@@ -1,0 +1,930 @@
+{
+  "common": {
+    "brand": "EmlakBanq",
+    "tagline": "Dubai'nin En Prestijli Lüks Gayrimenkul Platformu",
+    "cta": {
+      "getStarted": "Hemen Başlayın",
+      "contactUs": "Bize Ulaşın",
+      "viewProperties": "Mülkleri Görüntüle",
+      "learnMore": "Daha Fazla Bilgi",
+      "subscribe": "Abone Ol",
+      "exploreAreas": "Bölgeleri Keşfedin",
+      "bookConsultation": "Ücretsiz Danışmanlık Randevusu Alın",
+      "viewAll": "Tümünü Görüntüle",
+      "sendMessage": "Mesaj Gönder"
+    },
+    "loading": "Yükleniyor...",
+    "error": "Bir hata oluştu",
+    "backToHome": "Ana Sayfaya Dön",
+    "readMore": "Devamını Oku",
+    "from": "Başlangıç",
+    "bed": "Yatak Odası",
+    "beds": "Yatak Odası",
+    "bedrooms": "Yatak Odası",
+    "sqft": "sq ft",
+    "roi": "Yatırım Getirisi"
+  },
+  "nav": {
+    "home": "Ana Sayfa",
+    "properties": "Mülkler",
+    "areas": "Bölgeler",
+    "about": "Hakkımızda",
+    "contact": "İletişim",
+    "goldenVisa": "Altın Vize",
+    "buyerGuides": "Alıcı Rehberi",
+    "insights": "Yatırım Analizi",
+    "blog": "Blog"
+  },
+  "home": {
+    "meta": {
+      "title": "EmlakBanq | Dubai Lüks Gayrimenkul",
+      "description": "Dubai'nin lider lüks gayrimenkul platformu. Tamamlanmadan satış, villa, penthouse, markalı konut ve yatırım danışmanlığı."
+    },
+    "hero": {
+      "title": "Dubai'de Lüks Yaşama Açılan Kapınız",
+      "subtitle": "100'den fazla uzman, premium mülkler, özel yatırım fırsatları ve dünyanın en dinamik şehrinde kusursuz bir satın alma deneyimi ile size rehberlik ediyor."
+    },
+    "featured": {
+      "title": "Öne Çıkan Mülkler",
+      "subtitle": "Dubai'nin en prestijli lokasyonlarında özenle seçilmiş lüks mülkler"
+    },
+    "areas": {
+      "title": "Birincil Yatırım Bölgeleri",
+      "subtitle": "Dubai'nin en çok aranan mahallelerini ve benzersiz yatırım potansiyellerini keşfedin"
+    },
+    "stats": {
+      "title": "Neden EmlakBanq?",
+      "subtitle": "Dünya genelinde binlerce yatırımcının güvendiği platform",
+      "experts": "100+",
+      "expertsLabel": "Uzman Danışman",
+      "properties": "500+",
+      "propertiesLabel": "Premium İlan",
+      "countries": "40+",
+      "countriesLabel": "Hizmet Verilen Ülke",
+      "volume": "$2B+",
+      "volumeLabel": "İşlem Hacmi"
+    },
+    "services": {
+      "title": "Uçtan Uca Hizmetler",
+      "subtitle": "Sadece mülk satmıyoruz — eksiksiz bir yaşam tarzı çözümü sunuyoruz",
+      "investment": {
+        "title": "Yatırım Danışmanlığı",
+        "description": "Dubai'nin büyüyen pazarında yatırım getirinizi en üst düzeye çıkarmak için veriye dayalı analizler ve kişiselleştirilmiş stratejiler."
+      },
+      "legal": {
+        "title": "Hukuki ve Finansal Destek",
+        "description": "Süreç boyunca tam hukuki destek, ipotek yardımı ve şeffaf finansal rehberlik."
+      },
+      "visa": {
+        "title": "Altın Vize",
+        "description": "Özel vize ekibimizle stratejik gayrimenkul yatırımı aracılığıyla BAE oturma izninizi güvence altına alın."
+      },
+      "afterSales": {
+        "title": "Satış Sonrası Destek",
+        "description": "Anahtarlar teslim edildikten çok sonra bile mülk yönetimi, kiralama hizmetleri ve sürekli destek."
+      }
+    },
+    "cta": {
+      "title": "Dubai'ye Yatırım Yapmaya Hazır mısınız?",
+      "subtitle": "Kıdemli danışmanlarımızdan biriyle ücretsiz bir görüşme planlayın ve ideal yatırımınızı keşfedin."
+    }
+  },
+  "properties": {
+    "meta": {
+      "title": "Mülkler | EmlakBanq",
+      "description": "Dubai'deki lüks mülkleri keşfedin - tamamlanmadan satış, hazır, villa, penthouse, markalı konut."
+    },
+    "heading": "Lüks Mülkler",
+    "subtitle": "Dubai genelindeki özenle seçilmiş premium gayrimenkul koleksiyonumuzu keşfedin",
+    "filters": {
+      "all": "Tümü",
+      "type": "Mülk Tipi",
+      "area": "Bölge",
+      "priceRange": "Fiyat Aralığı",
+      "bedrooms": "Yatak Odası"
+    },
+    "types": {
+      "offPlan": "Tamamlanmadan Satış",
+      "ready": "Hazır",
+      "penthouse": "Penthouse",
+      "villa": "Villa",
+      "brandedResidence": "Markalı Konut",
+      "commercial": "Ticari"
+    },
+    "noResults": "Bu filtre için mülk bulunamadı. Lütfen başka bir kategori deneyin.",
+    "disclaimer": "Fiyatlar tahmini olup değişikliğe tabidir. Güncel fiyatlar için bizimle iletişime geçin."
+  },
+  "areas": {
+    "meta": {
+      "title": "Dubai Bölgeleri | EmlakBanq",
+      "description": "Dubai'nin önde gelen yatırım bölgelerini ve mahallelerini keşfedin."
+    },
+    "heading": "Dubai Yatırım Bölgeleri",
+    "subtitle": "Her mahallenin kendine özgü karakteri, yaşam tarzı ve yatırım profili vardır",
+    "intro": "İkonik sahil yaşamından huzurlu banliyö tatillerine kadar her mahallenin kendine özgü karakterini ve yatırım potansiyelini keşfedin.",
+    "explore": "Keşfedin",
+    "speakToExpert": "Uzmanla Görüşün",
+    "cta": {
+      "title": "Hangi bölgenin size uygun olduğundan emin değil misiniz?",
+      "description": "Uzmanlarımız yaşam tarzınıza, bütçenize ve yatırım hedeflerinize göre ideal mahalleyi belirlemenize yardımcı olabilir."
+    },
+    "zones": {
+      "downtown": {
+        "name": "Downtown Dubai",
+        "description": "Burj Khalifa ve Dubai Mall'a ev sahipliği yapan bölge — lüks yaşamın ve yüksek getirili yatırımın merkez üssü.",
+        "avgPrice": "AED 2.5M",
+        "avgRoi": "6.2%"
+      },
+      "marina": {
+        "name": "Dubai Marina",
+        "description": "Muhteşem marina manzaraları, dünya standartlarında restoranlar ve premium kulelere sahip canlı bir sahil topluluğu.",
+        "avgPrice": "AED 1.8M",
+        "avgRoi": "7.1%"
+      },
+      "palmJumeirah": {
+        "name": "Palm Jumeirah",
+        "description": "Ultra lüks villalar, markalı konutlar ve sahilde yaşam sunan ikonik yapay ada.",
+        "avgPrice": "AED 5.2M",
+        "avgRoi": "5.8%"
+      },
+      "businessBay": {
+        "name": "Business Bay",
+        "description": "Modern yüksek binalar, kanal manzaraları ve mükemmel kira getirisi sunan Dubai'nin merkezi iş bölgesi.",
+        "avgPrice": "AED 1.5M",
+        "avgRoi": "7.5%"
+      },
+      "jbr": {
+        "name": "JBR",
+        "description": "Jumeirah Beach Residence — tatil köyü tarzı yaşam ve canlı sosyal ortamıyla sahil daireleri.",
+        "avgPrice": "AED 2.8M",
+        "avgRoi": "6.0%"
+      },
+      "creekHarbour": {
+        "name": "Dubai Creek Harbour",
+        "description": "Sahil yürüyüş yolları, doğa koruma alanları ve önemli sermaye değer artışı potansiyeli ile yükselen bir yıldız.",
+        "avgPrice": "AED 1.6M",
+        "avgRoi": "7.8%"
+      },
+      "dubaiHills": {
+        "name": "Dubai Hills Estate",
+        "description": "Şampiyonluk golf sahası, parklar ve premium villalarla aile dostu bir master topluluk.",
+        "avgPrice": "AED 2.2M",
+        "avgRoi": "6.5%"
+      },
+      "jumeirahVillage": {
+        "name": "JVC",
+        "description": "Jumeirah Village Circle — güçlü kira getirisi ve hızlı gelişim ile uygun fiyatlı lüks.",
+        "avgPrice": "AED 850K",
+        "avgRoi": "8.2%"
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Hakkımızda | EmlakBanq",
+      "description": "EmlakBanq ile tanışın - 100'den fazla uzman, iki ofis, Dubai'nin güvenilir lüks gayrimenkul danışmanları."
+    },
+    "heading": "EmlakBanq Hakkında",
+    "subtitle": "Lüks gayrimenkul yatırımında Dubai'nin güvenilir ortağı",
+    "story": {
+      "label": "Hikayemiz",
+      "title": "Hikayemiz",
+      "p1": "EmlakBanq, tek bir vizyonla kuruldu: Dubai'deki lüks gayrimenkul deneyimini yeniden tanımlamak. Butik bir danışmanlık firması olarak başlayan yapımız, iki kıtada faaliyet gösteren 100'den fazla uzman danışmana sahip küresel bir platforma dönüştü.",
+      "p2": "Dubai'de mülk satın almanın, şehrin kendisi kadar heyecan verici — şeffaf, kusursuz ve ödüllendirici — olması gerektiğine inanıyoruz. Ekibimiz, derin piyasa bilgisini yatırımcıların mükemmel eşleşmelerini bulmalarına yardımcı olma tutkusuyla birleştiriyor.",
+      "p3": "Tamamlanmadan satış fırsatlarından taşınmaya hazır villalara, Altın Vize yardımından satış sonrası mülk yönetimine kadar Dubai gayrimenkulünde uçtan uca ortağınızız."
+    },
+    "values": {
+      "label": "Değerlerimiz",
+      "title": "Değerlerimiz",
+      "transparency": {
+        "title": "Şeffaflık",
+        "description": "Gizli ücret yok, abartılı vaatler yok. Her adımda dürüst, veriye dayalı rehberlik."
+      },
+      "expertise": {
+        "title": "Uzmanlık",
+        "description": "Yıllarca Dubai piyasası deneyimine sahip sertifikalı profesyoneller."
+      },
+      "global": {
+        "title": "Küresel Erişim",
+        "description": "Dubai ve İstanbul'da ofisler, 40'tan fazla ülkeden müşteriye hizmet."
+      },
+      "client": {
+        "title": "Önce Müşteri",
+        "description": "Her karar, müşterilerimizin yatırım hedefleri için en iyi olan doğrultusunda yönlendirilir."
+      }
+    },
+    "hero": {
+      "subtitle": "Kıtalar arası bağlantılar kurarak, eşsiz uzmanlık ve sarsılmaz dürüstlükle yatırımcıları dünyanın en dinamik gayrimenkul piyasasına bağlıyoruz."
+    },
+    "offices": {
+      "label": "Küresel Varlık",
+      "title": "Ofislerimiz",
+      "description": "Küresel yatırımın kesişim noktasında stratejik olarak konumlanmış ofislerimiz, Dubai'nin lüks gayrimenkul piyasasına açılan kapınızdır.",
+      "dubai": { "city": "Dubai, BAE", "address": "Bay Square, Business Bay" },
+      "istanbul": { "city": "İstanbul, Türkiye", "address": "Skyland Istanbul" }
+    },
+    "cta": {
+      "title": "Yolculuğunuza Başlamaya Hazır mısınız?",
+      "description": "Uzman ekibimizle bağlantı kurun ve yaşam tarzınıza ve yatırım hedeflerinize uygun mükemmel mülkü keşfedin.",
+      "button": "Bize Ulaşın"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "İletişim | EmlakBanq",
+      "description": "EmlakBanq ile iletişime geçin. Dubai ve İstanbul'da ofisler."
+    },
+    "heading": "İletişime Geçin",
+    "subtitle": "İlk kez alıcı olun ya da deneyimli bir yatırımcı, ekibimiz size yardımcı olmak için burada.",
+    "intro": "Yatırım yapmak, hayalinizdeki evi satın almak veya Altın Vize seçeneklerini keşfetmek istiyor olun, ekibimiz her adımda size rehberlik etmeye hazır.",
+    "form": {
+      "title": "Bize Mesaj Gönderin",
+      "description": "Aşağıdaki formu doldurun, danışmanlarımızdan biri 24 saat içinde size geri dönüş yapacaktır.",
+      "name": "Ad Soyad",
+      "email": "E-posta Adresi",
+      "phone": "Telefon Numarası",
+      "interest": "İlgilendiğim konu...",
+      "interests": {
+        "buying": "Mülk satın alma",
+        "investing": "Yatırım danışmanlığı",
+        "visa": "Altın Vize",
+        "selling": "Mülk satma",
+        "other": "Diğer"
+      },
+      "selectInterest": "İlgilendiğiniz konuyu seçin...",
+      "interestOptions": {
+        "buying": "Mülk Satın Alma",
+        "investing": "Yatırım Fırsatları",
+        "visa": "Altın Vize Yardımı",
+        "selling": "Mülk Satma",
+        "other": "Diğer Soru"
+      },
+      "message": "Mesajınız",
+      "submit": "Mesaj Gönder",
+      "consent": "Kişisel verilerimin gizlilik politikası kapsamında işlenmesini kabul ediyorum.",
+      "placeholders": {
+        "name": "ör. Ahmet Yılmaz",
+        "email": "ornek@email.com",
+        "phone": "+971 50 XXX XXXX",
+        "message": "İhtiyaçlarınız, bütçeniz veya sorularınız hakkında bize bilgi verin..."
+      },
+      "privacyLink": "Gizlilik Politikası",
+      "sending": "Gönderiliyor...",
+      "success": "Teşekkürler! Mesajınız gönderildi. 24 saat içinde size geri dönüş yapacağız.",
+      "error": "Bir hata oluştu. Lütfen tekrar deneyin."
+    },
+    "info": {
+      "title": "Bize Ulaşın",
+      "email": "info@emlakbanq.com",
+      "phone": "+971 4 XXX XXXX",
+      "whatsapp": "+971 50 XXX XXXX",
+      "hours": "Paz - Per: 9:00 - 18:00",
+      "labels": {
+        "email": "E-posta",
+        "phone": "Telefon",
+        "whatsapp": "WhatsApp",
+        "workingHours": "Çalışma Saatleri"
+      },
+      "workingHoursValue": "Paz - Per: 9:00 - 19:00 (GST)"
+    },
+    "offices": {
+      "title": "Ofislerimiz",
+      "dubai": {
+        "city": "Dubai, BAE",
+        "address": "Bay Square, Business Bay, Dubai, BAE"
+      },
+      "istanbul": {
+        "city": "İstanbul, Türkiye",
+        "address": "Skyland Istanbul, Türkiye"
+      }
+    },
+    "cta": {
+      "title": "Direkt Arama mı Tercih Ediyorsunuz?",
+      "description": "Çok dilli ekibimiz İngilizce, Arapça, Türkçe ve Rusça konuşmaktadır. Size uygun bir zamanda arama planlayın.",
+      "callNow": "Hemen Ara"
+    }
+  },
+  "goldenVisa": {
+    "meta": {
+      "title": "Altın Vize | EmlakBanq",
+      "description": "Gayrimenkul yatırımı ile Dubai Altın Vizesi hakkında bilgi edinin."
+    },
+    "heading": "Gayrimenkul Yatırımı ile BAE Oturma İznine Açılan Kapınız",
+    "subtitle": "BAE Altın Vizesi",
+    "hero": {
+      "subtitle": "BAE Altın Vize programı, gayrimenkul yatırımcılarına uzun süreli oturma izni sunarak dünyanın en dinamik ekonomilerinden birinde dünya standartlarında bir yaşam tarzı sağlar.",
+      "intro": "EmlakBanq, uygun mülklerin belirlenmesinden vize başvurunuzun tamamlanmasına kadar uçtan uca Altın Vize yardımı sunmaktadır. Özel ekibimiz yüzlerce ailenin güvenle BAE oturma iznini almasına yardımcı olmuştur."
+    },
+    "benefits": {
+      "label": "Neden Altın Vize?",
+      "title": "BAE Altın Vizesi'nin Avantajları",
+      "renewable_residency": {
+        "title": "10 Yıllık Yenilenebilir Oturma İzni",
+        "description": "Kendiniz ve aileniz için tamamen yenilenebilir 10 yıllık vize ile uzun süreli BAE oturma izni güvence altına alın."
+      },
+      "family_sponsorship": {
+        "title": "Tam Aile Sponsorluğu",
+        "description": "Eşinizi, çocuklarınızı ve ev çalışanlarınızı ek mülk gereksinimi olmadan tek bir vize başvurusu altında sponsor olun."
+      },
+      "business_ownership": {
+        "title": "%100 İş Sahipliği",
+        "description": "Yerel bir sponsora ihtiyaç duymadan BAE ana karasında veya serbest bölgelerde bir işletme kurun ve tamamen sahip olun."
+      },
+      "ease_of_travel": {
+        "title": "Seyahat Kolaylığı",
+        "description": "BAE'ye kısıtlama olmadan serbestçe girin ve çıkın. Vizeniz ülke dışında geçirilen süreden bağımsız olarak geçerliliğini korur."
+      },
+      "tax_free": {
+        "title": "Vergisiz Ortam",
+        "description": "Sıfır kişisel gelir vergisi, sıfır sermaye kazancı vergisi ve dünyanın en iş dostu mali politikalarından birinin keyfini çıkarın."
+      },
+      "premium_services": {
+        "title": "Premium Hizmetlere Erişim",
+        "description": "BAE sakinlerine ayrılmış dünya standartlarında sağlık, eğitim ve bankacılık hizmetlerine erişim elde edin."
+      }
+    },
+    "eligibility": {
+      "label": "Gereksinimler",
+      "title": "Uygunluk Kriterleri",
+      "description": "Aşağıdaki kriterler BAE Altın Vize programının gayrimenkul yatırımcı rotası için geçerlidir.",
+      "item1": "BAE'de minimum 2 milyon AED (yaklaşık 545.000 USD) değerinde bir mülk satın alın.",
+      "item2": "Mülk, vize düzenlenme tarihinden itibaren en az 3 yıl boyunca elde tutulmalıdır.",
+      "item3": "Mülk konut veya ticari, tamamlanmadan satış veya hazır olabilir ve tam mülkiyet veya ortak mülkiyet olabilir.",
+      "item4": "İpotekli mülkler, satın alma değerinin minimum eşiği karşılaması koşuluyla uygundur.",
+      "item5": "Başvuru, mülkün Dubai Arazi Dairesi'ne kaydından sonraki 6 ay içinde yapılmalıdır.",
+      "item6": "Gayrimenkul yatırımcı rotası için minimum maaş gereksinimi veya istihdam durumu kısıtlaması bulunmamaktadır."
+    },
+    "process": {
+      "label": "Nasıl Çalışır",
+      "title": "Altın Vize'ye Giden Yolunuz",
+      "step1": {
+        "title": "Mülk Seçimi",
+        "description": "Uzman danışmanlarımızın rehberliğinde 2 milyon AED üzeri değerinde uygun bir mülk seçin."
+      },
+      "step2": {
+        "title": "Satın Alma ve Kayıt",
+        "description": "Satın alma işlemini tamamlayın ve mülkü Dubai Arazi Dairesi'ne kaydettirin."
+      },
+      "step3": {
+        "title": "Belge Hazırlığı",
+        "description": "Pasaport kopyaları, Emirates ID ve mülk tapusu dahil gerekli belgeleri toplayın."
+      },
+      "step4": {
+        "title": "Vize Onayı",
+        "description": "Başvurunuzu yapın ve 30-60 gün içinde 10 yıllık Altın Vizenizi alın."
+      }
+    },
+    "cta": {
+      "title": "Altın Vize Yolculuğunuza Başlayın",
+      "description": "Özel vize uzmanlarımız mülk seçiminden vize onayına kadar size rehberlik edecektir. Bugün ücretsiz bir danışmanlık randevusu alın.",
+      "button": "Ücretsiz Danışmanlık Randevusu Alın"
+    }
+  },
+  "buyerGuides": {
+    "meta": {
+      "title": "Alıcı Rehberi | EmlakBanq",
+      "description": "Dubai'de lüks mülk satın almak için kapsamlı rehberler."
+    },
+    "heading": "Alıcı Rehberleri",
+    "subtitle": "Dubai'de mülk satın alma hakkında bilmeniz gereken her şey",
+    "intro": "Mülk kararlarınızı güçlendirmek için uzman tarafından hazırlanmış rehberler. İlk kez alıcılardan deneyimli yatırımcılara kadar güvenle yatırım yapmak için gereken bilgiyi edinin.",
+    "readGuide": "Rehberi Oku",
+    "speakToExpert": "Uzmanla Görüşün",
+    "cta": {
+      "title": "Kişiselleştirilmiş Tavsiye Mi İhtiyacınız Var?",
+      "description": "Danışmanlarımız, finansal hedeflerinize, zaman çizelgenize ve risk iştahınıza göre özel bir yatırım stratejisi oluşturabilir.",
+      "button": "Uzmanla Görüşün"
+    }
+  },
+  "insights": {
+    "meta": {
+      "title": "Yatırım Analizleri | EmlakBanq",
+      "description": "Dubai gayrimenkul piyasası analizleri ve yatırım içgörüleri."
+    },
+    "label": "Piyasa Analizi",
+    "heading": "Dubai Piyasa Analizleri",
+    "intro": "Dubai gayrimenkul piyasasına dair veriye dayalı analizler ve uzman görüşleri. En son trendler, getiri verileri ve yatırım fırsatlarıyla bilgi sahibi olun.",
+    "overview": {
+      "title": "Piyasaya Genel Bakış",
+      "period": "2025 4. Çeyrek - 2026 1. Çeyrek Öne Çıkanlar"
+    },
+    "roi": {
+      "label": "Yatırım Verileri",
+      "title": "Kira Getirisine Göre En İyi Bölgeler",
+      "description": "2025 4. Çeyrek verilerine göre Dubai'nin en popüler yatırım bölgelerinde ortalama brüt kira getirisi.",
+      "area": "Bölge",
+      "grossRoi": "Brüt Getiri",
+      "priceRange": "Fiyat Aralığı",
+      "trend": "Trend",
+      "rising": "Yükseliş",
+      "stable": "Sabit",
+      "disclaimer": "Veriler Dubai Arazi Departmanı ve iç analizlerden alınmıştır. Getiriler gösterge niteliğindedir ve değişkenlik gösterebilir."
+    },
+    "articles": {
+      "label": "Son Analizler",
+      "title": "Son Makaleler",
+      "viewAll": "Tüm Makaleleri Gör",
+      "readArticle": "Makaleyi Oku"
+    }
+  },
+  "propertyDetail": {
+    "price": "Fiyat",
+    "bedrooms": "Yatak Odası",
+    "size": "Boyut",
+    "sqftValue": "{{value}} sq ft",
+    "developer": "Geliştirici",
+    "completion": "Teslim Tarihi",
+    "aboutProperty": "Bu Mülk Hakkında",
+    "gallery": "Galeri",
+    "amenities": "Olanaklar ve Özellikler",
+    "interestedTitle": "Bu Mülkle İlgileniyor musunuz?",
+    "interestedDescription": "Ekibimiz özel bir gezi ayarlayabilir, detaylı fiyat bilgisi sağlayabilir ve tüm satın alma sürecinde size rehberlik edebilir.",
+    "contactUs": "Bize Ulaşın"
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog | EmlakBanq",
+      "description": "Dubai lüks gayrimenkul piyasasından en son haberler ve güncellemeler."
+    },
+    "heading": "Blog ve Haberler",
+    "subtitle": "En son piyasa trendleri, proje lansmanları ve uzman görüşleriyle güncel kalın"
+  },
+  "privacy": {
+    "meta": {
+      "title": "Gizlilik Politikası | EmlakBanq",
+      "description": "EmlakBanq gizlilik politikası."
+    },
+    "heading": "Gizlilik Politikası"
+  },
+  "terms": {
+    "meta": {
+      "title": "Kullanım Koşulları | EmlakBanq",
+      "description": "EmlakBanq kullanım koşulları."
+    },
+    "heading": "Kullanım Koşulları"
+  },
+  "footer": {
+    "description": "Mülk yatırımı için uzman rehberlik, Altın Vize yardımı ve kapsamlı satış sonrası destek sunan Dubai'nin önde gelen lüks gayrimenkul platformu.",
+    "quickLinks": "Hızlı Bağlantılar",
+    "services": "Hizmetler",
+    "legal": "Yasal",
+    "privacy": "Gizlilik Politikası",
+    "terms": "Kullanım Koşulları",
+    "newsletter": {
+      "title": "Güncel Kalın",
+      "subtitle": "Haftalık piyasa analizleri ve özel mülk bildirimleri alın.",
+      "placeholder": "E-posta adresinizi girin",
+      "subscribe": "Abone Ol"
+    },
+    "copyright": "2026 EmlakBanq. Tüm hakları saklıdır."
+  },
+  "notFound": {
+    "meta": {
+      "title": "Sayfa Bulunamadı | EmlakBanq"
+    },
+    "title": "Sayfa Bulunamadı",
+    "message": "Aradığınız sayfa mevcut değil veya taşınmış olabilir."
+  },
+  "gdpr": {
+    "cookieConsent": "Deneyiminizi iyileştirmek için çerezler kullanıyoruz. Devam ederek gizlilik politikamızı kabul etmiş olursunuz.",
+    "accept": "Kabul Et",
+    "decline": "Reddet"
+  },
+  "admin": {
+    "common": {
+      "search": "Ara",
+      "filter": "Filtrele",
+      "save": "Kaydet",
+      "saveAll": "Tümünü Kaydet",
+      "cancel": "İptal",
+      "delete": "Sil",
+      "edit": "Düzenle",
+      "create": "Oluştur",
+      "update": "Güncelle",
+      "add": "Ekle",
+      "actions": "İşlemler",
+      "status": "Durum",
+      "confirmDelete": "Silmeyi Onayla",
+      "deleteMessage": "Emin misiniz? Bu işlem geri alınamaz.",
+      "deleteConfirmMessage": "\"{{name}}\" öğesini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "saving": "Kaydediliyor...",
+      "deleting": "Siliniyor...",
+      "loading": "Yükleniyor...",
+      "noResults": "Sonuç bulunamadı",
+      "noItemsYet": "Henüz öğe yok. İlk öğeyi ekleyin.",
+      "addFirstItem": "İlk öğeyi ekleyin",
+      "total": "toplam",
+      "upload": "Yükle",
+      "uploading": "Yükleniyor...",
+      "orEnterUrl": "veya URL girin",
+      "dragDrop": "Sürükle bırak veya tıklayarak yükle",
+      "fileTooLarge": "Dosya çok büyük",
+      "invalidFormat": "Geçersiz dosya formatı",
+      "order": "Sıra",
+      "icon": "İkon",
+      "title": "Başlık",
+      "description": "Açıklama",
+      "sortOrder": "Sıralama",
+      "editItem": "Öğeyi Düzenle",
+      "addItem": "Öğe Ekle",
+      "deleteItem": "Öğeyi Sil",
+      "benefits": "Avantajlar",
+      "eligibility": "Uygunluk",
+      "processSteps": "Süreç Adımları",
+      "manageContent": "İçeriği yönetin",
+      "heroImages": "Hero Resimleri",
+      "heroImagesDesc": "Her sayfa hero bölümü için arka plan resimleri",
+      "offices": "Ofisler",
+      "officesDesc": "Şirket ofis konumları",
+      "companyStats": "Şirket İstatistikleri",
+      "companyStatsDesc": "Web sitesinde gösterilen istatistikler",
+      "brandInfo": "Marka bilgileri ve sosyal medya bağlantıları",
+      "marketHighlights": "Piyasa Öne Çıkanları",
+      "shortTextItems": "Analiz bölümünde gösterilen kısa metinler",
+      "topAreasROI": "En İyi Bölge ROI'leri",
+      "investmentReturns": "Bölgeye göre yatırım getirileri",
+      "imageUrl": "Resim URL",
+      "altText": "Alternatif metin"
+    },
+    "nav": {
+      "dashboard": "Gösterge Paneli",
+      "properties": "İlanlar",
+      "areas": "Bölgeler",
+      "blog": "Blog",
+      "buyerGuides": "Alıcı Rehberleri",
+      "goldenVisa": "Altın Vize",
+      "insights": "Analizler",
+      "messages": "Mesajlar",
+      "settings": "Ayarlar"
+    },
+    "topBar": {
+      "logout": "Çıkış Yap",
+      "admin": "Admin",
+      "backToSite": "Siteye Dön"
+    },
+    "login": {
+      "title": "Admin Girişi",
+      "heading": "Hesabınıza giriş yapın",
+      "email": "E-posta",
+      "password": "Şifre",
+      "emailPlaceholder": "E-posta adresinizi girin",
+      "passwordPlaceholder": "Şifrenizi girin",
+      "signIn": "Giriş Yap",
+      "signingIn": "Giriş yapılıyor...",
+      "backToSite": "EmlakBanq'a Dön",
+      "invalidCredentials": "Geçersiz e-posta veya şifre."
+    },
+    "dashboard": {
+      "welcomeBack": "Tekrar hoş geldiniz, {{name}}",
+      "overview": "EmlakBanq yönetim panelinize genel bir bakış.",
+      "totalProperties": "Toplam İlan",
+      "totalAreas": "Toplam Bölge",
+      "blogPosts": "Blog Yazıları",
+      "unreadMessages": "Okunmamış Mesajlar",
+      "quickActions": "Hızlı İşlemler",
+      "newProperty": "Yeni İlan",
+      "addListing": "İlan ekle",
+      "newBlogPost": "Yeni Blog Yazısı",
+      "writeArticle": "Makale yaz",
+      "newArea": "Yeni Bölge",
+      "addLocation": "Konum ekle",
+      "viewMessages": "Mesajlar",
+      "viewSubmissions": "Gönderileri görüntüle",
+      "recentMessages": "Son Mesajlar",
+      "viewAll": "Tümünü görüntüle",
+      "noMessages": "Henüz mesaj yok.",
+      "noMessageContent": "Mesaj içeriği yok"
+    },
+    "properties": {
+      "title": "İlanlar",
+      "subtitle": "İlan listenizi yönetin",
+      "addNew": "Yeni İlan Ekle",
+      "editProperty": "İlanı Düzenle",
+      "addProperty": "İlan Ekle",
+      "backToProperties": "İlanlara Dön",
+      "image": "Resim",
+      "name": "Başlık",
+      "type": "Tip",
+      "location": "Konum",
+      "price": "Fiyat",
+      "featured": "Öne Çıkan",
+      "noProperties": "İlan bulunamadı. Başlamak için ilk ilanınızı ekleyin.",
+      "deleteError": "İlan silinirken hata oluştu.",
+      "notFound": "İlan bulunamadı.",
+      "failedToSave": "İlan kaydedilemedi.",
+      "loadingProperty": "İlan yükleniyor..."
+    },
+    "propertyForm": {
+      "basicInfo": "Temel Bilgiler",
+      "propertyName": "İlan Adı",
+      "propertyNamePlaceholder": "ör. Palm Residences Tower A",
+      "propertyNameHelp": "Desteklenen tüm dillerde ilan adı. Slug İngilizce'den otomatik oluşturulur.",
+      "slug": "Slug",
+      "slugPlaceholder": "otomatik-oluşturulacak",
+      "slugHelp": "URL dostu tanımlayıcı. İngilizce başlıktan otomatik oluşturulur.",
+      "type": "Tip",
+      "typeLabel": "Tip Etiketi",
+      "typeOptions": {
+        "apartment": "Daire",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "townhouse": "Müstakil Ev"
+      },
+      "typeLabelPlaceholder": "ör. Lüks Daire",
+      "typeLabelHelp": "İlan kartında gösterilen etiket, tüm dillerde.",
+      "location": "Konum",
+      "locationPlaceholder": "ör. Dubai Marina",
+      "locationHelp": "Desteklenen tüm dillerde ilan konumu.",
+      "price": "Fiyat",
+      "pricePlaceholder": "ör. AED 2,500,000",
+      "beds": "Yatak Odası",
+      "bedsPlaceholder": "ör. 3",
+      "sqft": "Metrekare",
+      "sqftPlaceholder": "ör. 2,450",
+      "developer": "Geliştirici",
+      "developerPlaceholder": "ör. Emaar Properties",
+      "year": "İnşa Yılı",
+      "yearPlaceholder": "ör. 2024",
+      "media": "Medya",
+      "image": "Ana Resim URL",
+      "imagePlaceholder": "https://example.com/image.jpg",
+      "gallery": "Galeri",
+      "galleryPlaceholder": "Her satırda bir resim URL'si",
+      "galleryHelp": "Her satıra bir resim URL'si girin. Bunlar ilan galerisinde gösterilecektir.",
+      "details": "Detaylar",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "İlanın detaylı açıklaması...",
+      "amenities": "Olanaklar",
+      "amenitiesPlaceholder": "Her satırda bir olanak",
+      "amenitiesHelp": "Her satıra bir olanak girin (ör. Yüzme Havuzu, Spor Salonu, Otopark).",
+      "settings": "Ayarlar",
+      "sortOrder": "Sıralama",
+      "sortOrderPlaceholder": "0",
+      "sortOrderHelp": "Düşük sayılar önce görünür.",
+      "featured": "Öne Çıkan",
+      "updateProperty": "İlanı Güncelle",
+      "createProperty": "İlan Oluştur",
+      "cancel": "İptal"
+    },
+    "areas": {
+      "title": "Bölgeler",
+      "subtitle": "Dubai bölge listesini yönetin",
+      "addNew": "Yeni Bölge Ekle",
+      "editArea": "Bölgeyi Düzenle",
+      "addArea": "Bölge Ekle",
+      "backToAreas": "Bölgelere Dön",
+      "noAreas": "Bölge bulunamadı. Başlamak için ilk bölgenizi ekleyin.",
+      "image": "Resim",
+      "name": "Ad",
+      "tagline": "Slogan",
+      "avgPrice": "Ort. Fiyat",
+      "roi": "ROI",
+      "featured": "Öne Çıkan",
+      "notFound": "Bölge bulunamadı.",
+      "failedToSave": "Bölge kaydedilemedi.",
+      "failedToDelete": "Bölge silinemedi.",
+      "loadingArea": "Bölge yükleniyor..."
+    },
+    "areaForm": {
+      "basicInfo": "Temel Bilgiler",
+      "areaName": "Bölge Adı",
+      "areaNamePlaceholder": "ör. Dubai Marina",
+      "areaNameHelp": "Desteklenen tüm dillerde bölge adı. Slug ve key İngilizce'den otomatik oluşturulur.",
+      "key": "Anahtar",
+      "keyPlaceholder": "ör. dubai-marina",
+      "keyHelp": "Benzersiz tanımlayıcı anahtar. İngilizce isimden otomatik oluşturulur.",
+      "slug": "Slug",
+      "slugPlaceholder": "ör. dubai-marina",
+      "slugHelp": "URL dostu tanımlayıcı. İngilizce isimden otomatik oluşturulur.",
+      "imageUrl": "Resim URL",
+      "imagePlaceholder": "https://example.com/area.jpg",
+      "avgPrice": "Ortalama Fiyat",
+      "avgPricePlaceholder": "ör. AED 2.5M",
+      "roi": "ROI",
+      "roiPlaceholder": "ör. %7.2",
+      "descriptions": "Açıklamalar",
+      "shortDescription": "Kısa Açıklama",
+      "shortDescPlaceholder": "Bölgenin kısa özeti...",
+      "shortDescHelp": "Bölge kartlarında gösterilen kısa açıklama, tüm dillerde.",
+      "longDescription": "Uzun Açıklama",
+      "longDescPlaceholder": "Bölgenin detaylı açıklaması...",
+      "longDescHelp": "Bölge detay sayfasında gösterilen detaylı açıklama, tüm dillerde.",
+      "highlights": "Öne Çıkanlar",
+      "highlightsPlaceholder": "Her satırda bir özellik",
+      "highlightsHelp": "Her satıra bir özellik girin (ör. Sahil Yaşamı, Dünya Standartlarında Yemek).",
+      "settings": "Ayarlar",
+      "sortOrder": "Sıralama",
+      "sortOrderPlaceholder": "0",
+      "sortOrderHelp": "Düşük sayılar önce görünür.",
+      "featured": "Öne Çıkan",
+      "updateArea": "Bölgeyi Güncelle",
+      "createArea": "Bölge Oluştur",
+      "cancel": "İptal"
+    },
+    "blog": {
+      "title": "Blog Yazıları",
+      "subtitle": "Blog içeriğini yönetin",
+      "addNew": "Yeni Yazı Ekle",
+      "editPost": "Blog Yazısını Düzenle",
+      "addPost": "Blog Yazısı Ekle",
+      "backToBlog": "Blog Yazılarına Dön",
+      "image": "Resim",
+      "title": "Başlık",
+      "category": "Kategori",
+      "published": "Yayınlandı",
+      "date": "Tarih",
+      "noPosts": "Blog yazısı bulunamadı. Başlamak için ilk yazınızı ekleyin.",
+      "deleteTitle": "Blog Yazısını Sil",
+      "deleteConfirm": "Bu yazıyı silmek istediğinizden emin misiniz?",
+      "columnTitle": "Başlık",
+      "author": "Yazar",
+      "publishedStatus": "Yayında",
+      "draftStatus": "Taslak",
+      "notFound": "Blog yazısı bulunamadı.",
+      "failedToSave": "Blog yazısı kaydedilemedi.",
+      "failedToDelete": "Blog yazısı silinemedi.",
+      "loadingPost": "Blog yazısı yükleniyor..."
+    },
+    "blogForm": {
+      "basicInfo": "Temel Bilgiler",
+      "title": "Başlık",
+      "titlePlaceholder": "ör. Dubai Emlak Piyasası Güncellemesi 2025",
+      "titleHelp": "Desteklenen tüm dillerde blog yazısı başlığı. Slug İngilizce'den otomatik oluşturulur.",
+      "slug": "Slug",
+      "slugPlaceholder": "otomatik-oluşturulacak",
+      "slugHelp": "URL dostu tanımlayıcı. İngilizce başlıktan otomatik oluşturulur.",
+      "category": "Kategori",
+      "categoryPlaceholder": "ör. Piyasa Analizi",
+      "categoryHelp": "Desteklenen tüm dillerde kategori adı.",
+      "categoryColor": "Kategori Rengi",
+      "categoryColorPlaceholder": "ör. bg-blue-100 text-blue-700",
+      "categoryColorHelp": "Kategori rozeti için Tailwind CSS sınıfları.",
+      "date": "Tarih",
+      "datePlaceholder": "ör. 15 Mart 2025",
+      "dateHelp": "Blog yazısında gösterilen tarih.",
+      "imageUrl": "Resim URL",
+      "imagePlaceholder": "https://example.com/blog-image.jpg",
+      "publishedAt": "Yayın Tarihi",
+      "publishedAtPlaceholder": "ör. 2025-03-15T10:00:00Z",
+      "publishedAtHelp": "Yazının yayınlandığı ISO zaman damgası.",
+      "content": "İçerik",
+      "excerpt": "Özet",
+      "excerptPlaceholder": "Blog listesinde gösterilen kısa özet...",
+      "excerptHelp": "Blog liste sayfasında gösterilen kısa özet, tüm dillerde.",
+      "fullContent": "İçerik",
+      "contentPlaceholder": "Blog yazısının tam içeriği...",
+      "contentHelp": "Desteklenen tüm dillerde blog yazısının tam içeriği.",
+      "imagePreview": "Resim Önizleme",
+      "settings": "Ayarlar",
+      "sortOrder": "Sıralama",
+      "sortOrderPlaceholder": "0",
+      "sortOrderHelp": "Düşük sayılar önce görünür.",
+      "published": "Yayınlandı",
+      "updatePost": "Yazıyı Güncelle",
+      "createPost": "Yazı Oluştur",
+      "cancel": "İptal"
+    },
+    "buyerGuides": {
+      "title": "Alıcı Rehberleri",
+      "subtitle": "Alıcı rehberi içeriğini yönetin",
+      "addNew": "Yeni Rehber Ekle",
+      "editGuide": "Alıcı Rehberini Düzenle",
+      "addGuide": "Alıcı Rehberi Ekle",
+      "backToGuides": "Alıcı Rehberlerine Dön",
+      "noGuides": "Alıcı rehberi bulunamadı. Başlamak için ilk rehberinizi ekleyin.",
+      "image": "Resim",
+      "columnTitle": "Başlık",
+      "tag": "Etiket",
+      "readTime": "Okuma Süresi",
+      "notFound": "Alıcı rehberi bulunamadı.",
+      "failedToSave": "Alıcı rehberi kaydedilemedi.",
+      "failedToDelete": "Alıcı rehberi silinemedi.",
+      "loadingGuide": "Alıcı rehberi yükleniyor..."
+    },
+    "buyerGuideForm": {
+      "basicInfo": "Temel Bilgiler",
+      "title": "Başlık",
+      "titlePlaceholder": "ör. Dubai İlk Kez Alıcı Rehberi",
+      "slug": "Slug",
+      "slugPlaceholder": "basliktan-otomatik-olusturulur",
+      "slugHelp": "URL dostu tanımlayıcı. Başlıktan otomatik oluşturulur.",
+      "imageUrl": "Resim URL",
+      "imagePlaceholder": "https://example.com/rehber-resim.jpg",
+      "readTime": "Okuma Süresi",
+      "readTimePlaceholder": "ör. 8 dk okuma",
+      "content": "İçerik",
+      "description": "Açıklama",
+      "descriptionPlaceholder": "Rehber açıklaması veya özeti...",
+      "styling": "Stil",
+      "tag": "Etiket",
+      "tagPlaceholder": "ör. Temel",
+      "tagHelp": "Rehber kartında görüntülenen etiket metni.",
+      "tagColor": "Etiket Rengi",
+      "tagColorPlaceholder": "ör. bg-blue-100 text-blue-700",
+      "tagColorHelp": "Etiket rozeti için Tailwind CSS sınıfları.",
+      "borderColor": "Kenarlık Rengi",
+      "borderColorPlaceholder": "ör. border-blue-200",
+      "borderColorHelp": "Kart kenarlığı için Tailwind CSS sınıfı.",
+      "imagePreview": "Resim Önizleme",
+      "settings": "Ayarlar",
+      "sortOrder": "Sıralama",
+      "sortOrderHelp": "Düşük numaralar önce görünür."
+    },
+    "contactSubmissions": {
+      "title": "İletişim Mesajları",
+      "subtitle": "Gelen talepleri ve mesajları yönetin",
+      "all": "Tümü",
+      "unread": "Okunmamış",
+      "read": "Okunmuş",
+      "name": "İsim",
+      "email": "E-posta",
+      "phone": "Telefon",
+      "interest": "İlgi Alanı",
+      "date": "Tarih",
+      "status": "Durum",
+      "actions": "İşlemler",
+      "noUnreadMessages": "Okunmamış mesaj yok",
+      "noReadMessages": "Okunmuş mesaj yok",
+      "noMessagesYet": "Henüz mesaj yok",
+      "viewMessage": "Mesajı görüntüle",
+      "markAsRead": "Okundu olarak işaretle",
+      "markAsUnread": "Okunmadı olarak işaretle",
+      "readStatus": "Okundu",
+      "unreadStatus": "Okunmadı",
+      "message": "Mesaj",
+      "noMessageProvided": "Mesaj sağlanmadı",
+      "deleteTitle": "Mesajı Sil",
+      "deleteConfirm": "\"{{name}}\" adlı kişiden gelen mesajı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+    },
+    "goldenVisa": {
+      "subtitle": "Avantajları, uygunluk kriterlerini ve süreç adımlarını yönetin",
+      "iconPlaceholder": "ör. emoji veya ikon sınıfı",
+      "titlePlaceholder": "Öğe başlığı",
+      "descriptionPlaceholder": "Bu öğeyi açıklayın..."
+    },
+    "insights": {
+      "subtitle": "Piyasa öne çıkanlarını ve bölge ROI verilerini yönetin",
+      "highlightsPlaceholder": "Öne çıkan metnini girin...",
+      "noHighlights": "Henüz öne çıkan yok. İlk öğeyi ekleyin.",
+      "noAreas": "Henüz bölge yok. İlk bölgeyi ekleyin.",
+      "area": "Bölge",
+      "areaPlaceholder": "ör. Dubai Marina",
+      "roi": "ROI",
+      "roiPlaceholder": "ör. %8.5",
+      "priceRange": "Fiyat Aralığı",
+      "priceRangePlaceholder": "ör. AED 1.2M - 5M",
+      "trend": "Trend",
+      "trendUp": "Yükseliş",
+      "trendStable": "Sabit",
+      "editArea": "Bölgeyi Düzenle",
+      "addArea": "Bölge Ekle"
+    },
+    "settings": {
+      "title": "Site Ayarları",
+      "subtitle": "Hero resimleri, ofisler, şirket istatistikleri ve genel ayarları yönetin",
+      "noOffices": "Henüz ofis yok. İlk ofisi ekleyin.",
+      "noStats": "Henüz istatistik yok. İlk istatistiği ekleyin.",
+      "noSiteSettings": "Site ayarı bulunamadı.",
+      "editOffice": "Ofisi Düzenle",
+      "addOffice": "Ofis Ekle",
+      "editStat": "İstatistiği Düzenle",
+      "addStat": "İstatistik Ekle",
+      "city": "Şehir",
+      "cityPlaceholder": "ör. Dubai",
+      "address": "Adres",
+      "addressPlaceholder": "Tam ofis adresi",
+      "phone": "Telefon",
+      "email": "E-posta",
+      "value": "Değer",
+      "valuePlaceholder": "ör. 350+",
+      "label": "Etiket",
+      "labelPlaceholder": "ör. Listelenen İlanlar",
+      "brandName": "Marka Adı",
+      "domain": "Domain",
+      "tagline": "Slogan",
+      "socialMediaLinks": "Sosyal Medya Bağlantıları"
+    }
+  },
+  "components": {
+    "confirmDialog": {
+      "title": "Silmeyi Onayla",
+      "message": "Emin misiniz? Bu işlem geri alınamaz.",
+      "confirm": "Sil",
+      "cancel": "İptal"
+    },
+    "multilingualInput": {
+      "translated": "Çevrildi",
+      "missing": "Eksik",
+      "characters": "karakter"
+    },
+    "adminFormField": {
+      "selectPlaceholder": "Seçin..."
+    },
+    "imageWithLoader": {
+      "errorMessage": "Resim yüklenemedi"
+    },
+    "loadingSkeleton": {
+      "loading": "Yükleniyor..."
+    }
+  }
+}

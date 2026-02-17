@@ -1,0 +1,823 @@
+{
+  "common": {
+    "brand": "EmlakBanq",
+    "tagline": "Dubais führende Luxusimmobilien",
+    "cta": {
+      "getStarted": "Jetzt starten",
+      "contactUs": "Kontaktieren Sie uns",
+      "viewProperties": "Immobilien ansehen",
+      "learnMore": "Mehr erfahren",
+      "subscribe": "Abonnieren",
+      "exploreAreas": "Gebiete erkunden",
+      "bookConsultation": "Kostenlose Beratung buchen",
+      "viewAll": "Alle ansehen",
+      "sendMessage": "Nachricht senden"
+    },
+    "loading": "Laden...",
+    "error": "Etwas ist schiefgelaufen",
+    "backToHome": "Zurück zur Startseite",
+    "readMore": "Weiterlesen",
+    "from": "Ab",
+    "bedrooms": "Schlafzimmer",
+    "sqft": "sq ft",
+    "roi": "Rendite"
+  },
+  "nav": {
+    "home": "Startseite",
+    "properties": "Immobilien",
+    "areas": "Gebiete",
+    "about": "Über uns",
+    "contact": "Kontakt",
+    "goldenVisa": "Golden Visa",
+    "buyerGuides": "Käuferratgeber",
+    "insights": "Analysen",
+    "blog": "Blog"
+  },
+  "home": {
+    "meta": {
+      "title": "EmlakBanq | Luxusimmobilien Dubai",
+      "description": "Dubais führende Plattform für Luxusimmobilien. Off-Plan, Villen, Penthäuser, Markenresidenzen und Investmentberatung."
+    },
+    "hero": {
+      "title": "Ihr Tor zum Luxusleben in Dubai",
+      "subtitle": "Über 100 Experten begleiten Sie zu Premium-Immobilien, exklusiven Investitionsmöglichkeiten und einem reibungslosen Kauferlebnis in der dynamischsten Stadt der Welt."
+    },
+    "featured": {
+      "title": "Ausgewählte Immobilien",
+      "subtitle": "Handverlesene Luxusimmobilien in Dubais prestigeträchtigsten Lagen"
+    },
+    "areas": {
+      "title": "Erstklassige Investitionszonen",
+      "subtitle": "Entdecken Sie Dubais begehrteste Viertel und ihr einzigartiges Investitionspotenzial"
+    },
+    "stats": {
+      "title": "Warum EmlakBanq?",
+      "subtitle": "Von Tausenden Investoren weltweit vertraut",
+      "experts": "100+",
+      "expertsLabel": "Fachberater",
+      "properties": "500+",
+      "propertiesLabel": "Premium-Angebote",
+      "countries": "40+",
+      "countriesLabel": "Betreute Länder",
+      "volume": "$2B+",
+      "volumeLabel": "Transaktionsvolumen"
+    },
+    "services": {
+      "title": "Rundum-Service",
+      "subtitle": "Wir verkaufen nicht nur Immobilien — wir liefern eine komplette Lifestyle-Lösung",
+      "investment": {
+        "title": "Investmentberatung",
+        "description": "Datengestützte Einblicke und personalisierte Strategien zur Maximierung Ihrer Rendite auf Dubais florierendem Markt."
+      },
+      "legal": {
+        "title": "Recht & Finanzen",
+        "description": "Umfassende rechtliche Unterstützung, Hypothekenhilfe und transparente Finanzberatung während des gesamten Prozesses."
+      },
+      "visa": {
+        "title": "Golden Visa",
+        "description": "Sichern Sie sich Ihre UAE-Aufenthaltserlaubnis durch strategische Immobilieninvestitionen mit unserem spezialisierten Visa-Team."
+      },
+      "afterSales": {
+        "title": "After-Sales-Betreuung",
+        "description": "Immobilienverwaltung, Vermietungsservice und fortlaufende Unterstützung lange nach der Schlüsselübergabe."
+      }
+    },
+    "cta": {
+      "title": "Bereit, in Dubai zu investieren?",
+      "subtitle": "Vereinbaren Sie eine kostenlose Beratung mit einem unserer leitenden Berater und entdecken Sie Ihre ideale Investition."
+    }
+  },
+  "properties": {
+    "meta": {
+      "title": "Immobilien | EmlakBanq",
+      "description": "Entdecken Sie Luxusimmobilien in Dubai — Off-Plan, bezugsfertig, Villen, Penthäuser, Markenresidenzen."
+    },
+    "heading": "Luxusimmobilien",
+    "subtitle": "Entdecken Sie unsere kuratierte Sammlung erstklassiger Immobilien in ganz Dubai",
+    "filters": {
+      "all": "Alle",
+      "type": "Immobilientyp",
+      "area": "Gebiet",
+      "priceRange": "Preisspanne",
+      "bedrooms": "Schlafzimmer"
+    },
+    "types": {
+      "offPlan": "Off-Plan",
+      "ready": "Bezugsfertig",
+      "penthouse": "Penthouse",
+      "villa": "Villa",
+      "brandedResidence": "Markenresidenz",
+      "commercial": "Gewerbe"
+    },
+    "disclaimer": "Die Preise sind unverbindlich und können sich ändern. Kontaktieren Sie uns für aktuelle Preise."
+  },
+  "areas": {
+    "meta": {
+      "title": "Dubai Gebiete | EmlakBanq",
+      "description": "Entdecken Sie Dubais erstklassige Investitionszonen und Stadtviertel."
+    },
+    "heading": "Investitionszonen Dubai",
+    "subtitle": "Jedes Viertel hat seinen eigenen Charakter, Lebensstil und sein eigenes Investitionsprofil",
+    "intro": "Von ikonischem Waterfront-Wohnen bis hin zu ruhigen Vorstadt-Rückzugsorten — entdecken Sie den einzigartigen Charakter und das Investitionspotenzial jedes Viertels.",
+    "explore": "Entdecken",
+    "speakToExpert": "Mit einem Experten sprechen",
+    "cta": {
+      "title": "Nicht sicher, welches Gebiet zu Ihnen passt?",
+      "description": "Unsere Experten können Ihnen helfen, das ideale Viertel basierend auf Ihrem Lebensstil, Budget und Ihren Investitionszielen zu finden."
+    },
+    "zones": {
+      "downtown": {
+        "name": "Downtown Dubai",
+        "description": "Heimat des Burj Khalifa und der Dubai Mall — das Epizentrum des Luxuslebens und renditestarker Investitionen.",
+        "avgPrice": "AED 2.5M",
+        "avgRoi": "6.2%"
+      },
+      "marina": {
+        "name": "Dubai Marina",
+        "description": "Eine lebhafte Waterfront-Community mit atemberaubendem Blick auf den Yachthafen, erstklassiger Gastronomie und Premium-Türmen.",
+        "avgPrice": "AED 1.8M",
+        "avgRoi": "7.1%"
+      },
+      "palmJumeirah": {
+        "name": "Palm Jumeirah",
+        "description": "Die ikonische künstliche Insel mit Ultra-Luxus-Villen, Markenresidenzen und Leben direkt am Strand.",
+        "avgPrice": "AED 5.2M",
+        "avgRoi": "5.8%"
+      },
+      "businessBay": {
+        "name": "Business Bay",
+        "description": "Dubais zentrales Geschäftsviertel mit modernen Hochhäusern, Kanalblick und hervorragenden Mietrenditen.",
+        "avgPrice": "AED 1.5M",
+        "avgRoi": "7.5%"
+      },
+      "jbr": {
+        "name": "JBR",
+        "description": "Jumeirah Beach Residence — Strandapartments mit Resort-Lifestyle und lebhafter Gesellschaftsszene.",
+        "avgPrice": "AED 2.8M",
+        "avgRoi": "6.0%"
+      },
+      "creekHarbour": {
+        "name": "Dubai Creek Harbour",
+        "description": "Ein aufgehender Stern mit Uferpromenaden, Naturschutzgebieten und erheblichem Kapitalwertsteigerungspotenzial.",
+        "avgPrice": "AED 1.6M",
+        "avgRoi": "7.8%"
+      },
+      "dubaiHills": {
+        "name": "Dubai Hills Estate",
+        "description": "Familienfreundliche Master-Community mit Championship-Golfplatz, Parks und Premium-Villen.",
+        "avgPrice": "AED 2.2M",
+        "avgRoi": "6.5%"
+      },
+      "jumeirahVillage": {
+        "name": "JVC",
+        "description": "Jumeirah Village Circle — erschwinglicher Luxus mit starken Mietrenditen und rasanter Entwicklung.",
+        "avgPrice": "AED 850K",
+        "avgRoi": "8.2%"
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Über uns | EmlakBanq",
+      "description": "Lernen Sie EmlakBanq kennen — über 100 Experten, zwei Büros, Dubais vertrauenswürdige Luxusimmobilienberater."
+    },
+    "heading": "Über EmlakBanq",
+    "subtitle": "Dubais vertrauenswürdiger Partner für Luxusimmobilien-Investitionen",
+    "hero": {
+      "subtitle": "Wir verbinden Kontinente und vernetzen Investoren mit dem dynamischsten Immobilienmarkt der Welt — durch unübertroffene Expertise und unerschütterliche Integrität."
+    },
+    "story": {
+      "label": "Unsere Geschichte",
+      "title": "Unsere Geschichte",
+      "p1": "EmlakBanq wurde mit einer einzigen Vision gegründet: das Luxusimmobilien-Erlebnis in Dubai neu zu definieren. Was als Boutique-Beratungsfirma begann, ist zu einer globalen Plattform mit über 100 Fachberatern auf zwei Kontinenten gewachsen.",
+      "p2": "Wir glauben, dass der Immobilienkauf in Dubai genauso aufregend sein sollte wie die Stadt selbst — transparent, reibungslos und lohnend. Unser Team verbindet tiefgreifendes Marktwissen mit einer echten Leidenschaft, Investoren bei der Suche nach dem perfekten Match zu helfen.",
+      "p3": "Von Off-Plan-Möglichkeiten bis hin zu bezugsfertigen Villen, von Golden-Visa-Unterstützung bis hin zur After-Sales-Immobilienverwaltung — wir sind Ihr Komplettpartner für Immobilien in Dubai."
+    },
+    "values": {
+      "label": "Unsere Werte",
+      "title": "Unsere Werte",
+      "transparency": { "title": "Transparenz", "description": "Keine versteckten Gebühren, keine übertriebenen Versprechen. Ehrliche, datengestützte Beratung bei jedem Schritt." },
+      "expertise": { "title": "Fachkompetenz", "description": "Zertifizierte Fachleute mit jahrelanger Erfahrung auf dem Dubaianer Immobilienmarkt." },
+      "global": { "title": "Globale Reichweite", "description": "Büros in Dubai und Istanbul, Betreuung von Kunden aus über 40 Ländern." },
+      "client": { "title": "Der Kunde zuerst", "description": "Jede Entscheidung orientiert sich an den Investitionszielen unserer Kunden." }
+    },
+    "offices": {
+      "label": "Globale Präsenz",
+      "title": "Unsere Büros",
+      "description": "Strategisch an der Schnittstelle globaler Investitionen positioniert, sind unsere Büros Ihr Tor zum Luxusimmobilienmarkt in Dubai.",
+      "dubai": { "city": "Dubai, VAE", "address": "Bay Square, Business Bay" },
+      "istanbul": { "city": "Istanbul, Türkei", "address": "Skyland Istanbul" }
+    },
+    "cta": {
+      "title": "Bereit, Ihre Reise zu beginnen?",
+      "description": "Verbinden Sie sich mit unserem Expertenteam und entdecken Sie die perfekte Immobilie für Ihren Lebensstil und Ihre Investitionsziele.",
+      "button": "Kontaktieren Sie uns"
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontakt | EmlakBanq",
+      "description": "Nehmen Sie Kontakt mit EmlakBanq auf. Büros in Dubai und Istanbul."
+    },
+    "heading": "Lassen Sie uns sprechen",
+    "subtitle": "Ob Erstkäufer oder erfahrener Investor — unser Team ist für Sie da.",
+    "form": {
+      "name": "Vollständiger Name",
+      "email": "E-Mail-Adresse",
+      "phone": "Telefonnummer",
+      "interest": "Ich interessiere mich für...",
+      "interests": {
+        "buying": "Immobilienkauf",
+        "investing": "Investmentberatung",
+        "visa": "Golden Visa",
+        "selling": "Immobilienverkauf",
+        "other": "Sonstiges"
+      },
+      "message": "Ihre Nachricht",
+      "submit": "Nachricht senden",
+      "consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der Datenschutzrichtlinie zu."
+    },
+    "info": {
+      "title": "Kontakt aufnehmen",
+      "email": "info@emlakbanq.com",
+      "phone": "+971 4 XXX XXXX",
+      "whatsapp": "+971 50 XXX XXXX",
+      "hours": "So - Do: 9:00 - 18:00"
+    }
+  },
+  "goldenVisa": {
+    "meta": {
+      "title": "Golden Visa | EmlakBanq",
+      "description": "Erfahren Sie mehr über das Dubai Golden Visa durch Immobilieninvestition."
+    },
+    "heading": "Dubai Golden Visa",
+    "subtitle": "Sichern Sie sich eine langfristige UAE-Aufenthaltserlaubnis durch strategische Immobilieninvestition",
+    "intro": "Das UAE-Golden-Visa-Programm bietet Immobilieninvestoren verlängerbare Aufenthaltserlaubnisse für 5 und 10 Jahre. Immobilien sind einer der beliebtesten und unkompliziertesten Wege.",
+    "benefits": {
+      "title": "Wichtige Vorteile",
+      "items": {
+        "residency": "Langfristige Aufenthaltserlaubnis (5 oder 10 Jahre, verlängerbar)",
+        "business": "100% Unternehmenseigentum in den VAE",
+        "family": "Familienmitglieder einschließlich Ehepartner und Kinder sponsern",
+        "stay": "Keine Mindestaufenthaltspflicht",
+        "banking": "Zugang zu UAE-Bank- und Finanzdienstleistungen",
+        "permanent": "Weg zur dauerhaften Aufenthaltserlaubnis"
+      }
+    },
+    "eligibility": {
+      "title": "Teilnahmekriterien",
+      "minInvestment": "Mindestinvestition in Immobilien von AED 2,000,000",
+      "completed": "Die Immobilie muss fertiggestellt sein (nicht Off-Plan für das 10-Jahres-Visum)",
+      "type": "Wohn- oder Gewerbeimmobilien werden akzeptiert",
+      "multiple": "Mehrere Immobilien können kombiniert werden, um den Schwellenwert zu erreichen",
+      "mortgage": "Hypothek erlaubt (mindestens 50% Eigenkapital für einige Kategorien)"
+    },
+    "process": {
+      "title": "Wie wir helfen",
+      "step1": { "title": "Beratung", "description": "Wir bewerten Ihre Situation und empfehlen die optimale Investitionsstrategie." },
+      "step2": { "title": "Immobilienauswahl", "description": "Wählen Sie aus unserem kuratierten Portfolio visumqualifizierender Immobilien." },
+      "step3": { "title": "Kauf", "description": "Wir wickeln die gesamte Transaktion ab und bereiten alle Unterlagen vor." },
+      "step4": { "title": "Visumsantrag", "description": "Unser spezialisiertes Team betreut den gesamten Antragsprozess." }
+    }
+  },
+  "buyerGuides": {
+    "meta": {
+      "title": "Käuferratgeber | EmlakBanq",
+      "description": "Umfassende Ratgeber zum Kauf von Luxusimmobilien in Dubai."
+    },
+    "heading": "Käuferratgeber",
+    "subtitle": "Alles, was Sie über den Immobilienkauf in Dubai wissen müssen",
+    "intro": "Von Experten erstellte Ratgeber, die Ihre Immobilienentscheidungen stärken. Vom Erstkäufer bis zum erfahrenen Investor — gewinnen Sie das Wissen, das Sie für eine sichere Investition benötigen.",
+    "readGuide": "Ratgeber lesen",
+    "speakToExpert": "Mit einem Experten sprechen",
+    "cta": {
+      "title": "Benötigen Sie persönliche Beratung?",
+      "description": "Unsere Berater können eine maßgeschneiderte Investitionsstrategie erstellen, die auf Ihre finanziellen Ziele, Ihren Zeitplan und Ihre Risikobereitschaft zugeschnitten ist.",
+      "button": "Sprechen Sie mit einem Experten"
+    }
+  },
+  "insights": {
+    "meta": {
+      "title": "Investitionsanalysen | EmlakBanq",
+      "description": "Marktanalysen und Investitionseinblicke für Dubais Immobilienmarkt."
+    },
+    "label": "Marktintelligenz",
+    "heading": "Dubai Markteinblicke",
+    "subtitle": "Datengestützte Marktanalysen und Expertenperspektiven zum Immobilienmarkt in Dubai",
+    "intro": "Datengestützte Analysen und Expertenkommentare zum Immobilienmarkt in Dubai. Bleiben Sie informiert über die neuesten Trends, Renditedaten und Investitionsmöglichkeiten.",
+    "overview": {
+      "title": "Marktübersicht",
+      "period": "Q4 2025 - Q1 2026 Wichtige Highlights"
+    },
+    "roi": {
+      "label": "Investitionsdaten",
+      "title": "Top-Gebiete nach Mietrendite",
+      "description": "Durchschnittliche Bruttomietrenditen in Dubais beliebtesten Investitionszonen, basierend auf Q4 2025 Daten.",
+      "area": "Gebiet",
+      "grossRoi": "Bruttorendite",
+      "priceRange": "Preisspanne",
+      "trend": "Trend",
+      "rising": "Steigend",
+      "stable": "Stabil",
+      "disclaimer": "Daten stammen vom Dubai Land Department und internen Analysen. Renditen sind indikativ und können variieren."
+    },
+    "articles": {
+      "label": "Neueste Analysen",
+      "title": "Aktuelle Artikel",
+      "viewAll": "Alle Artikel ansehen",
+      "readArticle": "Artikel lesen"
+    }
+  },
+  "propertyDetail": {
+    "price": "Preis",
+    "bedrooms": "Schlafzimmer",
+    "size": "Größe",
+    "sqftValue": "{{value}} sq ft",
+    "developer": "Bauträger",
+    "completion": "Fertigstellung",
+    "aboutProperty": "Über diese Immobilie",
+    "gallery": "Galerie",
+    "amenities": "Ausstattung & Merkmale",
+    "interestedTitle": "Interesse an dieser Immobilie?",
+    "interestedDescription": "Unser Team kann eine private Besichtigung arrangieren, detaillierte Preisinformationen bereitstellen und Sie durch den gesamten Kaufprozess begleiten.",
+    "contactUs": "Kontaktieren Sie uns"
+  },
+  "blog": {
+    "meta": {
+      "title": "Blog | EmlakBanq",
+      "description": "Aktuelle Nachrichten und Updates vom Luxusimmobilienmarkt in Dubai."
+    },
+    "heading": "Blog & Nachrichten",
+    "subtitle": "Bleiben Sie informiert über aktuelle Markttrends, Projektstarts und Expertenmeinungen"
+  },
+  "privacy": {
+    "meta": { "title": "Datenschutzrichtlinie | EmlakBanq", "description": "Datenschutzrichtlinie von EmlakBanq." },
+    "heading": "Datenschutzrichtlinie"
+  },
+  "terms": {
+    "meta": { "title": "Nutzungsbedingungen | EmlakBanq", "description": "Nutzungsbedingungen von EmlakBanq." },
+    "heading": "Nutzungsbedingungen"
+  },
+  "footer": {
+    "description": "Dubais führende Plattform für Luxusimmobilien mit Expertenberatung für Immobilieninvestitionen, Golden-Visa-Unterstützung und umfassender After-Sales-Betreuung.",
+    "quickLinks": "Schnelllinks",
+    "services": "Dienstleistungen",
+    "legal": "Rechtliches",
+    "privacy": "Datenschutzrichtlinie",
+    "terms": "Nutzungsbedingungen",
+    "newsletter": {
+      "title": "Bleiben Sie informiert",
+      "subtitle": "Erhalten Sie wöchentliche Markteinblicke und exklusive Immobilienbenachrichtigungen.",
+      "placeholder": "Ihre E-Mail eingeben",
+      "subscribe": "Abonnieren"
+    },
+    "copyright": "2026 EmlakBanq. Alle Rechte vorbehalten."
+  },
+  "notFound": {
+    "meta": { "title": "Seite nicht gefunden | EmlakBanq" },
+    "title": "Seite nicht gefunden",
+    "message": "Die gesuchte Seite existiert nicht oder wurde verschoben."
+  },
+  "gdpr": {
+    "cookieConsent": "Wir verwenden Cookies, um Ihr Erlebnis zu verbessern. Durch die weitere Nutzung stimmen Sie unserer Datenschutzrichtlinie zu.",
+    "accept": "Akzeptieren",
+    "decline": "Ablehnen"
+  },
+  "admin": {
+    "common": {
+      "search": "Suchen",
+      "filter": "Filtern",
+      "save": "Speichern",
+      "saveAll": "Alle speichern",
+      "cancel": "Abbrechen",
+      "delete": "Löschen",
+      "edit": "Bearbeiten",
+      "create": "Erstellen",
+      "update": "Aktualisieren",
+      "add": "Hinzufügen",
+      "actions": "Aktionen",
+      "status": "Status",
+      "confirmDelete": "Löschen bestätigen",
+      "deleteMessage": "Sind Sie sicher? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "deleteConfirmMessage": "Möchten Sie \"{{name}}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "saving": "Speichern...",
+      "deleting": "Löschen...",
+      "loading": "Laden...",
+      "noResults": "Keine Ergebnisse gefunden",
+      "noItemsYet": "Noch keine Einträge. Fügen Sie den ersten hinzu.",
+      "addFirstItem": "Ersten Eintrag hinzufügen",
+      "total": "Gesamt",
+      "upload": "Hochladen",
+      "uploading": "Wird hochgeladen...",
+      "orEnterUrl": "oder URL eingeben",
+      "dragDrop": "Ziehen & ablegen oder klicken zum Hochladen",
+      "fileTooLarge": "Datei ist zu groß",
+      "invalidFormat": "Ungültiges Dateiformat",
+      "order": "Reihenfolge",
+      "icon": "Symbol",
+      "title": "Titel",
+      "description": "Beschreibung",
+      "sortOrder": "Sortierreihenfolge",
+      "editItem": "Eintrag bearbeiten",
+      "addItem": "Eintrag hinzufügen",
+      "deleteItem": "Eintrag löschen",
+      "benefits": "Vorteile",
+      "eligibility": "Berechtigung",
+      "processSteps": "Prozessschritte",
+      "manageContent": "Inhalte verwalten",
+      "heroImages": "Hero-Bilder",
+      "heroImagesDesc": "Hintergrundbilder für jeden Seitenheldenbereich",
+      "offices": "Büros",
+      "officesDesc": "Bürostandorte des Unternehmens",
+      "companyStats": "Unternehmensstatistiken",
+      "companyStatsDesc": "Auf der Website angezeigte Statistiken",
+      "brandInfo": "Markeninformationen und Social-Media-Links",
+      "marketHighlights": "Markt-Highlights",
+      "shortTextItems": "Kurze Textelemente im Insights-Bereich",
+      "topAreasROI": "Top-Gebiete ROI",
+      "investmentReturns": "Investitionsrenditen nach Gebiet",
+      "imageUrl": "Bild-URL",
+      "altText": "Alt-Text"
+    },
+    "nav": {
+      "dashboard": "Dashboard",
+      "properties": "Immobilien",
+      "areas": "Gebiete",
+      "blog": "Blog",
+      "buyerGuides": "Käuferratgeber",
+      "goldenVisa": "Golden Visa",
+      "insights": "Analysen",
+      "messages": "Nachrichten",
+      "settings": "Einstellungen"
+    },
+    "topBar": {
+      "logout": "Abmelden",
+      "admin": "Administrator",
+      "backToSite": "Zurück zur Website"
+    },
+    "login": {
+      "title": "Administrator-Anmeldung",
+      "heading": "Bei Ihrem Konto anmelden",
+      "email": "E-Mail",
+      "password": "Passwort",
+      "emailPlaceholder": "E-Mail-Adresse eingeben",
+      "passwordPlaceholder": "Passwort eingeben",
+      "signIn": "Anmelden",
+      "signingIn": "Anmelden...",
+      "backToSite": "Zurück zu EmlakBanq",
+      "invalidCredentials": "Ungültige E-Mail-Adresse oder ungültiges Passwort."
+    },
+    "dashboard": {
+      "welcomeBack": "Willkommen zurück, {{name}}",
+      "overview": "Hier ist ein Überblick über Ihr EmlakBanq Admin-Panel.",
+      "totalProperties": "Gesamt Immobilien",
+      "totalAreas": "Gesamt Gebiete",
+      "blogPosts": "Blogbeiträge",
+      "unreadMessages": "Ungelesene Nachrichten",
+      "quickActions": "Schnellaktionen",
+      "newProperty": "Neue Immobilie",
+      "addListing": "Inserat hinzufügen",
+      "newBlogPost": "Neuer Blogbeitrag",
+      "writeArticle": "Artikel schreiben",
+      "newArea": "Neues Gebiet",
+      "addLocation": "Standort hinzufügen",
+      "viewMessages": "Nachrichten",
+      "viewSubmissions": "Anfragen ansehen",
+      "recentMessages": "Letzte Nachrichten",
+      "viewAll": "Alle ansehen",
+      "noMessages": "Noch keine Nachrichten.",
+      "noMessageContent": "Kein Nachrichteninhalt"
+    },
+    "properties": {
+      "title": "Immobilien",
+      "subtitle": "Verwalten Sie Ihre Immobilienangebote",
+      "addNew": "Neue Immobilie hinzufügen",
+      "editProperty": "Immobilie bearbeiten",
+      "addProperty": "Immobilie hinzufügen",
+      "backToProperties": "Zurück zu Immobilien",
+      "image": "Bild",
+      "name": "Titel",
+      "type": "Typ",
+      "location": "Standort",
+      "price": "Preis",
+      "featured": "Hervorgehoben",
+      "noProperties": "Keine Immobilien gefunden. Fügen Sie Ihre erste Immobilie hinzu, um zu beginnen.",
+      "deleteError": "Löschen der Immobilie fehlgeschlagen.",
+      "notFound": "Immobilie nicht gefunden.",
+      "failedToSave": "Immobilie konnte nicht gespeichert werden.",
+      "loadingProperty": "Immobilie wird geladen..."
+    },
+    "propertyForm": {
+      "basicInfo": "Grundinformationen",
+      "propertyName": "Immobilienname",
+      "propertyNamePlaceholder": "z.B. Palm Residences Tower A",
+      "propertyNameHelp": "Immobilienname in allen unterstützten Sprachen. Slug wird automatisch aus dem Englischen generiert.",
+      "slug": "Slug",
+      "slugPlaceholder": "automatisch-aus-titel-generiert",
+      "slugHelp": "URL-freundliche Kennung. Wird automatisch aus dem englischen Titel generiert.",
+      "type": "Typ",
+      "typeOptions": {
+        "apartment": "Wohnung",
+        "villa": "Villa",
+        "penthouse": "Penthouse",
+        "townhouse": "Reihenhaus"
+      },
+      "typeLabel": "Typ-Label",
+      "typeLabelPlaceholder": "z.B. Luxusapartment",
+      "typeLabelHelp": "Anzeigelabel auf der Immobilienkarte in allen Sprachen.",
+      "location": "Standort",
+      "locationPlaceholder": "z.B. Dubai Marina",
+      "locationHelp": "Immobilienstandort in allen unterstützten Sprachen.",
+      "price": "Preis",
+      "pricePlaceholder": "z.B. AED 2,500,000",
+      "beds": "Schlafzimmer",
+      "bedsPlaceholder": "z.B. 3",
+      "sqft": "Quadratfuß",
+      "sqftPlaceholder": "z.B. 2,450",
+      "developer": "Entwickler",
+      "developerPlaceholder": "z.B. Emaar Properties",
+      "year": "Baujahr",
+      "yearPlaceholder": "z.B. 2024",
+      "media": "Medien",
+      "image": "Hauptbild-URL",
+      "imagePlaceholder": "https://example.com/image.jpg",
+      "gallery": "Galerie",
+      "galleryPlaceholder": "Eine Bild-URL pro Zeile",
+      "galleryHelp": "Geben Sie eine Bild-URL pro Zeile ein. Diese werden in der Immobiliengalerie angezeigt.",
+      "details": "Details",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Detaillierte Beschreibung der Immobilie...",
+      "amenities": "Ausstattung",
+      "amenitiesPlaceholder": "Eine Ausstattung pro Zeile",
+      "amenitiesHelp": "Geben Sie eine Ausstattung pro Zeile ein (z.B. Schwimmbad, Fitnessstudio, Parkplatz).",
+      "settings": "Einstellungen",
+      "sortOrder": "Sortierreihenfolge",
+      "sortOrderPlaceholder": "0",
+      "sortOrderHelp": "Niedrigere Zahlen werden zuerst angezeigt.",
+      "featured": "Hervorgehoben",
+      "updateProperty": "Immobilie aktualisieren",
+      "createProperty": "Immobilie erstellen",
+      "cancel": "Abbrechen"
+    },
+    "areas": {
+      "title": "Gebiete",
+      "subtitle": "Verwalten Sie Dubai-Gebietsangebote",
+      "addNew": "Neues Gebiet hinzufügen",
+      "editArea": "Gebiet bearbeiten",
+      "addArea": "Gebiet hinzufügen",
+      "backToAreas": "Zurück zu Gebieten",
+      "noAreas": "Keine Gebiete gefunden. Fügen Sie Ihr erstes Gebiet hinzu, um zu beginnen.",
+      "image": "Bild",
+      "name": "Name",
+      "tagline": "Slogan",
+      "avgPrice": "Durchschn. Preis",
+      "roi": "ROI",
+      "featured": "Hervorgehoben",
+      "notFound": "Gebiet nicht gefunden.",
+      "failedToSave": "Gebiet konnte nicht gespeichert werden.",
+      "failedToDelete": "Gebiet konnte nicht gelöscht werden.",
+      "loadingArea": "Gebiet wird geladen..."
+    },
+    "areaForm": {
+      "basicInfo": "Grundinformationen",
+      "areaName": "Gebietsname",
+      "areaNamePlaceholder": "z.B. Dubai Marina",
+      "areaNameHelp": "Gebietsname in allen unterstützten Sprachen. Slug und Schlüssel werden automatisch aus dem Englischen generiert.",
+      "key": "Schlüssel",
+      "keyPlaceholder": "z.B. dubai-marina",
+      "keyHelp": "Eindeutiger Identifikationsschlüssel. Wird automatisch aus dem englischen Namen generiert.",
+      "slug": "Slug",
+      "slugPlaceholder": "z.B. dubai-marina",
+      "slugHelp": "URL-freundliche Kennung. Wird automatisch aus dem englischen Namen generiert.",
+      "imageUrl": "Bild-URL",
+      "imagePlaceholder": "https://example.com/area.jpg",
+      "avgPrice": "Durchschnittspreis",
+      "avgPricePlaceholder": "z.B. AED 2.5M",
+      "roi": "ROI",
+      "roiPlaceholder": "z.B. 7.2%",
+      "descriptions": "Beschreibungen",
+      "shortDescription": "Kurzbeschreibung",
+      "shortDescPlaceholder": "Kurze Zusammenfassung des Gebiets...",
+      "shortDescHelp": "Kurzbeschreibung auf Gebietskarten in allen Sprachen.",
+      "longDescription": "Ausführliche Beschreibung",
+      "longDescPlaceholder": "Detaillierte Beschreibung des Gebiets...",
+      "longDescHelp": "Detaillierte Beschreibung auf der Gebietsdetailseite in allen Sprachen.",
+      "highlights": "Highlights",
+      "highlightsPlaceholder": "Ein Highlight pro Zeile",
+      "highlightsHelp": "Geben Sie ein Highlight pro Zeile ein (z.B. Strandleben, Weltklasse-Gastronomie).",
+      "settings": "Einstellungen",
+      "sortOrder": "Sortierreihenfolge",
+      "sortOrderPlaceholder": "0",
+      "sortOrderHelp": "Niedrigere Zahlen werden zuerst angezeigt.",
+      "featured": "Hervorgehoben",
+      "updateArea": "Gebiet aktualisieren",
+      "createArea": "Gebiet erstellen",
+      "cancel": "Abbrechen"
+    },
+    "blog": {
+      "title": "Blogbeiträge",
+      "subtitle": "Blog-Inhalte verwalten",
+      "addNew": "Neuen Beitrag hinzufügen",
+      "editPost": "Blogbeitrag bearbeiten",
+      "addPost": "Blogbeitrag hinzufügen",
+      "backToBlog": "Zurück zu Blogbeiträgen",
+      "image": "Bild",
+      "title": "Titel",
+      "category": "Kategorie",
+      "published": "Veröffentlicht",
+      "date": "Datum",
+      "noPosts": "Keine Blogbeiträge gefunden. Fügen Sie Ihren ersten Beitrag hinzu, um zu beginnen.",
+      "deleteTitle": "Blogbeitrag löschen",
+      "deleteConfirm": "Sind Sie sicher, dass Sie diesen Beitrag löschen möchten?",
+      "columnTitle": "Titel",
+      "author": "Autor",
+      "publishedStatus": "Veröffentlicht",
+      "draftStatus": "Entwurf",
+      "notFound": "Blogbeitrag nicht gefunden.",
+      "failedToSave": "Blogbeitrag konnte nicht gespeichert werden.",
+      "failedToDelete": "Blogbeitrag konnte nicht gelöscht werden.",
+      "loadingPost": "Blogbeitrag wird geladen..."
+    },
+    "blogForm": {
+      "basicInfo": "Grundinformationen",
+      "title": "Titel",
+      "titlePlaceholder": "z.B. Dubai Immobilienmarkt-Update 2025",
+      "titleHelp": "Blogbeitragstitel in allen unterstützten Sprachen. Slug wird automatisch aus dem Englischen generiert.",
+      "slug": "Slug",
+      "slugPlaceholder": "automatisch-aus-titel-generiert",
+      "slugHelp": "URL-freundliche Kennung. Wird automatisch aus dem englischen Titel generiert.",
+      "category": "Kategorie",
+      "categoryPlaceholder": "z.B. Marktanalysen",
+      "categoryHelp": "Kategoriename in allen unterstützten Sprachen.",
+      "categoryColor": "Kategoriefarbe",
+      "categoryColorPlaceholder": "z.B. bg-blue-100 text-blue-700",
+      "categoryColorHelp": "Tailwind CSS-Klassen für das Kategorie-Badge.",
+      "date": "Datum",
+      "datePlaceholder": "z.B. 15. März 2025",
+      "dateHelp": "Angezeigtes Datum auf dem Blogbeitrag.",
+      "imageUrl": "Bild-URL",
+      "imagePlaceholder": "https://example.com/blog-image.jpg",
+      "publishedAt": "Veröffentlicht am",
+      "publishedAtPlaceholder": "z.B. 2025-03-15T10:00:00Z",
+      "publishedAtHelp": "ISO-Zeitstempel für die Veröffentlichung dieses Beitrags.",
+      "content": "Inhalt",
+      "excerpt": "Auszug",
+      "excerptPlaceholder": "Kurze Zusammenfassung für die Blogliste...",
+      "excerptHelp": "Kurzer Auszug auf der Blog-Listenseite in allen Sprachen.",
+      "fullContent": "Inhalt",
+      "contentPlaceholder": "Vollständiger Blogbeitragsinhalt...",
+      "contentHelp": "Vollständiger Blogbeitragsinhalt in allen unterstützten Sprachen.",
+      "imagePreview": "Bildvorschau",
+      "settings": "Einstellungen",
+      "sortOrder": "Sortierreihenfolge",
+      "sortOrderPlaceholder": "0",
+      "sortOrderHelp": "Niedrigere Zahlen werden zuerst angezeigt.",
+      "published": "Veröffentlicht",
+      "updatePost": "Beitrag aktualisieren",
+      "createPost": "Beitrag erstellen",
+      "cancel": "Abbrechen"
+    },
+    "buyerGuides": {
+      "title": "Käuferratgeber",
+      "subtitle": "Käuferratgeber-Inhalte verwalten",
+      "addNew": "Neuen Ratgeber hinzufügen",
+      "editGuide": "Ratgeber bearbeiten",
+      "addGuide": "Ratgeber hinzufügen",
+      "backToGuides": "Zurück zu Ratgebern",
+      "noGuides": "Keine Ratgeber gefunden. Fügen Sie Ihren ersten Ratgeber hinzu, um zu beginnen.",
+      "image": "Bild",
+      "columnTitle": "Titel",
+      "tag": "Tag",
+      "readTime": "Lesezeit",
+      "notFound": "Käuferleitfaden nicht gefunden.",
+      "failedToSave": "Käuferleitfaden konnte nicht gespeichert werden.",
+      "failedToDelete": "Käuferleitfaden konnte nicht gelöscht werden.",
+      "loadingGuide": "Käuferleitfaden wird geladen..."
+    },
+    "buyerGuideForm": {
+      "basicInfo": "Grundinformationen",
+      "title": "Titel",
+      "titlePlaceholder": "z.B. Erstkäufer-Leitfaden für Dubai",
+      "slug": "Slug",
+      "slugPlaceholder": "automatisch-aus-titel-generiert",
+      "slugHelp": "URL-freundliche Kennung. Wird automatisch aus dem Titel generiert.",
+      "imageUrl": "Bild-URL",
+      "imagePlaceholder": "https://example.com/guide-image.jpg",
+      "readTime": "Lesezeit",
+      "readTimePlaceholder": "z.B. 8 Min. Lesezeit",
+      "content": "Inhalt",
+      "description": "Beschreibung",
+      "descriptionPlaceholder": "Beschreibung oder Zusammenfassung des Ratgebers...",
+      "styling": "Gestaltung",
+      "tag": "Tag",
+      "tagPlaceholder": "z.B. Wesentlich",
+      "tagHelp": "Tag-Text, der auf der Ratgeberkarte angezeigt wird.",
+      "tagColor": "Tag-Farbe",
+      "tagColorPlaceholder": "z.B. bg-blue-100 text-blue-700",
+      "tagColorHelp": "Tailwind CSS-Klassen für das Tag-Badge.",
+      "borderColor": "Rahmenfarbe",
+      "borderColorPlaceholder": "z.B. border-blue-200",
+      "borderColorHelp": "Tailwind CSS-Klasse für die Kartenrahmenfarbe.",
+      "imagePreview": "Bildvorschau",
+      "settings": "Einstellungen",
+      "sortOrder": "Sortierreihenfolge",
+      "sortOrderHelp": "Niedrigere Zahlen werden zuerst angezeigt."
+    },
+    "contactSubmissions": {
+      "title": "Kontaktnachrichten",
+      "subtitle": "Eingehende Anfragen und Nachrichten verwalten",
+      "all": "Alle",
+      "unread": "Ungelesen",
+      "read": "Gelesen",
+      "name": "Name",
+      "email": "E-Mail",
+      "phone": "Telefon",
+      "interest": "Immobilieninteresse",
+      "date": "Datum",
+      "status": "Status",
+      "actions": "Aktionen",
+      "noUnreadMessages": "Keine ungelesenen Nachrichten",
+      "noReadMessages": "Keine gelesenen Nachrichten",
+      "noMessagesYet": "Noch keine Nachrichten",
+      "viewMessage": "Nachricht anzeigen",
+      "markAsRead": "Als gelesen markieren",
+      "markAsUnread": "Als ungelesen markieren",
+      "readStatus": "Gelesen",
+      "unreadStatus": "Ungelesen",
+      "message": "Nachricht",
+      "noMessageProvided": "Keine Nachricht angegeben",
+      "deleteTitle": "Nachricht löschen",
+      "deleteConfirm": "Möchten Sie die Nachricht von \"{{name}}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden."
+    },
+    "goldenVisa": {
+      "subtitle": "Vorteile, Berechtigungskriterien und Prozessschritte verwalten",
+      "iconPlaceholder": "z.B. Emoji oder Icon-Klasse",
+      "titlePlaceholder": "Elementtitel",
+      "descriptionPlaceholder": "Dieses Element beschreiben..."
+    },
+    "insights": {
+      "subtitle": "Markt-Highlights und Gebiets-ROI-Daten verwalten",
+      "highlightsPlaceholder": "Highlight-Text eingeben...",
+      "noHighlights": "Noch keine Highlights. Fügen Sie das erste hinzu.",
+      "noAreas": "Noch keine Gebiete. Fügen Sie das erste hinzu.",
+      "area": "Gebiet",
+      "areaPlaceholder": "z.B. Dubai Marina",
+      "roi": "ROI",
+      "roiPlaceholder": "z.B. 8,5%",
+      "priceRange": "Preisspanne",
+      "priceRangePlaceholder": "z.B. AED 1,2M - 5M",
+      "trend": "Trend",
+      "trendUp": "Aufwärts",
+      "trendStable": "Stabil",
+      "editArea": "Gebiet bearbeiten",
+      "addArea": "Gebiet hinzufügen"
+    },
+    "settings": {
+      "title": "Website-Einstellungen",
+      "subtitle": "Hero-Bilder, Büros, Unternehmensstatistiken und globale Einstellungen verwalten",
+      "noOffices": "Noch keine Büros. Fügen Sie das erste hinzu.",
+      "noStats": "Noch keine Statistiken. Fügen Sie die erste hinzu.",
+      "noSiteSettings": "Keine Website-Einstellungen gefunden.",
+      "editOffice": "Büro bearbeiten",
+      "addOffice": "Büro hinzufügen",
+      "editStat": "Statistik bearbeiten",
+      "addStat": "Statistik hinzufügen",
+      "city": "Stadt",
+      "cityPlaceholder": "z.B. Dubai",
+      "address": "Adresse",
+      "addressPlaceholder": "Vollständige Büroadresse",
+      "phone": "Telefon",
+      "email": "E-Mail",
+      "value": "Wert",
+      "valuePlaceholder": "z.B. 350+",
+      "label": "Bezeichnung",
+      "labelPlaceholder": "z.B. Gelistete Immobilien",
+      "brandName": "Markenname",
+      "domain": "Domain",
+      "tagline": "Slogan",
+      "socialMediaLinks": "Social-Media-Links"
+    }
+  },
+  "components": {
+    "confirmDialog": {
+      "title": "Löschen bestätigen",
+      "message": "Sind Sie sicher? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "confirm": "Löschen",
+      "cancel": "Abbrechen"
+    },
+    "multilingualInput": {
+      "translated": "Übersetzt",
+      "missing": "Fehlt",
+      "characters": "Zeichen"
+    },
+    "adminFormField": {
+      "selectPlaceholder": "Auswählen..."
+    },
+    "imageWithLoader": {
+      "errorMessage": "Bild konnte nicht geladen werden"
+    },
+    "loadingSkeleton": {
+      "loading": "Laden..."
+    }
+  }
+}
