@@ -3,9 +3,11 @@ import { Link } from 'react-router-dom'
 import SEOHead from '../components/seo/SEOHead'
 import Container from '../components/common/Container'
 import { ROUTES } from '../config/routes'
+import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 
 export default function GoldenVisa() {
   const { t } = useTranslation()
+  const benefitsRef = useRevealOnScroll()
 
   return (
     <>
@@ -15,38 +17,42 @@ export default function GoldenVisa() {
       />
 
       {/* ── Hero ────────────────────────────────────────────────────── */}
-      <section className="bg-estate-900 py-24 text-white lg:py-32">
-        <Container>
-          <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
-            {t('goldenVisa.subtitle', 'UAE Golden Visa')}
+      <section className="relative overflow-hidden bg-estate-900 pb-24 pt-36 text-white lg:pb-32 lg:pt-44">
+        {/* Decorative elements */}
+        <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute -left-20 bottom-0 h-60 w-60 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent" />
+        <Container className="relative z-10">
+          <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
+            {t('goldenVisa.subtitle', 'Turkish Citizenship')}
           </p>
           <h1 className="mt-4 max-w-4xl font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            {t('goldenVisa.heading', 'Your Gateway to UAE Residency Through Property Investment')}
+            {t('goldenVisa.heading', 'Your Gateway to Turkish Citizenship Through Property Investment')}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-estate-300">
             {t(
               'goldenVisa.hero.subtitle',
-              'The UAE Golden Visa programme offers long-term residency to property investors, providing a world-class lifestyle in one of the globe\'s most dynamic economies.'
+              'Turkey\'s Citizenship by Investment programme offers full citizenship to property investors, providing a world-class lifestyle at the crossroads of Europe and Asia.'
             )}
           </p>
           <p className="mt-4 max-w-2xl text-base leading-relaxed text-estate-400">
             {t(
               'goldenVisa.hero.intro',
-              'EmlakBanq provides end-to-end Golden Visa assistance -- from identifying qualifying properties to completing your visa application. Our dedicated team has helped hundreds of families secure their UAE residency with confidence.'
+              'EmlakBanq provides end-to-end citizenship assistance -- from identifying qualifying properties to completing your application. Our dedicated team has helped hundreds of families secure their Turkish citizenship with confidence.'
             )}
           </p>
         </Container>
       </section>
 
       {/* ── Benefits ────────────────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-20 lg:py-24" ref={benefitsRef}>
         <Container>
           <div className="text-center">
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-600">
-              {t('goldenVisa.benefits.label', 'Why Golden Visa?')}
+            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
+              {t('goldenVisa.benefits.label', 'Why Turkish Citizenship?')}
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
-              {t('goldenVisa.benefits.title', 'Benefits of the UAE Golden Visa')}
+              {t('goldenVisa.benefits.title', 'Benefits of Turkish Citizenship by Investment')}
             </h2>
           </div>
 
@@ -54,7 +60,7 @@ export default function GoldenVisa() {
             {['renewable_residency', 'family_sponsorship', 'business_ownership', 'ease_of_travel', 'tax_free', 'premium_services'].map((benefitKey) => (
               <div
                 key={benefitKey}
-                className="group rounded-2xl border border-estate-100 bg-white p-7 transition-all duration-300 hover:-translate-y-1 hover:border-gold-200 hover:shadow-lg"
+                className="card-premium reveal group rounded-2xl bg-white p-7 transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Green checkmark indicator */}
                 <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-50">
@@ -86,11 +92,11 @@ export default function GoldenVisa() {
       </section>
 
       {/* ── Eligibility ─────────────────────────────────────────────── */}
-      <section className="bg-cream-50 py-20 lg:py-24">
+      <section className="bg-yellow-50 py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
             <div className="text-center">
-              <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-600">
+              <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
                 {t('goldenVisa.eligibility.label', 'Requirements')}
               </p>
               <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
@@ -99,7 +105,7 @@ export default function GoldenVisa() {
               <p className="mx-auto mt-4 max-w-xl text-estate-500">
                 {t(
                   'goldenVisa.eligibility.description',
-                  'The following criteria apply to the property investor route of the UAE Golden Visa programme.'
+                  'The following criteria apply to the property investor route of the Turkish Citizenship by Investment programme.'
                 )}
               </p>
             </div>
@@ -108,9 +114,9 @@ export default function GoldenVisa() {
               {[1,2,3,4,5,6].map((index) => (
                 <div
                   key={index}
-                  className="flex items-start gap-4 rounded-xl border border-estate-100 bg-white px-6 py-4 transition-all duration-300 hover:border-gold-200 hover:shadow-sm"
+                  className="flex items-start gap-4 rounded-xl border border-estate-100 bg-white px-6 py-4 transition-all duration-300 hover:border-blue-200 hover:shadow-sm"
                 >
-                  <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-gold-100 text-xs font-bold text-gold-800">
+                  <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-800">
                     {index}
                   </div>
                   <p className="text-sm leading-relaxed text-estate-700">
@@ -127,11 +133,11 @@ export default function GoldenVisa() {
       <section className="bg-white py-20 lg:py-24">
         <Container>
           <div className="text-center">
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-600">
+            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
               {t('goldenVisa.process.label', 'How It Works')}
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
-              {t('goldenVisa.process.title', 'Your Path to the Golden Visa')}
+              {t('goldenVisa.process.title', 'Your Path to Turkish Citizenship')}
             </h2>
           </div>
 
@@ -139,7 +145,7 @@ export default function GoldenVisa() {
             {[1,2,3,4].map((stepNumber) => (
               <div key={stepNumber} className="relative text-center">
                 {/* Step Number */}
-                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-gold-500 to-gold-700 shadow-lg shadow-gold-500/20">
+                <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg shadow-blue-500/20">
                   <span className="font-heading text-2xl font-bold text-white">
                     {stepNumber}
                   </span>
@@ -147,7 +153,7 @@ export default function GoldenVisa() {
 
                 {/* Connector line (hidden on last item and mobile) */}
                 {stepNumber < 4 && (
-                  <div className="absolute left-[calc(50%+2.5rem)] top-8 hidden h-px w-[calc(100%-3rem)] bg-gradient-to-r from-gold-300 to-gold-100 lg:block" />
+                  <div className="absolute left-[calc(50%+2.5rem)] top-8 hidden h-px w-[calc(100%-3rem)] bg-gradient-to-r from-blue-300 to-blue-100 lg:block" />
                 )}
 
                 <h3 className="mt-6 font-heading text-lg font-semibold text-estate-900">
@@ -166,9 +172,9 @@ export default function GoldenVisa() {
       <section className="bg-gradient-to-br from-estate-900 via-estate-800 to-estate-900 py-24 text-center text-white">
         <Container>
           <div className="mx-auto max-w-2xl">
-            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-gold-500/20">
+            <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/20">
               <svg
-                className="h-8 w-8 text-gold-400"
+                className="h-8 w-8 text-blue-400"
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -183,7 +189,7 @@ export default function GoldenVisa() {
             </div>
 
             <h2 className="mt-6 font-heading text-3xl font-bold md:text-4xl lg:text-5xl">
-              {t('goldenVisa.cta.title', 'Start Your Golden Visa Journey')}
+              {t('goldenVisa.cta.title', 'Start Your Citizenship Journey')}
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-estate-300">
               {t(
@@ -193,7 +199,7 @@ export default function GoldenVisa() {
             </p>
             <Link
               to={ROUTES.CONTACT}
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold-500 px-8 py-4 text-lg font-medium text-estate-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/25"
+              className="btn-glow mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-8 py-4 text-lg font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400"
             >
               {t('goldenVisa.cta.button', 'Book Free Consultation')}
               <svg

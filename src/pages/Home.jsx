@@ -10,6 +10,7 @@ import { useServices } from '../hooks/useServices'
 import { useDataStore } from '../stores/useDataStore'
 import LoadingSkeleton from '../components/common/LoadingSkeleton'
 import ImageWithLoader from '../components/common/ImageWithLoader'
+import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 
 export default function Home() {
   const { t } = useTranslation()
@@ -18,6 +19,11 @@ export default function Home() {
   const { data: services, loading: loadingServices } = useServices()
   const heroImages = useDataStore((s) => s.heroImages)
   const fetchHeroImages = useDataStore((s) => s.fetchHeroImages)
+
+  const featuredRef = useRevealOnScroll()
+  const zonesRef = useRevealOnScroll()
+  const servicesRef = useRevealOnScroll()
+  const ctaRef = useRevealOnScroll()
 
   useEffect(() => { fetchHeroImages() }, [])
 
@@ -29,24 +35,34 @@ export default function Home() {
       />
 
       {/* ===== HERO SECTION ===== */}
-      <section className="relative flex min-h-[90vh] items-center overflow-hidden bg-estate-900 text-white">
+      <section className="relative flex min-h-screen items-center overflow-hidden bg-estate-900 text-white">
         {/* Background Image */}
         <div className="absolute inset-0">
           <ImageWithLoader
             src={heroImages?.home || ''}
-            alt="Dubai skyline"
+            alt="Alanya skyline"
             priority={true}
           />
-          <div className="absolute inset-0 bg-estate-900/70" />
+          <div className="absolute inset-0 bg-gradient-to-b from-estate-950/80 via-estate-900/60 to-estate-950/90" />
+          {/* Subtle radial accent */}
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_20%_50%,rgba(26,167,215,0.08),transparent_60%)]" />
         </div>
-        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/50 to-transparent" />
+
+        {/* Top-left corner accent */}
+        <div className="absolute left-0 top-0 h-48 w-px bg-gradient-to-b from-blue-400/50 to-transparent" />
+        <div className="absolute left-0 top-0 h-px w-48 bg-gradient-to-r from-blue-400/50 to-transparent" />
+        {/* Bottom-right corner accent */}
+        <div className="absolute bottom-0 right-0 h-48 w-px bg-gradient-to-t from-blue-400/30 to-transparent" />
+        <div className="absolute bottom-0 right-0 h-px w-48 bg-gradient-to-l from-blue-400/30 to-transparent" />
 
         <Container className="relative z-10 py-20">
           <div className="animate-fade-in">
-            <span className="mb-6 inline-block font-body text-xs font-semibold uppercase tracking-[0.3em] text-gold-400">
+            <span className="mb-6 inline-flex items-center gap-3 font-body text-xs font-semibold uppercase tracking-[0.3em] text-blue-400">
+              <span className="inline-block h-px w-12 bg-gradient-to-r from-blue-400/60 to-blue-300/30" />
               {t('common.tagline')}
             </span>
-            <h1 className="max-w-4xl font-heading text-4xl leading-[1.1] font-bold tracking-tight md:text-5xl lg:text-7xl">
+            <h1 className="max-w-4xl text-3xl leading-[1.1] font-light tracking-tight text-white md:text-4xl lg:text-6xl" style={{ fontFamily: '"Montserrat", sans-serif' }}>
               {t('home.hero.title')}
             </h1>
             <p className="mt-8 max-w-2xl text-lg leading-relaxed text-estate-300 md:text-xl">
@@ -56,93 +72,99 @@ export default function Home() {
             <div className="mt-10 flex flex-col gap-4 sm:flex-row sm:items-center">
               <Link
                 to={ROUTES.PROPERTIES}
-                className="inline-flex items-center justify-center rounded-sm bg-gold-500 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-gold-600 hover:shadow-lg hover:shadow-gold-500/20"
+                className="btn-glow inline-flex items-center justify-center gap-2 rounded-md bg-blue-500 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-500 hover:bg-blue-400"
               >
                 {t('common.cta.viewProperties')}
+                <span className="text-base">&rarr;</span>
               </Link>
               <Link
                 to={ROUTES.CONTACT}
-                className="inline-flex items-center justify-center rounded-sm border border-white/20 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:border-gold-400 hover:text-gold-400"
+                className="btn-glow-outline inline-flex items-center justify-center rounded-md border border-white/20 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white/90 backdrop-blur-sm transition-all duration-500 hover:border-blue-400/60 hover:bg-white/5 hover:text-blue-400"
               >
                 {t('common.cta.bookConsultation')}
               </Link>
             </div>
 
             {/* Mini stats row */}
-            <div className="mt-16 flex flex-wrap gap-8 border-t border-estate-700/50 pt-8 md:gap-16">
-              <div>
-                <p className="font-heading text-3xl font-bold text-gold-400">
-                  {t('home.stats.experts')}
-                </p>
-                <p className="mt-1 text-sm text-estate-400">
-                  {t('home.stats.expertsLabel')}
-                </p>
-              </div>
-              <div>
-                <p className="font-heading text-3xl font-bold text-gold-400">
-                  {t('home.stats.properties')}
-                </p>
-                <p className="mt-1 text-sm text-estate-400">
-                  {t('home.stats.propertiesLabel')}
-                </p>
-              </div>
-              <div>
-                <p className="font-heading text-3xl font-bold text-gold-400">
-                  {t('home.stats.countries')}
-                </p>
-                <p className="mt-1 text-sm text-estate-400">
-                  {t('home.stats.countriesLabel')}
-                </p>
-              </div>
-              <div>
-                <p className="font-heading text-3xl font-bold text-gold-400">
-                  {t('home.stats.volume')}
-                </p>
-                <p className="mt-1 text-sm text-estate-400">
-                  {t('home.stats.volumeLabel')}
-                </p>
-              </div>
+            <div className="mt-16 flex flex-wrap gap-8 pt-8 md:gap-0">
+              {[
+                { value: t('home.stats.experts'), label: t('home.stats.expertsLabel') },
+                { value: t('home.stats.properties'), label: t('home.stats.propertiesLabel') },
+                { value: t('home.stats.countries'), label: t('home.stats.countriesLabel') },
+                { value: t('home.stats.volume'), label: t('home.stats.volumeLabel') },
+              ].map((stat, index) => (
+                <div key={index} className="flex items-center gap-8 md:gap-0">
+                  {index > 0 && (
+                    <div className="hidden h-12 w-px bg-gradient-to-b from-transparent via-blue-500/30 to-transparent md:mx-10 md:block" />
+                  )}
+                  <div>
+                    <p className="font-heading text-3xl font-bold text-blue-400 lg:text-4xl">
+                      {stat.value}
+                    </p>
+                    <p className="mt-1 text-xs uppercase tracking-[0.2em] text-estate-400">
+                      {stat.label}
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </Container>
+
       </section>
 
       {/* ===== FEATURED PROPERTIES ===== */}
-      <section className="bg-cream-50 py-20 md:py-28">
+      <section className="bg-yellow-50 py-24 md:py-32" ref={featuredRef}>
         <Container>
-          <div className="animate-slide-up text-center">
-            <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.3em] text-gold-500">
+          <div className="reveal flex flex-col items-start md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-blue-600">
+                <span className="inline-block h-px w-12 bg-gradient-to-r from-blue-500 to-blue-300" />
+                {t('common.cta.viewAll')}
+              </span>
+              <h2 className="font-heading text-3xl font-bold tracking-tight text-estate-900 md:text-4xl lg:text-5xl">
+                {t('home.featured.title')}
+              </h2>
+              <p className="mt-4 max-w-xl text-base text-estate-400 md:text-lg">
+                {t('home.featured.subtitle')}
+              </p>
+            </div>
+            <Link
+              to={ROUTES.PROPERTIES}
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-blue-600 transition-colors hover:text-blue-700 md:mt-0"
+            >
               {t('common.cta.viewAll')}
-            </span>
-            <h2 className="font-heading text-3xl font-bold text-estate-900 md:text-4xl lg:text-5xl">
-              {t('home.featured.title')}
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-estate-400 md:text-lg">
-              {t('home.featured.subtitle')}
-            </p>
+              <span>&rarr;</span>
+            </Link>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-12">
             {loadingFeatured && <LoadingSkeleton variant="card" count={6} columns={3} />}
-            {!loadingFeatured && featured?.map((property) => (
+            {!loadingFeatured && featured?.map((property, index) => (
               <Link
                 key={property.id}
                 to={ROUTES.PROPERTIES}
-                className="group animate-slide-up overflow-hidden rounded-sm bg-white shadow-sm transition-all duration-500 hover:-translate-y-1 hover:shadow-xl hover:shadow-estate-900/5"
+                className={`reveal reveal-delay-${(index % 3) + 1} card-premium group overflow-hidden rounded-2xl ${
+                  index === 0
+                    ? 'lg:col-span-7 lg:row-span-2'
+                    : index < 3
+                      ? 'lg:col-span-5'
+                      : 'lg:col-span-4'
+                }`}
               >
                 {/* Property Image */}
-                <div className="relative h-64 overflow-hidden">
+                <div className={`relative overflow-hidden ${index === 0 ? 'h-72 lg:h-full lg:min-h-[420px]' : 'h-56'}`}>
                   <ImageWithLoader
                     src={property.image}
                     alt={property.name}
-                    className="transition-transform duration-700 group-hover:scale-105"
+                    className="transition-transform duration-1000 ease-out group-hover:scale-105"
                   />
                   {/* Type badge */}
-                  <span className="absolute left-4 top-4 rounded-sm bg-gold-500 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-white">
+                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-estate-800 backdrop-blur-sm">
                     {property.type_label}
                   </span>
                   {/* Price overlay */}
-                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/60 to-transparent px-5 pb-4 pt-8">
+                  <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-5 pb-5 pt-12">
                     <p className="font-heading text-xl font-bold text-white">
                       {property.price}
                     </p>
@@ -150,7 +172,7 @@ export default function Home() {
                 </div>
 
                 <div className="p-5">
-                  <h3 className="font-heading text-lg font-bold text-estate-900 transition-colors group-hover:text-gold-600">
+                  <h3 className="font-heading text-lg font-bold text-estate-900 transition-colors duration-300 group-hover:text-blue-600">
                     {property.name}
                   </h3>
                   <p className="mt-1 text-sm text-estate-400">
@@ -158,11 +180,11 @@ export default function Home() {
                   </p>
                   <div className="mt-4 flex items-center gap-6 border-t border-estate-100 pt-4 text-sm text-estate-500">
                     <span className="flex items-center gap-1.5">
-                      <span className="inline-block h-1 w-1 rounded-full bg-gold-500" />
+                      <span className="inline-block h-1 w-1 rounded-full bg-blue-500" />
                       {property.beds} {t('common.bedrooms')}
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <span className="inline-block h-1 w-1 rounded-full bg-gold-500" />
+                      <span className="inline-block h-1 w-1 rounded-full bg-blue-500" />
                       {property.sqft} {t('common.sqft')}
                     </span>
                   </div>
@@ -170,73 +192,82 @@ export default function Home() {
               </Link>
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              to={ROUTES.PROPERTIES}
-              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-gold-600 transition-colors hover:text-gold-700"
-            >
-              {t('common.cta.viewAll')}
-              <span className="transition-transform group-hover:translate-x-1">&rarr;</span>
-            </Link>
-          </div>
         </Container>
       </section>
 
       {/* ===== PRIME INVESTMENT ZONES ===== */}
-      <section className="bg-estate-900 py-20 md:py-28">
-        <Container>
-          <div className="animate-slide-up text-center">
-            <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.3em] text-gold-400">
+      <section className="relative bg-estate-900 py-24 md:py-32" ref={zonesRef}>
+        {/* Subtle dot pattern texture */}
+        <div className="absolute inset-0 opacity-[0.03]">
+          <div className="absolute inset-0" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, rgba(26,167,215,0.4) 1px, transparent 0)', backgroundSize: '40px 40px' }} />
+        </div>
+
+        <Container className="relative z-10">
+          <div className="reveal flex flex-col items-start md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-blue-400">
+                <span className="inline-block h-px w-12 bg-gradient-to-r from-blue-400/60 to-blue-300/30" />
+                {t('common.cta.exploreAreas')}
+              </span>
+              <h2 className="font-heading text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
+                {t('home.areas.title')}
+              </h2>
+              <p className="mt-4 max-w-xl text-base text-estate-400 md:text-lg">
+                {t('home.areas.subtitle')}
+              </p>
+            </div>
+            <Link
+              to={ROUTES.AREAS}
+              className="mt-6 inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-blue-400 transition-colors hover:text-blue-300 md:mt-0"
+            >
               {t('common.cta.exploreAreas')}
-            </span>
-            <h2 className="font-heading text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-              {t('home.areas.title')}
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-estate-400 md:text-lg">
-              {t('home.areas.subtitle')}
-            </p>
+              <span>&rarr;</span>
+            </Link>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="mt-14 grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4 lg:grid-rows-2">
             {loadingZones && <LoadingSkeleton variant="card" count={4} columns={4} />}
-            {!loadingZones && zones?.map((zone) => (
+            {!loadingZones && zones?.map((zone, index) => (
               <Link
                 key={zone.key}
                 to={ROUTES.AREA_DETAIL.replace(':slug', zone.slug)}
-                className="group relative animate-slide-up overflow-hidden rounded-sm"
+                className={`reveal reveal-delay-${(index % 4) + 1} group relative overflow-hidden rounded-2xl ring-1 ring-white/10 transition-all duration-500 hover:ring-blue-400/30 ${
+                  index === 0 ? 'lg:col-span-2 lg:row-span-2' : ''
+                }`}
               >
                 {/* Zone background image */}
-                <div className="relative flex min-h-[320px] flex-col justify-end p-6 transition-all duration-500">
+                <div className={`relative flex flex-col justify-end p-6 transition-all duration-500 ${
+                  index === 0 ? 'min-h-[320px] lg:min-h-full' : 'min-h-[260px]'
+                }`}>
                   <div className="absolute inset-0">
                     <ImageWithLoader
                       src={zone.image}
                       alt={zone.name}
-                      className="scale-110 transition-transform duration-700 group-hover:scale-100"
+                      className="scale-105 transition-transform duration-1000 ease-out group-hover:scale-100"
                     />
                   </div>
-                  <div className="absolute inset-0 bg-black/40 transition-all duration-500 group-hover:bg-black/30" />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10 transition-all duration-500 group-hover:from-black/60 group-hover:via-black/20" />
 
                   {/* ROI badge */}
-                  <span className="relative z-10 mb-auto ml-auto inline-block rounded-sm bg-gold-500/90 px-3 py-1 text-xs font-semibold text-white">
+                  <span className="relative z-10 mb-auto ml-auto inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm ring-1 ring-white/20">
                     {t('common.roi')}: {zone.avg_roi}
                   </span>
 
                   <div className="relative z-10">
-                    <h3 className="font-heading text-xl font-bold text-white md:text-2xl">
+                    <h3 className={`font-heading font-bold text-white ${index === 0 ? 'text-2xl md:text-3xl' : 'text-xl md:text-2xl'}`}>
                       {zone.name}
                     </h3>
                     <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-white/70">
                       {zone.description}
                     </p>
                     <div className="mt-4 flex items-center justify-between">
-                      <p className="text-sm text-gold-300">
+                      <p className="text-sm text-blue-300">
                         {t('common.from')}{' '}
-                        <span className="font-semibold text-gold-400">
+                        <span className="font-semibold text-blue-400">
                           {zone.avg_price}
                         </span>
                       </p>
-                      <span className="text-sm text-gold-400 opacity-0 transition-all duration-300 group-hover:opacity-100">
+                      <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-sm text-white opacity-0 backdrop-blur-sm transition-all duration-500 group-hover:opacity-100">
                         &rarr;
                       </span>
                     </div>
@@ -245,94 +276,50 @@ export default function Home() {
               </Link>
             ))}
           </div>
-
-          <div className="mt-12 text-center">
-            <Link
-              to={ROUTES.AREAS}
-              className="inline-flex items-center gap-2 text-sm font-semibold uppercase tracking-wider text-gold-400 transition-colors hover:text-gold-300"
-            >
-              {t('common.cta.exploreAreas')}
-              <span>&rarr;</span>
-            </Link>
-          </div>
-        </Container>
-      </section>
-
-      {/* ===== STATS SECTION ===== */}
-      <section className="bg-gold-500 py-16 md:py-20">
-        <Container>
-          <div className="grid grid-cols-2 gap-8 text-center md:grid-cols-4 md:gap-12">
-            <div className="animate-fade-in">
-              <p className="font-heading text-4xl font-bold text-white md:text-5xl">
-                {t('home.stats.experts')}
-              </p>
-              <p className="mt-2 text-sm font-medium uppercase tracking-wider text-gold-100">
-                {t('home.stats.expertsLabel')}
-              </p>
-            </div>
-            <div className="animate-fade-in">
-              <p className="font-heading text-4xl font-bold text-white md:text-5xl">
-                {t('home.stats.properties')}
-              </p>
-              <p className="mt-2 text-sm font-medium uppercase tracking-wider text-gold-100">
-                {t('home.stats.propertiesLabel')}
-              </p>
-            </div>
-            <div className="animate-fade-in">
-              <p className="font-heading text-4xl font-bold text-white md:text-5xl">
-                {t('home.stats.countries')}
-              </p>
-              <p className="mt-2 text-sm font-medium uppercase tracking-wider text-gold-100">
-                {t('home.stats.countriesLabel')}
-              </p>
-            </div>
-            <div className="animate-fade-in">
-              <p className="font-heading text-4xl font-bold text-white md:text-5xl">
-                {t('home.stats.volume')}
-              </p>
-              <p className="mt-2 text-sm font-medium uppercase tracking-wider text-gold-100">
-                {t('home.stats.volumeLabel')}
-              </p>
-            </div>
-          </div>
         </Container>
       </section>
 
       {/* ===== SERVICES SECTION ===== */}
-      <section className="bg-cream-50 py-20 md:py-28">
-        <Container>
-          <div className="animate-slide-up text-center">
-            <span className="mb-4 inline-block text-xs font-semibold uppercase tracking-[0.3em] text-gold-500">
-              {t('common.cta.learnMore')}
-            </span>
-            <h2 className="font-heading text-3xl font-bold text-estate-900 md:text-4xl lg:text-5xl">
-              {t('home.services.title')}
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base text-estate-400 md:text-lg">
-              {t('home.services.subtitle')}
-            </p>
+      <section className="relative overflow-hidden bg-yellow-50 py-24 md:py-32" ref={servicesRef}>
+        {/* Decorative gradient orb */}
+        <div className="absolute -right-40 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full bg-blue-200/20 blur-3xl" />
+
+        <Container className="relative z-10">
+          <div className="reveal flex flex-col items-start md:flex-row md:items-end md:justify-between">
+            <div>
+              <span className="mb-4 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.35em] text-blue-600">
+                <span className="inline-block h-px w-12 bg-gradient-to-r from-blue-500 to-blue-300" />
+                {t('common.cta.learnMore')}
+              </span>
+              <h2 className="font-heading text-3xl font-bold tracking-tight text-estate-900 md:text-4xl lg:text-5xl">
+                {t('home.services.title')}
+              </h2>
+              <p className="mt-4 max-w-xl text-base text-estate-400 md:text-lg">
+                {t('home.services.subtitle')}
+              </p>
+            </div>
           </div>
 
-          <div className="mt-14 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {loadingServices && <LoadingSkeleton variant="card" count={4} columns={4} />}
-            {!loadingServices && services?.map((service) => (
+          <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
+            {loadingServices && <LoadingSkeleton variant="card" count={4} columns={2} />}
+            {!loadingServices && services?.map((service, index) => (
               <div
                 key={service.key}
-                className="animate-slide-up group rounded-sm border border-estate-100 bg-white p-8 transition-all duration-500 hover:-translate-y-1 hover:border-gold-200 hover:shadow-xl hover:shadow-gold-500/5"
+                className={`reveal reveal-delay-${(index % 2) + 1} card-premium group flex gap-6 rounded-2xl p-8`}
               >
-                {/* Icon circle with initials */}
-                <div
-                  className={`flex h-14 w-14 items-center justify-center rounded-full ${service.color} text-sm font-bold text-white transition-transform duration-300 group-hover:scale-110`}
-                >
-                  {service.initials}
+                {/* Number indicator */}
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gradient-to-br from-estate-900 to-estate-800 font-heading text-lg font-bold text-blue-400 shadow-lg shadow-estate-900/20 transition-all duration-500 group-hover:from-blue-500 group-hover:to-blue-600 group-hover:text-white group-hover:shadow-blue-500/20">
+                  {String(index + 1).padStart(2, '0')}
                 </div>
 
-                <h3 className="mt-6 font-heading text-lg font-bold text-estate-900">
-                  {t(`home.services.${service.key}.title`)}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-estate-400">
-                  {t(`home.services.${service.key}.description`)}
-                </p>
+                <div>
+                  <h3 className="font-heading text-lg font-bold text-estate-900">
+                    {t(`home.services.${service.key}.title`)}
+                  </h3>
+                  <p className="mt-2 text-sm leading-relaxed text-estate-400">
+                    {t(`home.services.${service.key}.description`)}
+                  </p>
+                </div>
               </div>
             ))}
           </div>
@@ -340,17 +327,24 @@ export default function Home() {
       </section>
 
       {/* ===== CTA SECTION ===== */}
-      <section className="relative overflow-hidden bg-estate-900 py-20 md:py-28">
-        {/* Decorative elements */}
-        <div className="absolute inset-0 opacity-[0.04]">
-          <div className="absolute -right-20 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full bg-gold-500" />
-          <div className="absolute -left-20 top-1/2 h-[300px] w-[300px] -translate-y-1/2 rounded-full bg-gold-400" />
+      <section className="relative overflow-hidden bg-estate-900 py-24 md:py-32" ref={ctaRef}>
+        {/* Decorative ring elements */}
+        <div className="absolute inset-0 opacity-[0.06]">
+          <div className="absolute -right-32 top-1/2 h-[500px] w-[500px] -translate-y-1/2 rounded-full border border-blue-400" />
+          <div className="absolute -right-20 top-1/2 h-[350px] w-[350px] -translate-y-1/2 rounded-full border border-blue-400" />
+          <div className="absolute -left-32 top-1/2 h-[400px] w-[400px] -translate-y-1/2 rounded-full border border-blue-400" />
         </div>
-        <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-gold-500/30 to-transparent" />
+        <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/30 to-transparent" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-500/20 to-transparent" />
 
         <Container className="relative z-10">
-          <div className="animate-fade-in mx-auto max-w-3xl text-center">
-            <h2 className="font-heading text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+          <div className="reveal mx-auto max-w-3xl text-center">
+            <span className="mb-6 inline-flex items-center gap-3 text-xs font-semibold uppercase tracking-[0.3em] text-blue-400">
+              <span className="inline-block h-px w-12 bg-blue-400/60" />
+              {t('common.cta.bookConsultation')}
+              <span className="inline-block h-px w-12 bg-blue-400/60" />
+            </span>
+            <h2 className="font-heading text-3xl font-bold tracking-tight text-white md:text-4xl lg:text-5xl">
               {t('home.cta.title')}
             </h2>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-estate-300">
@@ -358,9 +352,10 @@ export default function Home() {
             </p>
             <Link
               to={ROUTES.CONTACT}
-              className="mt-10 inline-flex items-center justify-center rounded-sm bg-gold-500 px-10 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-300 hover:bg-gold-600 hover:shadow-lg hover:shadow-gold-500/20"
+              className="btn-glow mt-10 inline-flex items-center justify-center gap-2 rounded-md bg-blue-500 px-10 py-4 text-sm font-semibold uppercase tracking-wider text-white transition-all duration-500 hover:bg-blue-400"
             >
               {t('common.cta.bookConsultation')}
+              <span className="text-base">&rarr;</span>
             </Link>
           </div>
         </Container>

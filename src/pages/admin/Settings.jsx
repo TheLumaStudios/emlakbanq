@@ -1,9 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../../utils/supabase'
+import AdminModal from '../../components/admin/AdminModal'
 import ConfirmDialog from '../../components/admin/ConfirmDialog'
 import ImageUpload from '../../components/admin/ImageUpload'
 import MultilingualInput from '../../components/admin/MultilingualInput'
+import { useToast } from '../../hooks/useToast'
 
 const HERO_PAGES = [
   'home',
@@ -22,6 +24,7 @@ const EMPTY_STAT = { value: '', label: '', sort_order: 0 }
 
 export default function Settings() {
   const { t } = useTranslation()
+  const toast = useToast()
 
   // Hero Images state
   const [heroImages, setHeroImages] = useState([])
@@ -52,7 +55,6 @@ export default function Settings() {
   const [saving, setSaving] = useState(false)
   const [deleteTarget, setDeleteTarget] = useState(null)
   const [deleteTable, setDeleteTable] = useState(null)
-  const [successMsg, setSuccessMsg] = useState(null)
 
   useEffect(() => {
     fetchHeroImages()
@@ -60,14 +62,6 @@ export default function Settings() {
     fetchStats()
     fetchSiteSettings()
   }, [])
-
-  // Auto-clear success message
-  useEffect(() => {
-    if (successMsg) {
-      const t = setTimeout(() => setSuccessMsg(null), 3000)
-      return () => clearTimeout(t)
-    }
-  }, [successMsg])
 
   // ========== HERO IMAGES ==========
   async function fetchHeroImages() {
@@ -79,6 +73,7 @@ export default function Settings() {
 
     if (err) {
       setError(err.message)
+      toast.error(err.message)
       setHeroImages(HERO_PAGES.map((page) => ({ page, url: '', alt: '', _isNew: true })))
     } else {
       // Merge existing data with all pages
@@ -126,9 +121,11 @@ export default function Settings() {
         .eq('id', hero.id)
     }
 
-    if (result.error) setError(result.error.message)
-    else {
-      setSuccessMsg(`Hero image for "${hero.page}" saved`)
+    if (result.error) {
+      setError(result.error.message)
+      toast.error(result.error.message)
+    } else {
+      toast.success(t('admin.common.savedSuccessfully'))
       await fetchHeroImages()
     }
     setSavingHero(null)
@@ -142,8 +139,10 @@ export default function Settings() {
       .select('*')
       .order('sort_order', { ascending: true })
 
-    if (err) setError(err.message)
-    else setOffices(data || [])
+    if (err) {
+      setError(err.message)
+      toast.error(err.message)
+    } else setOffices(data || [])
     setLoadingOffices(false)
   }
 
@@ -192,10 +191,12 @@ export default function Settings() {
       result = await supabase.from('offices').insert([{ ...payload, created_at: new Date().toISOString() }])
     }
 
-    if (result.error) setError(result.error.message)
-    else {
+    if (result.error) {
+      setError(result.error.message)
+      toast.error(result.error.message)
+    } else {
       closeOfficeModal()
-      setSuccessMsg(editingOffice ? 'Office updated' : 'Office created')
+      toast.success(t('admin.common.savedSuccessfully'))
       await fetchOffices()
     }
     setSaving(false)
@@ -209,8 +210,10 @@ export default function Settings() {
       .select('*')
       .order('sort_order', { ascending: true })
 
-    if (err) setError(err.message)
-    else setStats(data || [])
+    if (err) {
+      setError(err.message)
+      toast.error(err.message)
+    } else setStats(data || [])
     setLoadingStats(false)
   }
 
@@ -261,10 +264,12 @@ export default function Settings() {
       result = await supabase.from('company_stats').insert([{ ...payload, created_at: new Date().toISOString() }])
     }
 
-    if (result.error) setError(result.error.message)
-    else {
+    if (result.error) {
+      setError(result.error.message)
+      toast.error(result.error.message)
+    } else {
       closeStatModal()
-      setSuccessMsg(editingStat ? 'Stat updated' : 'Stat created')
+      toast.success(t('admin.common.savedSuccessfully'))
       await fetchStats()
     }
     setSaving(false)
@@ -278,8 +283,10 @@ export default function Settings() {
       .select('*')
       .order('key', { ascending: true })
 
-    if (err) setError(err.message)
-    else setSiteSettings(data || [])
+    if (err) {
+      setError(err.message)
+      toast.error(err.message)
+    } else setSiteSettings(data || [])
     setLoadingSiteSettings(false)
   }
 
@@ -311,10 +318,11 @@ export default function Settings() {
       })
       .eq('id', setting.id)
 
-    if (err) setError(err.message)
-    else {
-      const labels = { brand: 'Brand Name', domain: 'Domain', tagline: 'Tagline', social: 'Social Media Links' }
-      setSuccessMsg(`${labels[setting.key] || setting.key} saved`)
+    if (err) {
+      setError(err.message)
+      toast.error(err.message)
+    } else {
+      toast.success(t('admin.common.savedSuccessfully'))
       await fetchSiteSettings()
     }
     setSavingSetting(null)
@@ -336,11 +344,13 @@ export default function Settings() {
       .delete()
       .eq('id', deleteTarget.id)
 
-    if (err) setError(err.message)
-    else {
+    if (err) {
+      setError(err.message)
+      toast.error(err.message)
+    } else {
       if (deleteTable === 'offices') await fetchOffices()
       else if (deleteTable === 'company_stats') await fetchStats()
-      setSuccessMsg('Item deleted')
+      toast.success(t('admin.common.deletedSuccessfully'))
     }
     setDeleteTarget(null)
     setDeleteTable(null)
@@ -381,13 +391,6 @@ export default function Settings() {
         </div>
       )}
 
-      {/* Success */}
-      {successMsg && (
-        <div className="rounded-lg border border-green-200 bg-green-50 px-4 py-3 text-sm text-green-700">
-          {successMsg}
-        </div>
-      )}
-
       {/* ========== HERO IMAGES ========== */}
       <section className="rounded-lg border border-estate-200 bg-white">
         <div className="border-b border-estate-200 px-5 py-4">
@@ -412,7 +415,7 @@ export default function Settings() {
                   <button
                     onClick={() => saveHeroImage(hero)}
                     disabled={savingHero === hero.page}
-                    className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-gold-500 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-gold-600 disabled:opacity-50"
+                    className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-500 px-3 py-1.5 text-xs font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
                   >
                     {savingHero === hero.page ? (
                       <svg className="h-3.5 w-3.5 animate-spin" viewBox="0 0 24 24" fill="none">
@@ -443,7 +446,7 @@ export default function Settings() {
                       value={hero.alt || ''}
                       onChange={(e) => handleHeroChange(hero.page, 'alt', e.target.value)}
                       placeholder={t('admin.common.altText')}
-                      className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+                      className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     />
                   </div>
                 </div>
@@ -462,7 +465,7 @@ export default function Settings() {
           </div>
           <button
             onClick={() => openOfficeModal()}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-gold-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-blue-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -496,7 +499,7 @@ export default function Settings() {
               </thead>
               <tbody className="divide-y divide-estate-100">
                 {offices.map((office) => (
-                  <tr key={office.id} className="transition-colors hover:bg-cream-50">
+                  <tr key={office.id} className="transition-colors hover:bg-yellow-50">
                     <td className="px-4 py-3 text-estate-400">{office.sort_order}</td>
                     <td className="px-4 py-3 font-medium text-estate-900">{office.city}</td>
                     <td className="hidden max-w-[200px] truncate px-4 py-3 text-estate-500 md:table-cell">
@@ -543,7 +546,7 @@ export default function Settings() {
           </div>
           <button
             onClick={() => openStatModal()}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-gold-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-blue-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -575,10 +578,10 @@ export default function Settings() {
               </thead>
               <tbody className="divide-y divide-estate-100">
                 {stats.map((stat) => (
-                  <tr key={stat.id} className="transition-colors hover:bg-cream-50">
+                  <tr key={stat.id} className="transition-colors hover:bg-yellow-50">
                     <td className="px-4 py-3 text-estate-400">{stat.sort_order}</td>
                     <td className="px-4 py-3">
-                      <span className="inline-flex rounded-md bg-gold-50 px-2.5 py-1 text-sm font-bold text-gold-700">
+                      <span className="inline-flex rounded-md bg-blue-50 px-2.5 py-1 text-sm font-bold text-blue-700">
                         {stat.value}
                       </span>
                     </td>
@@ -655,12 +658,12 @@ export default function Settings() {
                         type="text"
                         value={displayValue}
                         onChange={(e) => handleSettingValueChange(setting.id, JSON.stringify(e.target.value))}
-                        className="flex-1 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+                        className="flex-1 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                       />
                       <button
                         onClick={() => saveSiteSetting(setting)}
                         disabled={savingSetting === setting.id}
-                        className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-gold-500 px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-gold-600 disabled:opacity-50"
+                        className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-500 px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
                       >
                         {savingSetting === setting.id ? (
                           <svg className="h-3.5 w-3.5 animate-spin" viewBox="0 0 24 24" fill="none">
@@ -703,7 +706,7 @@ export default function Settings() {
                       <button
                         onClick={() => saveSiteSetting(setting)}
                         disabled={savingSetting === setting.id}
-                        className="inline-flex items-center gap-1.5 rounded-lg bg-gold-500 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-gold-600 disabled:opacity-50"
+                        className="inline-flex items-center gap-1.5 rounded-lg bg-blue-500 px-4 py-2 text-xs font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
                       >
                         {savingSetting === setting.id ? (
                           <svg className="h-3.5 w-3.5 animate-spin" viewBox="0 0 24 24" fill="none">
@@ -736,7 +739,7 @@ export default function Settings() {
                                 handleSettingValueChange(setting.id, updated)
                               }}
                               placeholder={`https://${platform.key}.com/...`}
-                              className="w-full rounded border border-estate-200 bg-white px-2.5 py-1.5 text-xs text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
+                              className="w-full rounded border border-estate-200 bg-white px-2.5 py-1.5 text-xs text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                             />
                           </div>
                         </div>
@@ -752,196 +755,167 @@ export default function Settings() {
       {/* ========== MODALS ========== */}
 
       {/* Office Modal */}
-      {officeModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-estate-900/60 backdrop-blur-sm" onClick={closeOfficeModal} />
-          <div className="relative mx-4 w-full max-w-lg rounded-lg bg-white p-6 shadow-2xl">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-estate-900">
-                {editingOffice ? t('admin.settings.editOffice') : t('admin.settings.addOffice')}
-              </h2>
-              <button
-                onClick={closeOfficeModal}
-                className="rounded-md p-1.5 text-estate-400 transition-colors hover:bg-estate-100 hover:text-estate-700"
-              >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </button>
+      <AdminModal
+        open={officeModalOpen}
+        onClose={closeOfficeModal}
+        title={editingOffice ? t('admin.settings.editOffice') : t('admin.settings.addOffice')}
+      >
+        <form onSubmit={handleSaveOffice} className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.city')}</label>
+              <input
+                type="text"
+                name="city"
+                value={officeForm.city}
+                onChange={handleOfficeFormChange}
+                required
+                placeholder={t('admin.settings.cityPlaceholder')}
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
             </div>
-
-            <form onSubmit={handleSaveOffice} className="mt-5 space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.city')}</label>
-                  <input
-                    type="text"
-                    name="city"
-                    value={officeForm.city}
-                    onChange={handleOfficeFormChange}
-                    required
-                    placeholder={t('admin.settings.cityPlaceholder')}
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
-                  <input
-                    type="number"
-                    name="sort_order"
-                    value={officeForm.sort_order}
-                    onChange={handleOfficeFormChange}
-                    min={0}
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.address')}</label>
-                <input
-                  type="text"
-                  name="address"
-                  value={officeForm.address}
-                  onChange={handleOfficeFormChange}
-                  required
-                  placeholder={t('admin.settings.addressPlaceholder')}
-                  className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                />
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.phone')}</label>
-                  <input
-                    type="text"
-                    name="phone"
-                    value={officeForm.phone}
-                    onChange={handleOfficeFormChange}
-                    placeholder="+971 4 XXX XXXX"
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.email')}</label>
-                  <input
-                    type="email"
-                    name="email"
-                    value={officeForm.email}
-                    onChange={handleOfficeFormChange}
-                    placeholder="office@emlakbanq.com"
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-              </div>
-
-              <div className="flex justify-end gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={closeOfficeModal}
-                  className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
-                >
-                  {t('admin.common.cancel')}
-                </button>
-                <button
-                  type="submit"
-                  disabled={saving}
-                  className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600 disabled:opacity-50"
-                >
-                  {saving && (
-                    <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                    </svg>
-                  )}
-                  {editingOffice ? t('admin.common.update') : t('admin.common.create')}
-                </button>
-              </div>
-            </form>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
+              <input
+                type="number"
+                name="sort_order"
+                value={officeForm.sort_order}
+                onChange={handleOfficeFormChange}
+                min={0}
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
           </div>
-        </div>
-      )}
+
+          <div>
+            <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.address')}</label>
+            <input
+              type="text"
+              name="address"
+              value={officeForm.address}
+              onChange={handleOfficeFormChange}
+              required
+              placeholder={t('admin.settings.addressPlaceholder')}
+              className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            />
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.phone')}</label>
+              <input
+                type="text"
+                name="phone"
+                value={officeForm.phone}
+                onChange={handleOfficeFormChange}
+                placeholder="+971 4 XXX XXXX"
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.email')}</label>
+              <input
+                type="email"
+                name="email"
+                value={officeForm.email}
+                onChange={handleOfficeFormChange}
+                placeholder="office@emlakbanq.com"
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div className="flex justify-end gap-3 pt-2">
+            <button
+              type="button"
+              onClick={closeOfficeModal}
+              className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
+            >
+              {t('admin.common.cancel')}
+            </button>
+            <button
+              type="submit"
+              disabled={saving}
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
+            >
+              {saving && (
+                <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+              )}
+              {editingOffice ? t('admin.common.update') : t('admin.common.create')}
+            </button>
+          </div>
+        </form>
+      </AdminModal>
 
       {/* Stat Modal */}
-      {statModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-estate-900/60 backdrop-blur-sm" onClick={closeStatModal} />
-          <div className="relative mx-4 w-full max-w-md rounded-lg bg-white p-6 shadow-2xl">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-estate-900">
-                {editingStat ? t('admin.settings.editStat') : t('admin.settings.addStat')}
-              </h2>
-              <button
-                onClick={closeStatModal}
-                className="rounded-md p-1.5 text-estate-400 transition-colors hover:bg-estate-100 hover:text-estate-700"
-              >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
-
-            <form onSubmit={handleSaveStat} className="mt-5 space-y-4">
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.value')}</label>
-                <input
-                  type="text"
-                  name="value"
-                  value={statForm.value}
-                  onChange={handleStatFormChange}
-                  required
-                  placeholder={t('admin.settings.valuePlaceholder')}
-                  className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                />
-              </div>
-
-              <MultilingualInput
-                label={t('admin.settings.label')}
-                name="label"
-                value={statForm.label}
-                onChange={(name, value) => setStatForm((prev) => ({ ...prev, [name]: value }))}
-                placeholder={t('admin.settings.labelPlaceholder')}
-                required
-              />
-
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
-                <input
-                  type="number"
-                  name="sort_order"
-                  value={statForm.sort_order}
-                  onChange={handleStatFormChange}
-                  min={0}
-                  className="w-24 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                />
-              </div>
-
-              <div className="flex justify-end gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={closeStatModal}
-                  className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
-                >
-                  {t('admin.common.cancel')}
-                </button>
-                <button
-                  type="submit"
-                  disabled={saving}
-                  className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600 disabled:opacity-50"
-                >
-                  {saving && (
-                    <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                    </svg>
-                  )}
-                  {editingStat ? t('admin.common.update') : t('admin.common.create')}
-                </button>
-              </div>
-            </form>
+      <AdminModal
+        open={statModalOpen}
+        onClose={closeStatModal}
+        title={editingStat ? t('admin.settings.editStat') : t('admin.settings.addStat')}
+        maxWidth="max-w-md"
+      >
+        <form onSubmit={handleSaveStat} className="space-y-4">
+          <div>
+            <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.settings.value')}</label>
+            <input
+              type="text"
+              name="value"
+              value={statForm.value}
+              onChange={handleStatFormChange}
+              required
+              placeholder={t('admin.settings.valuePlaceholder')}
+              className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            />
           </div>
-        </div>
-      )}
+
+          <MultilingualInput
+            label={t('admin.settings.label')}
+            name="label"
+            value={statForm.label}
+            onChange={(name, value) => setStatForm((prev) => ({ ...prev, [name]: value }))}
+            placeholder={t('admin.settings.labelPlaceholder')}
+            required
+          />
+
+          <div>
+            <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
+            <input
+              type="number"
+              name="sort_order"
+              value={statForm.sort_order}
+              onChange={handleStatFormChange}
+              min={0}
+              className="w-24 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            />
+          </div>
+
+          <div className="flex justify-end gap-3 pt-2">
+            <button
+              type="button"
+              onClick={closeStatModal}
+              className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
+            >
+              {t('admin.common.cancel')}
+            </button>
+            <button
+              type="submit"
+              disabled={saving}
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
+            >
+              {saving && (
+                <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+              )}
+              {editingStat ? t('admin.common.update') : t('admin.common.create')}
+            </button>
+          </div>
+        </form>
+      </AdminModal>
 
       {/* Delete Confirm */}
       <ConfirmDialog

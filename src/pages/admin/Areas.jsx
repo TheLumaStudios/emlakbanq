@@ -2,8 +2,11 @@ import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../../utils/supabase'
+import { useToast } from '../../hooks/useToast'
 import AdminTable from '../../components/admin/AdminTable'
 import ConfirmDialog from '../../components/admin/ConfirmDialog'
+import ListStatCard from '../../components/admin/ListStatCard'
+import ListToolbar from '../../components/admin/ListToolbar'
 
 const getLocalizedValue = (field, lang = 'en') => {
   if (!field) return ''
@@ -15,11 +18,14 @@ export default function Areas() {
   const { t, i18n } = useTranslation()
   const lang = i18n.language
   const navigate = useNavigate()
+  const toast = useToast()
   const [areas, setAreas] = useState([])
   const [loading, setLoading] = useState(true)
   const [deleteTarget, setDeleteTarget] = useState(null)
   const [deleting, setDeleting] = useState(false)
   const [search, setSearch] = useState('')
+  const [featuredFilter, setFeaturedFilter] = useState('all')
+  const [pageSize, setPageSize] = useState(10)
 
   const fetchAreas = async () => {
     setLoading(true)
@@ -48,8 +54,9 @@ export default function Areas() {
       .eq('id', deleteTarget.id)
     if (error) {
       console.error('Error deleting area:', error)
-      alert(t('admin.areas.failedToDelete'))
+      toast.error(t('admin.areas.failedToDelete'))
     } else {
+      toast.success(t('admin.common.deletedSuccessfully'))
       await fetchAreas()
     }
     setDeleting(false)
@@ -57,10 +64,18 @@ export default function Areas() {
   }
 
   const filteredAreas = areas.filter((a) => {
-    if (!search) return true
-    const name = typeof a.name === 'object' ? Object.values(a.name).join(' ') : (a.name || '')
-    return name.toLowerCase().includes(search.toLowerCase())
+    // Search filter
+    if (search) {
+      const name = typeof a.name === 'object' ? Object.values(a.name).join(' ') : (a.name || '')
+      if (!name.toLowerCase().includes(search.toLowerCase())) return false
+    }
+    // Featured filter
+    if (featuredFilter === 'featured' && !a.featured) return false
+    if (featuredFilter === 'not_featured' && a.featured) return false
+    return true
   })
+
+  const featuredCount = areas.filter((a) => a.featured).length
 
   const columns = [
     {
@@ -83,6 +98,7 @@ export default function Areas() {
     {
       key: 'name',
       label: t('admin.areas.name'),
+      sortable: true,
       render: (value, row) => (
         <div>
           <p className="font-medium text-estate-900">{getLocalizedValue(value, lang)}</p>
@@ -102,11 +118,13 @@ export default function Areas() {
     {
       key: 'avg_price',
       label: t('admin.areas.avgPrice'),
+      sortable: true,
       render: (value) => <span className="font-medium text-estate-800">{value}</span>,
     },
     {
       key: 'roi',
       label: t('admin.areas.roi'),
+      sortable: true,
       render: (value) => (
         <span className="inline-block rounded-full bg-green-50 px-2.5 py-0.5 text-xs font-semibold text-green-700">
           {value}
@@ -116,9 +134,10 @@ export default function Areas() {
     {
       key: 'featured',
       label: t('admin.areas.featured'),
+      sortable: true,
       render: (value) =>
         value ? (
-          <span className="inline-block rounded-full bg-gold-100 px-2.5 py-0.5 text-xs font-semibold text-gold-700">
+          <span className="inline-block rounded-full bg-blue-100 px-2.5 py-0.5 text-xs font-semibold text-blue-700">
             {t('admin.areas.featured')}
           </span>
         ) : (
@@ -139,7 +158,7 @@ export default function Areas() {
         </div>
         <button
           onClick={() => navigate('/admin/areas/new')}
-          className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-600"
+          className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-600"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -148,21 +167,50 @@ export default function Areas() {
         </button>
       </div>
 
-      {/* Search */}
-      <div className="mb-4">
-        <div className="relative max-w-md">
-          <svg className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-estate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-          </svg>
-          <input
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder={t('admin.common.search') + '...'}
-            className="w-full rounded-lg border border-estate-200 bg-white pl-10 pr-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
-          />
-        </div>
+      {/* Stat Cards */}
+      <div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-2 lg:grid-cols-4">
+        <ListStatCard
+          label={t('admin.common.total')}
+          value={areas.length}
+          color="blue"
+          icon={
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z" />
+              <path strokeLinecap="round" strokeLinejoin="round" d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z" />
+            </svg>
+          }
+        />
+        <ListStatCard
+          label={t('admin.areas.featured')}
+          value={featuredCount}
+          color="gold"
+          icon={
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.563.563 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+            </svg>
+          }
+        />
       </div>
+
+      {/* Toolbar: Search + Featured Filter + Page Size */}
+      <ListToolbar
+        search={search}
+        onSearchChange={setSearch}
+        pageSize={pageSize}
+        onPageSizeChange={setPageSize}
+        filters={[
+          {
+            key: 'featured',
+            value: featuredFilter,
+            onChange: setFeaturedFilter,
+            options: [
+              { value: 'all', label: t('admin.common.all') },
+              { value: 'featured', label: t('admin.areas.featured') },
+              { value: 'not_featured', label: t('admin.areas.notFeatured') },
+            ],
+          },
+        ]}
+      />
 
       {/* Table */}
       <AdminTable
@@ -172,6 +220,7 @@ export default function Areas() {
         editPath="/admin/areas/:id"
         onDelete={(row) => setDeleteTarget(row)}
         emptyMessage={t('admin.areas.noAreas')}
+        pageSize={pageSize}
       />
 
       {/* Confirm Delete Dialog */}

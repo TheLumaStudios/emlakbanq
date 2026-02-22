@@ -1,7 +1,7 @@
 {
   "common": {
     "brand": "EmlakBanq",
-    "tagline": "Dubai's Premier Luxury Real Estate",
+    "tagline": "Alanya's Premier Luxury Real Estate",
     "cta": {
       "getStarted": "Get Started",
       "contactUs": "Contact Us",
@@ -30,27 +30,27 @@
     "areas": "Areas",
     "about": "About Us",
     "contact": "Contact",
-    "goldenVisa": "Golden Visa",
+    "goldenVisa": "Turkish Citizenship",
     "buyerGuides": "Buyer Guides",
     "insights": "Insights",
     "blog": "Blog"
   },
   "home": {
     "meta": {
-      "title": "EmlakBanq | Dubai Luxury Real Estate",
-      "description": "Dubai's leading luxury real estate platform. Off-plan, villas, penthouses, branded residences and investment consulting."
+      "title": "EmlakBanq | Alanya Luxury Real Estate",
+      "description": "Alanya's leading luxury real estate platform. Off-plan, villas, penthouses, branded residences and investment consulting."
     },
     "hero": {
-      "title": "Your Gateway to Dubai Luxury Living",
+      "title": "Your Gateway to Alanya Luxury Living",
       "subtitle": "Over 100 experts guiding you through premium properties, exclusive investment opportunities, and a seamless buying experience in the world's most dynamic city."
     },
     "featured": {
       "title": "Featured Properties",
-      "subtitle": "Hand-picked luxury properties in Dubai's most prestigious locations"
+      "subtitle": "Hand-picked luxury properties in Alanya's most prestigious locations"
     },
     "areas": {
       "title": "Prime Investment Zones",
-      "subtitle": "Discover Dubai's most sought-after neighborhoods and their unique investment potential"
+      "subtitle": "Discover Alanya's most sought-after neighborhoods and their unique investment potential"
     },
     "stats": {
       "title": "Why EmlakBanq?",
@@ -69,15 +69,15 @@
       "subtitle": "We don't just sell properties — we deliver a complete lifestyle solution",
       "investment": {
         "title": "Investment Consulting",
-        "description": "Data-driven insights and personalized strategies to maximize your ROI in Dubai's thriving market."
+        "description": "Data-driven insights and personalized strategies to maximize your ROI in Alanya's thriving market."
       },
       "legal": {
         "title": "Legal & Finance",
         "description": "Full legal support, mortgage assistance, and transparent financial guidance throughout the process."
       },
       "visa": {
-        "title": "Golden Visa",
-        "description": "Secure your UAE residency through strategic property investment with our dedicated visa team."
+        "title": "Turkish Citizenship",
+        "description": "Secure your Turkey residency through strategic property investment with our dedicated visa team."
       },
       "afterSales": {
         "title": "After-Sales Support",
@@ -85,17 +85,17 @@
       }
     },
     "cta": {
-      "title": "Ready to Invest in Dubai?",
+      "title": "Ready to Invest in Alanya?",
       "subtitle": "Schedule a free consultation with one of our senior advisors and discover your ideal investment."
     }
   },
   "properties": {
     "meta": {
       "title": "Properties | EmlakBanq",
-      "description": "Browse luxury properties in Dubai - off-plan, ready, villas, penthouses, branded residences."
+      "description": "Browse luxury properties in Alanya - off-plan, ready, villas, penthouses, branded residences."
     },
     "heading": "Luxury Properties",
-    "subtitle": "Explore our curated collection of premium real estate across Dubai",
+    "subtitle": "Explore our curated collection of premium real estate across Alanya",
     "filters": {
       "all": "All",
       "type": "Property Type",
@@ -116,10 +116,10 @@
   },
   "areas": {
     "meta": {
-      "title": "Dubai Areas | EmlakBanq",
-      "description": "Explore Dubai's premier investment zones and neighborhoods."
+      "title": "Alanya Areas | EmlakBanq",
+      "description": "Explore Alanya's premier investment zones and neighborhoods."
     },
-    "heading": "Dubai Investment Zones",
+    "heading": "Alanya Investment Zones",
     "subtitle": "Each neighborhood has its own character, lifestyle, and investment profile",
     "intro": "From iconic waterfront living to serene suburban retreats, explore the distinct character and investment potential of each neighbourhood.",
     "explore": "Explore",
@@ -129,76 +129,76 @@
       "description": "Our experts can help you identify the ideal neighbourhood based on your lifestyle, budget, and investment goals."
     },
     "zones": {
-      "downtown": {
-        "name": "Downtown Dubai",
-        "description": "Home to Burj Khalifa and Dubai Mall — the epicenter of luxury living and high-yield investment.",
-        "avgPrice": "AED 2.5M",
-        "avgRoi": "6.2%"
+      "kleopatra": {
+        "name": "Kleopatra",
+        "description": "Alanya's most famous beach district — golden sands, turquoise waters, and vibrant nightlife right at your doorstep.",
+        "avgPrice": "₺ 4.5M",
+        "avgRoi": "6.8%"
       },
-      "marina": {
-        "name": "Dubai Marina",
-        "description": "A vibrant waterfront community with stunning marina views, world-class dining, and premium towers.",
-        "avgPrice": "AED 1.8M",
-        "avgRoi": "7.1%"
+      "mahmutlar": {
+        "name": "Mahmutlar",
+        "description": "The fastest-growing coastal district with modern residences, affordable luxury, and strong rental demand from international buyers.",
+        "avgPrice": "₺ 2.2M",
+        "avgRoi": "8.5%"
       },
-      "palmJumeirah": {
-        "name": "Palm Jumeirah",
-        "description": "The iconic man-made island offering ultra-luxury villas, branded residences, and beachfront living.",
-        "avgPrice": "AED 5.2M",
-        "avgRoi": "5.8%"
+      "kestel": {
+        "name": "Kestel",
+        "description": "A tranquil seaside neighborhood offering panoramic sea views, family-friendly atmosphere, and excellent value for money.",
+        "avgPrice": "₺ 2.8M",
+        "avgRoi": "7.2%"
       },
-      "businessBay": {
-        "name": "Business Bay",
-        "description": "Dubai's central business district with modern high-rises, canal views, and excellent rental yields.",
-        "avgPrice": "AED 1.5M",
-        "avgRoi": "7.5%"
+      "oba": {
+        "name": "Oba",
+        "description": "Alanya's upscale residential hub with premium complexes, lush greenery, and proximity to city center amenities.",
+        "avgPrice": "₺ 3.5M",
+        "avgRoi": "7.0%"
       },
-      "jbr": {
-        "name": "JBR",
-        "description": "Jumeirah Beach Residence — beachfront apartments with resort-style living and vibrant social scene.",
-        "avgPrice": "AED 2.8M",
-        "avgRoi": "6.0%"
-      },
-      "creekHarbour": {
-        "name": "Dubai Creek Harbour",
-        "description": "A rising star with waterfront promenades, nature reserves, and significant capital appreciation potential.",
-        "avgPrice": "AED 1.6M",
+      "tosmur": {
+        "name": "Tosmur",
+        "description": "A peaceful riverside district between Alanya and Dim River, known for nature walks and serene living.",
+        "avgPrice": "₺ 2.0M",
         "avgRoi": "7.8%"
       },
-      "dubaiHills": {
-        "name": "Dubai Hills Estate",
-        "description": "Family-friendly master community with a championship golf course, parks, and premium villas.",
-        "avgPrice": "AED 2.2M",
+      "cikcilli": {
+        "name": "Cikcilli",
+        "description": "A hillside neighborhood with stunning Taurus Mountain views, modern apartments, and a growing expat community.",
+        "avgPrice": "₺ 1.8M",
+        "avgRoi": "8.0%"
+      },
+      "kargicak": {
+        "name": "Kargıcak",
+        "description": "Exclusive hilltop villas and residences offering breathtaking Mediterranean panoramas and ultimate privacy.",
+        "avgPrice": "₺ 5.0M",
         "avgRoi": "6.5%"
       },
-      "jumeirahVillage": {
-        "name": "JVC",
-        "description": "Jumeirah Village Circle — affordable luxury with strong rental returns and rapid development.",
-        "avgPrice": "AED 850K",
-        "avgRoi": "8.2%"
+      "avsallar": {
+        "name": "Avsallar",
+        "description": "A popular beachfront district with all-inclusive resort vibes, affordable apartments, and strong holiday rental returns.",
+        "avgPrice": "₺ 1.5M",
+        "avgRoi": "9.0%"
       }
     }
   },
   "about": {
     "meta": {
       "title": "About Us | EmlakBanq",
-      "description": "Meet EmlakBanq - 100+ experts, two offices, Dubai's trusted luxury real estate advisors."
+      "description": "Meet EmlakBanq - 100+ experts, two offices, Alanya's trusted luxury real estate advisors."
     },
     "heading": "About EmlakBanq",
-    "subtitle": "Dubai's trusted partner for luxury real estate investment",
+    "subtitle": "Alanya's trusted partner for luxury real estate investment",
     "story": {
       "label": "Our Story",
       "title": "Our Story",
-      "p1": "EmlakBanq was founded with a singular vision: to redefine the luxury real estate experience in Dubai. What started as a boutique advisory firm has grown into a global platform with over 100 expert advisors operating across two continents.",
-      "p2": "We believe that buying property in Dubai should be as exciting as the city itself — transparent, seamless, and rewarding. Our team combines deep market knowledge with a genuine passion for helping investors find their perfect match.",
-      "p3": "From off-plan opportunities to ready-to-move villas, from Golden Visa assistance to after-sales property management, we are your end-to-end partner in Dubai real estate."
+      "p1": "EmlakBanq was founded with a singular vision: to redefine the luxury real estate experience in Alanya. What started as a boutique advisory firm has grown into a global platform with over 100 expert advisors operating across two continents.",
+      "p2": "We believe that buying property in Alanya should be as exciting as the city itself — transparent, seamless, and rewarding. Our team combines deep market knowledge with a genuine passion for helping investors find their perfect match.",
+      "p3": "From off-plan opportunities to ready-to-move villas, from Turkish Citizenship assistance to after-sales property management, we are your end-to-end partner in Alanya real estate."
     },
     "values": {
       "label": "Our Values",
       "title": "Our Values",
       "transparency": { "title": "Transparency", "description": "No hidden fees, no inflated promises. Honest, data-backed guidance at every step." },
-      "expertise": { "title": "Expertise", "description": "Certified professionals with years of Dubai market experience." },
-      "global": { "title": "Global Reach", "description": "Offices in Dubai and Istanbul, serving clients from over 40 countries." },
+      "expertise": { "title": "Expertise", "description": "Certified professionals with years of Alanya market experience." },
+      "global": { "title": "Global Reach", "description": "Offices in Alanya and Istanbul, serving clients from over 40 countries." },
       "client": { "title": "Client First", "description": "Every decision guided by what's best for our clients' investment goals." }
     },
     "hero": {
@@ -207,8 +207,9 @@
     "offices": {
       "label": "Global Presence",
       "title": "Our Offices",
-      "description": "Strategically positioned at the crossroads of global investment, our offices are your gateway to Dubai's luxury property market.",
-      "dubai": { "city": "Dubai, UAE", "address": "Bay Square, Business Bay" },
+      "description": "Strategically positioned at the crossroads of global investment, our offices are your gateway to Alanya's luxury property market.",
+      "officeLabel": "Office",
+      "alanya": { "city": "Alanya, Turkey", "address": "Oba Mah., Alanya, Antalya" },
       "istanbul": { "city": "Istanbul, Turkey", "address": "Skyland Istanbul" }
     },
     "cta": {
@@ -220,11 +221,11 @@
   "contact": {
     "meta": {
       "title": "Contact | EmlakBanq",
-      "description": "Get in touch with EmlakBanq. Offices in Dubai and Istanbul."
+      "description": "Get in touch with EmlakBanq. Offices in Alanya and Istanbul."
     },
     "heading": "Let's Talk",
     "subtitle": "Whether you're a first-time buyer or a seasoned investor, our team is here to help.",
-    "intro": "Whether you're looking to invest, purchase a dream home, or explore Golden Visa options, our team is ready to guide you every step of the way.",
+    "intro": "Whether you're looking to invest, purchase a dream home, or explore Turkish Citizenship options, our team is ready to guide you every step of the way.",
     "form": {
       "title": "Send Us a Message",
       "description": "Fill in the form below and one of our consultants will get back to you within 24 hours.",
@@ -235,7 +236,7 @@
       "interests": {
         "buying": "Buying a property",
         "investing": "Investment consulting",
-        "visa": "Golden Visa",
+        "visa": "Turkish Citizenship",
         "selling": "Selling a property",
         "other": "Other"
       },
@@ -243,7 +244,7 @@
       "interestOptions": {
         "buying": "Buying a Property",
         "investing": "Investment Opportunities",
-        "visa": "Golden Visa Assistance",
+        "visa": "Turkish Citizenship Assistance",
         "selling": "Selling a Property",
         "other": "Other Inquiry"
       },
@@ -273,13 +274,13 @@
         "whatsapp": "WhatsApp",
         "workingHours": "Working Hours"
       },
-      "workingHoursValue": "Sun - Thu: 9 AM - 7 PM (GST)"
+      "workingHoursValue": "Mon - Sat: 9 AM - 6 PM (TRT)"
     },
     "offices": {
       "title": "Our Offices",
-      "dubai": {
-        "city": "Dubai, UAE",
-        "address": "Business Bay, Bay Square, Dubai, UAE"
+      "alanya": {
+        "city": "Alanya, Turkey",
+        "address": "Oba Mah., Alanya, Antalya, Turkey"
       },
       "istanbul": {
         "city": "Istanbul, Turkey",
@@ -294,87 +295,87 @@
   },
   "goldenVisa": {
     "meta": {
-      "title": "Golden Visa | EmlakBanq",
-      "description": "Learn about Dubai Golden Visa through real estate investment."
+      "title": "Turkish Citizenship | EmlakBanq",
+      "description": "Learn about Alanya Turkish Citizenship through real estate investment."
     },
-    "heading": "Your Gateway to UAE Residency Through Property Investment",
-    "subtitle": "UAE Golden Visa",
+    "heading": "Your Gateway to Turkish Citizenship Through Property Investment",
+    "subtitle": "Citizenship by Investment",
     "hero": {
-      "subtitle": "The UAE Golden Visa programme offers long-term residency to property investors, providing a world-class lifestyle in one of the globe's most dynamic economies.",
-      "intro": "EmlakBanq provides end-to-end Golden Visa assistance -- from identifying qualifying properties to completing your visa application. Our dedicated team has helped hundreds of families secure their UAE residency with confidence."
+      "subtitle": "Turkey's Citizenship by Investment programme offers full citizenship to property investors, providing access to a vibrant country that bridges Europe and Asia.",
+      "intro": "EmlakBanq provides end-to-end citizenship assistance — from identifying qualifying properties to completing your application. Our dedicated team has helped hundreds of families obtain Turkish citizenship with confidence."
     },
     "benefits": {
-      "label": "Why Golden Visa?",
-      "title": "Benefits of the UAE Golden Visa",
+      "label": "Why Turkish Citizenship?",
+      "title": "Benefits of Turkish Citizenship by Investment",
       "renewable_residency": {
-        "title": "10-Year Renewable Residency",
-        "description": "Secure long-term UAE residency for yourself and your family with a 10-year visa that is fully renewable."
+        "title": "Full Citizenship Rights",
+        "description": "Obtain permanent Turkish citizenship for yourself and your family. Not just residency — full citizenship rights."
       },
       "family_sponsorship": {
-        "title": "Full Family Sponsorship",
-        "description": "Sponsor your spouse, children, and domestic staff under a single visa application with no additional property requirements."
+        "title": "Family Included",
+        "description": "Your spouse and children under 18 can be included in the same application and receive citizenship together."
       },
       "business_ownership": {
-        "title": "100% Business Ownership",
-        "description": "Establish and fully own a business in the UAE mainland or free zones without the need for a local sponsor."
+        "title": "Business Freedom",
+        "description": "As a Turkish citizen, establish and manage businesses in Turkey without any restrictions."
       },
       "ease_of_travel": {
-        "title": "Ease of Travel",
-        "description": "Enter and exit the UAE freely without restrictions. Your visa remains valid regardless of time spent outside the country."
+        "title": "Visa-Free Travel",
+        "description": "Travel visa-free or with visa-on-arrival to 110+ countries with a Turkish passport."
       },
       "tax_free": {
-        "title": "Tax-Free Environment",
-        "description": "Enjoy zero personal income tax, zero capital gains tax, and one of the world's most business-friendly fiscal policies."
+        "title": "Competitive Tax System",
+        "description": "Benefit from competitive tax rates, special incentives for foreign investors, and double taxation prevention treaties."
       },
       "premium_services": {
-        "title": "Premium Services Access",
-        "description": "Gain access to world-class healthcare, education, and banking services reserved for UAE residents."
+        "title": "Quality Living Standards",
+        "description": "As a Turkish citizen, gain full access to world-class healthcare, education, and banking services."
       }
     },
     "eligibility": {
       "label": "Requirements",
       "title": "Eligibility Criteria",
-      "description": "The following criteria apply to the property investor route of the UAE Golden Visa programme.",
-      "item1": "Purchase a property in the UAE with a minimum value of AED 2 million (approximately USD 545,000).",
-      "item2": "The property must be retained for at least 3 years from the date of visa issuance.",
-      "item3": "Property can be residential or commercial, off-plan or ready, and can be fully owned or shared ownership.",
-      "item4": "Mortgaged properties are eligible, provided the purchase value meets the minimum threshold.",
-      "item5": "Application must be submitted within 6 months of property registration with the Dubai Land Department.",
+      "description": "The following criteria apply to the property investor route of Turkey's Citizenship by Investment programme.",
+      "item1": "Purchase a property in Turkey with a minimum value of USD 400,000.",
+      "item2": "The property must not be sold for at least 3 years from the date of purchase.",
+      "item3": "Property can be residential or commercial; completed or under-construction projects are eligible.",
+      "item4": "An official valuation report from the Title Deed Office is required.",
+      "item5": "Application must be submitted after the property is registered with the Land Registry and Cadastre Directorate.",
       "item6": "No minimum salary requirement or employment status restrictions apply for the property investor route."
     },
     "process": {
       "label": "How It Works",
-      "title": "Your Path to the Golden Visa",
+      "title": "Your Path to Turkish Citizenship",
       "step1": {
         "title": "Property Selection",
-        "description": "Choose a qualifying property worth AED 2M+ with guidance from our expert advisors."
+        "description": "Choose a qualifying property worth USD 400,000+ with guidance from our expert advisors."
       },
       "step2": {
         "title": "Purchase & Registration",
-        "description": "Complete the purchase and register the property with the Dubai Land Department."
+        "description": "Complete the purchase and register the property with the Land Registry and Cadastre Directorate."
       },
       "step3": {
         "title": "Document Preparation",
-        "description": "Gather required documents including passport copies, Emirates ID, and property deed."
+        "description": "Gather required documents including passport, birth certificate, title deed, and valuation report."
       },
       "step4": {
-        "title": "Visa Approval",
-        "description": "Submit your application and receive your 10-year Golden Visa within 30-60 days."
+        "title": "Citizenship Approval",
+        "description": "Submit your application and obtain your Turkish citizenship within 3-6 months."
       }
     },
     "cta": {
-      "title": "Start Your Golden Visa Journey",
-      "description": "Our dedicated visa specialists will guide you from property selection to visa approval. Book a free consultation today.",
+      "title": "Start Your Citizenship Journey",
+      "description": "Our expert advisors will guide you from property selection to citizenship approval. Book a free consultation today.",
       "button": "Book Free Consultation"
     }
   },
   "buyerGuides": {
     "meta": {
       "title": "Buyer Guides | EmlakBanq",
-      "description": "Comprehensive guides for buying luxury property in Dubai."
+      "description": "Comprehensive guides for buying luxury property in Alanya."
     },
     "heading": "Buyer Guides",
-    "subtitle": "Everything you need to know about buying property in Dubai",
+    "subtitle": "Everything you need to know about buying property in Alanya",
     "intro": "Expert-crafted guides designed to empower your property decisions. From first-time buyers to seasoned investors, gain the knowledge you need to invest with confidence.",
     "readGuide": "Read Guide",
     "speakToExpert": "Speak to an Expert",
@@ -387,11 +388,11 @@
   "insights": {
     "meta": {
       "title": "Investment Insights | EmlakBanq",
-      "description": "Dubai real estate market analytics and investment insights."
+      "description": "Alanya real estate market analytics and investment insights."
     },
     "label": "Market Intelligence",
-    "heading": "Dubai Market Insights",
-    "intro": "Data-driven analysis and expert commentary on Dubai's real estate market. Stay informed with the latest trends, ROI data, and investment opportunities.",
+    "heading": "Alanya Market Insights",
+    "intro": "Data-driven analysis and expert commentary on Alanya's real estate market. Stay informed with the latest trends, ROI data, and investment opportunities.",
     "overview": {
       "title": "Market Overview",
       "period": "Q4 2025 - Q1 2026 Key Highlights"
@@ -399,14 +400,14 @@
     "roi": {
       "label": "Investment Data",
       "title": "Top Areas by Rental ROI",
-      "description": "Average gross rental yields across Dubai's most popular investment zones, based on Q4 2025 data.",
+      "description": "Average gross rental yields across Alanya's most popular investment zones, based on Q4 2025 data.",
       "area": "Area",
       "grossRoi": "Gross ROI",
       "priceRange": "Price Range",
       "trend": "Trend",
       "rising": "Rising",
       "stable": "Stable",
-      "disclaimer": "Data sourced from Dubai Land Department and internal analysis. Yields are indicative and may vary."
+      "disclaimer": "Data sourced from Alanya Land Department and internal analysis. Yields are indicative and may vary."
     },
     "articles": {
       "label": "Latest Analysis",
@@ -432,7 +433,7 @@
   "blog": {
     "meta": {
       "title": "Blog | EmlakBanq",
-      "description": "Latest news and updates from Dubai's luxury real estate market."
+      "description": "Latest news and updates from Alanya's luxury real estate market."
     },
     "heading": "Blog & News",
     "subtitle": "Stay informed with the latest market trends, project launches, and expert opinions"
@@ -446,7 +447,7 @@
     "heading": "Terms of Service"
   },
   "footer": {
-    "description": "Dubai's premier luxury real estate platform offering expert guidance for property investment, Golden Visa assistance, and comprehensive after-sales support.",
+    "description": "Alanya's premier luxury real estate platform offering expert guidance for property investment, Turkish Citizenship assistance, and comprehensive after-sales support.",
     "quickLinks": "Quick Links",
     "services": "Services",
     "legal": "Legal",
@@ -524,7 +525,19 @@
       "topAreasROI": "Top Areas ROI",
       "investmentReturns": "Investment returns by area",
       "imageUrl": "Image URL",
-      "altText": "Alt text"
+      "altText": "Alt text",
+      "savedSuccessfully": "Saved successfully",
+      "deletedSuccessfully": "Deleted successfully",
+      "createdSuccessfully": "Created successfully",
+      "updatedSuccessfully": "Updated successfully",
+      "operationFailed": "Operation failed",
+      "unsavedChanges": "Unsaved changes",
+      "unsavedChangesTitle": "Unsaved Changes",
+      "unsavedChangesMessage": "You have unsaved changes. Are you sure you want to leave?",
+      "discardChanges": "Discard Changes",
+      "keepEditing": "Keep Editing",
+      "show": "Show",
+      "all": "All"
     },
     "nav": {
       "dashboard": "Dashboard",
@@ -532,7 +545,7 @@
       "areas": "Areas",
       "blog": "Blog",
       "buyerGuides": "Buyer Guides",
-      "goldenVisa": "Golden Visa",
+      "goldenVisa": "Turkish Citizenship",
       "insights": "Insights",
       "messages": "Messages",
       "settings": "Settings"
@@ -573,7 +586,11 @@
       "recentMessages": "Recent Messages",
       "viewAll": "View all",
       "noMessages": "No messages yet.",
-      "noMessageContent": "No message content"
+      "noMessageContent": "No message content",
+      "buyerGuides": "Buyer Guides",
+      "goldenVisaItems": "Turkish Citizenship Items",
+      "recentActivity": "Recent Activity",
+      "noActivity": "No recent activity"
     },
     "properties": {
       "title": "Properties",
@@ -590,9 +607,19 @@
       "featured": "Featured",
       "noProperties": "No properties found. Add your first property to get started.",
       "deleteError": "Failed to delete property.",
+      "deleteSuccess": "Property deleted successfully",
       "notFound": "Property not found.",
       "failedToSave": "Failed to save property.",
-      "loadingProperty": "Loading property..."
+      "loadingProperty": "Loading property...",
+      "totalProperties": "Total Properties",
+      "featuredCount": "Featured",
+      "typeBreakdown": "Type Breakdown",
+      "types": "types",
+      "details": "Details",
+      "allTypes": "All Types",
+      "allFeatured": "All",
+      "featuredOnly": "Featured",
+      "notFeatured": "Not Featured"
     },
     "propertyForm": {
       "basicInfo": "Basic Information",
@@ -613,10 +640,10 @@
       "typeLabelPlaceholder": "e.g. Luxury Apartment",
       "typeLabelHelp": "Display label shown on the property card in all languages.",
       "location": "Location",
-      "locationPlaceholder": "e.g. Dubai Marina",
+      "locationPlaceholder": "e.g. Mahmutlar",
       "locationHelp": "Property location in all supported languages.",
       "price": "Price",
-      "pricePlaceholder": "e.g. AED 2,500,000",
+      "pricePlaceholder": "e.g. ₺ 2,500,000",
       "beds": "Beds",
       "bedsPlaceholder": "e.g. 3",
       "sqft": "Sqft",
@@ -648,7 +675,7 @@
     },
     "areas": {
       "title": "Areas",
-      "subtitle": "Manage Dubai area listings",
+      "subtitle": "Manage Alanya area listings",
       "addNew": "Add New Area",
       "editArea": "Edit Area",
       "addArea": "Add Area",
@@ -663,23 +690,24 @@
       "notFound": "Area not found.",
       "failedToSave": "Failed to save area.",
       "failedToDelete": "Failed to delete area.",
-      "loadingArea": "Loading area..."
+      "loadingArea": "Loading area...",
+      "notFeatured": "Not Featured"
     },
     "areaForm": {
       "basicInfo": "Basic Information",
       "areaName": "Area Name",
-      "areaNamePlaceholder": "e.g. Dubai Marina",
+      "areaNamePlaceholder": "e.g. Mahmutlar",
       "areaNameHelp": "Area name in all supported languages. Slug and key auto-generated from English.",
       "key": "Key",
-      "keyPlaceholder": "e.g. dubai-marina",
+      "keyPlaceholder": "e.g. mahmutlar",
       "keyHelp": "Unique identifier key. Auto-generated from English name.",
       "slug": "Slug",
-      "slugPlaceholder": "e.g. dubai-marina",
+      "slugPlaceholder": "e.g. mahmutlar",
       "slugHelp": "URL-friendly identifier. Auto-generated from English name.",
       "imageUrl": "Image URL",
       "imagePlaceholder": "https://example.com/area.jpg",
       "avgPrice": "Average Price",
-      "avgPricePlaceholder": "e.g. AED 2.5M",
+      "avgPricePlaceholder": "e.g. ₺ 2.5M",
       "roi": "ROI",
       "roiPlaceholder": "e.g. 7.2%",
       "descriptions": "Descriptions",
@@ -723,12 +751,15 @@
       "notFound": "Blog post not found.",
       "failedToSave": "Failed to save blog post.",
       "failedToDelete": "Failed to delete blog post.",
-      "loadingPost": "Loading blog post..."
+      "loadingPost": "Loading blog post...",
+      "totalPosts": "Total Posts",
+      "publishedCount": "Published",
+      "draftCount": "Drafts"
     },
     "blogForm": {
       "basicInfo": "Basic Information",
       "title": "Title",
-      "titlePlaceholder": "e.g. Dubai Real Estate Market Update 2025",
+      "titlePlaceholder": "e.g. Alanya Real Estate Market Update 2025",
       "titleHelp": "Blog post title in all supported languages. Slug auto-generated from English.",
       "slug": "Slug",
       "slugPlaceholder": "auto-generated-from-title",
@@ -779,12 +810,14 @@
       "notFound": "Buyer guide not found.",
       "failedToSave": "Failed to save buyer guide.",
       "failedToDelete": "Failed to delete buyer guide.",
-      "loadingGuide": "Loading buyer guide..."
+      "loadingGuide": "Loading buyer guide...",
+      "totalGuides": "Total Guides",
+      "withImages": "With Images"
     },
     "buyerGuideForm": {
       "basicInfo": "Basic Information",
       "title": "Title",
-      "titlePlaceholder": "e.g. First-Time Buyer's Guide to Dubai",
+      "titlePlaceholder": "e.g. First-Time Buyer's Guide to Alanya",
       "slug": "Slug",
       "slugPlaceholder": "auto-generated-from-title",
       "slugHelp": "URL-friendly identifier. Auto-generated from title.",
@@ -834,7 +867,10 @@
       "message": "Message",
       "noMessageProvided": "No message provided",
       "deleteTitle": "Delete Message",
-      "deleteConfirm": "Are you sure you want to delete the message from \"{{name}}\"? This action cannot be undone."
+      "deleteConfirm": "Are you sure you want to delete the message from \"{{name}}\"? This action cannot be undone.",
+      "markedRead": "Marked as read",
+      "markedUnread": "Marked as unread",
+      "replyViaEmail": "Reply via Email"
     },
     "goldenVisa": {
       "subtitle": "Manage benefits, eligibility criteria, and process steps",
@@ -848,11 +884,11 @@
       "noHighlights": "No highlights yet. Add the first one.",
       "noAreas": "No areas yet. Add the first one.",
       "area": "Area",
-      "areaPlaceholder": "e.g. Dubai Marina",
+      "areaPlaceholder": "e.g. Mahmutlar",
       "roi": "ROI",
       "roiPlaceholder": "e.g. 8.5%",
       "priceRange": "Price Range",
-      "priceRangePlaceholder": "e.g. AED 1.2M - 5M",
+      "priceRangePlaceholder": "e.g. ₺ 1.2M - 5M",
       "trend": "Trend",
       "trendUp": "Up",
       "trendStable": "Stable",
@@ -870,7 +906,7 @@
       "editStat": "Edit Stat",
       "addStat": "Add Stat",
       "city": "City",
-      "cityPlaceholder": "e.g. Dubai",
+      "cityPlaceholder": "e.g. Alanya",
       "address": "Address",
       "addressPlaceholder": "Full office address",
       "phone": "Phone",

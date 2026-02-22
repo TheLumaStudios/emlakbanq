@@ -3,6 +3,8 @@ import { Outlet, Navigate, useLocation } from 'react-router-dom'
 import { useAuthStore } from '../stores/useAuthStore'
 import AdminSidebar from '../components/admin/AdminSidebar'
 import AdminTopBar from '../components/admin/AdminTopBar'
+import ToastContainer from '../components/admin/Toast'
+import Breadcrumbs from '../components/admin/Breadcrumbs'
 
 export default function AdminLayout() {
   const { session, loading } = useAuthStore()
@@ -29,9 +31,9 @@ export default function AdminLayout() {
             className="h-16 w-auto animate-pulse"
           />
           <div className="flex gap-1">
-            <div className="h-2 w-2 animate-bounce rounded-full bg-gold-500" style={{ animationDelay: '0ms' }} />
-            <div className="h-2 w-2 animate-bounce rounded-full bg-gold-500" style={{ animationDelay: '150ms' }} />
-            <div className="h-2 w-2 animate-bounce rounded-full bg-gold-500" style={{ animationDelay: '300ms' }} />
+            <div className="h-2 w-2 animate-bounce rounded-full bg-blue-500" style={{ animationDelay: '0ms' }} />
+            <div className="h-2 w-2 animate-bounce rounded-full bg-blue-500" style={{ animationDelay: '150ms' }} />
+            <div className="h-2 w-2 animate-bounce rounded-full bg-blue-500" style={{ animationDelay: '300ms' }} />
           </div>
           <p className="text-sm text-estate-400">Loading admin panel...</p>
         </div>
@@ -51,9 +53,12 @@ export default function AdminLayout() {
         <AdminTopBar onMenuToggle={() => setSidebarOpen(true)} />
 
         <main className="p-4 sm:p-6 lg:p-8">
+          <Breadcrumbs />
           <Outlet />
         </main>
       </div>
+
+      <ToastContainer />
     </div>
   )
 }

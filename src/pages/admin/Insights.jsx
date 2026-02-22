@@ -2,7 +2,9 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../../utils/supabase'
 import ConfirmDialog from '../../components/admin/ConfirmDialog'
+import AdminModal from '../../components/admin/AdminModal'
 import MultilingualInput from '../../components/admin/MultilingualInput'
+import { useToast } from '../../hooks/useToast'
 
 // Display text from JSONB or plain string
 function getDisplayText(field) {
@@ -13,6 +15,7 @@ function getDisplayText(field) {
 
 export default function Insights() {
   const { t } = useTranslation()
+  const toast = useToast()
   // Market Highlights state
   const [highlights, setHighlights] = useState([])
   const [loadingHighlights, setLoadingHighlights] = useState(true)
@@ -87,10 +90,13 @@ export default function Insights() {
       result = await supabase.from('market_highlights').insert([{ ...payload, created_at: new Date().toISOString() }])
     }
 
-    if (result.error) setError(result.error.message)
-    else {
+    if (result.error) {
+      setError(result.error.message)
+      toast.error(result.error.message)
+    } else {
       closeHighlightModal()
       await fetchHighlights()
+      toast.success(t('admin.common.savedSuccessfully'))
     }
     setSaving(false)
   }
@@ -157,10 +163,13 @@ export default function Insights() {
       result = await supabase.from('top_areas_roi').insert([{ ...payload, created_at: new Date().toISOString() }])
     }
 
-    if (result.error) setError(result.error.message)
-    else {
+    if (result.error) {
+      setError(result.error.message)
+      toast.error(result.error.message)
+    } else {
       closeAreaModal()
       await fetchAreas()
+      toast.success(t('admin.common.savedSuccessfully'))
     }
     setSaving(false)
   }
@@ -181,10 +190,13 @@ export default function Insights() {
       .delete()
       .eq('id', deleteTarget.id)
 
-    if (err) setError(err.message)
-    else {
+    if (err) {
+      setError(err.message)
+      toast.error(err.message)
+    } else {
       if (deleteTable === 'market_highlights') await fetchHighlights()
       else await fetchAreas()
+      toast.success(t('admin.common.deletedSuccessfully'))
     }
     setDeleteTarget(null)
     setDeleteTable(null)
@@ -217,7 +229,7 @@ export default function Insights() {
           </div>
           <button
             onClick={() => openHighlightModal()}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-gold-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-blue-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -277,7 +289,7 @@ export default function Insights() {
           </div>
           <button
             onClick={() => openAreaModal()}
-            className="inline-flex items-center gap-1.5 rounded-lg bg-gold-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600"
+            className="inline-flex items-center gap-1.5 rounded-lg bg-blue-500 px-3 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -311,10 +323,10 @@ export default function Insights() {
               </thead>
               <tbody className="divide-y divide-estate-100">
                 {areas.map((item) => (
-                  <tr key={item.id} className="transition-colors hover:bg-cream-50">
+                  <tr key={item.id} className="transition-colors hover:bg-yellow-50">
                     <td className="px-4 py-3 text-estate-400">{item.sort_order}</td>
                     <td className="px-4 py-3 font-medium text-estate-900">{getDisplayText(item.area)}</td>
-                    <td className="px-4 py-3 font-semibold text-gold-600">{item.roi}</td>
+                    <td className="px-4 py-3 font-semibold text-blue-600">{item.roi}</td>
                     <td className="px-4 py-3 text-estate-500">{item.price_range}</td>
                     <td className="px-4 py-3">
                       <span
@@ -369,178 +381,150 @@ export default function Insights() {
       {/* ========== MODALS ========== */}
 
       {/* Highlight Modal */}
-      {highlightModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-estate-900/60 backdrop-blur-sm" onClick={closeHighlightModal} />
-          <div className="relative mx-4 w-full max-w-2xl rounded-lg bg-white p-6 shadow-2xl">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-estate-900">
-                {editingHighlight ? t('admin.common.editItem') : t('admin.common.addItem')}
-              </h2>
-              <button
-                onClick={closeHighlightModal}
-                className="rounded-md p-1.5 text-estate-400 transition-colors hover:bg-estate-100 hover:text-estate-700"
-              >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+      <AdminModal
+        open={highlightModalOpen}
+        onClose={closeHighlightModal}
+        title={editingHighlight ? t('admin.common.editItem') : t('admin.common.addItem')}
+        maxWidth="max-w-2xl"
+      >
+        <form onSubmit={handleSaveHighlight} className="space-y-4">
+          <MultilingualInput
+            label={t('admin.common.description')}
+            name="text"
+            value={highlightForm.text}
+            onChange={(_, value) => setHighlightForm((prev) => ({ ...prev, text: value }))}
+            placeholder={t('admin.insights.highlightsPlaceholder')}
+          />
 
-            <form onSubmit={handleSaveHighlight} className="mt-5 space-y-4">
-              <MultilingualInput
-                label={t('admin.common.description')}
-                name="text"
-                value={highlightForm.text}
-                onChange={(_, value) => setHighlightForm((prev) => ({ ...prev, text: value }))}
-                placeholder={t('admin.insights.highlightsPlaceholder')}
-              />
-
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
-                <input
-                  type="number"
-                  value={highlightForm.sort_order}
-                  onChange={(e) => setHighlightForm((prev) => ({ ...prev, sort_order: parseInt(e.target.value, 10) || 0 }))}
-                  min={0}
-                  className="w-24 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                />
-              </div>
-
-              <div className="flex justify-end gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={closeHighlightModal}
-                  className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
-                >
-                  {t('admin.common.cancel')}
-                </button>
-                <button
-                  type="submit"
-                  disabled={saving}
-                  className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600 disabled:opacity-50"
-                >
-                  {saving && (
-                    <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                    </svg>
-                  )}
-                  {editingHighlight ? t('admin.common.update') : t('admin.common.create')}
-                </button>
-              </div>
-            </form>
+          <div>
+            <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
+            <input
+              type="number"
+              value={highlightForm.sort_order}
+              onChange={(e) => setHighlightForm((prev) => ({ ...prev, sort_order: parseInt(e.target.value, 10) || 0 }))}
+              min={0}
+              className="w-24 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            />
           </div>
-        </div>
-      )}
+
+          <div className="flex justify-end gap-3 pt-2">
+            <button
+              type="button"
+              onClick={closeHighlightModal}
+              className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
+            >
+              {t('admin.common.cancel')}
+            </button>
+            <button
+              type="submit"
+              disabled={saving}
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
+            >
+              {saving && (
+                <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+              )}
+              {editingHighlight ? t('admin.common.update') : t('admin.common.create')}
+            </button>
+          </div>
+        </form>
+      </AdminModal>
 
       {/* Area Modal */}
-      {areaModalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-estate-900/60 backdrop-blur-sm" onClick={closeAreaModal} />
-          <div className="relative mx-4 w-full max-w-2xl rounded-lg bg-white p-6 shadow-2xl">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-estate-900">
-                {editingArea ? t('admin.insights.editArea') : t('admin.insights.addArea')}
-              </h2>
-              <button
-                onClick={closeAreaModal}
-                className="rounded-md p-1.5 text-estate-400 transition-colors hover:bg-estate-100 hover:text-estate-700"
-              >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </button>
-            </div>
+      <AdminModal
+        open={areaModalOpen}
+        onClose={closeAreaModal}
+        title={editingArea ? t('admin.insights.editArea') : t('admin.insights.addArea')}
+        maxWidth="max-w-2xl"
+      >
+        <form onSubmit={handleSaveArea} className="space-y-4">
+          <MultilingualInput
+            label={t('admin.insights.area')}
+            name="area"
+            value={areaForm.area}
+            onChange={(_, value) => setAreaForm((prev) => ({ ...prev, area: value }))}
+            required
+            placeholder={t('admin.insights.areaPlaceholder')}
+          />
 
-            <form onSubmit={handleSaveArea} className="mt-5 space-y-4">
-              <MultilingualInput
-                label={t('admin.insights.area')}
-                name="area"
-                value={areaForm.area}
-                onChange={(_, value) => setAreaForm((prev) => ({ ...prev, area: value }))}
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.insights.roi')}</label>
+              <input
+                type="text"
+                name="roi"
+                value={areaForm.roi}
+                onChange={handleAreaFormChange}
                 required
-                placeholder={t('admin.insights.areaPlaceholder')}
+                placeholder={t('admin.insights.roiPlaceholder')}
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
               />
-
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.insights.roi')}</label>
-                  <input
-                    type="text"
-                    name="roi"
-                    value={areaForm.roi}
-                    onChange={handleAreaFormChange}
-                    required
-                    placeholder={t('admin.insights.roiPlaceholder')}
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.insights.priceRange')}</label>
-                  <input
-                    type="text"
-                    name="price_range"
-                    value={areaForm.price_range}
-                    onChange={handleAreaFormChange}
-                    placeholder={t('admin.insights.priceRangePlaceholder')}
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-              </div>
-
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.insights.trend')}</label>
-                  <select
-                    name="trend"
-                    value={areaForm.trend}
-                    onChange={handleAreaFormChange}
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  >
-                    <option value="up">{t('admin.insights.trendUp')}</option>
-                    <option value="stable">{t('admin.insights.trendStable')}</option>
-                  </select>
-                </div>
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
-                  <input
-                    type="number"
-                    name="sort_order"
-                    value={areaForm.sort_order}
-                    onChange={handleAreaFormChange}
-                    min={0}
-                    className="w-24 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-              </div>
-
-              <div className="flex justify-end gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={closeAreaModal}
-                  className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
-                >
-                  {t('admin.common.cancel')}
-                </button>
-                <button
-                  type="submit"
-                  disabled={saving}
-                  className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600 disabled:opacity-50"
-                >
-                  {saving && (
-                    <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                    </svg>
-                  )}
-                  {editingArea ? t('admin.common.update') : t('admin.common.create')}
-                </button>
-              </div>
-            </form>
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.insights.priceRange')}</label>
+              <input
+                type="text"
+                name="price_range"
+                value={areaForm.price_range}
+                onChange={handleAreaFormChange}
+                placeholder={t('admin.insights.priceRangePlaceholder')}
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
           </div>
-        </div>
-      )}
+
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.insights.trend')}</label>
+              <select
+                name="trend"
+                value={areaForm.trend}
+                onChange={handleAreaFormChange}
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              >
+                <option value="up">{t('admin.insights.trendUp')}</option>
+                <option value="stable">{t('admin.insights.trendStable')}</option>
+              </select>
+            </div>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
+              <input
+                type="number"
+                name="sort_order"
+                value={areaForm.sort_order}
+                onChange={handleAreaFormChange}
+                min={0}
+                className="w-24 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          </div>
+
+          <div className="flex justify-end gap-3 pt-2">
+            <button
+              type="button"
+              onClick={closeAreaModal}
+              className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
+            >
+              {t('admin.common.cancel')}
+            </button>
+            <button
+              type="submit"
+              disabled={saving}
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
+            >
+              {saving && (
+                <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+              )}
+              {editingArea ? t('admin.common.update') : t('admin.common.create')}
+            </button>
+          </div>
+        </form>
+      </AdminModal>
 
       {/* Delete Confirm */}
       <ConfirmDialog

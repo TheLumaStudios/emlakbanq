@@ -23,8 +23,10 @@ export default function Footer() {
   const { t } = useTranslation()
 
   return (
-    <footer className="bg-estate-900 text-estate-300">
-      <div className="mx-auto max-w-[1400px] px-6 py-16 lg:py-20">
+    <footer className="relative bg-estate-900 text-estate-300">
+      {/* Top gradient line */}
+      <div className="absolute left-0 right-0 top-0 h-px bg-gradient-to-r from-transparent via-blue-500/40 to-transparent" />
+      <div className="mx-auto max-w-[1400px] px-6 py-20 lg:py-24">
         <div className="grid grid-cols-1 gap-12 md:grid-cols-2 lg:grid-cols-12 lg:gap-8">
           <div className="lg:col-span-4">
             <Logo variant="light" size="lg" />
@@ -38,7 +40,7 @@ export default function Footer() {
                   href={url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex h-10 w-10 items-center justify-center rounded-full border border-estate-700 text-estate-400 transition-all duration-200 hover:border-gold-500 hover:bg-gold-500 hover:text-white"
+                  className="flex h-11 w-11 items-center justify-center rounded-full border border-estate-700 text-estate-400 transition-all duration-200 hover:border-blue-500/50 hover:bg-blue-500/10 hover:text-blue-400 hover:shadow-lg hover:shadow-blue-500/10"
                   aria-label={platform}
                 >
                   <svg className="h-[18px] w-[18px]" viewBox="0 0 24 24" fill="currentColor">
@@ -50,31 +52,31 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-2">
-            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-400">
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
               {t('footer.quickLinks')}
             </h3>
             <ul className="space-y-3">
-              <li><Link to={ROUTES.PROPERTIES} className="text-sm transition-colors hover:text-gold-400">{t('nav.properties')}</Link></li>
-              <li><Link to={ROUTES.AREAS} className="text-sm transition-colors hover:text-gold-400">{t('nav.areas')}</Link></li>
-              <li><Link to={ROUTES.GOLDEN_VISA} className="text-sm transition-colors hover:text-gold-400">{t('nav.goldenVisa')}</Link></li>
-              <li><Link to={ROUTES.INSIGHTS} className="text-sm transition-colors hover:text-gold-400">{t('nav.insights')}</Link></li>
+              <li><Link to={ROUTES.PROPERTIES} className="text-sm transition-colors hover:text-blue-400">{t('nav.properties')}</Link></li>
+              <li><Link to={ROUTES.AREAS} className="text-sm transition-colors hover:text-blue-400">{t('nav.areas')}</Link></li>
+              <li><Link to={ROUTES.GOLDEN_VISA} className="text-sm transition-colors hover:text-blue-400">{t('nav.goldenVisa')}</Link></li>
+              <li><Link to={ROUTES.INSIGHTS} className="text-sm transition-colors hover:text-blue-400">{t('nav.insights')}</Link></li>
             </ul>
           </div>
 
           <div className="lg:col-span-2">
-            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-gold-400">
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
               {t('footer.services')}
             </h3>
             <ul className="space-y-3">
-              <li><Link to={ROUTES.BUYER_GUIDES} className="text-sm transition-colors hover:text-gold-400">{t('nav.buyerGuides')}</Link></li>
-              <li><Link to={ROUTES.ABOUT} className="text-sm transition-colors hover:text-gold-400">{t('nav.about')}</Link></li>
-              <li><Link to={ROUTES.BLOG} className="text-sm transition-colors hover:text-gold-400">{t('nav.blog')}</Link></li>
-              <li><Link to={ROUTES.CONTACT} className="text-sm transition-colors hover:text-gold-400">{t('nav.contact')}</Link></li>
+              <li><Link to={ROUTES.BUYER_GUIDES} className="text-sm transition-colors hover:text-blue-400">{t('nav.buyerGuides')}</Link></li>
+              <li><Link to={ROUTES.ABOUT} className="text-sm transition-colors hover:text-blue-400">{t('nav.about')}</Link></li>
+              <li><Link to={ROUTES.BLOG} className="text-sm transition-colors hover:text-blue-400">{t('nav.blog')}</Link></li>
+              <li><Link to={ROUTES.CONTACT} className="text-sm transition-colors hover:text-blue-400">{t('nav.contact')}</Link></li>
             </ul>
           </div>
 
           <div className="lg:col-span-4">
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-gold-400">
+            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
               {t('footer.newsletter.title')}
             </h3>
             <p className="mb-5 text-sm text-estate-500">
@@ -84,11 +86,11 @@ export default function Footer() {
               <input
                 type="email"
                 placeholder={t('footer.newsletter.placeholder')}
-                className="flex-1 rounded-md border border-estate-700 bg-estate-800/50 px-4 py-3 text-sm text-white placeholder:text-estate-500 transition-colors focus:border-gold-500 focus:outline-none"
+                className="flex-1 rounded-md border border-estate-700 bg-estate-800/30 px-4 py-3 text-sm text-white placeholder:text-estate-500 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/10"
               />
               <button
                 type="submit"
-                className="shrink-0 rounded-md bg-gold-500 px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-gold-600 hover:shadow-lg"
+                className="btn-glow shrink-0 rounded-md bg-blue-500 px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-blue-400"
               >
                 {t('footer.newsletter.subscribe')}
               </button>
@@ -101,15 +103,15 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-16 flex flex-col items-center justify-between gap-4 border-t border-estate-800 pt-8 md:flex-row">
+        <div className="mt-20 flex flex-col items-center justify-between gap-4 border-t border-estate-800/50 pt-8 md:flex-row">
           <p className="text-xs text-estate-500">
             &copy; {t('footer.copyright')}
           </p>
           <div className="flex gap-8">
-            <Link to={ROUTES.PRIVACY} className="text-xs text-estate-500 transition-colors hover:text-gold-400">
+            <Link to={ROUTES.PRIVACY} className="text-xs text-estate-500 transition-colors hover:text-blue-400">
               {t('footer.privacy')}
             </Link>
-            <Link to={ROUTES.TERMS} className="text-xs text-estate-500 transition-colors hover:text-gold-400">
+            <Link to={ROUTES.TERMS} className="text-xs text-estate-500 transition-colors hover:text-blue-400">
               {t('footer.terms')}
             </Link>
           </div>

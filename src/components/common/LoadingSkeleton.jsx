@@ -16,9 +16,9 @@ export default function LoadingSkeleton({ variant = 'card', count = 3, columns =
             className="h-16 w-auto animate-pulse"
           />
           <div className="flex gap-1">
-            <div className="h-2 w-2 animate-bounce rounded-full bg-gold-500" style={{ animationDelay: '0ms' }} />
-            <div className="h-2 w-2 animate-bounce rounded-full bg-gold-500" style={{ animationDelay: '150ms' }} />
-            <div className="h-2 w-2 animate-bounce rounded-full bg-gold-500" style={{ animationDelay: '300ms' }} />
+            <div className="h-2 w-2 animate-bounce rounded-full bg-blue-500" style={{ animationDelay: '0ms' }} />
+            <div className="h-2 w-2 animate-bounce rounded-full bg-blue-500" style={{ animationDelay: '150ms' }} />
+            <div className="h-2 w-2 animate-bounce rounded-full bg-blue-500" style={{ animationDelay: '300ms' }} />
           </div>
         </div>
       </div>

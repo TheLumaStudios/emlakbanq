@@ -48,7 +48,7 @@ export default function MultilingualInput({
             onClick={() => setActiveTab(lang.code)}
             className={`px-3 py-2 text-sm font-medium transition-colors ${
               activeTab === lang.code
-                ? 'border-b-2 border-gold-500 text-gold-700'
+                ? 'border-b-2 border-blue-500 text-blue-700'
                 : 'text-estate-500 hover:text-estate-700'
             }`}
           >
@@ -74,7 +74,7 @@ export default function MultilingualInput({
                 rows={rows}
                 placeholder={`${placeholder} (${lang.name})`}
                 dir={lang.dir}
-                className="w-full rounded-md border border-estate-300 px-3 py-2 text-sm focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+                className="w-full rounded-md border border-estate-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               />
             ) : (
               <input
@@ -83,7 +83,7 @@ export default function MultilingualInput({
                 onChange={(e) => handleChange(lang.code, e.target.value)}
                 placeholder={`${placeholder} (${lang.name})`}
                 dir={lang.dir}
-                className="w-full rounded-md border border-estate-300 px-3 py-2 text-sm focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+                className="w-full rounded-md border border-estate-300 px-3 py-2 text-sm focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               />
             )}
 

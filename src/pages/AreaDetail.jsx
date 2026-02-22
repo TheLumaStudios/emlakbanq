@@ -23,7 +23,7 @@ export default function AreaDetail() {
     <>
       <SEOHead
         title={`${area.name} | EmlakBanq`}
-        description={area.description_long || area.description || `Explore ${area.name} - one of Dubai's premier neighborhoods.`}
+        description={area.description_long || area.description || `Explore ${area.name} - one of Alanya's premier neighborhoods.`}
       />
 
       {/* Hero Image */}
@@ -32,7 +32,7 @@ export default function AreaDetail() {
         <div className="absolute inset-0 bg-gradient-to-t from-estate-900/80 via-estate-900/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 pb-10">
           <Container>
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
+            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
               {t('areas.detail.explore', 'Explore Area')}
             </p>
             <h1 className="mt-4 font-heading text-3xl font-bold text-white md:text-4xl lg:text-5xl">
@@ -62,7 +62,7 @@ export default function AreaDetail() {
                 <p className="text-xs font-medium uppercase tracking-wider text-estate-400">
                   {t('areas.detail.roi', 'Expected ROI')}
                 </p>
-                <p className="mt-1 font-heading text-2xl font-bold text-gold-700">{area.roi}</p>
+                <p className="mt-1 font-heading text-2xl font-bold text-blue-700">{area.roi}</p>
               </div>
             )}
             {area.property_count && (
@@ -101,7 +101,7 @@ export default function AreaDetail() {
 
       {/* Highlights */}
       {area.highlights?.length > 0 && (
-        <section className="bg-cream-50 py-16 lg:py-20">
+        <section className="bg-yellow-50 py-16 lg:py-20">
           <Container>
             <div className="mx-auto max-w-3xl">
               <h2 className="font-heading text-2xl font-bold text-estate-900">
@@ -111,10 +111,10 @@ export default function AreaDetail() {
                 {area.highlights.map((highlight, i) => (
                   <div
                     key={i}
-                    className="flex items-start gap-3 rounded-xl border border-estate-100 bg-white px-5 py-4 transition-all duration-300 hover:border-gold-200 hover:shadow-sm"
+                    className="flex items-start gap-3 rounded-xl border border-estate-100 bg-white px-5 py-4 transition-all duration-300 hover:border-blue-200 hover:shadow-sm"
                   >
                     <svg
-                      className="mt-0.5 h-5 w-5 flex-shrink-0 text-gold-600"
+                      className="mt-0.5 h-5 w-5 flex-shrink-0 text-blue-600"
                       fill="none"
                       viewBox="0 0 24 24"
                       stroke="currentColor"
@@ -163,13 +163,13 @@ export default function AreaDetail() {
           <p className="mx-auto mt-4 max-w-xl text-lg text-estate-300">
             {t(
               'areas.detail.cta.description',
-              'Discover exclusive properties and investment opportunities in one of Dubai\'s most sought-after neighborhoods.'
+              'Discover exclusive properties and investment opportunities in one of Alanya\'s most sought-after neighborhoods.'
             )}
           </p>
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4">
             <Link
               to={ROUTES.PROPERTIES}
-              className="inline-flex items-center gap-2 rounded-full bg-gold-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/25"
+              className="btn-glow inline-flex items-center gap-2 rounded-full bg-blue-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400"
             >
               {t('areas.detail.cta.viewProperties', 'View Properties')}
               <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -178,7 +178,7 @@ export default function AreaDetail() {
             </Link>
             <Link
               to={ROUTES.CONTACT}
-              className="inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3.5 font-medium text-white transition-all duration-300 hover:bg-white/10"
+              className="btn-glow-outline inline-flex items-center gap-2 rounded-full border border-white/20 px-8 py-3.5 font-medium text-white transition-all duration-300 hover:bg-white/10"
             >
               {t('areas.detail.cta.contact', 'Contact Us')}
             </Link>

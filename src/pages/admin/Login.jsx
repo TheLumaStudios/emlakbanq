@@ -42,7 +42,7 @@ export default function Login() {
   if (authLoading) {
     return (
       <div className="flex min-h-screen items-center justify-center bg-estate-50">
-        <div className="h-10 w-10 animate-spin rounded-full border-4 border-estate-200 border-t-gold-500" />
+        <div className="h-10 w-10 animate-spin rounded-full border-4 border-estate-200 border-t-blue-500" />
       </div>
     )
   }
@@ -53,7 +53,7 @@ export default function Login() {
         {/* Logo */}
         <div className="mb-8 text-center">
           <span className="font-heading text-3xl font-bold tracking-tight text-estate-900">
-            Emlak<span className="text-gold-500">Banq</span>
+            Emlak<span className="text-blue-500">Banq</span>
           </span>
           <p className="mt-2 text-sm text-estate-500">{t('admin.login.title')}</p>
         </div>
@@ -83,7 +83,7 @@ export default function Login() {
                 required
                 autoComplete="email"
                 placeholder={t('admin.login.emailPlaceholder')}
-                className="w-full rounded-lg border border-estate-200 bg-white px-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+                className="w-full rounded-lg border border-estate-200 bg-white px-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               />
             </div>
 
@@ -99,14 +99,14 @@ export default function Login() {
                 required
                 autoComplete="current-password"
                 placeholder={t('admin.login.passwordPlaceholder')}
-                className="w-full rounded-lg border border-estate-200 bg-white px-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+                className="w-full rounded-lg border border-estate-200 bg-white px-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               />
             </div>
 
             <button
               type="submit"
               disabled={loading}
-              className="flex w-full items-center justify-center gap-2 rounded-lg bg-gold-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-600 disabled:opacity-60"
+              className="flex w-full items-center justify-center gap-2 rounded-lg bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-600 disabled:opacity-60"
             >
               {loading ? (
                 <>
@@ -122,7 +122,7 @@ export default function Login() {
 
         {/* Back to site */}
         <p className="mt-6 text-center text-sm text-estate-400">
-          <a href="/" className="text-gold-600 transition-colors hover:text-gold-700">
+          <a href="/" className="text-blue-600 transition-colors hover:text-blue-700">
             {t('admin.login.backToSite')}
           </a>
         </p>

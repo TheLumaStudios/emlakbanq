@@ -101,8 +101,8 @@ export default function ImageUpload({
         onDragLeave={() => setDragOver(false)}
         className={`cursor-pointer rounded-xl border-2 border-dashed p-6 text-center transition-colors ${
           dragOver
-            ? 'border-gold-500 bg-gold-50/30'
-            : 'border-estate-300 bg-estate-50 hover:border-gold-500 hover:bg-gold-50/20'
+            ? 'border-blue-500 bg-blue-50/30'
+            : 'border-estate-300 bg-estate-50 hover:border-blue-500 hover:bg-blue-50/20'
         }`}
       >
         <input
@@ -115,7 +115,7 @@ export default function ImageUpload({
         />
         {uploading ? (
           <div className="flex flex-col items-center gap-2">
-            <div className="h-6 w-6 animate-spin rounded-full border-2 border-estate-300 border-t-gold-500" />
+            <div className="h-6 w-6 animate-spin rounded-full border-2 border-estate-300 border-t-blue-500" />
             <span className="text-sm text-estate-500">{t('admin.common.uploading')}</span>
           </div>
         ) : (
@@ -147,7 +147,7 @@ export default function ImageUpload({
             }
           }}
           placeholder="https://..."
-          className="flex-1 rounded-lg border border-estate-200 bg-white px-3 py-1.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+          className="flex-1 rounded-lg border border-estate-200 bg-white px-3 py-1.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
         />
       </div>
 

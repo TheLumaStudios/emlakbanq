@@ -3,13 +3,45 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../../utils/supabase'
 import { useAuthStore } from '../../stores/useAuthStore'
+import { useToast } from '../../hooks/useToast'
+
+const getLocalizedValue = (field, lang = 'en') => {
+  if (!field) return ''
+  if (typeof field === 'string') return field
+  return field[lang] || field.en || Object.values(field)[0] || ''
+}
+
+function getRelativeTime(dateStr) {
+  if (!dateStr) return ''
+  const now = Date.now()
+  const then = new Date(dateStr).getTime()
+  const diffMs = now - then
+  const diffSec = Math.floor(diffMs / 1000)
+  const diffMin = Math.floor(diffSec / 60)
+  const diffHr = Math.floor(diffMin / 60)
+  const diffDay = Math.floor(diffHr / 24)
+
+  if (diffSec < 60) return 'Just now'
+  if (diffMin < 60) return `${diffMin}m ago`
+  if (diffHr < 24) return `${diffHr}h ago`
+  return `${diffDay}d ago`
+}
+
+const ACTIVITY_CONFIG = {
+  properties: { dotColor: 'bg-amber-400', label: 'Property', editBase: '/admin/properties' },
+  blog_posts: { dotColor: 'bg-green-500', label: 'Blog', editBase: '/admin/blog' },
+  areas: { dotColor: 'bg-blue-500', label: 'Area', editBase: '/admin/areas' },
+  buyer_guides: { dotColor: 'bg-purple-500', label: 'Guide', editBase: '/admin/buyer-guides' },
+}
 
 function StatCard({ label, value, icon, loading, color = 'gold' }) {
   const colorClasses = {
-    gold: 'bg-gold-50 text-gold-600',
+    gold: 'bg-blue-50 text-blue-600',
     blue: 'bg-blue-50 text-blue-600',
     green: 'bg-green-50 text-green-600',
     purple: 'bg-purple-50 text-purple-600',
+    amber: 'bg-amber-50 text-amber-600',
+    rose: 'bg-rose-50 text-rose-600',
   }
 
   return (
@@ -32,25 +64,30 @@ function StatCard({ label, value, icon, loading, color = 'gold' }) {
 }
 
 export default function Dashboard() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const session = useAuthStore((s) => s.session)
-  const [stats, setStats] = useState({ properties: 0, areas: 0, blogs: 0, messages: 0 })
+  const [stats, setStats] = useState({ properties: 0, areas: 0, blogs: 0, messages: 0, guides: 0, goldenVisa: 0 })
   const [recentMessages, setRecentMessages] = useState([])
+  const [recentActivity, setRecentActivity] = useState([])
   const [loading, setLoading] = useState(true)
   const [loadingMessages, setLoadingMessages] = useState(true)
+  const [loadingActivity, setLoadingActivity] = useState(true)
 
   useEffect(() => {
     fetchStats()
     fetchRecentMessages()
+    fetchRecentActivity()
   }, [])
 
   async function fetchStats() {
     setLoading(true)
-    const [propertiesRes, areasRes, blogsRes, messagesRes] = await Promise.all([
+    const [propertiesRes, areasRes, blogsRes, messagesRes, guidesRes, goldenVisaRes] = await Promise.all([
       supabase.from('properties').select('id', { count: 'exact', head: true }),
       supabase.from('areas').select('id', { count: 'exact', head: true }),
       supabase.from('blog_posts').select('id', { count: 'exact', head: true }),
       supabase.from('contact_submissions').select('id', { count: 'exact', head: true }).eq('read', false),
+      supabase.from('buyer_guides').select('id', { count: 'exact', head: true }),
+      supabase.from('golden_visa_content').select('id', { count: 'exact', head: true }),
     ])
 
     setStats({
@@ -58,6 +95,8 @@ export default function Dashboard() {
       areas: areasRes.count ?? 0,
       blogs: blogsRes.count ?? 0,
       messages: messagesRes.count ?? 0,
+      guides: guidesRes.count ?? 0,
+      goldenVisa: goldenVisaRes.count ?? 0,
     })
     setLoading(false)
   }
@@ -74,6 +113,28 @@ export default function Dashboard() {
     setLoadingMessages(false)
   }
 
+  async function fetchRecentActivity() {
+    setLoadingActivity(true)
+    const [propertiesRes, blogsRes, areasRes, guidesRes] = await Promise.all([
+      supabase.from('properties').select('id, name, updated_at, created_at').order('updated_at', { ascending: false }).limit(3),
+      supabase.from('blog_posts').select('id, title, updated_at, created_at').order('updated_at', { ascending: false }).limit(3),
+      supabase.from('areas').select('id, name, updated_at, created_at').order('updated_at', { ascending: false }).limit(3),
+      supabase.from('buyer_guides').select('id, title, updated_at, created_at').order('updated_at', { ascending: false }).limit(3),
+    ])
+
+    const all = [
+      ...(propertiesRes.data || []).map((item) => ({ ...item, _type: 'properties', _name: item.name })),
+      ...(blogsRes.data || []).map((item) => ({ ...item, _type: 'blog_posts', _name: item.title })),
+      ...(areasRes.data || []).map((item) => ({ ...item, _type: 'areas', _name: item.name })),
+      ...(guidesRes.data || []).map((item) => ({ ...item, _type: 'buyer_guides', _name: item.title })),
+    ]
+
+    all.sort((a, b) => new Date(b.updated_at || b.created_at).getTime() - new Date(a.updated_at || a.created_at).getTime())
+
+    setRecentActivity(all.slice(0, 8))
+    setLoadingActivity(false)
+  }
+
   const firstName = session?.user?.email?.split('@')[0] || 'Admin'
 
   return (
@@ -86,10 +147,13 @@ export default function Dashboard() {
         <p className="mt-1 text-sm text-estate-500">
           {t('admin.dashboard.overview')}
         </p>
+        <p className="mt-2 text-xs text-estate-400">
+          {new Date().toLocaleDateString(i18n.language, { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' })}
+        </p>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-4">
+      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
         <StatCard
           label={t('admin.dashboard.totalProperties')}
           value={stats.properties}
@@ -135,6 +199,28 @@ export default function Dashboard() {
             </svg>
           }
         />
+        <StatCard
+          label={t('admin.dashboard.buyerGuides', 'Buyer Guides')}
+          value={stats.guides}
+          loading={loading}
+          color="amber"
+          icon={
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
+          }
+        />
+        <StatCard
+          label={t('admin.dashboard.goldenVisaItems', 'Turkish Citizenship Items')}
+          value={stats.goldenVisa}
+          loading={loading}
+          color="rose"
+          icon={
+            <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.562.562 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
+            </svg>
+          }
+        />
       </div>
 
       {/* Quick Links + Recent Messages */}
@@ -145,9 +231,9 @@ export default function Dashboard() {
           <div className="grid grid-cols-2 gap-3">
             <Link
               to="/admin/properties/new"
-              className="flex items-center gap-3 rounded-lg border border-estate-200 p-4 transition-colors hover:border-gold-300 hover:bg-gold-50/50"
+              className="flex items-center gap-3 rounded-lg border border-estate-200 p-4 transition-colors hover:border-blue-300 hover:bg-blue-50/50"
             >
-              <div className="rounded-lg bg-gold-50 p-2 text-gold-600">
+              <div className="rounded-lg bg-blue-50 p-2 text-blue-600">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
                   <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
                 </svg>
@@ -159,7 +245,7 @@ export default function Dashboard() {
             </Link>
             <Link
               to="/admin/blog/new"
-              className="flex items-center gap-3 rounded-lg border border-estate-200 p-4 transition-colors hover:border-gold-300 hover:bg-gold-50/50"
+              className="flex items-center gap-3 rounded-lg border border-estate-200 p-4 transition-colors hover:border-blue-300 hover:bg-blue-50/50"
             >
               <div className="rounded-lg bg-blue-50 p-2 text-blue-600">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -173,7 +259,7 @@ export default function Dashboard() {
             </Link>
             <Link
               to="/admin/areas/new"
-              className="flex items-center gap-3 rounded-lg border border-estate-200 p-4 transition-colors hover:border-gold-300 hover:bg-gold-50/50"
+              className="flex items-center gap-3 rounded-lg border border-estate-200 p-4 transition-colors hover:border-blue-300 hover:bg-blue-50/50"
             >
               <div className="rounded-lg bg-green-50 p-2 text-green-600">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -187,7 +273,7 @@ export default function Dashboard() {
             </Link>
             <Link
               to="/admin/contact"
-              className="flex items-center gap-3 rounded-lg border border-estate-200 p-4 transition-colors hover:border-gold-300 hover:bg-gold-50/50"
+              className="flex items-center gap-3 rounded-lg border border-estate-200 p-4 transition-colors hover:border-blue-300 hover:bg-blue-50/50"
             >
               <div className="rounded-lg bg-purple-50 p-2 text-purple-600">
                 <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
@@ -208,7 +294,7 @@ export default function Dashboard() {
             <h2 className="font-heading text-lg font-semibold text-estate-900">{t('admin.dashboard.recentMessages')}</h2>
             <Link
               to="/admin/contact"
-              className="text-sm font-medium text-gold-600 transition-colors hover:text-gold-700"
+              className="text-sm font-medium text-blue-600 transition-colors hover:text-blue-700"
             >
               {t('admin.dashboard.viewAll')}
             </Link>
@@ -246,7 +332,7 @@ export default function Dashboard() {
                         {msg.name || msg.email}
                       </p>
                       {!msg.read && (
-                        <span className="inline-block h-2 w-2 rounded-full bg-gold-500" />
+                        <span className="inline-block h-2 w-2 rounded-full bg-blue-500" />
                       )}
                     </div>
                     <p className="mt-0.5 truncate text-xs text-estate-500">
@@ -268,6 +354,56 @@ export default function Dashboard() {
             </div>
           )}
         </div>
+      </div>
+
+      {/* Recent Activity */}
+      <div className="rounded-xl border border-estate-200 bg-white p-6 shadow-sm">
+        <h2 className="mb-4 font-heading text-lg font-semibold text-estate-900">
+          {t('admin.dashboard.recentActivity', 'Recent Activity')}
+        </h2>
+        {loadingActivity ? (
+          <div className="space-y-2">
+            {[...Array(4)].map((_, i) => (
+              <div key={i} className="animate-pulse rounded-lg border border-estate-100 px-3 py-2.5">
+                <div className="flex items-center gap-3">
+                  <div className="h-2 w-2 rounded-full bg-estate-100" />
+                  <div className="flex-1 space-y-1.5">
+                    <div className="h-4 w-1/3 rounded bg-estate-100" />
+                    <div className="h-3 w-1/4 rounded bg-estate-100" />
+                  </div>
+                  <div className="h-4 w-8 rounded bg-estate-100" />
+                </div>
+              </div>
+            ))}
+          </div>
+        ) : recentActivity.length === 0 ? (
+          <p className="py-8 text-center text-sm text-estate-400">
+            {t('admin.dashboard.noActivity', 'No recent activity')}
+          </p>
+        ) : (
+          <div className="space-y-2">
+            {recentActivity.map((item) => {
+              const config = ACTIVITY_CONFIG[item._type]
+              const displayName = getLocalizedValue(item._name, i18n.language)
+              const relativeTime = getRelativeTime(item.updated_at || item.created_at)
+              const editPath = `${config.editBase}/${item.id}`
+
+              return (
+                <div
+                  key={`${item._type}-${item.id}`}
+                  className="flex items-center gap-3 rounded-lg border border-estate-100 px-3 py-2.5 transition-colors hover:bg-estate-50/50"
+                >
+                  <span className={`h-2 w-2 shrink-0 rounded-full ${config.dotColor}`} />
+                  <div className="min-w-0 flex-1">
+                    <p className="truncate text-sm font-medium text-estate-800">{displayName}</p>
+                    <p className="text-xs text-estate-400">{config.label} · {relativeTime}</p>
+                  </div>
+                  <Link to={editPath} className="text-xs font-medium text-gold-600 hover:text-gold-700">Edit</Link>
+                </div>
+              )
+            })}
+          </div>
+        )}
       </div>
     </div>
   )

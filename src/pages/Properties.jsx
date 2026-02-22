@@ -34,16 +34,16 @@ export default function Properties() {
       {/* ── Page Header ─────────────────────────────────────────────── */}
       <section className="bg-estate-900 py-20 text-white lg:py-28">
         <Container>
-          <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
+          <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
             {t('properties.subtitle', 'Exclusive Portfolio')}
           </p>
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            {t('properties.heading', 'Luxury Properties in Dubai')}
+            {t('properties.heading', 'Properties in Alanya')}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-estate-300">
             {t(
               'properties.intro',
-              'Discover an unparalleled collection of residences, penthouses, villas, and investment opportunities across Dubai\'s most prestigious addresses.'
+              'Discover an unparalleled collection of residences, penthouses, villas, and investment opportunities across Alanya\'s most desirable locations.'
             )}
           </p>
         </Container>
@@ -71,7 +71,7 @@ export default function Properties() {
       </section>
 
       {/* ── Property Grid ───────────────────────────────────────────── */}
-      <section className="bg-cream-50 py-20 lg:py-24">
+      <section className="bg-yellow-50 py-20 lg:py-24">
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {loading && <LoadingSkeleton variant="card" count={6} columns={3} />}
@@ -114,7 +114,7 @@ export default function Properties() {
 
                 {/* Card Body */}
                 <div className="p-5">
-                  <h3 className="font-heading text-lg font-semibold text-estate-900 transition-colors group-hover:text-gold-700">
+                  <h3 className="font-heading text-lg font-semibold text-estate-900 transition-colors group-hover:text-blue-700">
                     {property.name}
                   </h3>
                   <p className="mt-1 text-sm text-estate-500">
@@ -126,7 +126,7 @@ export default function Properties() {
                     {property.beds && (
                       <div className="flex items-center gap-1.5 text-sm text-estate-600">
                         <svg
-                          className="h-4 w-4 text-gold-600"
+                          className="h-4 w-4 text-blue-600"
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -145,7 +145,7 @@ export default function Properties() {
                     )}
                     <div className="flex items-center gap-1.5 text-sm text-estate-600">
                       <svg
-                        className="h-4 w-4 text-gold-600"
+                        className="h-4 w-4 text-blue-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -162,7 +162,7 @@ export default function Properties() {
                   </div>
 
                   {/* Learn More */}
-                  <div className="mt-4 flex items-center gap-2 text-sm font-medium text-gold-700 transition-colors group-hover:text-gold-800">
+                  <div className="mt-4 flex items-center gap-2 text-sm font-medium text-blue-700 transition-colors group-hover:text-blue-800">
                     <span>{t('common.cta.learnMore', 'Learn More')}</span>
                     <svg
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"

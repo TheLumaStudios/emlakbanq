@@ -1,7 +1,7 @@
 {
   "common": {
     "brand": "EmlakBanq",
-    "tagline": "Dubais führende Luxusimmobilien",
+    "tagline": "Alanyas führende Luxusimmobilien",
     "cta": {
       "getStarted": "Jetzt starten",
       "contactUs": "Kontaktieren Sie uns",
@@ -28,27 +28,27 @@
     "areas": "Gebiete",
     "about": "Über uns",
     "contact": "Kontakt",
-    "goldenVisa": "Golden Visa",
+    "goldenVisa": "Türkische Staatsbürgerschaft",
     "buyerGuides": "Käuferratgeber",
     "insights": "Analysen",
     "blog": "Blog"
   },
   "home": {
     "meta": {
-      "title": "EmlakBanq | Luxusimmobilien Dubai",
-      "description": "Dubais führende Plattform für Luxusimmobilien. Off-Plan, Villen, Penthäuser, Markenresidenzen und Investmentberatung."
+      "title": "EmlakBanq | Luxusimmobilien Alanya",
+      "description": "Alanyas führende Plattform für Luxusimmobilien. Off-Plan, Villen, Penthäuser, Markenresidenzen und Investmentberatung."
     },
     "hero": {
-      "title": "Ihr Tor zum Luxusleben in Dubai",
+      "title": "Ihr Tor zum Luxusleben in Alanya",
       "subtitle": "Über 100 Experten begleiten Sie zu Premium-Immobilien, exklusiven Investitionsmöglichkeiten und einem reibungslosen Kauferlebnis in der dynamischsten Stadt der Welt."
     },
     "featured": {
       "title": "Ausgewählte Immobilien",
-      "subtitle": "Handverlesene Luxusimmobilien in Dubais prestigeträchtigsten Lagen"
+      "subtitle": "Handverlesene Luxusimmobilien in Alanyas prestigeträchtigsten Lagen"
     },
     "areas": {
       "title": "Erstklassige Investitionszonen",
-      "subtitle": "Entdecken Sie Dubais begehrteste Viertel und ihr einzigartiges Investitionspotenzial"
+      "subtitle": "Entdecken Sie Alanyas begehrteste Viertel und ihr einzigartiges Investitionspotenzial"
     },
     "stats": {
       "title": "Warum EmlakBanq?",
@@ -67,15 +67,15 @@
       "subtitle": "Wir verkaufen nicht nur Immobilien — wir liefern eine komplette Lifestyle-Lösung",
       "investment": {
         "title": "Investmentberatung",
-        "description": "Datengestützte Einblicke und personalisierte Strategien zur Maximierung Ihrer Rendite auf Dubais florierendem Markt."
+        "description": "Datengestützte Einblicke und personalisierte Strategien zur Maximierung Ihrer Rendite auf Alanyas florierendem Markt."
       },
       "legal": {
         "title": "Recht & Finanzen",
         "description": "Umfassende rechtliche Unterstützung, Hypothekenhilfe und transparente Finanzberatung während des gesamten Prozesses."
       },
       "visa": {
-        "title": "Golden Visa",
-        "description": "Sichern Sie sich Ihre UAE-Aufenthaltserlaubnis durch strategische Immobilieninvestitionen mit unserem spezialisierten Visa-Team."
+        "title": "Türkische Staatsbürgerschaft",
+        "description": "Erwerben Sie die türkische Staatsbürgerschaft durch strategische Immobilieninvestitionen mit unserem spezialisierten Team."
       },
       "afterSales": {
         "title": "After-Sales-Betreuung",
@@ -83,17 +83,17 @@
       }
     },
     "cta": {
-      "title": "Bereit, in Dubai zu investieren?",
+      "title": "Bereit, in Alanya zu investieren?",
       "subtitle": "Vereinbaren Sie eine kostenlose Beratung mit einem unserer leitenden Berater und entdecken Sie Ihre ideale Investition."
     }
   },
   "properties": {
     "meta": {
       "title": "Immobilien | EmlakBanq",
-      "description": "Entdecken Sie Luxusimmobilien in Dubai — Off-Plan, bezugsfertig, Villen, Penthäuser, Markenresidenzen."
+      "description": "Entdecken Sie Luxusimmobilien in Alanya — Off-Plan, bezugsfertig, Villen, Penthäuser, Markenresidenzen."
     },
     "heading": "Luxusimmobilien",
-    "subtitle": "Entdecken Sie unsere kuratierte Sammlung erstklassiger Immobilien in ganz Dubai",
+    "subtitle": "Entdecken Sie unsere kuratierte Sammlung erstklassiger Immobilien in ganz Alanya",
     "filters": {
       "all": "Alle",
       "type": "Immobilientyp",
@@ -113,10 +113,10 @@
   },
   "areas": {
     "meta": {
-      "title": "Dubai Gebiete | EmlakBanq",
-      "description": "Entdecken Sie Dubais erstklassige Investitionszonen und Stadtviertel."
+      "title": "Alanya Gebiete | EmlakBanq",
+      "description": "Entdecken Sie Alanyas erstklassige Investitionszonen und Stadtviertel."
     },
-    "heading": "Investitionszonen Dubai",
+    "heading": "Investitionszonen Alanya",
     "subtitle": "Jedes Viertel hat seinen eigenen Charakter, Lebensstil und sein eigenes Investitionsprofil",
     "intro": "Von ikonischem Waterfront-Wohnen bis hin zu ruhigen Vorstadt-Rückzugsorten — entdecken Sie den einzigartigen Charakter und das Investitionspotenzial jedes Viertels.",
     "explore": "Entdecken",
@@ -126,86 +126,87 @@
       "description": "Unsere Experten können Ihnen helfen, das ideale Viertel basierend auf Ihrem Lebensstil, Budget und Ihren Investitionszielen zu finden."
     },
     "zones": {
-      "downtown": {
-        "name": "Downtown Dubai",
-        "description": "Heimat des Burj Khalifa und der Dubai Mall — das Epizentrum des Luxuslebens und renditestarker Investitionen.",
-        "avgPrice": "AED 2.5M",
-        "avgRoi": "6.2%"
+      "kleopatra": {
+        "name": "Kleopatra",
+        "description": "Alanyas berühmtester Strand mit goldenem Sand, türkisfarbenem Wasser und pulsierendem Nachtleben.",
+        "avgPrice": "₺ 4.5M",
+        "avgRoi": "6.8%"
       },
-      "marina": {
-        "name": "Dubai Marina",
-        "description": "Eine lebhafte Waterfront-Community mit atemberaubendem Blick auf den Yachthafen, erstklassiger Gastronomie und Premium-Türmen.",
-        "avgPrice": "AED 1.8M",
-        "avgRoi": "7.1%"
+      "mahmutlar": {
+        "name": "Mahmutlar",
+        "description": "Der am schnellsten wachsende Küstenort mit modernen Residenzen, erschwinglichem Luxus und starker Mietnachfrage.",
+        "avgPrice": "₺ 2.2M",
+        "avgRoi": "8.5%"
       },
-      "palmJumeirah": {
-        "name": "Palm Jumeirah",
-        "description": "Die ikonische künstliche Insel mit Ultra-Luxus-Villen, Markenresidenzen und Leben direkt am Strand.",
-        "avgPrice": "AED 5.2M",
-        "avgRoi": "5.8%"
+      "kestel": {
+        "name": "Kestel",
+        "description": "Ruhiger Küstenort mit Panorama-Meerblick, familienfreundlich und hervorragendem Preis-Leistungs-Verhältnis.",
+        "avgPrice": "₺ 2.8M",
+        "avgRoi": "7.2%"
       },
-      "businessBay": {
-        "name": "Business Bay",
-        "description": "Dubais zentrales Geschäftsviertel mit modernen Hochhäusern, Kanalblick und hervorragenden Mietrenditen.",
-        "avgPrice": "AED 1.5M",
-        "avgRoi": "7.5%"
+      "oba": {
+        "name": "Oba",
+        "description": "Gehobenes Wohnviertel mit Premium-Wohnanlagen, üppigem Grün und Nähe zum Zentrum.",
+        "avgPrice": "₺ 3.5M",
+        "avgRoi": "7.0%"
       },
-      "jbr": {
-        "name": "JBR",
-        "description": "Jumeirah Beach Residence — Strandapartments mit Resort-Lifestyle und lebhafter Gesellschaftsszene.",
-        "avgPrice": "AED 2.8M",
-        "avgRoi": "6.0%"
-      },
-      "creekHarbour": {
-        "name": "Dubai Creek Harbour",
-        "description": "Ein aufgehender Stern mit Uferpromenaden, Naturschutzgebieten und erheblichem Kapitalwertsteigerungspotenzial.",
-        "avgPrice": "AED 1.6M",
+      "tosmur": {
+        "name": "Tosmur",
+        "description": "Friedliches Flussufer zwischen Alanya und dem Dim-Fluss mit Naturwanderwegen.",
+        "avgPrice": "₺ 2.0M",
         "avgRoi": "7.8%"
       },
-      "dubaiHills": {
-        "name": "Dubai Hills Estate",
-        "description": "Familienfreundliche Master-Community mit Championship-Golfplatz, Parks und Premium-Villen.",
-        "avgPrice": "AED 2.2M",
+      "cikcilli": {
+        "name": "Cikcilli",
+        "description": "Hanglage mit Blick auf das Taurusgebirge, modernen Apartments und internationaler Expat-Gemeinschaft.",
+        "avgPrice": "₺ 1.8M",
+        "avgRoi": "8.0%"
+      },
+      "kargicak": {
+        "name": "Kargıcak",
+        "description": "Exklusive Hügelvillen mit mediterranem Panoramablick und maximaler Privatsphäre.",
+        "avgPrice": "₺ 5.0M",
         "avgRoi": "6.5%"
       },
-      "jumeirahVillage": {
-        "name": "JVC",
-        "description": "Jumeirah Village Circle — erschwinglicher Luxus mit starken Mietrenditen und rasanter Entwicklung.",
-        "avgPrice": "AED 850K",
-        "avgRoi": "8.2%"
+      "avsallar": {
+        "name": "Avsallar",
+        "description": "Beliebte Strandlage mit Resort-Atmosphäre, erschwinglichen Apartments und hohen Ferienvermietungsrenditen.",
+        "avgPrice": "₺ 1.5M",
+        "avgRoi": "9.0%"
       }
     }
   },
   "about": {
     "meta": {
       "title": "Über uns | EmlakBanq",
-      "description": "Lernen Sie EmlakBanq kennen — über 100 Experten, zwei Büros, Dubais vertrauenswürdige Luxusimmobilienberater."
+      "description": "Lernen Sie EmlakBanq kennen — über 100 Experten, zwei Büros, Alanyas vertrauenswürdige Luxusimmobilienberater."
     },
     "heading": "Über EmlakBanq",
-    "subtitle": "Dubais vertrauenswürdiger Partner für Luxusimmobilien-Investitionen",
+    "subtitle": "Alanyas vertrauenswürdiger Partner für Luxusimmobilien-Investitionen",
     "hero": {
       "subtitle": "Wir verbinden Kontinente und vernetzen Investoren mit dem dynamischsten Immobilienmarkt der Welt — durch unübertroffene Expertise und unerschütterliche Integrität."
     },
     "story": {
       "label": "Unsere Geschichte",
       "title": "Unsere Geschichte",
-      "p1": "EmlakBanq wurde mit einer einzigen Vision gegründet: das Luxusimmobilien-Erlebnis in Dubai neu zu definieren. Was als Boutique-Beratungsfirma begann, ist zu einer globalen Plattform mit über 100 Fachberatern auf zwei Kontinenten gewachsen.",
-      "p2": "Wir glauben, dass der Immobilienkauf in Dubai genauso aufregend sein sollte wie die Stadt selbst — transparent, reibungslos und lohnend. Unser Team verbindet tiefgreifendes Marktwissen mit einer echten Leidenschaft, Investoren bei der Suche nach dem perfekten Match zu helfen.",
-      "p3": "Von Off-Plan-Möglichkeiten bis hin zu bezugsfertigen Villen, von Golden-Visa-Unterstützung bis hin zur After-Sales-Immobilienverwaltung — wir sind Ihr Komplettpartner für Immobilien in Dubai."
+      "p1": "EmlakBanq wurde mit einer einzigen Vision gegründet: das Luxusimmobilien-Erlebnis in Alanya neu zu definieren. Was als Boutique-Beratungsfirma begann, ist zu einer globalen Plattform mit über 100 Fachberatern auf zwei Kontinenten gewachsen.",
+      "p2": "Wir glauben, dass der Immobilienkauf in Alanya genauso aufregend sein sollte wie die Stadt selbst — transparent, reibungslos und lohnend. Unser Team verbindet tiefgreifendes Marktwissen mit einer echten Leidenschaft, Investoren bei der Suche nach dem perfekten Match zu helfen.",
+      "p3": "Von Off-Plan-Möglichkeiten bis hin zu bezugsfertigen Villen, von der Unterstützung bei der türkischen Staatsbürgerschaft bis hin zur After-Sales-Immobilienverwaltung — wir sind Ihr Komplettpartner für Immobilien in Alanya."
     },
     "values": {
       "label": "Unsere Werte",
       "title": "Unsere Werte",
       "transparency": { "title": "Transparenz", "description": "Keine versteckten Gebühren, keine übertriebenen Versprechen. Ehrliche, datengestützte Beratung bei jedem Schritt." },
-      "expertise": { "title": "Fachkompetenz", "description": "Zertifizierte Fachleute mit jahrelanger Erfahrung auf dem Dubaianer Immobilienmarkt." },
-      "global": { "title": "Globale Reichweite", "description": "Büros in Dubai und Istanbul, Betreuung von Kunden aus über 40 Ländern." },
+      "expertise": { "title": "Fachkompetenz", "description": "Zertifizierte Fachleute mit jahrelanger Erfahrung auf dem Alanyaaner Immobilienmarkt." },
+      "global": { "title": "Globale Reichweite", "description": "Büros in Alanya und Istanbul, Betreuung von Kunden aus über 40 Ländern." },
       "client": { "title": "Der Kunde zuerst", "description": "Jede Entscheidung orientiert sich an den Investitionszielen unserer Kunden." }
     },
     "offices": {
       "label": "Globale Präsenz",
       "title": "Unsere Büros",
-      "description": "Strategisch an der Schnittstelle globaler Investitionen positioniert, sind unsere Büros Ihr Tor zum Luxusimmobilienmarkt in Dubai.",
-      "dubai": { "city": "Dubai, VAE", "address": "Bay Square, Business Bay" },
+      "description": "Strategisch an der Schnittstelle globaler Investitionen positioniert, sind unsere Büros Ihr Tor zum Luxusimmobilienmarkt in Alanya.",
+      "officeLabel": "Büro",
+      "alanya": { "city": "Alanya, Türkei", "address": "Oba Mah., Alanya, Antalya" },
       "istanbul": { "city": "Istanbul, Türkei", "address": "Skyland Istanbul" }
     },
     "cta": {
@@ -217,7 +218,7 @@
   "contact": {
     "meta": {
       "title": "Kontakt | EmlakBanq",
-      "description": "Nehmen Sie Kontakt mit EmlakBanq auf. Büros in Dubai und Istanbul."
+      "description": "Nehmen Sie Kontakt mit EmlakBanq auf. Büros in Alanya und Istanbul."
     },
     "heading": "Lassen Sie uns sprechen",
     "subtitle": "Ob Erstkäufer oder erfahrener Investor — unser Team ist für Sie da.",
@@ -229,7 +230,7 @@
       "interests": {
         "buying": "Immobilienkauf",
         "investing": "Investmentberatung",
-        "visa": "Golden Visa",
+        "visa": "Türkische Staatsbürgerschaft",
         "selling": "Immobilienverkauf",
         "other": "Sonstiges"
       },
@@ -246,47 +247,55 @@
     }
   },
   "goldenVisa": {
-    "meta": {
-      "title": "Golden Visa | EmlakBanq",
-      "description": "Erfahren Sie mehr über das Dubai Golden Visa durch Immobilieninvestition."
+    "meta": { "title": "Türkische Staatsbürgerschaft | EmlakBanq", "description": "Erfahren Sie mehr über den Erwerb der türkischen Staatsbürgerschaft durch Immobilieninvestition." },
+    "heading": "Ihr Tor zur türkischen Staatsbürgerschaft durch Immobilieninvestition",
+    "subtitle": "Staatsbürgerschaft durch Investition",
+    "hero": {
+      "subtitle": "Das türkische Programm zur Staatsbürgerschaft durch Investition bietet Immobilieninvestoren die Möglichkeit, die volle Staatsbürgerschaft in einem Land zu erwerben, das Europa und Asien verbindet.",
+      "intro": "EmlakBanq bietet umfassende Unterstützung von der Identifizierung qualifizierender Immobilien bis zum Abschluss des Staatsbürgerschaftsantrags. Unser spezialisiertes Team hat Hunderten von Familien geholfen, die türkische Staatsbürgerschaft mit Zuversicht zu erlangen."
     },
-    "heading": "Dubai Golden Visa",
-    "subtitle": "Sichern Sie sich eine langfristige UAE-Aufenthaltserlaubnis durch strategische Immobilieninvestition",
-    "intro": "Das UAE-Golden-Visa-Programm bietet Immobilieninvestoren verlängerbare Aufenthaltserlaubnisse für 5 und 10 Jahre. Immobilien sind einer der beliebtesten und unkompliziertesten Wege.",
     "benefits": {
-      "title": "Wichtige Vorteile",
-      "items": {
-        "residency": "Langfristige Aufenthaltserlaubnis (5 oder 10 Jahre, verlängerbar)",
-        "business": "100% Unternehmenseigentum in den VAE",
-        "family": "Familienmitglieder einschließlich Ehepartner und Kinder sponsern",
-        "stay": "Keine Mindestaufenthaltspflicht",
-        "banking": "Zugang zu UAE-Bank- und Finanzdienstleistungen",
-        "permanent": "Weg zur dauerhaften Aufenthaltserlaubnis"
-      }
+      "label": "Warum türkische Staatsbürgerschaft?",
+      "title": "Vorteile der türkischen Staatsbürgerschaft durch Investition",
+      "renewable_residency": { "title": "Volle Bürgerrechte", "description": "Erwerben Sie die dauerhafte türkische Staatsbürgerschaft für sich und Ihre Familie. Nicht nur eine Aufenthaltserlaubnis, sondern volle Bürgerrechte." },
+      "family_sponsorship": { "title": "Staatsbürgerschaft für die Familie", "description": "Ihr Ehepartner und Kinder unter 18 Jahren können in denselben Antrag aufgenommen werden und gemeinsam die Staatsbürgerschaft erhalten." },
+      "business_ownership": { "title": "Geschäftsfreiheit", "description": "Als türkischer Staatsbürger können Sie Ihr Unternehmen in der Türkei ohne Einschränkungen gründen und führen." },
+      "ease_of_travel": { "title": "Visafreies Reisen", "description": "Reisen Sie mit dem türkischen Pass visafrei oder mit Visum bei Ankunft in über 110 Länder." },
+      "tax_free": { "title": "Wettbewerbsfähiges Steuersystem", "description": "Profitieren Sie von wettbewerbsfähigen Steuersätzen, besonderen Anreizen für ausländische Investoren und Doppelbesteuerungsabkommen." },
+      "premium_services": { "title": "Hoher Lebensstandard", "description": "Als türkischer Staatsbürger erhalten Sie vollen Zugang zu Gesundheitsversorgung, Bildung und internationalen Bankdienstleistungen." }
     },
     "eligibility": {
+      "label": "Voraussetzungen",
       "title": "Teilnahmekriterien",
-      "minInvestment": "Mindestinvestition in Immobilien von AED 2,000,000",
-      "completed": "Die Immobilie muss fertiggestellt sein (nicht Off-Plan für das 10-Jahres-Visum)",
-      "type": "Wohn- oder Gewerbeimmobilien werden akzeptiert",
-      "multiple": "Mehrere Immobilien können kombiniert werden, um den Schwellenwert zu erreichen",
-      "mortgage": "Hypothek erlaubt (mindestens 50% Eigenkapital für einige Kategorien)"
+      "description": "Die folgenden Kriterien gelten für den Immobilieninvestor-Weg des türkischen Programms zur Staatsbürgerschaft durch Investition.",
+      "item1": "Kauf einer Immobilie in der Türkei im Wert von mindestens 400.000 USD.",
+      "item2": "Die Immobilie darf mindestens 3 Jahre ab Kaufdatum nicht verkauft werden.",
+      "item3": "Die Immobilie kann Wohn- oder Gewerbeimmobilie sein; fertiggestellte oder im Bau befindliche Projekte sind zulässig.",
+      "item4": "Ein offizielles Wertgutachten der Grundbuchdirektion ist erforderlich.",
+      "item5": "Der Antrag muss nach der Eintragung der Immobilie beim Grundbuch- und Katasteramt gestellt werden.",
+      "item6": "Keine Mindestgehaltsanforderungen oder Beschäftigungsbeschränkungen."
     },
     "process": {
-      "title": "Wie wir helfen",
-      "step1": { "title": "Beratung", "description": "Wir bewerten Ihre Situation und empfehlen die optimale Investitionsstrategie." },
-      "step2": { "title": "Immobilienauswahl", "description": "Wählen Sie aus unserem kuratierten Portfolio visumqualifizierender Immobilien." },
-      "step3": { "title": "Kauf", "description": "Wir wickeln die gesamte Transaktion ab und bereiten alle Unterlagen vor." },
-      "step4": { "title": "Visumsantrag", "description": "Unser spezialisiertes Team betreut den gesamten Antragsprozess." }
+      "label": "So funktioniert es",
+      "title": "Ihr Weg zur türkischen Staatsbürgerschaft",
+      "step1": { "title": "Immobilienauswahl", "description": "Wählen Sie mit Unterstützung unserer erfahrenen Berater eine qualifizierende Immobilie im Wert von 400.000 USD oder mehr." },
+      "step2": { "title": "Kauf und Registrierung", "description": "Schließen Sie den Kauf ab und registrieren Sie die Immobilie beim Grundbuch- und Katasteramt." },
+      "step3": { "title": "Dokumentenvorbereitung", "description": "Sammeln Sie die erforderlichen Dokumente einschließlich Reisepass, Geburtsurkunde, Eigentumsurkunde und Wertgutachten." },
+      "step4": { "title": "Genehmigung der Staatsbürgerschaft", "description": "Reichen Sie Ihren Antrag ein und erhalten Sie die türkische Staatsbürgerschaft innerhalb von 3-6 Monaten." }
+    },
+    "cta": {
+      "title": "Starten Sie Ihre Reise zur Staatsbürgerschaft",
+      "description": "Unsere erfahrenen Berater begleiten Sie von der Immobilienauswahl bis zur Genehmigung der Staatsbürgerschaft. Buchen Sie noch heute eine kostenlose Beratung.",
+      "button": "Kostenlose Beratung buchen"
     }
   },
   "buyerGuides": {
     "meta": {
       "title": "Käuferratgeber | EmlakBanq",
-      "description": "Umfassende Ratgeber zum Kauf von Luxusimmobilien in Dubai."
+      "description": "Umfassende Ratgeber zum Kauf von Luxusimmobilien in Alanya."
     },
     "heading": "Käuferratgeber",
-    "subtitle": "Alles, was Sie über den Immobilienkauf in Dubai wissen müssen",
+    "subtitle": "Alles, was Sie über den Immobilienkauf in Alanya wissen müssen",
     "intro": "Von Experten erstellte Ratgeber, die Ihre Immobilienentscheidungen stärken. Vom Erstkäufer bis zum erfahrenen Investor — gewinnen Sie das Wissen, das Sie für eine sichere Investition benötigen.",
     "readGuide": "Ratgeber lesen",
     "speakToExpert": "Mit einem Experten sprechen",
@@ -299,12 +308,12 @@
   "insights": {
     "meta": {
       "title": "Investitionsanalysen | EmlakBanq",
-      "description": "Marktanalysen und Investitionseinblicke für Dubais Immobilienmarkt."
+      "description": "Marktanalysen und Investitionseinblicke für Alanyas Immobilienmarkt."
     },
     "label": "Marktintelligenz",
-    "heading": "Dubai Markteinblicke",
-    "subtitle": "Datengestützte Marktanalysen und Expertenperspektiven zum Immobilienmarkt in Dubai",
-    "intro": "Datengestützte Analysen und Expertenkommentare zum Immobilienmarkt in Dubai. Bleiben Sie informiert über die neuesten Trends, Renditedaten und Investitionsmöglichkeiten.",
+    "heading": "Alanya Markteinblicke",
+    "subtitle": "Datengestützte Marktanalysen und Expertenperspektiven zum Immobilienmarkt in Alanya",
+    "intro": "Datengestützte Analysen und Expertenkommentare zum Immobilienmarkt in Alanya. Bleiben Sie informiert über die neuesten Trends, Renditedaten und Investitionsmöglichkeiten.",
     "overview": {
       "title": "Marktübersicht",
       "period": "Q4 2025 - Q1 2026 Wichtige Highlights"
@@ -312,14 +321,14 @@
     "roi": {
       "label": "Investitionsdaten",
       "title": "Top-Gebiete nach Mietrendite",
-      "description": "Durchschnittliche Bruttomietrenditen in Dubais beliebtesten Investitionszonen, basierend auf Q4 2025 Daten.",
+      "description": "Durchschnittliche Bruttomietrenditen in Alanyas beliebtesten Investitionszonen, basierend auf Q4 2025 Daten.",
       "area": "Gebiet",
       "grossRoi": "Bruttorendite",
       "priceRange": "Preisspanne",
       "trend": "Trend",
       "rising": "Steigend",
       "stable": "Stabil",
-      "disclaimer": "Daten stammen vom Dubai Land Department und internen Analysen. Renditen sind indikativ und können variieren."
+      "disclaimer": "Daten stammen vom Grundbuch- und Katasteramt und internen Analysen. Renditen sind indikativ und können variieren."
     },
     "articles": {
       "label": "Neueste Analysen",
@@ -345,7 +354,7 @@
   "blog": {
     "meta": {
       "title": "Blog | EmlakBanq",
-      "description": "Aktuelle Nachrichten und Updates vom Luxusimmobilienmarkt in Dubai."
+      "description": "Aktuelle Nachrichten und Updates vom Luxusimmobilienmarkt in Alanya."
     },
     "heading": "Blog & Nachrichten",
     "subtitle": "Bleiben Sie informiert über aktuelle Markttrends, Projektstarts und Expertenmeinungen"
@@ -359,7 +368,7 @@
     "heading": "Nutzungsbedingungen"
   },
   "footer": {
-    "description": "Dubais führende Plattform für Luxusimmobilien mit Expertenberatung für Immobilieninvestitionen, Golden-Visa-Unterstützung und umfassender After-Sales-Betreuung.",
+    "description": "Alanyas führende Plattform für Luxusimmobilien mit Expertenberatung für Immobilieninvestitionen, Unterstützung bei der türkischen Staatsbürgerschaft und umfassender After-Sales-Betreuung.",
     "quickLinks": "Schnelllinks",
     "services": "Dienstleistungen",
     "legal": "Rechtliches",
@@ -437,7 +446,19 @@
       "topAreasROI": "Top-Gebiete ROI",
       "investmentReturns": "Investitionsrenditen nach Gebiet",
       "imageUrl": "Bild-URL",
-      "altText": "Alt-Text"
+      "altText": "Alt-Text",
+      "savedSuccessfully": "Erfolgreich gespeichert",
+      "deletedSuccessfully": "Erfolgreich gelöscht",
+      "createdSuccessfully": "Erfolgreich erstellt",
+      "updatedSuccessfully": "Erfolgreich aktualisiert",
+      "operationFailed": "Vorgang fehlgeschlagen",
+      "unsavedChanges": "Ungespeicherte Änderungen",
+      "unsavedChangesTitle": "Ungespeicherte Änderungen",
+      "unsavedChangesMessage": "Sie haben ungespeicherte Änderungen. Möchten Sie die Seite wirklich verlassen?",
+      "discardChanges": "Änderungen verwerfen",
+      "keepEditing": "Weiter bearbeiten",
+      "show": "Anzeigen",
+      "all": "Alle"
     },
     "nav": {
       "dashboard": "Dashboard",
@@ -445,7 +466,7 @@
       "areas": "Gebiete",
       "blog": "Blog",
       "buyerGuides": "Käuferratgeber",
-      "goldenVisa": "Golden Visa",
+      "goldenVisa": "Türkische Staatsbürgerschaft",
       "insights": "Analysen",
       "messages": "Nachrichten",
       "settings": "Einstellungen"
@@ -486,7 +507,11 @@
       "recentMessages": "Letzte Nachrichten",
       "viewAll": "Alle ansehen",
       "noMessages": "Noch keine Nachrichten.",
-      "noMessageContent": "Kein Nachrichteninhalt"
+      "noMessageContent": "Kein Nachrichteninhalt",
+      "buyerGuides": "Käuferratgeber",
+      "goldenVisaItems": "Türkische Staatsbürgerschaft",
+      "recentActivity": "Letzte Aktivitäten",
+      "noActivity": "Keine aktuellen Aktivitäten"
     },
     "properties": {
       "title": "Immobilien",
@@ -505,7 +530,17 @@
       "deleteError": "Löschen der Immobilie fehlgeschlagen.",
       "notFound": "Immobilie nicht gefunden.",
       "failedToSave": "Immobilie konnte nicht gespeichert werden.",
-      "loadingProperty": "Immobilie wird geladen..."
+      "loadingProperty": "Immobilie wird geladen...",
+      "deleteSuccess": "Immobilie erfolgreich gelöscht",
+      "totalProperties": "Gesamte Immobilien",
+      "featuredCount": "Hervorgehoben",
+      "typeBreakdown": "Typverteilung",
+      "types": "Typen",
+      "details": "Details",
+      "allTypes": "Alle Typen",
+      "allFeatured": "Alle",
+      "featuredOnly": "Hervorgehoben",
+      "notFeatured": "Nicht hervorgehoben"
     },
     "propertyForm": {
       "basicInfo": "Grundinformationen",
@@ -526,10 +561,10 @@
       "typeLabelPlaceholder": "z.B. Luxusapartment",
       "typeLabelHelp": "Anzeigelabel auf der Immobilienkarte in allen Sprachen.",
       "location": "Standort",
-      "locationPlaceholder": "z.B. Dubai Marina",
+      "locationPlaceholder": "z.B. Mahmutlar",
       "locationHelp": "Immobilienstandort in allen unterstützten Sprachen.",
       "price": "Preis",
-      "pricePlaceholder": "z.B. AED 2,500,000",
+      "pricePlaceholder": "z.B. ₺ 2,500,000",
       "beds": "Schlafzimmer",
       "bedsPlaceholder": "z.B. 3",
       "sqft": "Quadratfuß",
@@ -561,7 +596,7 @@
     },
     "areas": {
       "title": "Gebiete",
-      "subtitle": "Verwalten Sie Dubai-Gebietsangebote",
+      "subtitle": "Verwalten Sie Alanya-Gebietsangebote",
       "addNew": "Neues Gebiet hinzufügen",
       "editArea": "Gebiet bearbeiten",
       "addArea": "Gebiet hinzufügen",
@@ -576,23 +611,24 @@
       "notFound": "Gebiet nicht gefunden.",
       "failedToSave": "Gebiet konnte nicht gespeichert werden.",
       "failedToDelete": "Gebiet konnte nicht gelöscht werden.",
-      "loadingArea": "Gebiet wird geladen..."
+      "loadingArea": "Gebiet wird geladen...",
+      "notFeatured": "Nicht hervorgehoben"
     },
     "areaForm": {
       "basicInfo": "Grundinformationen",
       "areaName": "Gebietsname",
-      "areaNamePlaceholder": "z.B. Dubai Marina",
+      "areaNamePlaceholder": "z.B. Mahmutlar",
       "areaNameHelp": "Gebietsname in allen unterstützten Sprachen. Slug und Schlüssel werden automatisch aus dem Englischen generiert.",
       "key": "Schlüssel",
-      "keyPlaceholder": "z.B. dubai-marina",
+      "keyPlaceholder": "z.B. mahmutlar",
       "keyHelp": "Eindeutiger Identifikationsschlüssel. Wird automatisch aus dem englischen Namen generiert.",
       "slug": "Slug",
-      "slugPlaceholder": "z.B. dubai-marina",
+      "slugPlaceholder": "z.B. mahmutlar",
       "slugHelp": "URL-freundliche Kennung. Wird automatisch aus dem englischen Namen generiert.",
       "imageUrl": "Bild-URL",
       "imagePlaceholder": "https://example.com/area.jpg",
       "avgPrice": "Durchschnittspreis",
-      "avgPricePlaceholder": "z.B. AED 2.5M",
+      "avgPricePlaceholder": "z.B. ₺ 2.5M",
       "roi": "ROI",
       "roiPlaceholder": "z.B. 7.2%",
       "descriptions": "Beschreibungen",
@@ -636,12 +672,15 @@
       "notFound": "Blogbeitrag nicht gefunden.",
       "failedToSave": "Blogbeitrag konnte nicht gespeichert werden.",
       "failedToDelete": "Blogbeitrag konnte nicht gelöscht werden.",
-      "loadingPost": "Blogbeitrag wird geladen..."
+      "loadingPost": "Blogbeitrag wird geladen...",
+      "totalPosts": "Gesamte Beiträge",
+      "publishedCount": "Veröffentlicht",
+      "draftCount": "Entwürfe"
     },
     "blogForm": {
       "basicInfo": "Grundinformationen",
       "title": "Titel",
-      "titlePlaceholder": "z.B. Dubai Immobilienmarkt-Update 2025",
+      "titlePlaceholder": "z.B. Alanya Immobilienmarkt-Update 2025",
       "titleHelp": "Blogbeitragstitel in allen unterstützten Sprachen. Slug wird automatisch aus dem Englischen generiert.",
       "slug": "Slug",
       "slugPlaceholder": "automatisch-aus-titel-generiert",
@@ -692,12 +731,14 @@
       "notFound": "Käuferleitfaden nicht gefunden.",
       "failedToSave": "Käuferleitfaden konnte nicht gespeichert werden.",
       "failedToDelete": "Käuferleitfaden konnte nicht gelöscht werden.",
-      "loadingGuide": "Käuferleitfaden wird geladen..."
+      "loadingGuide": "Käuferleitfaden wird geladen...",
+      "totalGuides": "Gesamte Ratgeber",
+      "withImages": "Mit Bildern"
     },
     "buyerGuideForm": {
       "basicInfo": "Grundinformationen",
       "title": "Titel",
-      "titlePlaceholder": "z.B. Erstkäufer-Leitfaden für Dubai",
+      "titlePlaceholder": "z.B. Erstkäufer-Leitfaden für Alanya",
       "slug": "Slug",
       "slugPlaceholder": "automatisch-aus-titel-generiert",
       "slugHelp": "URL-freundliche Kennung. Wird automatisch aus dem Titel generiert.",
@@ -747,7 +788,10 @@
       "message": "Nachricht",
       "noMessageProvided": "Keine Nachricht angegeben",
       "deleteTitle": "Nachricht löschen",
-      "deleteConfirm": "Möchten Sie die Nachricht von \"{{name}}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden."
+      "deleteConfirm": "Möchten Sie die Nachricht von \"{{name}}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
+      "markedRead": "Als gelesen markiert",
+      "markedUnread": "Als ungelesen markiert",
+      "replyViaEmail": "Per E-Mail antworten"
     },
     "goldenVisa": {
       "subtitle": "Vorteile, Berechtigungskriterien und Prozessschritte verwalten",
@@ -761,11 +805,11 @@
       "noHighlights": "Noch keine Highlights. Fügen Sie das erste hinzu.",
       "noAreas": "Noch keine Gebiete. Fügen Sie das erste hinzu.",
       "area": "Gebiet",
-      "areaPlaceholder": "z.B. Dubai Marina",
+      "areaPlaceholder": "z.B. Mahmutlar",
       "roi": "ROI",
       "roiPlaceholder": "z.B. 8,5%",
       "priceRange": "Preisspanne",
-      "priceRangePlaceholder": "z.B. AED 1,2M - 5M",
+      "priceRangePlaceholder": "z.B. ₺ 1,2M - 5M",
       "trend": "Trend",
       "trendUp": "Aufwärts",
       "trendStable": "Stabil",
@@ -783,7 +827,7 @@
       "editStat": "Statistik bearbeiten",
       "addStat": "Statistik hinzufügen",
       "city": "Stadt",
-      "cityPlaceholder": "z.B. Dubai",
+      "cityPlaceholder": "z.B. Alanya",
       "address": "Adresse",
       "addressPlaceholder": "Vollständige Büroadresse",
       "phone": "Telefon",

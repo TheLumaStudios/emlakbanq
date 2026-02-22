@@ -17,7 +17,7 @@ export default function AdminFormField({
   const id = `field-${name}`
 
   const baseInputClasses =
-    `w-full rounded-lg border border-estate-200 px-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20 ${disabled ? 'bg-estate-50 text-estate-500 cursor-not-allowed' : 'bg-white'}`
+    `w-full rounded-lg border border-estate-200 px-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20 ${disabled ? 'bg-estate-50 text-estate-500 cursor-not-allowed' : 'bg-white'}`
 
   const handleChange = (e) => {
     const val = type === 'checkbox' ? e.target.checked : e.target.value
@@ -34,7 +34,7 @@ export default function AdminFormField({
             type="checkbox"
             checked={!!value}
             onChange={handleChange}
-            className="h-4 w-4 rounded border-estate-300 text-gold-500 focus:ring-gold-500"
+            className="h-4 w-4 rounded border-estate-300 text-blue-500 focus:ring-blue-500"
           />
           <label htmlFor={id} className="text-sm font-medium text-estate-700">
             {label}

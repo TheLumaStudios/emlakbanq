@@ -24,12 +24,12 @@ export default function PropertyDetail() {
       <SEOHead title={`${property.name} | EmlakBanq`} description={property.description || property.location} />
 
       {/* Hero Image */}
-      <section className="relative h-[50vh] min-h-[400px] overflow-hidden bg-estate-900">
+      <section className="relative h-[50vh] min-h-[400px] overflow-hidden bg-estate-900 pt-20">
         <img src={property.image} alt={property.name} className="h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-estate-900/80 via-estate-900/30 to-transparent" />
         <div className="absolute bottom-0 left-0 right-0 pb-10">
           <Container>
-            <span className="rounded-full bg-gold-500 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
+            <span className="rounded-full bg-blue-500 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
               {property.type_label}
             </span>
             <h1 className="mt-4 font-heading text-3xl font-bold text-white md:text-4xl lg:text-5xl">
@@ -88,7 +88,7 @@ export default function PropertyDetail() {
 
       {/* Gallery */}
       {property.gallery?.length > 0 && (
-        <section className="bg-cream-50 py-16 lg:py-20">
+        <section className="bg-yellow-50 py-16 lg:py-20">
           <Container>
             <h2 className="font-heading text-2xl font-bold text-estate-900">{t('propertyDetail.gallery')}</h2>
             <div className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -111,7 +111,7 @@ export default function PropertyDetail() {
               <div className="mt-8 grid gap-3 sm:grid-cols-2">
                 {property.amenities.map((amenity, i) => (
                   <div key={i} className="flex items-center gap-3 rounded-lg border border-estate-100 px-4 py-3">
-                    <svg className="h-5 w-5 flex-shrink-0 text-gold-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                    <svg className="h-5 w-5 flex-shrink-0 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
                       <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
                     </svg>
                     <span className="text-sm text-estate-700">{amenity}</span>
@@ -132,7 +132,7 @@ export default function PropertyDetail() {
           </p>
           <Link
             to={ROUTES.CONTACT}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/25"
+            className="btn-glow mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400"
           >
             {t('propertyDetail.contactUs')}
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>

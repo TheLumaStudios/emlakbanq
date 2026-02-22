@@ -6,10 +6,12 @@ import { ROUTES } from '../config/routes'
 import { useBlogPosts } from '../hooks/useBlogPosts'
 import LoadingSkeleton from '../components/common/LoadingSkeleton'
 import ImageWithLoader from '../components/common/ImageWithLoader'
+import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 
 export default function Blog() {
   const { t } = useTranslation()
   const { data: posts, loading } = useBlogPosts()
+  const gridRef = useRevealOnScroll()
 
   return (
     <>
@@ -19,9 +21,13 @@ export default function Blog() {
       />
 
       {/* ── Page Header ─────────────────────────────────────────────── */}
-      <section className="bg-estate-900 py-20 text-white lg:py-28">
-        <Container>
-          <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
+      <section className="relative overflow-hidden bg-estate-900 pb-20 pt-36 text-white lg:pb-28 lg:pt-44">
+        {/* Decorative elements */}
+        <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute -left-20 bottom-0 h-60 w-60 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent" />
+        <Container className="relative z-10">
+          <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
             {t('blog.subtitle', 'Expert Commentary')}
           </p>
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
@@ -30,22 +36,22 @@ export default function Blog() {
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-estate-300">
             {t(
               'blog.intro',
-              'In-depth articles, market commentary, and expert perspectives on Dubai\'s luxury real estate landscape. Written by our research team for discerning investors.'
+              'In-depth articles, market commentary, and expert perspectives on Alanya\'s real estate landscape. Written by our research team for discerning investors.'
             )}
           </p>
         </Container>
       </section>
 
       {/* ── Blog Grid ───────────────────────────────────────────────── */}
-      <section className="bg-cream-50 py-20 lg:py-24">
+      <section className="bg-yellow-50 py-20 lg:py-24" ref={gridRef}>
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {loading && <LoadingSkeleton variant="card" count={6} columns={3} />}
-            {!loading && posts?.map((post) => (
+            {!loading && posts?.map((post, index) => (
               <Link
                 key={post.slug}
                 to={ROUTES.BLOG_POST.replace(':slug', post.slug)}
-                className="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className={`card-premium reveal reveal-delay-${index % 3} group overflow-hidden rounded-2xl bg-white transition-all duration-300 hover:-translate-y-1`}
               >
                 {/* Blog Post Image */}
                 <div className="relative h-56 overflow-hidden">
@@ -69,7 +75,7 @@ export default function Blog() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-3 font-heading text-lg font-semibold leading-snug text-estate-900 transition-colors group-hover:text-gold-700">
+                  <h3 className="mt-3 font-heading text-lg font-semibold leading-snug text-estate-900 transition-colors group-hover:text-blue-700">
                     {post.title}
                   </h3>
 
@@ -79,7 +85,7 @@ export default function Blog() {
                   </p>
 
                   {/* Read More */}
-                  <div className="mt-5 flex items-center gap-2 text-sm font-medium text-gold-700 transition-colors group-hover:text-gold-800">
+                  <div className="mt-5 flex items-center gap-2 text-sm font-medium text-blue-700 transition-colors group-hover:text-blue-800">
                     <span>{t('common.readMore', 'Read More')}</span>
                     <svg
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -119,11 +125,11 @@ export default function Blog() {
               <input
                 type="email"
                 placeholder={t('footer.newsletter.placeholder', 'Enter your email')}
-                className="flex-1 rounded-full border border-estate-700 bg-estate-800 px-5 py-3 text-sm text-white placeholder:text-estate-500 focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+                className="flex-1 rounded-full border border-estate-700 bg-estate-800 px-5 py-3 text-sm text-white placeholder:text-estate-500 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               />
               <button
                 type="button"
-                className="rounded-full bg-gold-500 px-6 py-3 text-sm font-medium text-estate-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/25"
+                className="btn-glow rounded-full bg-blue-500 px-6 py-3 text-sm font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400"
               >
                 {t('footer.newsletter.subscribe', 'Subscribe')}
               </button>

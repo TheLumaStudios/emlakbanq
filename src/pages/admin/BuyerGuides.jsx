@@ -1,18 +1,23 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useMemo } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../../utils/supabase'
+import { useToast } from '../../hooks/useToast'
 import AdminTable from '../../components/admin/AdminTable'
 import ConfirmDialog from '../../components/admin/ConfirmDialog'
+import ListStatCard from '../../components/admin/ListStatCard'
+import ListToolbar from '../../components/admin/ListToolbar'
 
 export default function BuyerGuides() {
   const { t } = useTranslation()
   const navigate = useNavigate()
+  const toast = useToast()
   const [guides, setGuides] = useState([])
   const [loading, setLoading] = useState(true)
   const [deleteTarget, setDeleteTarget] = useState(null)
   const [deleting, setDeleting] = useState(false)
   const [search, setSearch] = useState('')
+  const [pageSize, setPageSize] = useState(10)
 
   const fetchGuides = async () => {
     setLoading(true)
@@ -41,8 +46,9 @@ export default function BuyerGuides() {
       .eq('id', deleteTarget.id)
     if (error) {
       console.error('Error deleting buyer guide:', error)
-      alert(t('admin.buyerGuides.failedToDelete'))
+      toast.error(t('admin.buyerGuides.failedToDelete'))
     } else {
+      toast.success(t('admin.common.deletedSuccessfully'))
       await fetchGuides()
     }
     setDeleting(false)
@@ -53,6 +59,12 @@ export default function BuyerGuides() {
     if (!search) return true
     return (g.title || '').toLowerCase().includes(search.toLowerCase())
   })
+
+  const stats = useMemo(() => {
+    const total = guides.length
+    const withImages = guides.filter((g) => !!g.image).length
+    return { total, withImages }
+  }, [guides])
 
   const columns = [
     {
@@ -75,6 +87,7 @@ export default function BuyerGuides() {
     {
       key: 'title',
       label: t('admin.buyerGuides.columnTitle'),
+      sortable: true,
       render: (value, row) => (
         <div>
           <p className="font-medium text-estate-900">{value}</p>
@@ -110,7 +123,7 @@ export default function BuyerGuides() {
         </div>
         <button
           onClick={() => navigate('/admin/buyer-guides/new')}
-          className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-600"
+          className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-600"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -119,21 +132,37 @@ export default function BuyerGuides() {
         </button>
       </div>
 
-      {/* Search */}
-      <div className="mb-4">
-        <div className="relative max-w-md">
-          <svg className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-estate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
-            <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
-          </svg>
-          <input
-            type="text"
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            placeholder={t('admin.common.search') + '...'}
-            className="w-full rounded-lg border border-estate-200 bg-white pl-10 pr-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
-          />
-        </div>
+      {/* Stat Cards */}
+      <div className="mb-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <ListStatCard
+          label={t('admin.buyerGuides.totalGuides')}
+          value={stats.total}
+          color="blue"
+          icon={
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M12 6.042A8.967 8.967 0 006 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 016 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 016-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0018 18a8.967 8.967 0 00-6 2.292m0-14.25v14.25" />
+            </svg>
+          }
+        />
+        <ListStatCard
+          label={t('admin.buyerGuides.withImages')}
+          value={stats.withImages}
+          color="green"
+          icon={
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 15.75l5.159-5.159a2.25 2.25 0 013.182 0l5.159 5.159m-1.5-1.5l1.409-1.41a2.25 2.25 0 013.182 0l2.909 2.91m-18 3.75h16.5a1.5 1.5 0 001.5-1.5V6a1.5 1.5 0 00-1.5-1.5H3.75A1.5 1.5 0 002.25 6v12a1.5 1.5 0 001.5 1.5zm10.5-11.25h.008v.008h-.008V8.25zm.375 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z" />
+            </svg>
+          }
+        />
       </div>
+
+      {/* Toolbar (Search + Page Size) */}
+      <ListToolbar
+        search={search}
+        onSearchChange={setSearch}
+        pageSize={pageSize}
+        onPageSizeChange={setPageSize}
+      />
 
       {/* Table */}
       <AdminTable
@@ -143,6 +172,7 @@ export default function BuyerGuides() {
         editPath="/admin/buyer-guides/:id"
         onDelete={(row) => setDeleteTarget(row)}
         emptyMessage={t('admin.buyerGuides.noGuides')}
+        pageSize={pageSize}
       />
 
       {/* Confirm Delete Dialog */}

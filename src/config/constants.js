@@ -1,13 +1,13 @@
 export const APP_CONFIG = {
   brand: 'EmlakBanq',
   domain: 'emlakbanq.com',
-  tagline: "Dubai's Premier Luxury Real Estate",
+  tagline: "Alanya's Premier Real Estate",
 
   offices: {
-    dubai: {
-      city: 'Dubai',
-      address: 'Business Bay, Bay Square, Dubai, UAE',
-      coordinates: { lat: 25.1865, lng: 55.2622 },
+    alanya: {
+      city: 'Alanya',
+      address: 'Oba Mah., Alanya, Antalya, Türkiye',
+      coordinates: { lat: 36.5432, lng: 31.9993 },
     },
     istanbul: {
       city: 'Istanbul',
@@ -32,14 +32,14 @@ export const APP_CONFIG = {
     'commercial',
   ],
 
-  dubaiZones: [
-    'downtown',
-    'marina',
-    'palmJumeirah',
-    'businessBay',
-    'jbr',
-    'creekHarbour',
-    'dubaiHills',
-    'jumeirahVillage',
+  alanyaZones: [
+    'mahmutlar',
+    'kestel',
+    'oba',
+    'tosmur',
+    'cikcilli',
+    'kargicak',
+    'avsallar',
+    'konaklı',
   ],
 }

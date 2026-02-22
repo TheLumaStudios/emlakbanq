@@ -10,15 +10,17 @@ export default function NotFound() {
   return (
     <>
       <SEOHead title={t('notFound.meta.title')} />
-      <section className="flex min-h-[60vh] items-center py-16">
+      <section className="flex min-h-[70vh] items-center pt-36 pb-16">
         <Container className="text-center">
-          <h1 className="text-4xl md:text-5xl">{t('notFound.title')}</h1>
+          <p className="font-heading text-[120px] font-bold leading-none text-blue-500/20 md:text-[180px]">404</p>
+          <h1 className="mt-4 font-heading text-3xl font-bold text-estate-900 md:text-4xl">{t('notFound.title')}</h1>
           <p className="mt-4 text-lg text-estate-400">{t('notFound.message')}</p>
           <Link
             to={ROUTES.HOME}
-            className="mt-8 inline-block rounded-sm bg-gold-500 px-6 py-3 font-semibold text-white hover:bg-gold-600"
+            className="btn-glow mt-8 inline-flex items-center gap-2 rounded-md bg-blue-500 px-8 py-4 text-sm font-semibold uppercase tracking-wider text-white hover:bg-blue-400"
           >
             {t('common.backToHome')}
+            <span>&rarr;</span>
           </Link>
         </Container>
       </section>

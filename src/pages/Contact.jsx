@@ -5,6 +5,7 @@ import SEOHead from '../components/seo/SEOHead'
 import Container from '../components/common/Container'
 import { ROUTES } from '../config/routes'
 import { useContactSubmit } from '../hooks/useContactSubmit'
+import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 
 const INITIAL_FORM = {
   name: '',
@@ -22,7 +23,7 @@ export default function Contact() {
     { value: '', label: t('contact.form.selectInterest', 'Select your interest...') },
     { value: 'buying', label: t('contact.form.interestOptions.buying', 'Buying a Property') },
     { value: 'investing', label: t('contact.form.interestOptions.investing', 'Investment Opportunities') },
-    { value: 'visa', label: t('contact.form.interestOptions.visa', 'Golden Visa Assistance') },
+    { value: 'visa', label: t('contact.form.interestOptions.visa', 'Turkish Citizenship Assistance') },
     { value: 'selling', label: t('contact.form.interestOptions.selling', 'Selling a Property') },
     { value: 'other', label: t('contact.form.interestOptions.other', 'Other Inquiry') },
   ]
@@ -67,6 +68,7 @@ export default function Contact() {
   ]
   const [form, setForm] = useState(INITIAL_FORM)
   const { submit, loading: submitting, error: submitError, success } = useContactSubmit()
+  const formRef = useRevealOnScroll()
 
   useEffect(() => {
     if (success) setForm(INITIAL_FORM)
@@ -86,7 +88,7 @@ export default function Contact() {
   }
 
   const inputClass =
-    'w-full rounded-xl border border-estate-200 bg-white px-4 py-3 text-sm text-estate-900 placeholder:text-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20'
+    'w-full rounded-xl border border-estate-200 bg-white px-4 py-3 text-sm text-estate-900 placeholder:text-estate-400 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20'
 
   return (
     <>
@@ -96,9 +98,13 @@ export default function Contact() {
       />
 
       {/* ── Page Header ─────────────────────────────────────────────── */}
-      <section className="bg-estate-900 py-20 text-white lg:py-28">
-        <Container>
-          <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
+      <section className="relative overflow-hidden bg-estate-900 pb-20 pt-36 text-white lg:pb-28 lg:pt-44">
+        {/* Decorative elements */}
+        <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute -left-20 bottom-0 h-60 w-60 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent" />
+        <Container className="relative z-10">
+          <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
             {t('contact.subtitle', 'Get in Touch')}
           </p>
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
@@ -107,19 +113,19 @@ export default function Contact() {
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-estate-300">
             {t(
               'contact.intro',
-              'Whether you\'re looking to invest, purchase a dream home, or explore Golden Visa options, our team is ready to guide you every step of the way.'
+              'Whether you\'re looking to invest, purchase a dream home, or explore Turkish citizenship options, our team is ready to guide you every step of the way.'
             )}
           </p>
         </Container>
       </section>
 
       {/* ── Two-Column Layout ───────────────────────────────────────── */}
-      <section className="bg-cream-50 py-20 lg:py-24">
+      <section className="bg-yellow-50 py-20 lg:py-24" ref={formRef}>
         <Container>
           <div className="grid gap-12 lg:grid-cols-5 lg:gap-16">
             {/* ─── Left: Form ────────────────────────────────────────── */}
             <div className="lg:col-span-3">
-              <div className="rounded-2xl bg-white p-8 shadow-sm md:p-10">
+              <div className="reveal rounded-2xl bg-white p-8 shadow-lg shadow-estate-900/5 ring-1 ring-estate-100 md:p-10">
                 <h2 className="font-heading text-2xl font-bold text-estate-900">
                   {t('contact.form.title', 'Send Us a Message')}
                 </h2>
@@ -242,7 +248,7 @@ export default function Contact() {
                       required
                       checked={form.consent}
                       onChange={handleChange}
-                      className="mt-1 h-4 w-4 rounded border-estate-300 text-gold-600 focus:ring-gold-500"
+                      className="mt-1 h-4 w-4 rounded border-estate-300 text-blue-600 focus:ring-blue-500"
                     />
                     <label htmlFor="consent" className="text-xs leading-relaxed text-estate-500">
                       {t(
@@ -251,7 +257,7 @@ export default function Contact() {
                       )}{' '}
                       <Link
                         to={ROUTES.PRIVACY}
-                        className="font-medium text-gold-700 underline hover:text-gold-800"
+                        className="font-medium text-blue-700 underline hover:text-blue-800"
                       >
                         {t('contact.form.privacyLink', 'Privacy Policy')}
                       </Link>
@@ -261,7 +267,7 @@ export default function Contact() {
                   {/* Submit */}
                   <button
                     type="submit"
-                    className="w-full rounded-xl bg-estate-900 px-8 py-3.5 font-medium text-white transition-all duration-300 hover:bg-estate-800 hover:shadow-lg hover:shadow-estate-900/20 disabled:cursor-not-allowed disabled:opacity-50"
+                    className="btn-glow w-full rounded-xl bg-blue-500 px-8 py-3.5 font-medium text-white transition-all duration-300 hover:bg-blue-400 disabled:cursor-not-allowed disabled:opacity-50"
                     disabled={!form.consent || submitting}
                   >
                     {submitting ? t('contact.form.sending', 'Sending...') : t('contact.form.submit', 'Send Message')}
@@ -288,9 +294,9 @@ export default function Contact() {
                 {CONTACT_INFO.map((item) => (
                   <div
                     key={item.label}
-                    className="flex items-start gap-4 rounded-xl border border-estate-100 bg-white p-5 transition-all duration-300 hover:border-gold-200 hover:shadow-sm"
+                    className="reveal flex items-start gap-4 rounded-xl border border-estate-100 bg-white p-5 transition-all duration-300 hover:border-blue-200 hover:shadow-sm"
                   >
-                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-gold-50 text-gold-700">
+                    <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-blue-50 text-blue-700">
                       {item.icon}
                     </div>
                     <div>
@@ -311,23 +317,23 @@ export default function Contact() {
                   {t('contact.offices.title', 'Our Offices')}
                 </h3>
 
-                {/* Dubai */}
+                {/* Alanya */}
                 <div className="rounded-xl border border-estate-100 bg-white p-5">
                   <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-gold-500" />
+                    <div className="h-2 w-2 rounded-full bg-blue-500" />
                     <h4 className="font-heading text-sm font-semibold text-estate-900">
-                      {t('contact.offices.dubai.city', 'Dubai, UAE')}
+                      {t('contact.offices.alanya.city', 'Alanya, Türkiye')}
                     </h4>
                   </div>
                   <p className="mt-2 text-sm text-estate-500">
-                    {t('contact.offices.dubai.address', 'Business Bay, Bay Square, Dubai, UAE')}
+                    {t('contact.offices.alanya.address', 'Oba Mah., Alanya, Antalya, Türkiye')}
                   </p>
                 </div>
 
                 {/* Istanbul */}
                 <div className="rounded-xl border border-estate-100 bg-white p-5">
                   <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-gold-500" />
+                    <div className="h-2 w-2 rounded-full bg-blue-500" />
                     <h4 className="font-heading text-sm font-semibold text-estate-900">
                       {t('contact.offices.istanbul.city', 'Istanbul, Turkey')}
                     </h4>
@@ -351,7 +357,7 @@ export default function Contact() {
                 </p>
                 <a
                   href="tel:+97140000000"
-                  className="mt-4 inline-flex items-center gap-2 rounded-full bg-gold-500 px-6 py-2.5 text-sm font-medium text-estate-900 transition-all duration-300 hover:bg-gold-400"
+                  className="btn-glow mt-4 inline-flex items-center gap-2 rounded-full bg-blue-500 px-6 py-2.5 text-sm font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400"
                 >
                   <svg
                     className="h-4 w-4"

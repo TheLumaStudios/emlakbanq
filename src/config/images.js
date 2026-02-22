@@ -28,7 +28,7 @@ export const IMAGES = {
     {
       id: 3,
       src: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80&fit=crop',
-      alt: 'Marina apartment tower at sunset',
+      alt: 'Seaside apartment tower at sunset',
     },
     {
       id: 4,
@@ -63,20 +63,20 @@ export const IMAGES = {
   ],
 
   zones: {
-    downtown: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80&fit=crop',
-    marina: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80&fit=crop',
-    palmJumeirah: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=800&q=80&fit=crop',
-    businessBay: 'https://images.unsplash.com/photo-1546412414-e1885259563a?w=800&q=80&fit=crop',
-    jbr: 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80&fit=crop',
-    creekHarbour: 'https://images.unsplash.com/photo-1622015663319-e97e697503ee?w=800&q=80&fit=crop',
-    dubaiHills: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&fit=crop',
-    jumeirahVillage: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80&fit=crop',
+    mahmutlar: 'https://images.unsplash.com/photo-1512453979798-5ea266f8880c?w=800&q=80&fit=crop',
+    kestel: 'https://images.unsplash.com/photo-1518684079-3c830dcef090?w=800&q=80&fit=crop',
+    oba: 'https://images.unsplash.com/photo-1580674684081-7617fbf3d745?w=800&q=80&fit=crop',
+    tosmur: 'https://images.unsplash.com/photo-1546412414-e1885259563a?w=800&q=80&fit=crop',
+    cikcilli: 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80&fit=crop',
+    kargicak: 'https://images.unsplash.com/photo-1622015663319-e97e697503ee?w=800&q=80&fit=crop',
+    avsallar: 'https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=800&q=80&fit=crop',
+    konaklı: 'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?w=800&q=80&fit=crop',
   },
 
   about: {
     office: 'https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=80&fit=crop',
     team: 'https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=800&q=80&fit=crop',
-    dubai: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&q=80&fit=crop',
+    alanya: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&q=80&fit=crop',
     istanbul: 'https://images.unsplash.com/photo-1524231757912-21f4fe3a7200?w=800&q=80&fit=crop',
   },
 
@@ -84,12 +84,12 @@ export const IMAGES = {
     {
       id: 1,
       src: 'https://images.unsplash.com/photo-1460472178825-e5240623afd5?w=800&q=80&fit=crop',
-      alt: 'Dubai real estate market analysis',
+      alt: 'Alanya real estate market analysis',
     },
     {
       id: 2,
       src: 'https://images.unsplash.com/photo-1582672060674-bc2bd808a8b5?w=800&q=80&fit=crop',
-      alt: 'Dubai skyline panorama',
+      alt: 'Alanya coastline panorama',
     },
     {
       id: 3,
@@ -99,17 +99,17 @@ export const IMAGES = {
     {
       id: 4,
       src: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?w=800&q=80&fit=crop',
-      alt: 'Premium villa in Dubai',
+      alt: 'Premium villa in Alanya',
     },
     {
       id: 5,
       src: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&q=80&fit=crop',
-      alt: 'Golden Visa Dubai guide',
+      alt: 'Turkish citizenship by investment guide',
     },
     {
       id: 6,
       src: 'https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=800&q=80&fit=crop',
-      alt: 'Marina waterfront apartments',
+      alt: 'Seaside waterfront apartments',
     },
   ],
 
@@ -127,7 +127,7 @@ export const IMAGES = {
     {
       id: 3,
       src: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=800&q=80&fit=crop',
-      alt: 'Dubai property finance guide',
+      alt: 'Turkey property finance guide',
     },
     {
       id: 4,
@@ -142,7 +142,7 @@ export const IMAGES = {
     {
       id: 6,
       src: 'https://images.unsplash.com/photo-1512632578888-169bbbc64f33?w=800&q=80&fit=crop',
-      alt: 'Golden Visa property requirements',
+      alt: 'Turkish citizenship property requirements',
     },
   ],
 }

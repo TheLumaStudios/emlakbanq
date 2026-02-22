@@ -41,7 +41,7 @@ export default function ConfirmDialog({
   const confirmColors =
     variant === 'danger'
       ? 'bg-red-600 hover:bg-red-700 focus:ring-red-500'
-      : 'bg-gold-500 hover:bg-gold-600 focus:ring-gold-500'
+      : 'bg-blue-500 hover:bg-blue-600 focus:ring-blue-500'
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">

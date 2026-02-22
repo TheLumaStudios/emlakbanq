@@ -23,7 +23,7 @@ export default function Insights() {
       {/* ── Page Header ─────────────────────────────────────────────── */}
       <section className="bg-estate-900 py-20 text-white lg:py-28">
         <Container>
-          <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
+          <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
             {t('insights.label')}
           </p>
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
@@ -39,11 +39,11 @@ export default function Insights() {
       <section className="bg-white py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-4xl">
-            <div className="rounded-2xl border border-estate-100 bg-gradient-to-br from-cream-50 to-white p-8 shadow-sm md:p-10">
+            <div className="rounded-2xl border border-estate-100 bg-gradient-to-br from-yellow-50 to-white p-8 shadow-sm md:p-10">
               <div className="flex items-center gap-3">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gold-100">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-blue-100">
                   <svg
-                    className="h-5 w-5 text-gold-700"
+                    className="h-5 w-5 text-blue-700"
                     fill="none"
                     viewBox="0 0 24 24"
                     stroke="currentColor"
@@ -73,7 +73,7 @@ export default function Insights() {
                   </div>
                 ) : highlights?.map((item, index) => (
                   <div key={index} className="flex items-start gap-3">
-                    <div className="mt-1.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-gold-500">
+                    <div className="mt-1.5 flex h-5 w-5 flex-shrink-0 items-center justify-center rounded-full bg-blue-500">
                       <svg
                         className="h-3 w-3 text-white"
                         fill="none"
@@ -98,10 +98,10 @@ export default function Insights() {
       </section>
 
       {/* ── Top Areas by ROI ────────────────────────────────────────── */}
-      <section className="bg-cream-50 py-20 lg:py-24">
+      <section className="bg-yellow-50 py-20 lg:py-24">
         <Container>
           <div className="text-center">
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-600">
+            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
               {t('insights.roi.label')}
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
@@ -128,7 +128,7 @@ export default function Insights() {
               ) : areasRoi?.map((item, index) => (
                 <div
                   key={item.area}
-                  className={`grid gap-2 px-6 py-4 transition-colors hover:bg-cream-50 sm:grid-cols-4 sm:gap-0 ${
+                  className={`grid gap-2 px-6 py-4 transition-colors hover:bg-yellow-50 sm:grid-cols-4 sm:gap-0 ${
                     index === 0 ? 'sm:rounded-t-none' : ''
                   }`}
                 >
@@ -188,7 +188,7 @@ export default function Insights() {
         <Container>
           <div className="flex items-end justify-between">
             <div>
-              <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-600">
+              <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
                 {t('insights.articles.label')}
               </p>
               <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
@@ -197,7 +197,7 @@ export default function Insights() {
             </div>
             <Link
               to={ROUTES.BLOG}
-              className="hidden items-center gap-2 text-sm font-medium text-gold-700 transition-colors hover:text-gold-800 md:flex"
+              className="hidden items-center gap-2 text-sm font-medium text-blue-700 transition-colors hover:text-blue-800 md:flex"
             >
               {t('insights.articles.viewAll')}
               <svg
@@ -241,13 +241,13 @@ export default function Insights() {
 
                 <div className="p-6">
                   <p className="text-xs text-estate-400">{article.date}</p>
-                  <h3 className="mt-2 font-heading text-lg font-semibold leading-snug text-estate-900 transition-colors group-hover:text-gold-700">
+                  <h3 className="mt-2 font-heading text-lg font-semibold leading-snug text-estate-900 transition-colors group-hover:text-blue-700">
                     {article.title}
                   </h3>
                   <p className="mt-3 text-sm leading-relaxed text-estate-500">
                     {article.excerpt}
                   </p>
-                  <div className="mt-5 flex items-center gap-2 text-sm font-medium text-gold-700 transition-colors group-hover:text-gold-800">
+                  <div className="mt-5 flex items-center gap-2 text-sm font-medium text-blue-700 transition-colors group-hover:text-blue-800">
                     <span>{t('insights.articles.readArticle')}</span>
                     <svg
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -272,7 +272,7 @@ export default function Insights() {
           <div className="mt-10 text-center md:hidden">
             <Link
               to={ROUTES.BLOG}
-              className="inline-flex items-center gap-2 text-sm font-medium text-gold-700"
+              className="inline-flex items-center gap-2 text-sm font-medium text-blue-700"
             >
               {t('insights.articles.viewAll')}
               <svg

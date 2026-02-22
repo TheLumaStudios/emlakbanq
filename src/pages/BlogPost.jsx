@@ -32,28 +32,29 @@ export default function BlogPost() {
       />
 
       {/* Hero Image */}
-      <section className="relative h-[45vh] min-h-[360px] overflow-hidden bg-estate-900">
-        <img src={post.image} alt={post.title} className="h-full w-full object-cover" />
+      <section className="relative overflow-hidden bg-estate-900 pb-20 pt-36 lg:pb-28 lg:pt-44">
+        <img src={post.image} alt={post.title} className="absolute inset-0 h-full w-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-estate-900/90 via-estate-900/40 to-transparent" />
-        <div className="absolute bottom-0 left-0 right-0 pb-10">
-          <Container>
-            <div className="mx-auto max-w-3xl">
-              <div className="flex items-center gap-3">
-                {post.category && (
-                  <span className="rounded-full bg-gold-500 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
-                    {post.category}
-                  </span>
-                )}
-                {post.date && (
-                  <span className="text-sm text-estate-300">{post.date}</span>
-                )}
-              </div>
-              <h1 className="mt-4 font-heading text-3xl font-bold text-white md:text-4xl lg:text-5xl">
-                {post.title}
-              </h1>
+        <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute -left-20 bottom-0 h-60 w-60 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent" />
+        <Container className="relative z-10">
+          <div className="mx-auto max-w-3xl">
+            <div className="flex items-center gap-3">
+              {post.category && (
+                <span className="rounded-full bg-blue-500 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-white">
+                  {post.category}
+                </span>
+              )}
+              {post.date && (
+                <span className="text-sm text-estate-300">{post.date}</span>
+              )}
             </div>
-          </Container>
-        </div>
+            <h1 className="mt-4 font-heading text-3xl font-bold text-white md:text-4xl lg:text-5xl">
+              {post.title}
+            </h1>
+          </div>
+        </Container>
       </section>
 
       {/* Author & Meta Bar */}
@@ -97,7 +98,7 @@ export default function BlogPost() {
           <div className="mx-auto max-w-3xl">
             {post.content ? (
               <div
-                className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-estate-900 prose-p:text-estate-600 prose-a:text-gold-700 prose-a:no-underline hover:prose-a:underline prose-strong:text-estate-900 prose-img:rounded-xl"
+                className="prose prose-lg max-w-none prose-headings:font-heading prose-headings:font-bold prose-headings:text-estate-900 prose-p:text-estate-600 prose-a:text-blue-700 prose-a:no-underline hover:prose-a:underline prose-strong:text-estate-900 prose-img:rounded-xl"
                 dangerouslySetInnerHTML={{ __html: post.content }}
               />
             ) : post.excerpt ? (
@@ -117,7 +118,7 @@ export default function BlogPost() {
                 {post.tags.map((tag, i) => (
                   <span
                     key={i}
-                    className="rounded-full border border-estate-100 px-3 py-1 text-xs font-medium text-estate-500 transition-colors hover:border-gold-200 hover:text-gold-700"
+                    className="rounded-full border border-estate-100 px-3 py-1 text-xs font-medium text-estate-500 transition-colors hover:border-blue-200 hover:text-blue-700"
                   >
                     {tag}
                   </span>
@@ -130,7 +131,7 @@ export default function BlogPost() {
 
       {/* Related Posts */}
       {filteredRelated.length > 0 && (
-        <section className="bg-cream-50 py-16 lg:py-20">
+        <section className="bg-yellow-50 py-16 lg:py-20">
           <Container>
             <h2 className="font-heading text-2xl font-bold text-estate-900">
               {t('blog.related', 'Related Articles')}
@@ -163,7 +164,7 @@ export default function BlogPost() {
                     {related.date && (
                       <p className="text-xs text-estate-400">{related.date}</p>
                     )}
-                    <h3 className="mt-2 font-heading text-lg font-semibold text-estate-900 transition-colors group-hover:text-gold-700">
+                    <h3 className="mt-2 font-heading text-lg font-semibold text-estate-900 transition-colors group-hover:text-blue-700">
                       {related.title}
                     </h3>
                     {related.excerpt && (
@@ -181,7 +182,7 @@ export default function BlogPost() {
       <section className="bg-estate-900 py-20 text-center text-white">
         <Container>
           <div className="mx-auto max-w-2xl">
-            <svg className="mx-auto h-12 w-12 text-gold-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
+            <svg className="mx-auto h-12 w-12 text-blue-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}>
               <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
             </svg>
             <h2 className="mt-6 font-heading text-3xl font-bold md:text-4xl">
@@ -197,9 +198,9 @@ export default function BlogPost() {
               <input
                 type="email"
                 placeholder={t('blog.newsletter.placeholder', 'Enter your email')}
-                className="flex-1 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-estate-400 focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+                className="flex-1 rounded-full border border-white/20 bg-white/10 px-6 py-3.5 text-sm text-white placeholder:text-estate-400 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
               />
-              <button className="rounded-full bg-gold-500 px-8 py-3.5 text-sm font-medium text-estate-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/25">
+              <button className="btn-glow rounded-full bg-blue-500 px-8 py-3.5 text-sm font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400">
                 {t('blog.newsletter.subscribe', 'Subscribe')}
               </button>
             </div>

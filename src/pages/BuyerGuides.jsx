@@ -5,10 +5,12 @@ import Container from '../components/common/Container'
 import { ROUTES } from '../config/routes'
 import { useBuyerGuides } from '../hooks/useBuyerGuides'
 import LoadingSkeleton from '../components/common/LoadingSkeleton'
+import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 
 export default function BuyerGuides() {
   const { t } = useTranslation()
   const { data: guides, loading } = useBuyerGuides()
+  const gridRef = useRevealOnScroll()
 
   return (
     <>
@@ -18,9 +20,13 @@ export default function BuyerGuides() {
       />
 
       {/* ── Page Header ─────────────────────────────────────────────── */}
-      <section className="bg-estate-900 py-20 text-white lg:py-28">
-        <Container>
-          <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
+      <section className="relative overflow-hidden bg-estate-900 pb-20 pt-36 text-white lg:pb-28 lg:pt-44">
+        {/* Decorative elements */}
+        <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute -left-20 bottom-0 h-60 w-60 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent" />
+        <Container className="relative z-10">
+          <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
             {t('buyerGuides.subtitle', 'Knowledge Centre')}
           </p>
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
@@ -36,14 +42,14 @@ export default function BuyerGuides() {
       </section>
 
       {/* ── Guides Grid ─────────────────────────────────────────────── */}
-      <section className="bg-cream-50 py-20 lg:py-24">
+      <section className="bg-yellow-50 py-20 lg:py-24" ref={gridRef}>
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {loading && <LoadingSkeleton variant="card" count={6} columns={3} />}
-            {!loading && guides?.map((guide) => (
+            {!loading && guides?.map((guide, index) => (
               <div
                 key={guide.slug}
-                className={`group overflow-hidden rounded-2xl border-t-4 ${guide.border_color} bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
+                className={`reveal reveal-delay-${index % 3} group overflow-hidden rounded-2xl border-t-4 ${guide.border_color} bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
               >
                 {/* Guide Image */}
                 <div className="h-48 overflow-hidden">
@@ -66,7 +72,7 @@ export default function BuyerGuides() {
                   </div>
 
                   {/* Title */}
-                  <h3 className="mt-5 font-heading text-lg font-semibold leading-snug text-estate-900 transition-colors group-hover:text-gold-700">
+                  <h3 className="mt-5 font-heading text-lg font-semibold leading-snug text-estate-900 transition-colors group-hover:text-blue-700">
                     {guide.title}
                   </h3>
 
@@ -76,7 +82,7 @@ export default function BuyerGuides() {
                   </p>
 
                   {/* Read Guide Link */}
-                  <div className="mt-6 flex items-center gap-2 text-sm font-medium text-gold-700 transition-colors group-hover:text-gold-800">
+                  <div className="mt-6 flex items-center gap-2 text-sm font-medium text-blue-700 transition-colors group-hover:text-blue-800">
                     <span>{t('buyerGuides.readGuide')}</span>
                     <svg
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -114,7 +120,7 @@ export default function BuyerGuides() {
             </p>
             <Link
               to={ROUTES.CONTACT}
-              className="mt-8 inline-flex items-center gap-2 rounded-full bg-estate-900 px-8 py-3.5 font-medium text-white transition-all duration-300 hover:bg-estate-800 hover:shadow-lg hover:shadow-estate-900/20"
+              className="btn-glow mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400"
             >
               {t('buyerGuides.speakToExpert')}
               <svg

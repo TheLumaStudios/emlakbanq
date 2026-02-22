@@ -6,10 +6,12 @@ import { ROUTES } from '../config/routes'
 import { useAreas } from '../hooks/useAreas'
 import LoadingSkeleton from '../components/common/LoadingSkeleton'
 import ErrorMessage from '../components/common/ErrorMessage'
+import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 
 export default function Areas() {
   const { t } = useTranslation()
   const { data: areas, loading, error } = useAreas()
+  const gridRef = useRevealOnScroll()
 
   return (
     <>
@@ -19,13 +21,17 @@ export default function Areas() {
       />
 
       {/* ── Page Header ─────────────────────────────────────────────── */}
-      <section className="bg-estate-900 py-20 text-white lg:py-28">
-        <Container>
-          <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
+      <section className="relative overflow-hidden bg-estate-900 pb-20 pt-36 text-white lg:pb-28 lg:pt-44">
+        {/* Decorative elements */}
+        <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute -left-20 bottom-0 h-60 w-60 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent" />
+        <Container className="relative z-10">
+          <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
             {t('areas.subtitle', 'Prime Locations')}
           </p>
           <h1 className="mt-4 font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            {t('areas.heading', 'Dubai\'s Most Coveted Neighbourhoods')}
+            {t('areas.heading', 'Alanya\'s Most Coveted Neighbourhoods')}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-estate-300">
             {t(
@@ -37,16 +43,16 @@ export default function Areas() {
       </section>
 
       {/* ── Area Grid ───────────────────────────────────────────────── */}
-      <section className="bg-cream-50 py-20 lg:py-24">
+      <section className="bg-yellow-50 py-20 lg:py-24" ref={gridRef}>
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {loading && <LoadingSkeleton variant="card" count={8} columns={4} />}
             {error && <ErrorMessage onRetry={() => window.location.reload()} />}
-            {!loading && !error && areas?.map((area) => (
+            {!loading && !error && areas?.map((area, index) => (
               <Link
                 key={area.key}
                 to={ROUTES.AREA_DETAIL.replace(':slug', area.slug)}
-                className="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className={`card-premium reveal reveal-delay-${index % 4} group overflow-hidden rounded-2xl bg-white transition-all duration-300 hover:-translate-y-1`}
               >
                 {/* Zone Image */}
                 <div className="relative h-72 overflow-hidden">
@@ -75,7 +81,7 @@ export default function Areas() {
                   <div className="mt-4 flex flex-wrap gap-2">
                     <span className="inline-flex items-center gap-1 rounded-full bg-estate-50 px-3 py-1 text-xs font-medium text-estate-700">
                       <svg
-                        className="h-3 w-3 text-gold-600"
+                        className="h-3 w-3 text-blue-600"
                         fill="currentColor"
                         viewBox="0 0 20 20"
                       >
@@ -100,7 +106,7 @@ export default function Areas() {
                   </div>
 
                   {/* Explore Link */}
-                  <div className="mt-5 flex items-center gap-2 text-sm font-medium text-gold-700 transition-colors group-hover:text-gold-800">
+                  <div className="mt-5 flex items-center gap-2 text-sm font-medium text-blue-700 transition-colors group-hover:text-blue-800">
                     <span>{t('areas.explore')}</span>
                     <svg
                       className="h-4 w-4 transition-transform duration-300 group-hover:translate-x-1"
@@ -137,7 +143,7 @@ export default function Areas() {
           </p>
           <Link
             to={ROUTES.CONTACT}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/25"
+            className="btn-glow mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400"
           >
             {t('areas.speakToExpert')}
             <svg

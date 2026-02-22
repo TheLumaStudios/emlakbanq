@@ -1,7 +1,7 @@
 {
   "common": {
     "brand": "EmlakBanq",
-    "tagline": "Dubai'nin En Prestijli Lüks Gayrimenkul Platformu",
+    "tagline": "Alanya'nin En Prestijli Lüks Gayrimenkul Platformu",
     "cta": {
       "getStarted": "Hemen Başlayın",
       "contactUs": "Bize Ulaşın",
@@ -37,20 +37,20 @@
   },
   "home": {
     "meta": {
-      "title": "EmlakBanq | Dubai Lüks Gayrimenkul",
-      "description": "Dubai'nin lider lüks gayrimenkul platformu. Tamamlanmadan satış, villa, penthouse, markalı konut ve yatırım danışmanlığı."
+      "title": "EmlakBanq | Alanya Lüks Gayrimenkul",
+      "description": "Alanya'nin lider lüks gayrimenkul platformu. Tamamlanmadan satış, villa, penthouse, markalı konut ve yatırım danışmanlığı."
     },
     "hero": {
-      "title": "Dubai'de Lüks Yaşama Açılan Kapınız",
+      "title": "Alanya'da Lüks Yaşama Açılan Kapınız",
       "subtitle": "100'den fazla uzman, premium mülkler, özel yatırım fırsatları ve dünyanın en dinamik şehrinde kusursuz bir satın alma deneyimi ile size rehberlik ediyor."
     },
     "featured": {
       "title": "Öne Çıkan Mülkler",
-      "subtitle": "Dubai'nin en prestijli lokasyonlarında özenle seçilmiş lüks mülkler"
+      "subtitle": "Alanya'nin en prestijli lokasyonlarında özenle seçilmiş lüks mülkler"
     },
     "areas": {
       "title": "Birincil Yatırım Bölgeleri",
-      "subtitle": "Dubai'nin en çok aranan mahallelerini ve benzersiz yatırım potansiyellerini keşfedin"
+      "subtitle": "Alanya'nin en çok aranan mahallelerini ve benzersiz yatırım potansiyellerini keşfedin"
     },
     "stats": {
       "title": "Neden EmlakBanq?",
@@ -69,15 +69,15 @@
       "subtitle": "Sadece mülk satmıyoruz — eksiksiz bir yaşam tarzı çözümü sunuyoruz",
       "investment": {
         "title": "Yatırım Danışmanlığı",
-        "description": "Dubai'nin büyüyen pazarında yatırım getirinizi en üst düzeye çıkarmak için veriye dayalı analizler ve kişiselleştirilmiş stratejiler."
+        "description": "Alanya'nin büyüyen pazarında yatırım getirinizi en üst düzeye çıkarmak için veriye dayalı analizler ve kişiselleştirilmiş stratejiler."
       },
       "legal": {
         "title": "Hukuki ve Finansal Destek",
         "description": "Süreç boyunca tam hukuki destek, ipotek yardımı ve şeffaf finansal rehberlik."
       },
       "visa": {
-        "title": "Altın Vize",
-        "description": "Özel vize ekibimizle stratejik gayrimenkul yatırımı aracılığıyla BAE oturma izninizi güvence altına alın."
+        "title": "Türk Vatandaşlığı",
+        "description": "Özel ekibimizle stratejik gayrimenkul yatırımı aracılığıyla Türk vatandaşlığınızı güvence altına alın."
       },
       "afterSales": {
         "title": "Satış Sonrası Destek",
@@ -85,17 +85,17 @@
       }
     },
     "cta": {
-      "title": "Dubai'ye Yatırım Yapmaya Hazır mısınız?",
+      "title": "Alanya'ye Yatırım Yapmaya Hazır mısınız?",
       "subtitle": "Kıdemli danışmanlarımızdan biriyle ücretsiz bir görüşme planlayın ve ideal yatırımınızı keşfedin."
     }
   },
   "properties": {
     "meta": {
       "title": "Mülkler | EmlakBanq",
-      "description": "Dubai'deki lüks mülkleri keşfedin - tamamlanmadan satış, hazır, villa, penthouse, markalı konut."
+      "description": "Alanya'daki lüks mülkleri keşfedin - tamamlanmadan satış, hazır, villa, penthouse, markalı konut."
     },
     "heading": "Lüks Mülkler",
-    "subtitle": "Dubai genelindeki özenle seçilmiş premium gayrimenkul koleksiyonumuzu keşfedin",
+    "subtitle": "Alanya genelindeki özenle seçilmiş premium gayrimenkul koleksiyonumuzu keşfedin",
     "filters": {
       "all": "Tümü",
       "type": "Mülk Tipi",
@@ -116,10 +116,10 @@
   },
   "areas": {
     "meta": {
-      "title": "Dubai Bölgeleri | EmlakBanq",
-      "description": "Dubai'nin önde gelen yatırım bölgelerini ve mahallelerini keşfedin."
+      "title": "Alanya Bölgeleri | EmlakBanq",
+      "description": "Alanya'nin önde gelen yatırım bölgelerini ve mahallelerini keşfedin."
     },
-    "heading": "Dubai Yatırım Bölgeleri",
+    "heading": "Alanya Yatırım Bölgeleri",
     "subtitle": "Her mahallenin kendine özgü karakteri, yaşam tarzı ve yatırım profili vardır",
     "intro": "İkonik sahil yaşamından huzurlu banliyö tatillerine kadar her mahallenin kendine özgü karakterini ve yatırım potansiyelini keşfedin.",
     "explore": "Keşfedin",
@@ -129,69 +129,69 @@
       "description": "Uzmanlarımız yaşam tarzınıza, bütçenize ve yatırım hedeflerinize göre ideal mahalleyi belirlemenize yardımcı olabilir."
     },
     "zones": {
-      "downtown": {
-        "name": "Downtown Dubai",
-        "description": "Burj Khalifa ve Dubai Mall'a ev sahipliği yapan bölge — lüks yaşamın ve yüksek getirili yatırımın merkez üssü.",
-        "avgPrice": "AED 2.5M",
-        "avgRoi": "6.2%"
+      "kleopatra": {
+        "name": "Kleopatra",
+        "description": "Alanya'nın en ünlü plaj bölgesi — altın kumlar, turkuaz deniz ve kapınızın önünde canlı gece hayatı.",
+        "avgPrice": "₺ 4.5M",
+        "avgRoi": "%6.8"
       },
-      "marina": {
-        "name": "Dubai Marina",
-        "description": "Muhteşem marina manzaraları, dünya standartlarında restoranlar ve premium kulelere sahip canlı bir sahil topluluğu.",
-        "avgPrice": "AED 1.8M",
-        "avgRoi": "7.1%"
+      "mahmutlar": {
+        "name": "Mahmutlar",
+        "description": "En hızlı büyüyen sahil bölgesi — modern konutlar, uygun fiyatlı lüks ve uluslararası alıcılardan güçlü kira talebi.",
+        "avgPrice": "₺ 2.2M",
+        "avgRoi": "%8.5"
       },
-      "palmJumeirah": {
-        "name": "Palm Jumeirah",
-        "description": "Ultra lüks villalar, markalı konutlar ve sahilde yaşam sunan ikonik yapay ada.",
-        "avgPrice": "AED 5.2M",
-        "avgRoi": "5.8%"
+      "kestel": {
+        "name": "Kestel",
+        "description": "Panoramik deniz manzarası, aile dostu atmosfer ve mükemmel fiyat-performans oranı sunan huzurlu sahil mahallesi.",
+        "avgPrice": "₺ 2.8M",
+        "avgRoi": "%7.2"
       },
-      "businessBay": {
-        "name": "Business Bay",
-        "description": "Modern yüksek binalar, kanal manzaraları ve mükemmel kira getirisi sunan Dubai'nin merkezi iş bölgesi.",
-        "avgPrice": "AED 1.5M",
-        "avgRoi": "7.5%"
+      "oba": {
+        "name": "Oba",
+        "description": "Alanya'nın prestijli yerleşim merkezi — premium siteler, yemyeşil doğa ve şehir merkezine yakınlık.",
+        "avgPrice": "₺ 3.5M",
+        "avgRoi": "%7.0"
       },
-      "jbr": {
-        "name": "JBR",
-        "description": "Jumeirah Beach Residence — tatil köyü tarzı yaşam ve canlı sosyal ortamıyla sahil daireleri.",
-        "avgPrice": "AED 2.8M",
-        "avgRoi": "6.0%"
+      "tosmur": {
+        "name": "Tosmur",
+        "description": "Alanya ile Dim Çayı arasında huzurlu bir nehir kıyısı bölgesi — doğa yürüyüşleri ve sakin yaşam.",
+        "avgPrice": "₺ 2.0M",
+        "avgRoi": "%7.8"
       },
-      "creekHarbour": {
-        "name": "Dubai Creek Harbour",
-        "description": "Sahil yürüyüş yolları, doğa koruma alanları ve önemli sermaye değer artışı potansiyeli ile yükselen bir yıldız.",
-        "avgPrice": "AED 1.6M",
-        "avgRoi": "7.8%"
+      "cikcilli": {
+        "name": "Cikcilli",
+        "description": "Muhteşem Toros Dağları manzarası, modern daireler ve büyüyen yabancı topluluğu ile yamaç mahallesi.",
+        "avgPrice": "₺ 1.8M",
+        "avgRoi": "%8.0"
       },
-      "dubaiHills": {
-        "name": "Dubai Hills Estate",
-        "description": "Şampiyonluk golf sahası, parklar ve premium villalarla aile dostu bir master topluluk.",
-        "avgPrice": "AED 2.2M",
-        "avgRoi": "6.5%"
+      "kargicak": {
+        "name": "Kargıcak",
+        "description": "Nefes kesen Akdeniz panoraması ve mutlak mahremiyet sunan özel tepe villalar ve rezidanslar.",
+        "avgPrice": "₺ 5.0M",
+        "avgRoi": "%6.5"
       },
-      "jumeirahVillage": {
-        "name": "JVC",
-        "description": "Jumeirah Village Circle — güçlü kira getirisi ve hızlı gelişim ile uygun fiyatlı lüks.",
-        "avgPrice": "AED 850K",
-        "avgRoi": "8.2%"
+      "avsallar": {
+        "name": "Avsallar",
+        "description": "Her şey dahil tatil havası, uygun fiyatlı daireler ve güçlü tatil kiralama getirisi sunan popüler sahil bölgesi.",
+        "avgPrice": "₺ 1.5M",
+        "avgRoi": "%9.0"
       }
     }
   },
   "about": {
     "meta": {
       "title": "Hakkımızda | EmlakBanq",
-      "description": "EmlakBanq ile tanışın - 100'den fazla uzman, iki ofis, Dubai'nin güvenilir lüks gayrimenkul danışmanları."
+      "description": "EmlakBanq ile tanışın - 100'den fazla uzman, iki ofis, Alanya'nin güvenilir lüks gayrimenkul danışmanları."
     },
     "heading": "EmlakBanq Hakkında",
-    "subtitle": "Lüks gayrimenkul yatırımında Dubai'nin güvenilir ortağı",
+    "subtitle": "Lüks gayrimenkul yatırımında Alanya'nin güvenilir ortağı",
     "story": {
       "label": "Hikayemiz",
       "title": "Hikayemiz",
-      "p1": "EmlakBanq, tek bir vizyonla kuruldu: Dubai'deki lüks gayrimenkul deneyimini yeniden tanımlamak. Butik bir danışmanlık firması olarak başlayan yapımız, iki kıtada faaliyet gösteren 100'den fazla uzman danışmana sahip küresel bir platforma dönüştü.",
-      "p2": "Dubai'de mülk satın almanın, şehrin kendisi kadar heyecan verici — şeffaf, kusursuz ve ödüllendirici — olması gerektiğine inanıyoruz. Ekibimiz, derin piyasa bilgisini yatırımcıların mükemmel eşleşmelerini bulmalarına yardımcı olma tutkusuyla birleştiriyor.",
-      "p3": "Tamamlanmadan satış fırsatlarından taşınmaya hazır villalara, Altın Vize yardımından satış sonrası mülk yönetimine kadar Dubai gayrimenkulünde uçtan uca ortağınızız."
+      "p1": "EmlakBanq, tek bir vizyonla kuruldu: Alanya'daki lüks gayrimenkul deneyimini yeniden tanımlamak. Butik bir danışmanlık firması olarak başlayan yapımız, iki kıtada faaliyet gösteren 100'den fazla uzman danışmana sahip küresel bir platforma dönüştü.",
+      "p2": "Alanya'da mülk satın almanın, şehrin kendisi kadar heyecan verici — şeffaf, kusursuz ve ödüllendirici — olması gerektiğine inanıyoruz. Ekibimiz, derin piyasa bilgisini yatırımcıların mükemmel eşleşmelerini bulmalarına yardımcı olma tutkusuyla birleştiriyor.",
+      "p3": "Tamamlanmadan satış fırsatlarından taşınmaya hazır villalara, Altın Vize yardımından satış sonrası mülk yönetimine kadar Alanya gayrimenkulünde uçtan uca ortağınızız."
     },
     "values": {
       "label": "Değerlerimiz",
@@ -202,11 +202,11 @@
       },
       "expertise": {
         "title": "Uzmanlık",
-        "description": "Yıllarca Dubai piyasası deneyimine sahip sertifikalı profesyoneller."
+        "description": "Yıllarca Alanya piyasası deneyimine sahip sertifikalı profesyoneller."
       },
       "global": {
         "title": "Küresel Erişim",
-        "description": "Dubai ve İstanbul'da ofisler, 40'tan fazla ülkeden müşteriye hizmet."
+        "description": "Alanya ve İstanbul'da ofisler, 40'tan fazla ülkeden müşteriye hizmet."
       },
       "client": {
         "title": "Önce Müşteri",
@@ -219,8 +219,9 @@
     "offices": {
       "label": "Küresel Varlık",
       "title": "Ofislerimiz",
-      "description": "Küresel yatırımın kesişim noktasında stratejik olarak konumlanmış ofislerimiz, Dubai'nin lüks gayrimenkul piyasasına açılan kapınızdır.",
-      "dubai": { "city": "Dubai, BAE", "address": "Bay Square, Business Bay" },
+      "description": "Küresel yatırımın kesişim noktasında stratejik olarak konumlanmış ofislerimiz, Alanya'nin lüks gayrimenkul piyasasına açılan kapınızdır.",
+      "officeLabel": "Ofisi",
+      "alanya": { "city": "Alanya, Türkiye", "address": "Oba Mah., Alanya, Antalya" },
       "istanbul": { "city": "İstanbul, Türkiye", "address": "Skyland Istanbul" }
     },
     "cta": {
@@ -232,7 +233,7 @@
   "contact": {
     "meta": {
       "title": "İletişim | EmlakBanq",
-      "description": "EmlakBanq ile iletişime geçin. Dubai ve İstanbul'da ofisler."
+      "description": "EmlakBanq ile iletişime geçin. Alanya ve İstanbul'da ofisler."
     },
     "heading": "İletişime Geçin",
     "subtitle": "İlk kez alıcı olun ya da deneyimli bir yatırımcı, ekibimiz size yardımcı olmak için burada.",
@@ -289,9 +290,9 @@
     },
     "offices": {
       "title": "Ofislerimiz",
-      "dubai": {
-        "city": "Dubai, BAE",
-        "address": "Bay Square, Business Bay, Dubai, BAE"
+      "alanya": {
+        "city": "Alanya, Türkiye",
+        "address": "Oba Mah., Alanya, Antalya, Alanya, Türkiye"
       },
       "istanbul": {
         "city": "İstanbul, Türkiye",
@@ -306,87 +307,87 @@
   },
   "goldenVisa": {
     "meta": {
-      "title": "Altın Vize | EmlakBanq",
-      "description": "Gayrimenkul yatırımı ile Dubai Altın Vizesi hakkında bilgi edinin."
+      "title": "Türk Vatandaşlığı | EmlakBanq",
+      "description": "Gayrimenkul yatırımı ile Türk vatandaşlığı edinme hakkında bilgi edinin."
     },
-    "heading": "Gayrimenkul Yatırımı ile BAE Oturma İznine Açılan Kapınız",
-    "subtitle": "BAE Altın Vizesi",
+    "heading": "Gayrimenkul Yatırımı ile Türk Vatandaşlığına Açılan Kapınız",
+    "subtitle": "Yatırım Yoluyla Türk Vatandaşlığı",
     "hero": {
-      "subtitle": "BAE Altın Vize programı, gayrimenkul yatırımcılarına uzun süreli oturma izni sunarak dünyanın en dinamik ekonomilerinden birinde dünya standartlarında bir yaşam tarzı sağlar.",
-      "intro": "EmlakBanq, uygun mülklerin belirlenmesinden vize başvurunuzun tamamlanmasına kadar uçtan uca Altın Vize yardımı sunmaktadır. Özel ekibimiz yüzlerce ailenin güvenle BAE oturma iznini almasına yardımcı olmuştur."
+      "subtitle": "Türkiye'nin yatırım yoluyla vatandaşlık programı, gayrimenkul yatırımcılarına Türk vatandaşlığı edinme imkânı sunarak Avrupa ile Asya arasında köprü olan eşsiz bir ülkede yaşam fırsatı sağlar.",
+      "intro": "EmlakBanq, uygun mülklerin belirlenmesinden vatandaşlık başvurunuzun tamamlanmasına kadar uçtan uca destek sunmaktadır. Özel ekibimiz yüzlerce ailenin güvenle Türk vatandaşlığı edinmesine yardımcı olmuştur."
     },
     "benefits": {
-      "label": "Neden Altın Vize?",
-      "title": "BAE Altın Vizesi'nin Avantajları",
+      "label": "Neden Türk Vatandaşlığı?",
+      "title": "Yatırım Yoluyla Türk Vatandaşlığının Avantajları",
       "renewable_residency": {
-        "title": "10 Yıllık Yenilenebilir Oturma İzni",
-        "description": "Kendiniz ve aileniz için tamamen yenilenebilir 10 yıllık vize ile uzun süreli BAE oturma izni güvence altına alın."
+        "title": "Tam Vatandaşlık Hakkı",
+        "description": "Kendiniz ve aileniz için kalıcı Türk vatandaşlığı edinin. Oturma izni değil, tam vatandaşlık hakkı kazanın."
       },
       "family_sponsorship": {
-        "title": "Tam Aile Sponsorluğu",
-        "description": "Eşinizi, çocuklarınızı ve ev çalışanlarınızı ek mülk gereksinimi olmadan tek bir vize başvurusu altında sponsor olun."
+        "title": "Aile Dahil Vatandaşlık",
+        "description": "Eşiniz ve 18 yaşından küçük çocuklarınız da başvuruya dahil edilerek birlikte vatandaşlık alabilir."
       },
       "business_ownership": {
-        "title": "%100 İş Sahipliği",
-        "description": "Yerel bir sponsora ihtiyaç duymadan BAE ana karasında veya serbest bölgelerde bir işletme kurun ve tamamen sahip olun."
+        "title": "İş Kurma Özgürlüğü",
+        "description": "Türk vatandaşı olarak herhangi bir kısıtlama olmadan Türkiye'de işletme kurun ve yönetin."
       },
       "ease_of_travel": {
-        "title": "Seyahat Kolaylığı",
-        "description": "BAE'ye kısıtlama olmadan serbestçe girin ve çıkın. Vizeniz ülke dışında geçirilen süreden bağımsız olarak geçerliliğini korur."
+        "title": "Vizesiz Seyahat",
+        "description": "Türk pasaportu ile 110'dan fazla ülkeye vizesiz veya kapıda vize ile seyahat edin."
       },
       "tax_free": {
-        "title": "Vergisiz Ortam",
-        "description": "Sıfır kişisel gelir vergisi, sıfır sermaye kazancı vergisi ve dünyanın en iş dostu mali politikalarından birinin keyfini çıkarın."
+        "title": "Avantajlı Vergi Sistemi",
+        "description": "Rekabetçi vergi oranları, yabancı yatırımcılara özel teşvikler ve çifte vergilendirmeyi önleyen anlaşmalardan yararlanın."
       },
       "premium_services": {
-        "title": "Premium Hizmetlere Erişim",
-        "description": "BAE sakinlerine ayrılmış dünya standartlarında sağlık, eğitim ve bankacılık hizmetlerine erişim elde edin."
+        "title": "Kaliteli Yaşam Standartları",
+        "description": "Türk vatandaşı olarak dünya standartlarında sağlık, eğitim ve bankacılık hizmetlerine tam erişim elde edin."
       }
     },
     "eligibility": {
       "label": "Gereksinimler",
       "title": "Uygunluk Kriterleri",
-      "description": "Aşağıdaki kriterler BAE Altın Vize programının gayrimenkul yatırımcı rotası için geçerlidir.",
-      "item1": "BAE'de minimum 2 milyon AED (yaklaşık 545.000 USD) değerinde bir mülk satın alın.",
-      "item2": "Mülk, vize düzenlenme tarihinden itibaren en az 3 yıl boyunca elde tutulmalıdır.",
-      "item3": "Mülk konut veya ticari, tamamlanmadan satış veya hazır olabilir ve tam mülkiyet veya ortak mülkiyet olabilir.",
-      "item4": "İpotekli mülkler, satın alma değerinin minimum eşiği karşılaması koşuluyla uygundur.",
-      "item5": "Başvuru, mülkün Dubai Arazi Dairesi'ne kaydından sonraki 6 ay içinde yapılmalıdır.",
+      "description": "Aşağıdaki kriterler Türkiye'nin yatırım yoluyla vatandaşlık programının gayrimenkul rotası için geçerlidir.",
+      "item1": "Türkiye'de minimum 400.000 USD değerinde bir gayrimenkul satın alın.",
+      "item2": "Mülk, satın alma tarihinden itibaren en az 3 yıl boyunca satılmamalıdır.",
+      "item3": "Mülk konut veya ticari olabilir; tamamlanmış veya yapım aşamasında projeler uygundur.",
+      "item4": "Tapu Müdürlüğü'nden resmi değerleme raporu alınması gereklidir.",
+      "item5": "Başvuru, mülkün Tapu ve Kadastro Müdürlüğü'ne tescilinden sonra yapılmalıdır.",
       "item6": "Gayrimenkul yatırımcı rotası için minimum maaş gereksinimi veya istihdam durumu kısıtlaması bulunmamaktadır."
     },
     "process": {
       "label": "Nasıl Çalışır",
-      "title": "Altın Vize'ye Giden Yolunuz",
+      "title": "Türk Vatandaşlığına Giden Yolunuz",
       "step1": {
         "title": "Mülk Seçimi",
-        "description": "Uzman danışmanlarımızın rehberliğinde 2 milyon AED üzeri değerinde uygun bir mülk seçin."
+        "description": "Uzman danışmanlarımızın rehberliğinde 400.000 USD ve üzeri değerinde uygun bir mülk seçin."
       },
       "step2": {
-        "title": "Satın Alma ve Kayıt",
-        "description": "Satın alma işlemini tamamlayın ve mülkü Dubai Arazi Dairesi'ne kaydettirin."
+        "title": "Satın Alma ve Tescil",
+        "description": "Satın alma işlemini tamamlayın ve mülkü Tapu ve Kadastro Müdürlüğü'ne tescil ettirin."
       },
       "step3": {
         "title": "Belge Hazırlığı",
-        "description": "Pasaport kopyaları, Emirates ID ve mülk tapusu dahil gerekli belgeleri toplayın."
+        "description": "Pasaport, doğum belgesi, tapu ve değerleme raporu dahil gerekli belgeleri toplayın."
       },
       "step4": {
-        "title": "Vize Onayı",
-        "description": "Başvurunuzu yapın ve 30-60 gün içinde 10 yıllık Altın Vizenizi alın."
+        "title": "Vatandaşlık Onayı",
+        "description": "Başvurunuzu yapın ve 3-6 ay içinde Türk vatandaşlığınızı edinin."
       }
     },
     "cta": {
-      "title": "Altın Vize Yolculuğunuza Başlayın",
-      "description": "Özel vize uzmanlarımız mülk seçiminden vize onayına kadar size rehberlik edecektir. Bugün ücretsiz bir danışmanlık randevusu alın.",
+      "title": "Vatandaşlık Yolculuğunuza Başlayın",
+      "description": "Uzman danışmanlarımız mülk seçiminden vatandaşlık onayına kadar size rehberlik edecektir. Bugün ücretsiz bir danışmanlık randevusu alın.",
       "button": "Ücretsiz Danışmanlık Randevusu Alın"
     }
   },
   "buyerGuides": {
     "meta": {
       "title": "Alıcı Rehberi | EmlakBanq",
-      "description": "Dubai'de lüks mülk satın almak için kapsamlı rehberler."
+      "description": "Alanya'da lüks mülk satın almak için kapsamlı rehberler."
     },
     "heading": "Alıcı Rehberleri",
-    "subtitle": "Dubai'de mülk satın alma hakkında bilmeniz gereken her şey",
+    "subtitle": "Alanya'da mülk satın alma hakkında bilmeniz gereken her şey",
     "intro": "Mülk kararlarınızı güçlendirmek için uzman tarafından hazırlanmış rehberler. İlk kez alıcılardan deneyimli yatırımcılara kadar güvenle yatırım yapmak için gereken bilgiyi edinin.",
     "readGuide": "Rehberi Oku",
     "speakToExpert": "Uzmanla Görüşün",
@@ -399,11 +400,11 @@
   "insights": {
     "meta": {
       "title": "Yatırım Analizleri | EmlakBanq",
-      "description": "Dubai gayrimenkul piyasası analizleri ve yatırım içgörüleri."
+      "description": "Alanya gayrimenkul piyasası analizleri ve yatırım içgörüleri."
     },
     "label": "Piyasa Analizi",
-    "heading": "Dubai Piyasa Analizleri",
-    "intro": "Dubai gayrimenkul piyasasına dair veriye dayalı analizler ve uzman görüşleri. En son trendler, getiri verileri ve yatırım fırsatlarıyla bilgi sahibi olun.",
+    "heading": "Alanya Piyasa Analizleri",
+    "intro": "Alanya gayrimenkul piyasasına dair veriye dayalı analizler ve uzman görüşleri. En son trendler, getiri verileri ve yatırım fırsatlarıyla bilgi sahibi olun.",
     "overview": {
       "title": "Piyasaya Genel Bakış",
       "period": "2025 4. Çeyrek - 2026 1. Çeyrek Öne Çıkanlar"
@@ -411,14 +412,14 @@
     "roi": {
       "label": "Yatırım Verileri",
       "title": "Kira Getirisine Göre En İyi Bölgeler",
-      "description": "2025 4. Çeyrek verilerine göre Dubai'nin en popüler yatırım bölgelerinde ortalama brüt kira getirisi.",
+      "description": "2025 4. Çeyrek verilerine göre Alanya'nin en popüler yatırım bölgelerinde ortalama brüt kira getirisi.",
       "area": "Bölge",
       "grossRoi": "Brüt Getiri",
       "priceRange": "Fiyat Aralığı",
       "trend": "Trend",
       "rising": "Yükseliş",
       "stable": "Sabit",
-      "disclaimer": "Veriler Dubai Arazi Departmanı ve iç analizlerden alınmıştır. Getiriler gösterge niteliğindedir ve değişkenlik gösterebilir."
+      "disclaimer": "Veriler Alanya Arazi Departmanı ve iç analizlerden alınmıştır. Getiriler gösterge niteliğindedir ve değişkenlik gösterebilir."
     },
     "articles": {
       "label": "Son Analizler",
@@ -444,7 +445,7 @@
   "blog": {
     "meta": {
       "title": "Blog | EmlakBanq",
-      "description": "Dubai lüks gayrimenkul piyasasından en son haberler ve güncellemeler."
+      "description": "Alanya lüks gayrimenkul piyasasından en son haberler ve güncellemeler."
     },
     "heading": "Blog ve Haberler",
     "subtitle": "En son piyasa trendleri, proje lansmanları ve uzman görüşleriyle güncel kalın"
@@ -464,7 +465,7 @@
     "heading": "Kullanım Koşulları"
   },
   "footer": {
-    "description": "Mülk yatırımı için uzman rehberlik, Altın Vize yardımı ve kapsamlı satış sonrası destek sunan Dubai'nin önde gelen lüks gayrimenkul platformu.",
+    "description": "Mülk yatırımı için uzman rehberlik, Altın Vize yardımı ve kapsamlı satış sonrası destek sunan Alanya'nin önde gelen lüks gayrimenkul platformu.",
     "quickLinks": "Hızlı Bağlantılar",
     "services": "Hizmetler",
     "legal": "Yasal",
@@ -544,7 +545,19 @@
       "topAreasROI": "En İyi Bölge ROI'leri",
       "investmentReturns": "Bölgeye göre yatırım getirileri",
       "imageUrl": "Resim URL",
-      "altText": "Alternatif metin"
+      "altText": "Alternatif metin",
+      "savedSuccessfully": "Başarıyla kaydedildi",
+      "deletedSuccessfully": "Başarıyla silindi",
+      "createdSuccessfully": "Başarıyla oluşturuldu",
+      "updatedSuccessfully": "Başarıyla güncellendi",
+      "operationFailed": "İşlem başarısız",
+      "unsavedChanges": "Kaydedilmemiş değişiklikler",
+      "unsavedChangesTitle": "Kaydedilmemiş Değişiklikler",
+      "unsavedChangesMessage": "Kaydedilmemiş değişiklikleriniz var. Ayrılmak istediğinizden emin misiniz?",
+      "discardChanges": "Değişiklikleri At",
+      "keepEditing": "Düzenlemeye Devam Et",
+      "show": "Göster",
+      "all": "Tümü"
     },
     "nav": {
       "dashboard": "Gösterge Paneli",
@@ -593,7 +606,11 @@
       "recentMessages": "Son Mesajlar",
       "viewAll": "Tümünü görüntüle",
       "noMessages": "Henüz mesaj yok.",
-      "noMessageContent": "Mesaj içeriği yok"
+      "noMessageContent": "Mesaj içeriği yok",
+      "buyerGuides": "Alıcı Rehberleri",
+      "goldenVisaItems": "Türk Vatandaşlığı Öğeleri",
+      "recentActivity": "Son Aktiviteler",
+      "noActivity": "Henüz aktivite yok"
     },
     "properties": {
       "title": "İlanlar",
@@ -612,7 +629,17 @@
       "deleteError": "İlan silinirken hata oluştu.",
       "notFound": "İlan bulunamadı.",
       "failedToSave": "İlan kaydedilemedi.",
-      "loadingProperty": "İlan yükleniyor..."
+      "loadingProperty": "İlan yükleniyor...",
+      "deleteSuccess": "Mülk başarıyla silindi",
+      "totalProperties": "Toplam Mülk",
+      "featuredCount": "Öne Çıkan",
+      "typeBreakdown": "Tür Dağılımı",
+      "types": "tür",
+      "details": "Detaylar",
+      "allTypes": "Tüm Türler",
+      "allFeatured": "Tümü",
+      "featuredOnly": "Öne Çıkan",
+      "notFeatured": "Öne Çıkmayan"
     },
     "propertyForm": {
       "basicInfo": "Temel Bilgiler",
@@ -633,10 +660,10 @@
       "typeLabelPlaceholder": "ör. Lüks Daire",
       "typeLabelHelp": "İlan kartında gösterilen etiket, tüm dillerde.",
       "location": "Konum",
-      "locationPlaceholder": "ör. Dubai Marina",
+      "locationPlaceholder": "ör. Mahmutlar",
       "locationHelp": "Desteklenen tüm dillerde ilan konumu.",
       "price": "Fiyat",
-      "pricePlaceholder": "ör. AED 2,500,000",
+      "pricePlaceholder": "ör. ₺ 2,500,000",
       "beds": "Yatak Odası",
       "bedsPlaceholder": "ör. 3",
       "sqft": "Metrekare",
@@ -668,7 +695,7 @@
     },
     "areas": {
       "title": "Bölgeler",
-      "subtitle": "Dubai bölge listesini yönetin",
+      "subtitle": "Alanya bölge listesini yönetin",
       "addNew": "Yeni Bölge Ekle",
       "editArea": "Bölgeyi Düzenle",
       "addArea": "Bölge Ekle",
@@ -683,23 +710,24 @@
       "notFound": "Bölge bulunamadı.",
       "failedToSave": "Bölge kaydedilemedi.",
       "failedToDelete": "Bölge silinemedi.",
-      "loadingArea": "Bölge yükleniyor..."
+      "loadingArea": "Bölge yükleniyor...",
+      "notFeatured": "Öne Çıkmayan"
     },
     "areaForm": {
       "basicInfo": "Temel Bilgiler",
       "areaName": "Bölge Adı",
-      "areaNamePlaceholder": "ör. Dubai Marina",
+      "areaNamePlaceholder": "ör. Mahmutlar",
       "areaNameHelp": "Desteklenen tüm dillerde bölge adı. Slug ve key İngilizce'den otomatik oluşturulur.",
       "key": "Anahtar",
-      "keyPlaceholder": "ör. dubai-marina",
+      "keyPlaceholder": "ör. mahmutlar",
       "keyHelp": "Benzersiz tanımlayıcı anahtar. İngilizce isimden otomatik oluşturulur.",
       "slug": "Slug",
-      "slugPlaceholder": "ör. dubai-marina",
+      "slugPlaceholder": "ör. mahmutlar",
       "slugHelp": "URL dostu tanımlayıcı. İngilizce isimden otomatik oluşturulur.",
       "imageUrl": "Resim URL",
       "imagePlaceholder": "https://example.com/area.jpg",
       "avgPrice": "Ortalama Fiyat",
-      "avgPricePlaceholder": "ör. AED 2.5M",
+      "avgPricePlaceholder": "ör. ₺ 2.5M",
       "roi": "ROI",
       "roiPlaceholder": "ör. %7.2",
       "descriptions": "Açıklamalar",
@@ -743,12 +771,15 @@
       "notFound": "Blog yazısı bulunamadı.",
       "failedToSave": "Blog yazısı kaydedilemedi.",
       "failedToDelete": "Blog yazısı silinemedi.",
-      "loadingPost": "Blog yazısı yükleniyor..."
+      "loadingPost": "Blog yazısı yükleniyor...",
+      "totalPosts": "Toplam Yazı",
+      "publishedCount": "Yayında",
+      "draftCount": "Taslak"
     },
     "blogForm": {
       "basicInfo": "Temel Bilgiler",
       "title": "Başlık",
-      "titlePlaceholder": "ör. Dubai Emlak Piyasası Güncellemesi 2025",
+      "titlePlaceholder": "ör. Alanya Emlak Piyasası Güncellemesi 2025",
       "titleHelp": "Desteklenen tüm dillerde blog yazısı başlığı. Slug İngilizce'den otomatik oluşturulur.",
       "slug": "Slug",
       "slugPlaceholder": "otomatik-oluşturulacak",
@@ -799,12 +830,14 @@
       "notFound": "Alıcı rehberi bulunamadı.",
       "failedToSave": "Alıcı rehberi kaydedilemedi.",
       "failedToDelete": "Alıcı rehberi silinemedi.",
-      "loadingGuide": "Alıcı rehberi yükleniyor..."
+      "loadingGuide": "Alıcı rehberi yükleniyor...",
+      "totalGuides": "Toplam Rehber",
+      "withImages": "Görsel Olan"
     },
     "buyerGuideForm": {
       "basicInfo": "Temel Bilgiler",
       "title": "Başlık",
-      "titlePlaceholder": "ör. Dubai İlk Kez Alıcı Rehberi",
+      "titlePlaceholder": "ör. Alanya İlk Kez Alıcı Rehberi",
       "slug": "Slug",
       "slugPlaceholder": "basliktan-otomatik-olusturulur",
       "slugHelp": "URL dostu tanımlayıcı. Başlıktan otomatik oluşturulur.",
@@ -854,7 +887,10 @@
       "message": "Mesaj",
       "noMessageProvided": "Mesaj sağlanmadı",
       "deleteTitle": "Mesajı Sil",
-      "deleteConfirm": "\"{{name}}\" adlı kişiden gelen mesajı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz."
+      "deleteConfirm": "\"{{name}}\" adlı kişiden gelen mesajı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
+      "markedRead": "Okundu olarak işaretlendi",
+      "markedUnread": "Okunmadı olarak işaretlendi",
+      "replyViaEmail": "E-posta ile Yanıtla"
     },
     "goldenVisa": {
       "subtitle": "Avantajları, uygunluk kriterlerini ve süreç adımlarını yönetin",
@@ -868,11 +904,11 @@
       "noHighlights": "Henüz öne çıkan yok. İlk öğeyi ekleyin.",
       "noAreas": "Henüz bölge yok. İlk bölgeyi ekleyin.",
       "area": "Bölge",
-      "areaPlaceholder": "ör. Dubai Marina",
+      "areaPlaceholder": "ör. Mahmutlar",
       "roi": "ROI",
       "roiPlaceholder": "ör. %8.5",
       "priceRange": "Fiyat Aralığı",
-      "priceRangePlaceholder": "ör. AED 1.2M - 5M",
+      "priceRangePlaceholder": "ör. ₺ 1.2M - 5M",
       "trend": "Trend",
       "trendUp": "Yükseliş",
       "trendStable": "Sabit",
@@ -890,7 +926,7 @@
       "editStat": "İstatistiği Düzenle",
       "addStat": "İstatistik Ekle",
       "city": "Şehir",
-      "cityPlaceholder": "ör. Dubai",
+      "cityPlaceholder": "ör. Alanya",
       "address": "Adres",
       "addressPlaceholder": "Tam ofis adresi",
       "phone": "Telefon",

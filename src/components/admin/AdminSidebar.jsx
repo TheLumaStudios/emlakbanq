@@ -115,7 +115,7 @@ export default function AdminSidebar({ open, onClose }) {
         {/* Logo */}
         <div className="flex h-16 items-center justify-between border-b border-white/10 px-6">
           <div className="flex items-center gap-3">
-            <span className="rounded bg-gold-500/20 px-2 py-0.5 text-xs font-semibold text-gold-400">
+            <span className="rounded bg-blue-500/20 px-2 py-0.5 text-xs font-semibold text-blue-400">
               {t('admin.topBar.admin')}
             </span>
           </div>
@@ -142,7 +142,7 @@ export default function AdminSidebar({ open, onClose }) {
                     cn(
                       'flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors',
                       isActive
-                        ? 'bg-white/10 text-gold-400'
+                        ? 'bg-white/10 text-blue-400'
                         : 'text-white/70 hover:bg-white/5 hover:text-white'
                     )
                   }

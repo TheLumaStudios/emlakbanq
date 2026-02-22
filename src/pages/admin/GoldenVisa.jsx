@@ -2,11 +2,14 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../../utils/supabase'
 import ConfirmDialog from '../../components/admin/ConfirmDialog'
+import { useToast } from '../../hooks/useToast'
+import AdminModal from '../../components/admin/AdminModal'
 
 const EMPTY_ITEM = { icon: '', title: '', description: '', sort_order: 0 }
 
 export default function GoldenVisa() {
   const { t } = useTranslation()
+  const toast = useToast()
 
   const TABS = [
     { key: 'benefit', label: t('admin.common.benefits') },
@@ -105,9 +108,11 @@ export default function GoldenVisa() {
 
     if (result.error) {
       setError(result.error.message)
+      toast.error(result.error.message)
     } else {
       closeModal()
       await fetchItems()
+      toast.success(t('admin.common.savedSuccessfully'))
     }
     setSaving(false)
   }
@@ -124,8 +129,10 @@ export default function GoldenVisa() {
 
     if (delError) {
       setError(delError.message)
+      toast.error(delError.message)
     } else {
       await fetchItems()
+      toast.success(t('admin.common.deletedSuccessfully'))
     }
     setDeleteTarget(null)
     setSaving(false)
@@ -143,7 +150,7 @@ export default function GoldenVisa() {
         </div>
         <button
           onClick={openAddModal}
-          className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-gold-600"
+          className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-blue-600"
         >
           <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
             <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -168,7 +175,7 @@ export default function GoldenVisa() {
               onClick={() => setActiveTab(tab.key)}
               className={`whitespace-nowrap border-b-2 px-1 pb-3 text-sm font-medium transition-colors ${
                 activeTab === tab.key
-                  ? 'border-gold-500 text-gold-600'
+                  ? 'border-blue-500 text-blue-600'
                   : 'border-transparent text-estate-400 hover:border-estate-300 hover:text-estate-600'
               }`}
             >
@@ -195,7 +202,7 @@ export default function GoldenVisa() {
           </p>
           <button
             onClick={openAddModal}
-            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-600 hover:text-gold-700"
+            className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-blue-600 hover:text-blue-700"
           >
             <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 4.5v15m7.5-7.5h-15" />
@@ -217,10 +224,10 @@ export default function GoldenVisa() {
             </thead>
             <tbody className="divide-y divide-estate-100">
               {items.map((item) => (
-                <tr key={item.id} className="transition-colors hover:bg-cream-50">
+                <tr key={item.id} className="transition-colors hover:bg-yellow-50">
                   <td className="px-4 py-3 text-estate-400">{item.sort_order}</td>
                   <td className="px-4 py-3">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-gold-50 text-base">
+                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-base">
                       {item.icon}
                     </span>
                   </td>
@@ -258,101 +265,86 @@ export default function GoldenVisa() {
       )}
 
       {/* Add/Edit Modal */}
-      {modalOpen && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center">
-          <div className="absolute inset-0 bg-estate-900/60 backdrop-blur-sm" onClick={closeModal} />
-          <div className="relative mx-4 w-full max-w-lg rounded-lg bg-white p-6 shadow-2xl">
-            <div className="flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-estate-900">
-                {editingItem ? t('admin.common.editItem') : t('admin.common.addItem')}
-              </h2>
-              <button
-                onClick={closeModal}
-                className="rounded-md p-1.5 text-estate-400 transition-colors hover:bg-estate-100 hover:text-estate-700"
-              >
-                <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
-                </svg>
-              </button>
+      <AdminModal
+        open={modalOpen}
+        onClose={closeModal}
+        title={editingItem ? t('admin.common.editItem') : t('admin.common.addItem')}
+      >
+        <form onSubmit={handleSave} className="space-y-4">
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.icon')}</label>
+              <input
+                type="text"
+                name="icon"
+                value={formData.icon}
+                onChange={handleFormChange}
+                placeholder={t('admin.goldenVisa.iconPlaceholder')}
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
             </div>
-
-            <form onSubmit={handleSave} className="mt-5 space-y-4">
-              <div className="grid grid-cols-2 gap-4">
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.icon')}</label>
-                  <input
-                    type="text"
-                    name="icon"
-                    value={formData.icon}
-                    onChange={handleFormChange}
-                    placeholder={t('admin.goldenVisa.iconPlaceholder')}
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-                <div>
-                  <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
-                  <input
-                    type="number"
-                    name="sort_order"
-                    value={formData.sort_order}
-                    onChange={handleFormChange}
-                    min={0}
-                    className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.title')}</label>
-                <input
-                  type="text"
-                  name="title"
-                  value={formData.title}
-                  onChange={handleFormChange}
-                  required
-                  placeholder={t('admin.goldenVisa.titlePlaceholder')}
-                  className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                />
-              </div>
-
-              <div>
-                <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.description')}</label>
-                <textarea
-                  name="description"
-                  value={formData.description}
-                  onChange={handleFormChange}
-                  rows={4}
-                  placeholder={t('admin.goldenVisa.descriptionPlaceholder')}
-                  className="w-full resize-none rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-gold-500 focus:outline-none focus:ring-1 focus:ring-gold-500"
-                />
-              </div>
-
-              <div className="flex justify-end gap-3 pt-2">
-                <button
-                  type="button"
-                  onClick={closeModal}
-                  className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
-                >
-                  {t('admin.common.cancel')}
-                </button>
-                <button
-                  type="submit"
-                  disabled={saving}
-                  className="inline-flex items-center gap-2 rounded-lg bg-gold-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-gold-600 disabled:opacity-50"
-                >
-                  {saving && (
-                    <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                    </svg>
-                  )}
-                  {editingItem ? t('admin.common.update') : t('admin.common.create')}
-                </button>
-              </div>
-            </form>
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
+              <input
+                type="number"
+                name="sort_order"
+                value={formData.sort_order}
+                onChange={handleFormChange}
+                min={0}
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
           </div>
-        </div>
-      )}
+
+          <div>
+            <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.title')}</label>
+            <input
+              type="text"
+              name="title"
+              value={formData.title}
+              onChange={handleFormChange}
+              required
+              placeholder={t('admin.goldenVisa.titlePlaceholder')}
+              className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            />
+          </div>
+
+          <div>
+            <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.description')}</label>
+            <textarea
+              name="description"
+              value={formData.description}
+              onChange={handleFormChange}
+              rows={4}
+              placeholder={t('admin.goldenVisa.descriptionPlaceholder')}
+              className="w-full resize-none rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+            />
+          </div>
+
+          <div className="flex justify-end gap-3 pt-2">
+            <button
+              type="button"
+              onClick={closeModal}
+              className="rounded-lg border border-estate-200 px-4 py-2 text-sm font-medium text-estate-700 transition-colors hover:bg-estate-50"
+            >
+              {t('admin.common.cancel')}
+            </button>
+            <button
+              type="submit"
+              disabled={saving}
+              className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
+            >
+              {saving && (
+                <svg className="h-4 w-4 animate-spin" viewBox="0 0 24 24" fill="none">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+                </svg>
+              )}
+              {editingItem ? t('admin.common.update') : t('admin.common.create')}
+            </button>
+          </div>
+        </form>
+      </AdminModal>
 
       {/* Delete Confirm */}
       <ConfirmDialog

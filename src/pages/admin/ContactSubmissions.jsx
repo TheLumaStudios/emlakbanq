@@ -2,9 +2,12 @@ import { useState, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
 import { supabase } from '../../utils/supabase'
 import ConfirmDialog from '../../components/admin/ConfirmDialog'
+import ListStatCard from '../../components/admin/ListStatCard'
+import { useToast } from '../../hooks/useToast'
 
 export default function ContactSubmissions() {
   const { t } = useTranslation()
+  const toast = useToast()
 
   const FILTERS = [
     { key: 'all', label: t('admin.contactSubmissions.all') },
@@ -18,6 +21,13 @@ export default function ContactSubmissions() {
   const [filter, setFilter] = useState('all')
   const [search, setSearch] = useState('')
   const [unreadCount, setUnreadCount] = useState(0)
+
+  const totalCount = submissions.length
+  const filteredSubmissions = submissions.filter((s) => {
+    if (!search) return true
+    const q = search.toLowerCase()
+    return (s.name || '').toLowerCase().includes(q) || (s.email || '').toLowerCase().includes(q) || (s.property_interest || '').toLowerCase().includes(q)
+  })
 
   // Expanded row for viewing message
   const [expandedId, setExpandedId] = useState(null)
@@ -73,6 +83,7 @@ export default function ContactSubmissions() {
 
     if (err) setError(err.message)
     else {
+      toast.success(item.read ? t('admin.contactSubmissions.markedUnread') : t('admin.contactSubmissions.markedRead'))
       await fetchSubmissions()
       await fetchUnreadCount()
     }
@@ -91,6 +102,7 @@ export default function ContactSubmissions() {
 
     if (err) setError(err.message)
     else {
+      toast.success(t('admin.common.deletedSuccessfully'))
       if (expandedId === deleteTarget.id) setExpandedId(null)
       await fetchSubmissions()
       await fetchUnreadCount()
@@ -127,7 +139,7 @@ export default function ContactSubmissions() {
             </p>
           </div>
           {unreadCount > 0 && (
-            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-gold-500 px-2 text-xs font-bold text-white">
+            <span className="inline-flex h-7 min-w-7 items-center justify-center rounded-full bg-blue-500 px-2 text-xs font-bold text-white">
               {unreadCount}
             </span>
           )}
@@ -141,6 +153,40 @@ export default function ContactSubmissions() {
         </div>
       )}
 
+      {/* Stats */}
+      <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
+        <ListStatCard
+          label={t('admin.contactSubmissions.all')}
+          value={totalCount}
+          color="estate"
+          icon={
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+            </svg>
+          }
+        />
+        <ListStatCard
+          label={t('admin.contactSubmissions.unread')}
+          value={unreadCount}
+          color="blue"
+          icon={
+            <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+              <circle cx="12" cy="12" r="5" />
+            </svg>
+          }
+        />
+        <ListStatCard
+          label={t('admin.contactSubmissions.read')}
+          value={totalCount - unreadCount}
+          color="green"
+          icon={
+            <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+            </svg>
+          }
+        />
+      </div>
+
       {/* Search */}
       <div className="relative max-w-md">
         <svg className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-estate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
@@ -151,7 +197,7 @@ export default function ContactSubmissions() {
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           placeholder={t('admin.common.search') + '...'}
-          className="w-full rounded-lg border border-estate-200 bg-white pl-10 pr-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+          className="w-full rounded-lg border border-estate-200 bg-white pl-10 pr-4 py-2.5 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
         />
       </div>
 
@@ -169,7 +215,7 @@ export default function ContactSubmissions() {
           >
             {f.label}
             {f.key === 'unread' && unreadCount > 0 && (
-              <span className="ml-1.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-gold-500 px-1.5 text-xs font-bold text-white">
+              <span className="ml-1.5 inline-flex h-5 min-w-5 items-center justify-center rounded-full bg-blue-500 px-1.5 text-xs font-bold text-white">
                 {unreadCount}
               </span>
             )}
@@ -214,15 +260,11 @@ export default function ContactSubmissions() {
                 </tr>
               </thead>
               <tbody className="divide-y divide-estate-100">
-                {submissions.filter((s) => {
-                if (!search) return true
-                const q = search.toLowerCase()
-                return (s.name || '').toLowerCase().includes(q) || (s.email || '').toLowerCase().includes(q) || (s.property_interest || '').toLowerCase().includes(q)
-              }).map((item) => (
+                {filteredSubmissions.map((item) => (
                   <>
                     <tr
                       key={item.id}
-                      className={`transition-colors hover:bg-cream-50 ${!item.read ? 'bg-gold-50/30' : ''}`}
+                      className={`transition-colors hover:bg-yellow-50 ${!item.read ? 'bg-blue-50/30 border-l-3 border-l-gold-500' : ''}`}
                     >
                       {/* Expand toggle */}
                       <td className="px-4 py-3">
@@ -248,7 +290,7 @@ export default function ContactSubmissions() {
                         </span>
                       </td>
                       <td className="hidden px-4 py-3 text-estate-500 md:table-cell">
-                        <a href={`mailto:${item.email}`} className="hover:text-gold-600 hover:underline">
+                        <a href={`mailto:${item.email}`} className="hover:text-blue-600 hover:underline">
                           {item.email}
                         </a>
                       </td>
@@ -266,7 +308,7 @@ export default function ContactSubmissions() {
                           className={`inline-flex items-center gap-1 rounded-full px-2.5 py-0.5 text-xs font-medium transition-colors ${
                             item.read
                               ? 'bg-estate-100 text-estate-500 hover:bg-estate-200'
-                              : 'bg-gold-100 text-gold-700 hover:bg-gold-200'
+                              : 'bg-blue-100 text-blue-700 hover:bg-blue-200'
                           }`}
                           title={item.read ? t('admin.contactSubmissions.markAsUnread') : t('admin.contactSubmissions.markAsRead')}
                         >
@@ -321,7 +363,7 @@ export default function ContactSubmissions() {
                             <div className="grid grid-cols-1 gap-2 text-sm sm:grid-cols-2 md:hidden">
                               <div>
                                 <span className="font-medium text-estate-600">{t('admin.contactSubmissions.email')}: </span>
-                                <a href={`mailto:${item.email}`} className="text-gold-600 hover:underline">
+                                <a href={`mailto:${item.email}`} className="text-blue-600 hover:underline">
                                   {item.email}
                                 </a>
                               </div>
@@ -344,6 +386,18 @@ export default function ContactSubmissions() {
                                 {item.message || <span className="italic text-estate-300">{t('admin.contactSubmissions.noMessageProvided')}</span>}
                               </div>
                             </div>
+
+                            {item.email && (
+                              <a
+                                href={`mailto:${item.email}?subject=Re: ${item.property_interest || 'Your inquiry'}`}
+                                className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
+                              >
+                                <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                                  <path strokeLinecap="round" strokeLinejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
+                                </svg>
+                                {t('admin.contactSubmissions.replyViaEmail')}
+                              </a>
+                            )}
                           </div>
                         </td>
                       </tr>

@@ -6,6 +6,7 @@ import LoadingSkeleton from '../components/common/LoadingSkeleton'
 import { ROUTES } from '../config/routes'
 import { useCompanyStats } from '../hooks/useCompanyStats'
 import { useOffices } from '../hooks/useOffices'
+import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 
 const VALUES = [
   {
@@ -47,6 +48,8 @@ export default function About() {
   const { t } = useTranslation()
   const { data: stats, loading: loadingStats } = useCompanyStats()
   const { data: offices, loading: loadingOffices } = useOffices()
+  const valuesRef = useRevealOnScroll()
+  const officesRef = useRevealOnScroll()
 
   return (
     <>
@@ -56,13 +59,17 @@ export default function About() {
       />
 
       {/* ── Hero ────────────────────────────────────────────────────── */}
-      <section className="bg-estate-900 py-24 text-white lg:py-32">
-        <Container>
-          <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-400">
+      <section className="relative overflow-hidden bg-estate-900 pb-24 pt-36 text-white lg:pb-32 lg:pt-44">
+        {/* Decorative elements */}
+        <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute -left-20 bottom-0 h-60 w-60 rounded-full bg-blue-500/5 blur-3xl" />
+        <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-blue-400/30 to-transparent" />
+        <Container className="relative z-10">
+          <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-400">
             {t('about.subtitle', 'Our Legacy')}
           </p>
           <h1 className="mt-4 max-w-3xl font-heading text-4xl font-bold leading-tight md:text-5xl lg:text-6xl">
-            {t('about.heading', 'Redefining Luxury Real Estate in Dubai')}
+            {t('about.heading', 'Redefining Real Estate in Alanya')}
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-relaxed text-estate-300">
             {t(
@@ -77,7 +84,7 @@ export default function About() {
       <section className="bg-white py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-600">
+            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
               {t('about.story.label', 'Our Story')}
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
@@ -88,7 +95,7 @@ export default function About() {
               <p>
                 {t(
                   'about.story.p1',
-                  'EmlakBanq was founded with a singular vision: to create a bespoke real estate experience that transcends borders and exceeds expectations. What began as a boutique consultancy in Dubai has grown into a globally recognized brand, trusted by discerning investors and homeowners from over 40 countries.'
+                  'EmlakBanq was founded with a singular vision: to create a bespoke real estate experience that transcends borders and exceeds expectations. What began as a boutique consultancy in Alanya has grown into a recognized brand, trusted by discerning investors and homeowners from over 40 countries.'
                 )}
               </p>
               <p>
@@ -100,7 +107,7 @@ export default function About() {
               <p>
                 {t(
                   'about.story.p3',
-                  'With offices in Dubai and Istanbul, we operate at the crossroads of East and West, offering our clients privileged access to off-market opportunities, pre-launch allocations, and exclusive developer partnerships that are simply unavailable elsewhere.'
+                  'With offices in Alanya and Istanbul, we operate at the crossroads of East and West, offering our clients privileged access to off-market opportunities, pre-launch allocations, and exclusive developer partnerships that are simply unavailable elsewhere.'
                 )}
               </p>
             </div>
@@ -109,14 +116,14 @@ export default function About() {
       </section>
 
       {/* ── Stats Row ───────────────────────────────────────────────── */}
-      <section className="border-y border-estate-100 bg-cream-50 py-16 lg:py-20">
+      <section className="border-y border-estate-100 bg-yellow-50 py-16 lg:py-20">
         <Container>
           <div className="grid grid-cols-2 gap-8 md:grid-cols-4 md:gap-12">
             {loadingStats ? (
               <LoadingSkeleton variant="card" count={4} columns={4} />
             ) : stats?.map((stat) => (
               <div key={stat.label} className="text-center">
-                <div className="font-heading text-4xl font-bold text-gold-700 md:text-5xl">
+                <div className="font-heading text-4xl font-bold text-blue-700 md:text-5xl">
                   {stat.value}
                 </div>
                 <p className="mt-2 text-sm font-medium uppercase tracking-wider text-estate-500">
@@ -129,10 +136,10 @@ export default function About() {
       </section>
 
       {/* ── Values ──────────────────────────────────────────────────── */}
-      <section className="bg-white py-20 lg:py-24">
+      <section className="bg-white py-20 lg:py-24" ref={valuesRef}>
         <Container>
           <div className="text-center">
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-600">
+            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
               {t('about.values.label', 'Our Values')}
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
@@ -144,9 +151,9 @@ export default function About() {
             {VALUES.map((value) => (
               <div
                 key={value.key}
-                className="group rounded-2xl border border-estate-100 bg-white p-8 text-center transition-all duration-300 hover:-translate-y-1 hover:border-gold-200 hover:shadow-lg"
+                className="card-premium reveal group rounded-2xl bg-white p-8 text-center transition-all duration-300 hover:-translate-y-1"
               >
-                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-gold-50 text-gold-700 transition-colors group-hover:bg-gold-100">
+                <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-xl bg-blue-50 text-blue-700 transition-colors group-hover:bg-blue-100">
                   {value.icon}
                 </div>
                 <h3 className="mt-5 font-heading text-lg font-semibold text-estate-900">
@@ -165,10 +172,10 @@ export default function About() {
       </section>
 
       {/* ── Offices ─────────────────────────────────────────────────── */}
-      <section className="bg-cream-50 py-20 lg:py-24">
+      <section className="bg-yellow-50 py-20 lg:py-24" ref={officesRef}>
         <Container>
           <div className="text-center">
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-gold-600">
+            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
               {t('about.offices.label', 'Global Presence')}
             </p>
             <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
@@ -177,7 +184,7 @@ export default function About() {
             <p className="mx-auto mt-4 max-w-xl text-estate-500">
               {t(
                 'about.offices.description',
-                'Strategically positioned at the crossroads of global investment, our offices are your gateway to Dubai\'s luxury property market.'
+                'Strategically positioned at the heart of the Mediterranean coast, our offices are your gateway to Alanya\'s thriving property market.'
               )}
             </p>
           </div>
@@ -188,7 +195,7 @@ export default function About() {
             ) : offices?.map((office) => (
               <div
                 key={office.city}
-                className="group overflow-hidden rounded-2xl shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl"
+                className="card-premium reveal group overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Office Image */}
                 <div className="relative h-48 overflow-hidden">
@@ -200,7 +207,7 @@ export default function About() {
                   />
                   <div className="absolute bottom-5 left-6">
                     <span className="rounded-full bg-white/20 px-4 py-1.5 text-sm font-medium text-white backdrop-blur-sm">
-                      {office.city} Office
+                      {office.city} {t('about.offices.officeLabel', 'Office')}
                     </span>
                   </div>
                 </div>
@@ -213,7 +220,7 @@ export default function About() {
                   <div className="mt-3 space-y-2">
                     <div className="flex items-start gap-2 text-sm text-estate-600">
                       <svg
-                        className="mt-0.5 h-4 w-4 flex-shrink-0 text-gold-600"
+                        className="mt-0.5 h-4 w-4 flex-shrink-0 text-blue-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -234,7 +241,7 @@ export default function About() {
                     </div>
                     <div className="flex items-center gap-2 text-sm text-estate-600">
                       <svg
-                        className="h-4 w-4 flex-shrink-0 text-gold-600"
+                        className="h-4 w-4 flex-shrink-0 text-blue-600"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke="currentColor"
@@ -270,7 +277,7 @@ export default function About() {
           </p>
           <Link
             to={ROUTES.CONTACT}
-            className="mt-8 inline-flex items-center gap-2 rounded-full bg-gold-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-gold-400 hover:shadow-lg hover:shadow-gold-500/25"
+            className="btn-glow mt-8 inline-flex items-center gap-2 rounded-full bg-blue-500 px-8 py-3.5 font-medium text-estate-900 transition-all duration-300 hover:bg-blue-400"
           >
             {t('about.cta.button')}
             <svg
