@@ -114,9 +114,44 @@ export default function PropertyForm() {
     setSaving(true)
     setError(null)
 
+    // Ensure slug is unique (only for new properties or if slug changed)
+    let finalSlug = formData.slug
+    let counter = 1
+    let slugExists = true
+    let testSlug = finalSlug
+
+    while (slugExists) {
+      let query = supabase
+        .from('properties')
+        .select('id')
+        .eq('slug', testSlug)
+        .limit(1)
+
+      // If editing, exclude current property
+      if (isEdit) {
+        query = query.neq('id', id)
+      }
+
+      const { data, error } = await query
+
+      if (error) {
+        console.error('Error checking slug:', error)
+        break
+      }
+
+      if (data && data.length > 0) {
+        // Slug exists, try with counter
+        testSlug = `${finalSlug}-${counter}`
+        counter++
+      } else {
+        slugExists = false
+        finalSlug = testSlug
+      }
+    }
+
     const payload = {
       name: formData.name,
-      slug: formData.slug,
+      slug: finalSlug,
       type: formData.type,
       type_label: formData.type_label,
       location: formData.location,

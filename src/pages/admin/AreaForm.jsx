@@ -100,10 +100,78 @@ export default function AreaForm() {
     setSaving(true)
     setError(null)
 
+    // Ensure slug and key are unique
+    let finalSlug = formData.slug
+    let finalKey = formData.key
+    let counter = 1
+
+    // Check slug uniqueness
+    let slugExists = true
+    let testSlug = finalSlug
+
+    while (slugExists) {
+      let query = supabase
+        .from('areas')
+        .select('id')
+        .eq('slug', testSlug)
+        .limit(1)
+
+      if (isEdit) {
+        query = query.neq('id', id)
+      }
+
+      const { data, error } = await query
+
+      if (error) {
+        console.error('Error checking slug:', error)
+        break
+      }
+
+      if (data && data.length > 0) {
+        testSlug = `${finalSlug}-${counter}`
+        counter++
+      } else {
+        slugExists = false
+        finalSlug = testSlug
+      }
+    }
+
+    // Check key uniqueness
+    counter = 1
+    let keyExists = true
+    let testKey = finalKey
+
+    while (keyExists) {
+      let query = supabase
+        .from('areas')
+        .select('id')
+        .eq('key', testKey)
+        .limit(1)
+
+      if (isEdit) {
+        query = query.neq('id', id)
+      }
+
+      const { data, error } = await query
+
+      if (error) {
+        console.error('Error checking key:', error)
+        break
+      }
+
+      if (data && data.length > 0) {
+        testKey = `${finalKey}-${counter}`
+        counter++
+      } else {
+        keyExists = false
+        finalKey = testKey
+      }
+    }
+
     const payload = {
       name: formData.name,
-      key: formData.key,
-      slug: formData.slug,
+      key: finalKey,
+      slug: finalSlug,
       description: formData.description,
       description_long: formData.description_long,
       image: formData.image,

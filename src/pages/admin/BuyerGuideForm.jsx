@@ -100,9 +100,42 @@ export default function BuyerGuideForm() {
     setSaving(true)
     setError(null)
 
+    // Ensure slug is unique
+    let finalSlug = formData.slug
+    let counter = 1
+    let slugExists = true
+    let testSlug = finalSlug
+
+    while (slugExists) {
+      let query = supabase
+        .from('buyer_guides')
+        .select('id')
+        .eq('slug', testSlug)
+        .limit(1)
+
+      if (isEdit) {
+        query = query.neq('id', id)
+      }
+
+      const { data, error } = await query
+
+      if (error) {
+        console.error('Error checking slug:', error)
+        break
+      }
+
+      if (data && data.length > 0) {
+        testSlug = `${finalSlug}-${counter}`
+        counter++
+      } else {
+        slugExists = false
+        finalSlug = testSlug
+      }
+    }
+
     const payload = {
       title: formData.title,
-      slug: formData.slug,
+      slug: finalSlug,
       description: formData.description,
       image: formData.image,
       tag: formData.tag,
