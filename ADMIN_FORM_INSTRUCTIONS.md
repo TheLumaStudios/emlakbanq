@@ -96,7 +96,7 @@ const payload = {
     value={formData.title_en}
     onChange={handleChange}
     required
-    placeholder="e.g. Dubai Market Trends 2024"
+    placeholder="e.g. Alanya Market Trends 2024"
   />
   <AdminFormField
     label="Title (TR)"
@@ -104,7 +104,7 @@ const payload = {
     value={formData.title_tr}
     onChange={handleChange}
     required
-    placeholder="ör. Dubai Piyasa Trendleri 2024"
+    placeholder="ör. Alanya Piyasa Trendleri 2024"
   />
 </div>
 

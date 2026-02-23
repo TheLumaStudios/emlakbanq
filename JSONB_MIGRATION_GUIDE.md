@@ -125,7 +125,7 @@ const handleChange = (name, value) => {
   value={formData.location}
   onChange={handleChange}
   required
-  placeholder="e.g. Dubai Marina"
+  placeholder="e.g. City Center"
 />
 
 {/* Type Label - All Languages */}
@@ -212,14 +212,14 @@ Aynı şekilde güncelleyin:
 ### Database Format:
 ```json
 {
-  "en": "Luxury Villa in Dubai Marina",
-  "tr": "Dubai Marina'da Lüks Villa",
-  "ar": "فيلا فاخرة في دبي مارينا",
-  "ru": "Роскошная вилла в Дубай Марина",
-  "de": "Luxusvilla in Dubai Marina",
-  "fr": "Villa de luxe à Dubai Marina",
-  "fa": "ویلای لوکس در دبی مارینا",
-  "hi": "दुबई मरीना में लक्जरी विला"
+  "en": "Luxury Villa in Marina District",
+  "tr": "Marina Bölgesi'nde Lüks Villa",
+  "ar": "فيلا فاخرة في منطقة المارينا",
+  "ru": "Роскошная вилла в районе Марина",
+  "de": "Luxusvilla im Marina-Viertel",
+  "fr": "Villa de luxe dans le quartier de la Marina",
+  "fa": "ویلای لوکس در منطقه مارینا",
+  "hi": "मरीना जिले में लक्जरी विला"
 }
 ```
 
@@ -228,7 +228,7 @@ Aynı şekilde güncelleyin:
 INSERT INTO properties (name, location, price)
 VALUES (
   '{"en": "Luxury Villa", "tr": "Lüks Villa", "ar": "فيلا فاخرة"}'::jsonb,
-  '{"en": "Dubai Marina", "tr": "Dubai Marina"}'::jsonb,
+  '{"en": "Marina District", "tr": "Marina Bölgesi"}'::jsonb,
   'AED 5M'
 );
 ```

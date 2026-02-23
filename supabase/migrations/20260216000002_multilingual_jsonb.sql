@@ -124,7 +124,7 @@ $$ LANGUAGE plpgsql IMMUTABLE;
 -- INSERT INTO properties (name, location, price, ...)
 -- VALUES (
 --   '{"en": "Luxury Villa", "tr": "Lüks Villa", "ar": "فيلا فاخرة"}'::jsonb,
---   '{"en": "Dubai Marina", "tr": "Dubai Marina", "ar": "دبي مارينا"}'::jsonb,
+--   '{"en": "Alanya Marina", "tr": "Alanya Marina", "ar": "ألانيا مارينا"}'::jsonb,
 --   'AED 5M',
 --   ...
 -- );

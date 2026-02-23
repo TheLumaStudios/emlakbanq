@@ -23,27 +23,27 @@ ALTER TABLE buyer_guides
 -- 2. Update with all translations
 -- ============================================
 
--- Guide 1: Complete Buyer's Guide
+-- Guide 1: Complete Buyer's Guide (Alanya references removed)
 UPDATE buyer_guides SET
   title = '{
-    "en": "Complete Buyer''s Guide to Dubai Real Estate",
-    "tr": "Dubai Gayrimenkulüne Eksiksiz Alıcı Rehberi",
-    "ar": "الدليل الشامل لشراء العقارات في دبي",
-    "ru": "Полное руководство покупателя недвижимости в Дубае",
-    "de": "Vollständiger Käuferleitfaden für Immobilien in Dubai",
-    "fr": "Guide complet de l''acheteur immobilier à Dubaï",
-    "fa": "راهنمای کامل خرید ملک در دبی",
-    "hi": "दुबई रियल एस्टेट के लिए संपूर्ण खरीदार गाइड"
+    "en": "Complete Buyer''s Guide to Real Estate",
+    "tr": "Gayrimenkule Eksiksiz Alıcı Rehberi",
+    "ar": "الدليل الشامل لشراء العقارات",
+    "ru": "Полное руководство покупателя недвижимости",
+    "de": "Vollständiger Käuferleitfaden für Immobilien",
+    "fr": "Guide complet de l''acheteur immobilier",
+    "fa": "راهنمای کامل خرید ملک",
+    "hi": "रियल एस्टेट के लिए संपूर्ण खरीदार गाइड"
   }'::jsonb,
   description = '{
-    "en": "Everything you need to know about purchasing property in Dubai -- from choosing the right area to completing your transaction with confidence.",
-    "tr": "Dubai''da mülk satın alma hakkında bilmeniz gereken her şey -- doğru bölge seçiminden işleminizi güvenle tamamlamaya kadar.",
-    "ar": "كل ما تحتاج معرفته حول شراء العقارات في دبي -- من اختيار المنطقة المناسبة إلى إتمام معاملتك بثقة.",
-    "ru": "Всё, что нужно знать о покупке недвижимости в Дубае — от выбора района до уверенного завершения сделки.",
-    "de": "Alles, was Sie über den Immobilienkauf in Dubai wissen müssen — von der Wahl des richtigen Gebiets bis zum sicheren Abschluss Ihrer Transaktion.",
-    "fr": "Tout ce que vous devez savoir sur l''achat immobilier à Dubaï — du choix du quartier à la finalisation de votre transaction en toute confiance.",
-    "fa": "همه آنچه باید درباره خرید ملک در دبی بدانید -- از انتخاب منطقه مناسب تا تکمیل معامله با اطمینان.",
-    "hi": "दुबई में संपत्ति खरीदने के बारे में वह सब कुछ जो आपको जानना चाहिए -- सही क्षेत्र चुनने से लेकर आत्मविश्वास के साथ अपना लेनदेन पूरा करने तक।"
+    "en": "Everything you need to know about purchasing property -- from choosing the right area to completing your transaction with confidence.",
+    "tr": "Mülk satın alma hakkında bilmeniz gereken her şey -- doğru bölge seçiminden işleminizi güvenle tamamlamaya kadar.",
+    "ar": "كل ما تحتاج معرفته حول شراء العقارات -- من اختيار المنطقة المناسبة إلى إتمام معاملتك بثقة.",
+    "ru": "Всё, что нужно знать о покупке недвижимости — от выбора района до уверенного завершения сделки.",
+    "de": "Alles, was Sie über den Immobilienkauf wissen müssen — von der Wahl des richtigen Gebiets bis zum sicheren Abschluss Ihrer Transaktion.",
+    "fr": "Tout ce que vous devez savoir sur l''achat immobilier — du choix du quartier à la finalisation de votre transaction en toute confiance.",
+    "fa": "همه آنچه باید درباره خرید ملک بدانید -- از انتخاب منطقه مناسب تا تکمیل معامله با اطمینان.",
+    "hi": "संपत्ति खरीदने के बारे में वह सब कुछ जो आपको जानना चाहिए -- सही क्षेत्र चुनने से लेकर आत्मविश्वास के साथ अपना लेनदेन पूरा करने तक।"
   }'::jsonb,
   tag = '{
     "en": "Essential",
@@ -67,27 +67,27 @@ UPDATE buyer_guides SET
   }'::jsonb
 WHERE slug = 'complete-buyers-guide';
 
--- Guide 2: First-Time Buyer Tips
+-- Guide 2: First-Time Buyer Tips (Alanya references removed)
 UPDATE buyer_guides SET
   title = '{
-    "en": "First-Time Buyer Tips for the Dubai Market",
-    "tr": "Dubai Piyasası İçin İlk Kez Alıcı İpuçları",
-    "ar": "نصائح للمشتري لأول مرة في سوق دبي",
-    "ru": "Советы для начинающих покупателей на рынке Дубая",
-    "de": "Tipps für Erstkäufer auf dem Immobilienmarkt in Dubai",
-    "fr": "Conseils pour les primo-accédants sur le marché de Dubaï",
-    "fa": "نکات خرید برای اولین بار در بازار دبی",
-    "hi": "दुबई बाजार के लिए पहली बार खरीदार सुझाव"
+    "en": "First-Time Buyer Tips for Real Estate",
+    "tr": "Gayrimenkul İçin İlk Kez Alıcı İpuçları",
+    "ar": "نصائح للمشتري لأول مرة في العقارات",
+    "ru": "Советы для начинающих покупателей недвижимости",
+    "de": "Tipps für Erstkäufer auf dem Immobilienmarkt",
+    "fr": "Conseils pour les primo-accédants en immobilier",
+    "fa": "نکات خرید برای اولین بار در املاک",
+    "hi": "रियल एस्टेट के लिए पहली बार खरीदार सुझाव"
   }'::jsonb,
   description = '{
-    "en": "New to Dubai property? Avoid common pitfalls and learn the insider strategies that experienced investors use to maximise returns.",
-    "tr": "Dubai''da mülk alımında yeni misiniz? Yaygın tuzaklardan kaçının ve deneyimli yatırımcıların getirilerini en üst düzeye çıkarmak için kullandığı stratejileri öğrenin.",
-    "ar": "جديد في عقارات دبي؟ تجنب الأخطاء الشائعة وتعلم الاستراتيجيات التي يستخدمها المستثمرون المحترفون لتعظيم العوائد.",
-    "ru": "Впервые на рынке недвижимости Дубая? Избегайте типичных ошибок и изучите стратегии опытных инвесторов для максимизации прибыли.",
-    "de": "Neu auf dem Immobilienmarkt in Dubai? Vermeiden Sie häufige Fehler und lernen Sie die Strategien erfahrener Investoren zur Maximierung der Rendite.",
-    "fr": "Nouveau dans l''immobilier à Dubaï ? Évitez les pièges courants et découvrez les stratégies que les investisseurs expérimentés utilisent pour maximiser les rendements.",
-    "fa": "تازه‌وارد بازار ملک دبی هستید؟ از اشتباهات رایج دوری کنید و استراتژی‌های سرمایه‌گذاران باتجربه را بیاموزید.",
-    "hi": "दुबई संपत्ति में नए हैं? सामान्य गलतियों से बचें और अनुभवी निवेशकों की रणनीतियां सीखें।"
+    "en": "New to property investment? Avoid common pitfalls and learn the insider strategies that experienced investors use to maximise returns.",
+    "tr": "Mülk yatırımında yeni misiniz? Yaygın tuzaklardan kaçının ve deneyimli yatırımcıların getirilerini en üst düzeye çıkarmak için kullandığı stratejileri öğrenin.",
+    "ar": "جديد في الاستثمار العقاري؟ تجنب الأخطاء الشائعة وتعلم الاستراتيجيات التي يستخدمها المستثمرون المحترفون لتعظيم العوائد.",
+    "ru": "Впервые инвестируете в недвижимость? Избегайте типичных ошибок и изучите стратегии опытных инвесторов для максимизации прибыли.",
+    "de": "Neu im Immobilieninvestment? Vermeiden Sie häufige Fehler und lernen Sie die Strategien erfahrener Investoren zur Maximierung der Rendite.",
+    "fr": "Nouveau dans l''investissement immobilier ? Évitez les pièges courants et découvrez les stratégies que les investisseurs expérimentés utilisent pour maximiser les rendements.",
+    "fa": "تازه‌وارد سرمایه‌گذاری املاک هستید؟ از اشتباهات رایج دوری کنید و استراتژی‌های سرمایه‌گذاران باتجربه را بیاموزید.",
+    "hi": "संपत्ति निवेश में नए हैं? सामान्य गलतियों से बचें और अनुभवी निवेशकों की रणनीतियां सीखें।"
   }'::jsonb,
   tag = '{
     "en": "Beginner",
@@ -168,14 +168,14 @@ UPDATE buyer_guides SET
     "hi": "विदेशी संपत्ति मालिकों के लिए कानूनी ढांचा"
   }'::jsonb,
   description = '{
-    "en": "Understand freehold vs. leasehold zones, RERA regulations, escrow protections, and your legal rights as a foreign property owner in Dubai.",
-    "tr": "Tam mülkiyet ve kiralık bölgeler arasındaki farkları, RERA düzenlemelerini, emanet korumalarını ve Dubai''da yabancı mülk sahibi olarak yasal haklarınızı anlayın.",
-    "ar": "افهم مناطق التملك الحر مقابل الإيجار، ولوائح ريرا، وحماية الضمان، وحقوقك القانونية كمالك عقار أجنبي في دبي.",
-    "ru": "Разберитесь в зонах фрихолд и лизхолд, регулировании RERA, защите эскроу и ваших правах как иностранного владельца недвижимости в Дубае.",
-    "de": "Verstehen Sie Freehold- vs. Leasehold-Zonen, RERA-Vorschriften, Treuhandschutz und Ihre Rechte als ausländischer Immobilieneigentümer in Dubai.",
-    "fr": "Comprenez les zones en pleine propriété vs. bail, les réglementations RERA, les protections séquestre et vos droits en tant que propriétaire étranger à Dubaï.",
-    "fa": "تفاوت مناطق مالکیت آزاد و اجاره‌ای، قوانین ریرا، حمایت‌های امانی و حقوق قانونی شما به عنوان مالک خارجی ملک در دبی را درک کنید.",
-    "hi": "फ्रीहोल्ड बनाम लीजहोल्ड ज़ोन, RERA नियम, एस्क्रो सुरक्षा और दुबई में विदेशी संपत्ति मालिक के रूप में आपके कानूनी अधिकारों को समझें।"
+    "en": "Understand freehold vs. leasehold zones, regulations, escrow protections, and your legal rights as a foreign property owner.",
+    "tr": "Tam mülkiyet ve kiralık bölgeler arasındaki farkları, düzenlemeleri, emanet korumalarını ve yabancı mülk sahibi olarak yasal haklarınızı anlayın.",
+    "ar": "افهم مناطق التملك الحر مقابل الإيجار، واللوائح، وحماية الضمان، وحقوقك القانونية كمالك عقار أجنبي.",
+    "ru": "Разберитесь в зонах фрихолд и лизхолд, регулировании, защите эскроу и ваших правах как иностранного владельца недвижимости.",
+    "de": "Verstehen Sie Freehold- vs. Leasehold-Zonen, Vorschriften, Treuhandschutz und Ihre Rechte als ausländischer Immobilieneigentümer.",
+    "fr": "Comprenez les zones en pleine propriété vs. bail, les réglementations, les protections séquestre et vos droits en tant que propriétaire étranger.",
+    "fa": "تفاوت مناطق مالکیت آزاد و اجاره‌ای، قوانین، حمایت‌های امانی و حقوق قانونی شما به عنوان مالک خارجی ملک را درک کنید.",
+    "hi": "फ्रीहोल्ड बनाम लीजहोल्ड ज़ोन, नियम, एस्क्रो सुरक्षा और विदेशी संपत्ति मालिक के रूप में आपके कानूनी अधिकारों को समझें।"
   }'::jsonb,
   tag = '{
     "en": "Legal",
@@ -256,14 +256,14 @@ UPDATE buyer_guides SET
     "hi": "संपत्ति कर और शुल्क विवरण"
   }'::jsonb,
   description = '{
-    "en": "A transparent breakdown of all costs involved in buying Dubai property -- DLD fees, agent commissions, NOC charges, service charges, and more.",
-    "tr": "Dubai''da mülk satın alırken karşılaşacağınız tüm maliyetlerin şeffaf dökümü -- DLD ücretleri, acente komisyonları, NOC masrafları, hizmet bedelleri ve daha fazlası.",
-    "ar": "تحليل شفاف لجميع التكاليف المتعلقة بشراء العقارات في دبي -- رسوم دائرة الأراضي، عمولات الوكلاء، رسوم شهادة عدم الممانعة، رسوم الخدمات والمزيد.",
-    "ru": "Прозрачный разбор всех расходов при покупке недвижимости в Дубае — сборы DLD, комиссии агентов, платежи NOC, сервисные сборы и другое.",
-    "de": "Eine transparente Aufschlüsselung aller Kosten beim Immobilienkauf in Dubai — DLD-Gebühren, Maklerprovisionen, NOC-Gebühren, Servicegebühren und mehr.",
-    "fr": "Un détail transparent de tous les coûts liés à l''achat immobilier à Dubaï — frais DLD, commissions d''agents, frais NOC, charges de service et plus.",
-    "fa": "تفکیک شفاف تمام هزینه‌های مرتبط با خرید ملک در دبی -- هزینه‌های DLD، کمیسیون نماینده، هزینه‌های NOC، هزینه‌های خدمات و موارد دیگر.",
-    "hi": "दुबई संपत्ति खरीदने में शामिल सभी लागतों का पारदर्शी विवरण -- DLD शुल्क, एजेंट कमीशन, NOC शुल्क, सेवा शुल्क और अधिक।"
+    "en": "A transparent breakdown of all costs involved in buying property -- registration fees, agent commissions, transfer charges, service charges, and more.",
+    "tr": "Mülk satın alırken karşılaşacağınız tüm maliyetlerin şeffaf dökümü -- kayıt ücretleri, acente komisyonları, transfer masrafları, hizmet bedelleri ve daha fazlası.",
+    "ar": "تحليل شفاف لجميع التكاليف المتعلقة بشراء العقارات -- رسوم التسجيل، عمولات الوكلاء، رسوم التحويل، رسوم الخدمات والمزيد.",
+    "ru": "Прозрачный разбор всех расходов при покупке недвижимости — регистрационные сборы, комиссии агентов, платежи за перевод, сервисные сборы и другое.",
+    "de": "Eine transparente Aufschlüsselung aller Kosten beim Immobilienkauf — Registrierungsgebühren, Maklerprovisionen, Übertragungsgebühren, Servicegebühren und mehr.",
+    "fr": "Un détail transparent de tous les coûts liés à l''achat immobilier — frais d''enregistrement, commissions d''agents, frais de transfert, charges de service et plus.",
+    "fa": "تفکیک شفاف تمام هزینه‌های مرتبط با خرید ملک -- هزینه‌های ثبت، کمیسیون نماینده، هزینه‌های انتقال، هزینه‌های خدمات و موارد دیگر.",
+    "hi": "संपत्ति खरीदने में शामिल सभी लागतों का पारदर्शी विवरण -- पंजीकरण शुल्क, एजेंट कमीशन, हस्तांतरण शुल्क, सेवा शुल्क और अधिक।"
   }'::jsonb,
   tag = '{
     "en": "Tax & Fees",
