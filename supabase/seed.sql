@@ -36,7 +36,7 @@ INSERT INTO buyer_guides (slug, tag, tag_color, border_color, title, description
 (
   'complete-buyers-guide',
   'Essential',
-  'bg-gold-100 text-gold-800',
+  'bg-blue-100 text-blue-800',
   'border-t-gold-500',
   'Complete Buyer''s Guide to Real Estate',
   'Everything you need to know about purchasing property -- from choosing the right area to completing your transaction with confidence.',
@@ -106,9 +106,9 @@ INSERT INTO buyer_guides (slug, tag, tag_color, border_color, title, description
 -- ============================================================================
 
 INSERT INTO services (key, initials, color, sort_order) VALUES
-('investment', 'IC', 'bg-gold-500', 0),
+('investment', 'IC', 'bg-blue-500', 0),
 ('legal', 'LF', 'bg-estate-600', 1),
-('visa', 'GV', 'bg-gold-700', 2),
+('visa', 'GV', 'bg-blue-700', 2),
 ('afterSales', 'AS', 'bg-estate-500', 3);
 
 

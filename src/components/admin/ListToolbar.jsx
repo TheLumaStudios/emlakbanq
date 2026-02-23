@@ -23,7 +23,7 @@ export default function ListToolbar({
             value={search}
             onChange={(e) => onSearchChange(e.target.value)}
             placeholder={t('admin.common.search') + '...'}
-            className="w-full rounded-lg border border-estate-200 bg-white py-2 pl-10 pr-4 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+            className="w-full rounded-lg border border-estate-200 bg-white py-2 pl-10 pr-4 text-sm text-estate-800 placeholder-estate-400 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
           />
         </div>
 
@@ -33,7 +33,7 @@ export default function ListToolbar({
             key={filter.key}
             value={filter.value}
             onChange={(e) => filter.onChange(e.target.value)}
-            className="rounded-lg border border-estate-200 bg-white px-3 py-2 text-sm text-estate-700 transition-colors focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+            className="rounded-lg border border-estate-200 bg-white px-3 py-2 text-sm text-estate-700 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
           >
             {filter.options.map((opt) => (
               <option key={opt.value} value={opt.value}>
@@ -53,7 +53,7 @@ export default function ListToolbar({
           <select
             value={pageSize}
             onChange={(e) => onPageSizeChange(Number(e.target.value))}
-            className="rounded-lg border border-estate-200 bg-white px-2 py-1.5 text-xs text-estate-700 focus:border-gold-500 focus:outline-none focus:ring-2 focus:ring-gold-500/20"
+            className="rounded-lg border border-estate-200 bg-white px-2 py-1.5 text-xs text-estate-700 focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/20"
           >
             <option value={10}>10</option>
             <option value={25}>25</option>

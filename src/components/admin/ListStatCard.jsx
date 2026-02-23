@@ -1,5 +1,5 @@
 const COLOR_CLASSES = {
-  gold: 'bg-gold-50 text-gold-600',
+  gold: 'bg-blue-50 text-blue-600',
   blue: 'bg-blue-50 text-blue-600',
   green: 'bg-green-50 text-green-600',
   purple: 'bg-purple-50 text-purple-600',

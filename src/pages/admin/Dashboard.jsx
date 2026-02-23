@@ -398,7 +398,7 @@ export default function Dashboard() {
                     <p className="truncate text-sm font-medium text-estate-800">{displayName}</p>
                     <p className="text-xs text-estate-400">{config.label} · {relativeTime}</p>
                   </div>
-                  <Link to={editPath} className="text-xs font-medium text-gold-600 hover:text-gold-700">Edit</Link>
+                  <Link to={editPath} className="text-xs font-medium text-blue-600 hover:text-blue-700">Edit</Link>
                 </div>
               )
             })}
