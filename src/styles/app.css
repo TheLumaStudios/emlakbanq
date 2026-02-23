@@ -42,6 +42,17 @@
   --color-yellow-400: #f0b93c;
   --color-yellow-500: #eca927;
 
+  --color-gold-50: #fefaf0;
+  --color-gold-100: #fdf3d7;
+  --color-gold-200: #fbe6af;
+  --color-gold-300: #f8d887;
+  --color-gold-400: #f5c95f;
+  --color-gold-500: #D4AF37;
+  --color-gold-600: #C5A028;
+  --color-gold-700: #9A7D1F;
+  --color-gold-800: #6F5A16;
+  --color-gold-900: #44370E;
+
   --color-success: #10B981;
   --color-warning: #F59E0B;
   --color-error: #da2c22;
