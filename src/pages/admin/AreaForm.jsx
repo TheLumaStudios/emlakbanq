@@ -81,14 +81,15 @@ export default function AreaForm() {
   const handleChange = (name, value) => {
     setFormData((prev) => {
       const updated = { ...prev, [name]: value }
-      // Auto-generate slug and key from English name
-      if (name === 'name' && value.en) {
-        const prevEnglishName = prev.name?.en || ''
-        if (!prev.slug || prev.slug === generateSlug(prevEnglishName)) {
-          updated.slug = generateSlug(value.en)
+      // Auto-generate slug and key from first available language
+      if (name === 'name' && typeof value === 'object') {
+        const firstLang = value.tr || value.de || value.bs || value.ru || Object.values(value)[0] || ''
+        const prevFirstLang = prev.name?.tr || prev.name?.de || prev.name?.bs || prev.name?.ru || Object.values(prev.name || {})[0] || ''
+        if (!prev.slug || prev.slug === generateSlug(prevFirstLang)) {
+          updated.slug = generateSlug(firstLang)
         }
-        if (!prev.key || prev.key === generateSlug(prevEnglishName)) {
-          updated.key = generateSlug(value.en)
+        if (!prev.key || prev.key === generateSlug(prevFirstLang)) {
+          updated.key = generateSlug(firstLang)
         }
       }
       return updated

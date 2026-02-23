@@ -84,11 +84,16 @@ export default function BuyerGuideForm() {
   const handleChange = (name, value) => {
     setFormData((prev) => {
       const updated = { ...prev, [name]: value }
-      // Auto-generate slug from English title
+      // Auto-generate slug from first available language
       if (name === 'title') {
-        const enTitle = typeof value === 'object' ? (value.en || '') : value
-        if (!prev.slug || prev.slug === generateSlug(typeof prev.title === 'object' ? (prev.title.en || '') : prev.title)) {
-          updated.slug = generateSlug(enTitle)
+        if (typeof value === 'object') {
+          const firstLang = value.tr || value.de || value.bs || value.ru || Object.values(value)[0] || ''
+          const prevFirstLang = typeof prev.title === 'object'
+            ? (prev.title.tr || prev.title.de || prev.title.bs || prev.title.ru || Object.values(prev.title)[0] || '')
+            : prev.title
+          if (!prev.slug || prev.slug === generateSlug(prevFirstLang)) {
+            updated.slug = generateSlug(firstLang)
+          }
         }
       }
       return updated

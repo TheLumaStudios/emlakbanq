@@ -81,11 +81,12 @@ export default function BlogForm() {
   const handleChange = (name, value) => {
     setFormData((prev) => {
       const updated = { ...prev, [name]: value }
-      // Auto-generate slug from English title
-      if (name === 'title' && value.en) {
-        const prevEnglishTitle = prev.title?.en || ''
-        if (!prev.slug || prev.slug === generateSlug(prevEnglishTitle)) {
-          updated.slug = generateSlug(value.en)
+      // Auto-generate slug from first available language
+      if (name === 'title' && typeof value === 'object') {
+        const firstLang = value.tr || value.de || value.bs || value.ru || Object.values(value)[0] || ''
+        const prevFirstLang = prev.title?.tr || prev.title?.de || prev.title?.bs || prev.title?.ru || Object.values(prev.title || {})[0] || ''
+        if (!prev.slug || prev.slug === generateSlug(prevFirstLang)) {
+          updated.slug = generateSlug(firstLang)
         }
       }
       return updated
