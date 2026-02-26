@@ -84,10 +84,7 @@ export default function About() {
       <section className="bg-white py-20 lg:py-24">
         <Container>
           <div className="mx-auto max-w-3xl">
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
-              {t('about.story.label', 'Our Story')}
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
+            <h2 className="font-heading text-3xl font-bold text-estate-900 md:text-4xl">
               {t('about.story.title', 'Built on Passion, Driven by Excellence')}
             </h2>
 
@@ -107,7 +104,7 @@ export default function About() {
               <p>
                 {t(
                   'about.story.p3',
-                  'With offices in Alanya and Istanbul, we operate at the crossroads of East and West, offering our clients privileged access to off-market opportunities, pre-launch allocations, and exclusive developer partnerships that are simply unavailable elsewhere.'
+                  'With our office in Alanya, we operate at the heart of the Turkish Riviera, offering our clients privileged access to off-market opportunities, pre-launch allocations, and exclusive developer partnerships that are simply unavailable elsewhere.'
                 )}
               </p>
             </div>
@@ -186,13 +183,13 @@ export default function About() {
             </p>
           </div>
 
-          <div className="mx-auto mt-14 grid max-w-4xl gap-8 md:grid-cols-2">
+          <div className="mx-auto mt-14 flex max-w-4xl justify-center gap-8">
             {loadingOffices ? (
               <LoadingSkeleton variant="card" count={2} columns={2} />
             ) : offices?.map((office) => (
               <div
                 key={office.city}
-                className="card-premium reveal group overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1"
+                className="card-premium reveal group w-full max-w-md overflow-hidden rounded-2xl transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Office Image */}
                 <div className="relative h-48 overflow-hidden">

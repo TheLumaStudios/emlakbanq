@@ -42,13 +42,14 @@ export default function BuyerGuides() {
       </section>
 
       {/* ── Guides Grid ─────────────────────────────────────────────── */}
-      <section className="bg-yellow-50 py-20 lg:py-24" ref={gridRef}>
+      <section className="bg-estate-50 py-20 lg:py-24" ref={gridRef}>
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {loading && <LoadingSkeleton variant="card" count={6} columns={3} />}
             {!loading && guides?.map((guide, index) => (
-              <div
+              <Link
                 key={guide.slug}
+                to={ROUTES.BUYER_GUIDE_DETAIL.replace(':slug', guide.slug)}
                 className={`reveal reveal-delay-${index % 3} group overflow-hidden rounded-2xl border-t-4 ${guide.border_color} bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg`}
               >
                 {/* Guide Image */}
@@ -99,7 +100,7 @@ export default function BuyerGuides() {
                     </svg>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
         </Container>

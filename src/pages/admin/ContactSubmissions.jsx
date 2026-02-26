@@ -389,7 +389,9 @@ export default function ContactSubmissions() {
 
                             {item.email && (
                               <a
-                                href={`mailto:${item.email}?subject=Re: ${item.property_interest || 'Your inquiry'}`}
+                                href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(item.email)}&su=${encodeURIComponent('Re: ' + (item.property_interest || 'Your inquiry'))}`}
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600"
                               >
                                 <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">

@@ -16,6 +16,30 @@ function getTranslation(jsonbField, lang, fallbackLang = 'en') {
   return jsonbField[lang] || jsonbField[fallbackLang] || jsonbField['en'] || ''
 }
 
+export function useBuyerGuide(slug) {
+  const { i18n } = useTranslation()
+  const lang = i18n.language
+
+  const result = useSupabaseQuery(
+    (sb) => sb.from('buyer_guides').select('*').eq('slug', slug).single(),
+    [slug]
+  )
+
+  if (!result.data) return result
+
+  return {
+    ...result,
+    data: {
+      ...result.data,
+      title: getTranslation(result.data.title, lang),
+      description: getTranslation(result.data.description, lang),
+      content: getTranslation(result.data.content, lang),
+      tag: getTranslation(result.data.tag, lang),
+      read_time: getTranslation(result.data.read_time, lang),
+    },
+  }
+}
+
 export function useBuyerGuides() {
   const { i18n } = useTranslation()
   const lang = i18n.language

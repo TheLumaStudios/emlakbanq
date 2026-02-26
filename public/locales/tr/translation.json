@@ -407,6 +407,9 @@
     "intro": "Mülk kararlarınızı güçlendirmek için uzman tarafından hazırlanmış rehberler. İlk kez alıcılardan deneyimli yatırımcılara kadar güvenle yatırım yapmak için gereken bilgiyi edinin.",
     "readGuide": "Rehberi Oku",
     "speakToExpert": "Uzmanla Görüşün",
+    "backToGuides": "Tüm Rehberler",
+    "otherLabel": "Okumaya Devam",
+    "otherGuides": "Diğer Rehberler",
     "cta": {
       "title": "Kişiselleştirilmiş Tavsiye Mi İhtiyacınız Var?",
       "description": "Danışmanlarımız, finansal hedeflerinize, zaman çizelgenize ve risk iştahınıza göre özel bir yatırım stratejisi oluşturabilir.",
@@ -452,11 +455,18 @@
     "developer": "Geliştirici",
     "completion": "Teslim Tarihi",
     "aboutProperty": "Bu Mülk Hakkında",
-    "gallery": "Galeri",
+    "gallery": "Fotoğraf Galerisi",
     "amenities": "Olanaklar ve Özellikler",
     "interestedTitle": "Bu Mülkle İlgileniyor musunuz?",
     "interestedDescription": "Ekibimiz özel bir gezi ayarlayabilir, detaylı fiyat bilgisi sağlayabilir ve tüm satın alma sürecinde size rehberlik edebilir.",
-    "contactUs": "Bize Ulaşın"
+    "contactUs": "Bize Ulaşın",
+    "inquire": "Bilgi Al",
+    "sendInquiry": "Bilgi Talebi Gönder",
+    "whatsapp": "WhatsApp",
+    "call": "Bizi Arayın",
+    "disclaimer": "Ekibimiz 24 saat içinde size geri dönüş yapacaktır",
+    "backToProperties": "Tüm Mülklere Dön",
+    "featured": "Öne Çıkan"
   },
   "blog": {
     "meta": {
@@ -890,7 +900,10 @@
       "imagePreview": "Resim Önizleme",
       "settings": "Ayarlar",
       "sortOrder": "Sıralama",
-      "sortOrderHelp": "Düşük numaralar önce görünür."
+      "sortOrderHelp": "Düşük numaralar önce görünür.",
+      "contentBody": "Rehber İçeriği",
+      "contentBodyPlaceholder": "Rehber içeriğini HTML formatında yazın...",
+      "contentBodyHelp": "HTML formatında rehber içeriği. Başlık, paragraf ve liste etiketleri kullanabilirsiniz."
     },
     "contactSubmissions": {
       "title": "İletişim Mesajları",

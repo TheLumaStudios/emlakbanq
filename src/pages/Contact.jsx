@@ -329,19 +329,6 @@ export default function Contact() {
                     {t('contact.offices.alanya.address', 'Oba Mah., Alanya, Antalya, Türkiye')}
                   </p>
                 </div>
-
-                {/* Istanbul */}
-                <div className="rounded-xl border border-estate-100 bg-white p-5">
-                  <div className="flex items-center gap-2">
-                    <div className="h-2 w-2 rounded-full bg-blue-500" />
-                    <h4 className="font-heading text-sm font-semibold text-estate-900">
-                      {t('contact.offices.istanbul.city', 'Istanbul, Turkey')}
-                    </h4>
-                  </div>
-                  <p className="mt-2 text-sm text-estate-500">
-                    {t('contact.offices.istanbul.address', 'Skyland Istanbul, Turkey')}
-                  </p>
-                </div>
               </div>
 
               {/* Reassurance */}

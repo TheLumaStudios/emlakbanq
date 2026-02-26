@@ -8,6 +8,7 @@ export const ROUTES = {
   CONTACT: '/contact',
   GOLDEN_VISA: '/golden-visa',
   BUYER_GUIDES: '/buyer-guides',
+  BUYER_GUIDE_DETAIL: '/buyer-guides/:slug',
   INSIGHTS: '/insights',
   BLOG: '/blog',
   BLOG_POST: '/blog/:slug',

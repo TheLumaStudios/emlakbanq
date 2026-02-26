@@ -26,6 +26,8 @@ function mapPropertyFields(property, lang) {
     name: getTranslation(property.name, lang),
     location: getTranslation(property.location, lang),
     type_label: getTranslation(property.type_label, lang),
+    description: getTranslation(property.description, lang),
+    amenities: property.amenities?.map(a => getTranslation(a, lang)) || [],
   }
 }
 

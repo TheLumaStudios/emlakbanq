@@ -17,6 +17,7 @@ const INITIAL_STATE = {
   title: {},
   slug: '',
   description: {},
+  content: {},
   image: '',
   tag: {},
   tag_color: '',
@@ -25,10 +26,17 @@ const INITIAL_STATE = {
   sort_order: 0,
 }
 
-// Extract English text from JSONB or plain string
 function toJsonb(field) {
   if (!field) return {}
-  if (typeof field === 'string') return { en: field }
+  if (typeof field === 'string') {
+    try {
+      const parsed = JSON.parse(field)
+      if (typeof parsed === 'object' && parsed !== null) return parsed
+    } catch (e) {
+      // Not JSON, treat as plain string
+    }
+    return { tr: field }
+  }
   return field
 }
 
@@ -68,6 +76,7 @@ export default function BuyerGuideForm() {
         title: toJsonb(data.title),
         slug: data.slug || '',
         description: toJsonb(data.description),
+        content: toJsonb(data.content),
         image: data.image || '',
         tag: toJsonb(data.tag),
         tag_color: data.tag_color || '',
@@ -142,6 +151,7 @@ export default function BuyerGuideForm() {
       title: formData.title,
       slug: finalSlug,
       description: formData.description,
+      content: formData.content,
       image: formData.image,
       tag: formData.tag,
       tag_color: formData.tag_color,
@@ -231,31 +241,23 @@ export default function BuyerGuideForm() {
               required
               placeholder={t('admin.buyerGuideForm.titlePlaceholder')}
             />
-            <div className="grid gap-5 sm:grid-cols-2">
-              <AdminFormField
-                label={t('admin.buyerGuideForm.slug')}
-                name="slug"
-                value={formData.slug}
-                onChange={handleChange}
-                required
-                disabled
-                placeholder={t('admin.buyerGuideForm.slugPlaceholder')}
-                help={t('admin.buyerGuideForm.slugHelp')}
-              />
-              <AdminFormField
-                label={t('admin.buyerGuideForm.readTime')}
-                name="read_time_display"
-                value={typeof formData.read_time === 'object' ? (formData.read_time.en || '') : formData.read_time}
-                onChange={(_, v) => {
-                  // Keep read_time as plain string for simple cases, or update en key
-                  handleChange('read_time', typeof formData.read_time === 'object'
-                    ? { ...formData.read_time, en: v }
-                    : v
-                  )
-                }}
-                placeholder={t('admin.buyerGuideForm.readTimePlaceholder')}
-              />
-            </div>
+            <AdminFormField
+              label={t('admin.buyerGuideForm.slug')}
+              name="slug"
+              value={formData.slug}
+              onChange={handleChange}
+              required
+              disabled
+              placeholder={t('admin.buyerGuideForm.slugPlaceholder')}
+              help={t('admin.buyerGuideForm.slugHelp')}
+            />
+            <MultilingualInput
+              label={t('admin.buyerGuideForm.readTime')}
+              name="read_time"
+              value={formData.read_time}
+              onChange={handleChange}
+              placeholder={t('admin.buyerGuideForm.readTimePlaceholder')}
+            />
             <ImageUpload
               label={t('admin.buyerGuideForm.imageUrl')}
               name="image"
@@ -284,6 +286,16 @@ export default function BuyerGuideForm() {
               onChange={handleChange}
               rows={5}
               placeholder={t('admin.buyerGuideForm.descriptionPlaceholder')}
+            />
+            <MultilingualInput
+              label={t('admin.buyerGuideForm.contentBody')}
+              name="content"
+              type="textarea"
+              value={formData.content}
+              onChange={handleChange}
+              rows={12}
+              placeholder={t('admin.buyerGuideForm.contentBodyPlaceholder')}
+              help={t('admin.buyerGuideForm.contentBodyHelp')}
             />
             <MultilingualInput
               label={t('admin.buyerGuideForm.tag')}

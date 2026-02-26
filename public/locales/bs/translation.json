@@ -407,6 +407,9 @@
     "intro": "Stručno pripremljeni vodiči za jačanje vaših odluka o nekretninama. Od kupaca koji kupuju prvi put do iskusnih investitora — stekni znanje potrebno za sigurnu investiciju.",
     "readGuide": "Pročitajte vodič",
     "speakToExpert": "Razgovarajte sa stručnjakom",
+    "backToGuides": "Svi vodiči",
+    "otherLabel": "Nastavite čitanje",
+    "otherGuides": "Ostali vodiči",
     "cta": {
       "title": "Trebate personalizovani savjet?",
       "description": "Naši savjetnici mogu kreirati prilagođenu investicijsku strategiju prema vašim finansijskim ciljevima, vremenskom okviru i sklonosti riziku.",
@@ -452,11 +455,18 @@
     "developer": "Developer",
     "completion": "Datum završetka",
     "aboutProperty": "O ovoj nekretnini",
-    "gallery": "Galerija",
+    "gallery": "Foto galerija",
     "amenities": "Pogodnosti i karakteristike",
     "interestedTitle": "Zainteresovani za ovu nekretninu?",
     "interestedDescription": "Naš tim može organizovati privatnu posjetu, pružiti detaljne informacije o cijenama i voditi vas kroz cijeli proces kupovine.",
-    "contactUs": "Kontaktirajte nas"
+    "contactUs": "Kontaktirajte nas",
+    "inquire": "Saznajte više",
+    "sendInquiry": "Pošaljite upit",
+    "whatsapp": "WhatsApp",
+    "call": "Pozovite nas",
+    "disclaimer": "Naš tim će vam odgovoriti u roku od 24 sata",
+    "backToProperties": "Nazad na sve nekretnine",
+    "featured": "Istaknuto"
   },
   "blog": {
     "meta": {
@@ -890,7 +900,10 @@
       "imagePreview": "Pregled slike",
       "settings": "Postavke",
       "sortOrder": "Redoslijed",
-      "sortOrderHelp": "Niži brojevi se prikazuju prvi."
+      "sortOrderHelp": "Niži brojevi se prikazuju prvi.",
+      "contentBody": "Sadržaj vodiča",
+      "contentBodyPlaceholder": "Napišite sadržaj vodiča u HTML formatu...",
+      "contentBodyHelp": "Sadržaj vodiča u HTML formatu. Možete koristiti oznake za naslove, paragrafe i liste."
     },
     "contactSubmissions": {
       "title": "Kontakt poruke",

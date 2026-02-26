@@ -9,11 +9,6 @@ export const APP_CONFIG = {
       address: 'Oba Mah., Alanya, Antalya, Türkiye',
       coordinates: { lat: 36.5432, lng: 31.9993 },
     },
-    istanbul: {
-      city: 'Istanbul',
-      address: 'Skyland Istanbul, Turkey',
-      coordinates: { lat: 41.0766, lng: 28.9864 },
-    },
   },
 
   social: {

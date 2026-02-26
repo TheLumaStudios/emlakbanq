@@ -220,8 +220,9 @@ export default function Insights() {
             {loadingArticles ? (
               <LoadingSkeleton variant="card" count={3} columns={3} />
             ) : articles?.map((article) => (
-              <div
+              <Link
                 key={article.slug}
+                to={`/blog/${article.slug}`}
                 className="group overflow-hidden rounded-2xl bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-lg"
               >
                 {/* Article Image */}
@@ -264,7 +265,7 @@ export default function Insights() {
                     </svg>
                   </div>
                 </div>
-              </div>
+              </Link>
             ))}
           </div>
 

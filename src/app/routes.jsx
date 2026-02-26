@@ -10,6 +10,7 @@ import About from '../pages/About'
 import Contact from '../pages/Contact'
 import GoldenVisa from '../pages/GoldenVisa'
 import BuyerGuides from '../pages/BuyerGuides'
+import BuyerGuideDetail from '../pages/BuyerGuideDetail'
 import Insights from '../pages/Insights'
 import Blog from '../pages/Blog'
 import BlogPost from '../pages/BlogPost'
@@ -47,6 +48,7 @@ export const router = createBrowserRouter([
       { path: ROUTES.CONTACT, element: <Contact /> },
       { path: ROUTES.GOLDEN_VISA, element: <GoldenVisa /> },
       { path: ROUTES.BUYER_GUIDES, element: <BuyerGuides /> },
+      { path: ROUTES.BUYER_GUIDE_DETAIL, element: <BuyerGuideDetail /> },
       { path: ROUTES.INSIGHTS, element: <Insights /> },
       { path: ROUTES.BLOG, element: <Blog /> },
       { path: ROUTES.BLOG_POST, element: <BlogPost /> },

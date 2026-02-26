@@ -2,14 +2,19 @@ import { useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SUPPORTED_LANGUAGES } from '../../config/i18n'
 
+const ALL_EDIT_LANGUAGES = [
+  { code: 'tr', name: 'Türkçe', dir: 'ltr' },
+  ...SUPPORTED_LANGUAGES.filter((l) => l.code !== 'tr'),
+]
+
 /**
  * Multilingual Input Component
- * Supports all 8 languages with tab-based interface
+ * Supports all languages with tab-based interface
  */
 export default function MultilingualInput({
   label,
   name,
-  value = {}, // JSONB object: { en: '...', tr: '...', ar: '...', ... }
+  value = {}, // JSONB object: { en: '...', tr: '...', de: '...', ... }
   onChange,
   type = 'text', // 'text' or 'textarea'
   required = false,
@@ -18,7 +23,7 @@ export default function MultilingualInput({
   help = ''
 }) {
   const { t } = useTranslation()
-  const [activeTab, setActiveTab] = useState('en')
+  const [activeTab, setActiveTab] = useState('tr')
 
   // Ensure value is an object
   const translations = typeof value === 'object' && value !== null ? value : {}
@@ -41,7 +46,7 @@ export default function MultilingualInput({
 
       {/* Language Tabs */}
       <div className="flex flex-wrap gap-1 border-b border-estate-200">
-        {SUPPORTED_LANGUAGES.map((lang) => (
+        {ALL_EDIT_LANGUAGES.map((lang) => (
           <button
             key={lang.code}
             type="button"
@@ -62,7 +67,7 @@ export default function MultilingualInput({
 
       {/* Input Fields */}
       <div className="rounded-lg border border-estate-200 bg-estate-50 p-3">
-        {SUPPORTED_LANGUAGES.map((lang) => (
+        {ALL_EDIT_LANGUAGES.map((lang) => (
           <div
             key={lang.code}
             className={activeTab === lang.code ? 'block' : 'hidden'}
@@ -104,7 +109,7 @@ export default function MultilingualInput({
 
       {/* Translation status */}
       <div className="flex flex-wrap gap-2 text-xs">
-        {SUPPORTED_LANGUAGES.map((lang) => (
+        {ALL_EDIT_LANGUAGES.map((lang) => (
           <span
             key={lang.code}
             className={`rounded px-2 py-0.5 ${

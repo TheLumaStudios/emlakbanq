@@ -102,6 +102,11 @@
   to { transform: scaleX(1); }
 }
 
+@keyframes whatsapp-pulse {
+  0%, 100% { box-shadow: 0 4px 20px rgba(37, 211, 102, 0.5); }
+  50% { box-shadow: 0 6px 30px rgba(37, 211, 102, 0.7), 0 0 0 12px rgba(37, 211, 102, 0.15); }
+}
+
 @layer utilities {
   .btn-glow {
     position: relative;

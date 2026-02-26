@@ -2,6 +2,7 @@ import { Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import Header from './Header'
 import Footer from './Footer'
+import WhatsAppButton from '../components/common/WhatsAppButton'
 import { useDirection } from '../hooks/useDirection'
 import { useUIStore } from '../stores/useUIStore'
 
@@ -23,6 +24,7 @@ export default function RootLayout() {
         <Outlet />
       </main>
       <Footer />
+      <WhatsAppButton />
     </div>
   )
 }

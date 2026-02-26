@@ -347,6 +347,9 @@
     "intro": "Von Experten erstellte Ratgeber, die Ihre Immobilienentscheidungen stärken. Vom Erstkäufer bis zum erfahrenen Investor — gewinnen Sie das Wissen, das Sie für eine sichere Investition benötigen.",
     "readGuide": "Ratgeber lesen",
     "speakToExpert": "Mit einem Experten sprechen",
+    "backToGuides": "Alle Ratgeber",
+    "otherLabel": "Weiterlesen",
+    "otherGuides": "Weitere Ratgeber",
     "cta": {
       "title": "Benötigen Sie persönliche Beratung?",
       "description": "Unsere Berater können eine maßgeschneiderte Investitionsstrategie erstellen, die auf Ihre finanziellen Ziele, Ihren Zeitplan und Ihre Risikobereitschaft zugeschnitten ist.",
@@ -393,11 +396,18 @@
     "developer": "Bauträger",
     "completion": "Fertigstellung",
     "aboutProperty": "Über diese Immobilie",
-    "gallery": "Galerie",
+    "gallery": "Fotogalerie",
     "amenities": "Ausstattung & Merkmale",
     "interestedTitle": "Interesse an dieser Immobilie?",
     "interestedDescription": "Unser Team kann eine private Besichtigung arrangieren, detaillierte Preisinformationen bereitstellen und Sie durch den gesamten Kaufprozess begleiten.",
-    "contactUs": "Kontaktieren Sie uns"
+    "contactUs": "Kontaktieren Sie uns",
+    "inquire": "Jetzt anfragen",
+    "sendInquiry": "Anfrage senden",
+    "whatsapp": "WhatsApp",
+    "call": "Anrufen",
+    "disclaimer": "Unser Team wird sich innerhalb von 24 Stunden bei Ihnen melden",
+    "backToProperties": "Zurück zu allen Immobilien",
+    "featured": "Empfohlen"
   },
   "blog": {
     "meta": {
@@ -823,7 +833,10 @@
       "imagePreview": "Bildvorschau",
       "settings": "Einstellungen",
       "sortOrder": "Sortierreihenfolge",
-      "sortOrderHelp": "Niedrigere Zahlen werden zuerst angezeigt."
+      "sortOrderHelp": "Niedrigere Zahlen werden zuerst angezeigt.",
+      "contentBody": "Ratgeber-Inhalt",
+      "contentBodyPlaceholder": "Ratgeber-Inhalt im HTML-Format schreiben...",
+      "contentBodyHelp": "Ratgeber-Inhalt im HTML-Format. Sie können Überschriften, Absätze und Listen-Tags verwenden."
     },
     "contactSubmissions": {
       "title": "Kontaktnachrichten",

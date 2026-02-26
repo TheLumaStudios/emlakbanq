@@ -54,7 +54,7 @@ export default function PropertyDetail() {
                   </span>
                   {property.featured && (
                     <span className="rounded-full bg-yellow-400 px-4 py-1.5 text-xs font-semibold uppercase tracking-wider text-estate-900 shadow-lg">
-                      {t('common.featured', 'Featured')}
+                      {t('propertyDetail.featured', 'Featured')}
                     </span>
                   )}
                 </div>
