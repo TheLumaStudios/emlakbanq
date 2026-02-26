@@ -124,6 +124,22 @@
     "intro": "İkonik sahil yaşamından huzurlu banliyö tatillerine kadar her mahallenin kendine özgü karakterini ve yatırım potansiyelini keşfedin.",
     "explore": "Keşfedin",
     "speakToExpert": "Uzmanla Görüşün",
+    "detail": {
+      "explore": "Bölgeyi Keşfedin",
+      "avgPrice": "Ortalama Fiyat",
+      "roi": "Beklenen ROI",
+      "properties": "Mevcut Mülkler",
+      "population": "Nüfus",
+      "aboutTitle": "Hakkında",
+      "highlights": "Bölge Öne Çıkanları",
+      "gallery": "Galeri",
+      "cta": {
+        "title": "Yatırım Yapın:",
+        "description": "Alanya'nın en gözde mahallelerinden birinde özel mülkleri ve yatırım fırsatlarını keşfedin.",
+        "viewProperties": "Mülkleri Görüntüle",
+        "contact": "Bize Ulaşın"
+      }
+    },
     "cta": {
       "title": "Hangi bölgenin size uygun olduğundan emin değil misiniz?",
       "description": "Uzmanlarımız yaşam tarzınıza, bütçenize ve yatırım hedeflerinize göre ideal mahalleyi belirlemenize yardımcı olabilir."
@@ -266,7 +282,7 @@
       "placeholders": {
         "name": "ör. Ahmet Yılmaz",
         "email": "ornek@email.com",
-        "phone": "+971 50 XXX XXXX",
+        "phone": "+90 532 XXX XXXX",
         "message": "İhtiyaçlarınız, bütçeniz veya sorularınız hakkında bize bilgi verin..."
       },
       "privacyLink": "Gizlilik Politikası",
@@ -277,8 +293,8 @@
     "info": {
       "title": "Bize Ulaşın",
       "email": "info@emlakbanq.com",
-      "phone": "+971 4 XXX XXXX",
-      "whatsapp": "+971 50 XXX XXXX",
+      "phone": "+90 242 XXX XXXX",
+      "whatsapp": "+90 532 XXX XXXX",
       "hours": "Paz - Per: 9:00 - 18:00",
       "labels": {
         "email": "E-posta",
@@ -286,7 +302,7 @@
         "whatsapp": "WhatsApp",
         "workingHours": "Çalışma Saatleri"
       },
-      "workingHoursValue": "Paz - Per: 9:00 - 19:00 (GST)"
+      "workingHoursValue": "Pzt - Cum: 9:00 - 18:00 (TR)"
     },
     "offices": {
       "title": "Ofislerimiz",
@@ -448,7 +464,20 @@
       "description": "Alanya lüks gayrimenkul piyasasından en son haberler ve güncellemeler."
     },
     "heading": "Blog ve Haberler",
-    "subtitle": "En son piyasa trendleri, proje lansmanları ve uzman görüşleriyle güncel kalın"
+    "subtitle": "Uzman Yorumları",
+    "intro": "Alanya gayrimenkul piyasasına dair derinlemesine makaleler, piyasa analizleri ve uzman görüşleri. Bilinçli yatırımcılar için araştırma ekibimiz tarafından hazırlanmıştır.",
+    "moreLabel": "Keşfet",
+    "moreTitle": "Tüm Yazılar",
+    "backToList": "Tüm Yazılar",
+    "share": "Paylaş",
+    "related": "İlgili Yazılar",
+    "relatedLabel": "Okumaya Devam",
+    "cta": {
+      "title": "Alanya'da Yatırım Yapmaya Hazır mısınız?",
+      "description": "Uzman danışmanlarımız size mükemmel mülkü bulmanızda yardımcı olmaya hazır. Kişiselleştirilmiş öneriler için hemen iletişime geçin.",
+      "viewProperties": "Mülkleri Görüntüle",
+      "contact": "Bize Ulaşın"
+    }
   },
   "privacy": {
     "meta": {
@@ -644,7 +673,7 @@
     "propertyForm": {
       "basicInfo": "Temel Bilgiler",
       "propertyName": "İlan Adı",
-      "propertyNamePlaceholder": "ör. Palm Residences Tower A",
+      "propertyNamePlaceholder": "ör. Alanya Sahil Residence",
       "propertyNameHelp": "Desteklenen tüm dillerde ilan adı. Slug İngilizce'den otomatik oluşturulur.",
       "slug": "Slug",
       "slugPlaceholder": "otomatik-oluşturulacak",

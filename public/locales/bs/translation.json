@@ -1,179 +1,195 @@
 {
   "common": {
     "brand": "EmlakBanq",
-    "tagline": "Alanya'nin En Prestijli Lüks Gayrimenkul Platformu",
+    "tagline": "Najprestižnija platforma za luksuzne nekretnine u Alanji",
     "cta": {
-      "getStarted": "Hemen Başlayın",
-      "contactUs": "Bize Ulaşın",
-      "viewProperties": "Mülkleri Görüntüle",
-      "learnMore": "Daha Fazla Bilgi",
-      "subscribe": "Abone Ol",
-      "exploreAreas": "Bölgeleri Keşfedin",
-      "bookConsultation": "Ücretsiz Danışmanlık Randevusu Alın",
-      "viewAll": "Tümünü Görüntüle",
-      "sendMessage": "Mesaj Gönder"
+      "getStarted": "Započnite",
+      "contactUs": "Kontaktirajte nas",
+      "viewProperties": "Pregledajte nekretnine",
+      "learnMore": "Saznajte više",
+      "subscribe": "Pretplatite se",
+      "exploreAreas": "Istražite područja",
+      "bookConsultation": "Zakažite besplatnu konsultaciju",
+      "viewAll": "Pogledajte sve",
+      "sendMessage": "Pošaljite poruku"
     },
-    "loading": "Yükleniyor...",
-    "error": "Bir hata oluştu",
-    "backToHome": "Ana Sayfaya Dön",
-    "readMore": "Devamını Oku",
-    "from": "Başlangıç",
-    "bed": "Yatak Odası",
-    "beds": "Yatak Odası",
-    "bedrooms": "Yatak Odası",
+    "loading": "Učitavanje...",
+    "error": "Došlo je do greške",
+    "backToHome": "Povratak na početnu",
+    "readMore": "Pročitajte više",
+    "from": "Od",
+    "bed": "Spavaća soba",
+    "beds": "Spavaće sobe",
+    "bedrooms": "Spavaće sobe",
     "sqft": "sq ft",
-    "roi": "Yatırım Getirisi"
+    "roi": "Povrat investicije"
   },
   "nav": {
-    "home": "Ana Sayfa",
-    "properties": "Mülkler",
-    "areas": "Bölgeler",
-    "about": "Hakkımızda",
-    "contact": "İletişim",
-    "goldenVisa": "Altın Vize",
-    "buyerGuides": "Alıcı Rehberi",
-    "insights": "Yatırım Analizi",
+    "home": "Početna",
+    "properties": "Nekretnine",
+    "areas": "Područja",
+    "about": "O nama",
+    "contact": "Kontakt",
+    "goldenVisa": "Državljanstvo",
+    "buyerGuides": "Vodič",
+    "insights": "Analize",
     "blog": "Blog"
   },
   "home": {
     "meta": {
-      "title": "EmlakBanq | Alanya Lüks Gayrimenkul",
-      "description": "Alanya'nin lider lüks gayrimenkul platformu. Tamamlanmadan satış, villa, penthouse, markalı konut ve yatırım danışmanlığı."
+      "title": "EmlakBanq | Luksuzne nekretnine u Alanji",
+      "description": "Vodeća platforma za luksuzne nekretnine u Alanji. Prodaja u izgradnji, vile, penthousovi, brendirane rezidencije i investicijsko savjetovanje."
     },
     "hero": {
-      "title": "Alanya'da Lüks Yaşama Açılan Kapınız",
-      "subtitle": "100'den fazla uzman, premium mülkler, özel yatırım fırsatları ve dünyanın en dinamik şehrinde kusursuz bir satın alma deneyimi ile size rehberlik ediyor."
+      "title": "Vaša kapija ka luksuznom životu u Alanji",
+      "subtitle": "Više od 100 stručnjaka, premium nekretnine, ekskluzivne investicijske prilike i besprijekorno iskustvo kupovine u najdinamičnijem gradu na svijetu."
     },
     "featured": {
-      "title": "Öne Çıkan Mülkler",
-      "subtitle": "Alanya'nin en prestijli lokasyonlarında özenle seçilmiş lüks mülkler"
+      "title": "Istaknute nekretnine",
+      "subtitle": "Pažljivo odabrane luksuzne nekretnine na najprestižnijim lokacijama u Alanji"
     },
     "areas": {
-      "title": "Birincil Yatırım Bölgeleri",
-      "subtitle": "Alanya'nin en çok aranan mahallelerini ve benzersiz yatırım potansiyellerini keşfedin"
+      "title": "Primarna investicijska područja",
+      "subtitle": "Otkrijte najtraženije četvrti Alanje i njihov jedinstveni investicijski potencijal"
     },
     "stats": {
-      "title": "Neden EmlakBanq?",
-      "subtitle": "Dünya genelinde binlerce yatırımcının güvendiği platform",
+      "title": "Zašto EmlakBanq?",
+      "subtitle": "Platforma kojoj vjeruju hiljade investitora širom svijeta",
       "experts": "100+",
-      "expertsLabel": "Uzman Danışman",
+      "expertsLabel": "Stručnih savjetnika",
       "properties": "500+",
-      "propertiesLabel": "Premium İlan",
+      "propertiesLabel": "Premium oglasa",
       "countries": "40+",
-      "countriesLabel": "Hizmet Verilen Ülke",
+      "countriesLabel": "Zemalja kojima služimo",
       "volume": "$2B+",
-      "volumeLabel": "İşlem Hacmi"
+      "volumeLabel": "Obim transakcija"
     },
     "services": {
-      "title": "Uçtan Uca Hizmetler",
-      "subtitle": "Sadece mülk satmıyoruz — eksiksiz bir yaşam tarzı çözümü sunuyoruz",
+      "title": "Sveobuhvatne usluge",
+      "subtitle": "Ne prodajemo samo nekretnine — nudimo kompletno životno rješenje",
       "investment": {
-        "title": "Yatırım Danışmanlığı",
-        "description": "Alanya'nin büyüyen pazarında yatırım getirinizi en üst düzeye çıkarmak için veriye dayalı analizler ve kişiselleştirilmiş stratejiler."
+        "title": "Investicijsko savjetovanje",
+        "description": "Analize zasnovane na podacima i personalizovane strategije za maksimiziranje povrata investicije na rastućem tržištu Alanje."
       },
       "legal": {
-        "title": "Hukuki ve Finansal Destek",
-        "description": "Süreç boyunca tam hukuki destek, ipotek yardımı ve şeffaf finansal rehberlik."
+        "title": "Pravna i finansijska podrška",
+        "description": "Potpuna pravna podrška, pomoć s hipotekom i transparentno finansijsko vođenje kroz cijeli proces."
       },
       "visa": {
-        "title": "Türk Vatandaşlığı",
-        "description": "Özel ekibimizle stratejik gayrimenkul yatırımı aracılığıyla Türk vatandaşlığınızı güvence altına alın."
+        "title": "Tursko državljanstvo",
+        "description": "Osigurajte tursko državljanstvo putem strateške investicije u nekretnine uz pomoć našeg specijalizovanog tima."
       },
       "afterSales": {
-        "title": "Satış Sonrası Destek",
-        "description": "Anahtarlar teslim edildikten çok sonra bile mülk yönetimi, kiralama hizmetleri ve sürekli destek."
+        "title": "Podrška nakon prodaje",
+        "description": "Upravljanje nekretninama, usluge iznajmljivanja i kontinuirana podrška čak i nakon predaje ključeva."
       }
     },
     "cta": {
-      "title": "Alanya'ye Yatırım Yapmaya Hazır mısınız?",
-      "subtitle": "Kıdemli danışmanlarımızdan biriyle ücretsiz bir görüşme planlayın ve ideal yatırımınızı keşfedin."
+      "title": "Spremni za investiranje u Alanju?",
+      "subtitle": "Zakažite besplatnu konsultaciju s jednim od naših viših savjetnika i otkrijte idealnu investiciju."
     }
   },
   "properties": {
     "meta": {
-      "title": "Mülkler | EmlakBanq",
-      "description": "Alanya'daki lüks mülkleri keşfedin - tamamlanmadan satış, hazır, villa, penthouse, markalı konut."
+      "title": "Nekretnine | EmlakBanq",
+      "description": "Otkrijte luksuzne nekretnine u Alanji - prodaja u izgradnji, gotove, vile, penthousovi, brendirane rezidencije."
     },
-    "heading": "Lüks Mülkler",
-    "subtitle": "Alanya genelindeki özenle seçilmiş premium gayrimenkul koleksiyonumuzu keşfedin",
+    "heading": "Luksuzne nekretnine",
+    "subtitle": "Istražite našu pažljivo odabranu kolekciju premium nekretnina širom Alanje",
     "filters": {
-      "all": "Tümü",
-      "type": "Mülk Tipi",
-      "area": "Bölge",
-      "priceRange": "Fiyat Aralığı",
-      "bedrooms": "Yatak Odası"
+      "all": "Sve",
+      "type": "Tip nekretnine",
+      "area": "Područje",
+      "priceRange": "Raspon cijena",
+      "bedrooms": "Spavaće sobe"
     },
     "types": {
-      "offPlan": "Tamamlanmadan Satış",
-      "ready": "Hazır",
+      "offPlan": "U izgradnji",
+      "ready": "Gotove",
       "penthouse": "Penthouse",
-      "villa": "Villa",
-      "brandedResidence": "Markalı Konut",
-      "commercial": "Ticari"
+      "villa": "Vila",
+      "brandedResidence": "Brendirana rezidencija",
+      "commercial": "Komercijalne"
     },
-    "noResults": "Bu filtre için mülk bulunamadı. Lütfen başka bir kategori deneyin.",
-    "disclaimer": "Fiyatlar tahmini olup değişikliğe tabidir. Güncel fiyatlar için bizimle iletişime geçin."
+    "noResults": "Nema nekretnina za ovaj filter. Pokušajte drugu kategoriju.",
+    "disclaimer": "Cijene su okvirne i podložne promjenama. Kontaktirajte nas za aktuelne cijene."
   },
   "areas": {
     "meta": {
-      "title": "Alanya Bölgeleri | EmlakBanq",
-      "description": "Alanya'nin önde gelen yatırım bölgelerini ve mahallelerini keşfedin."
+      "title": "Područja Alanje | EmlakBanq",
+      "description": "Otkrijte vodeća investicijska područja i četvrti Alanje."
     },
-    "heading": "Alanya Yatırım Bölgeleri",
-    "subtitle": "Her mahallenin kendine özgü karakteri, yaşam tarzı ve yatırım profili vardır",
-    "intro": "İkonik sahil yaşamından huzurlu banliyö tatillerine kadar her mahallenin kendine özgü karakterini ve yatırım potansiyelini keşfedin.",
-    "explore": "Keşfedin",
-    "speakToExpert": "Uzmanla Görüşün",
+    "heading": "Investicijska područja Alanje",
+    "subtitle": "Svaka četvrt ima svoj jedinstveni karakter, stil života i investicijski profil",
+    "intro": "Od ikoničnog obalnog života do mirnih prigradskih odmora, otkrijte jedinstveni karakter i investicijski potencijal svake četvrti.",
+    "explore": "Istražite",
+    "speakToExpert": "Razgovarajte sa stručnjakom",
+    "detail": {
+      "explore": "Istražite područje",
+      "avgPrice": "Prosječna cijena",
+      "roi": "Očekivani ROI",
+      "properties": "Dostupne nekretnine",
+      "population": "Stanovništvo",
+      "aboutTitle": "O području",
+      "highlights": "Istaknuto u području",
+      "gallery": "Galerija",
+      "cta": {
+        "title": "Investirajte u",
+        "description": "Otkrijte ekskluzivne nekretnine i investicijske prilike u jednoj od najtraženijih četvrti Alanje.",
+        "viewProperties": "Pogledajte nekretnine",
+        "contact": "Kontaktirajte nas"
+      }
+    },
     "cta": {
-      "title": "Hangi bölgenin size uygun olduğundan emin değil misiniz?",
-      "description": "Uzmanlarımız yaşam tarzınıza, bütçenize ve yatırım hedeflerinize göre ideal mahalleyi belirlemenize yardımcı olabilir."
+      "title": "Niste sigurni koje područje vam odgovara?",
+      "description": "Naši stručnjaci vam mogu pomoći identificirati idealnu četvrt na osnovu vašeg životnog stila, budžeta i investicijskih ciljeva."
     },
     "zones": {
       "kleopatra": {
         "name": "Kleopatra",
-        "description": "Alanya'nın en ünlü plaj bölgesi — altın kumlar, turkuaz deniz ve kapınızın önünde canlı gece hayatı.",
+        "description": "Najpoznatije plažno područje Alanje — zlatni pijesak, tirkizno more i živahan noćni život pred vašim vratima.",
         "avgPrice": "₺ 4.5M",
         "avgRoi": "%6.8"
       },
       "mahmutlar": {
         "name": "Mahmutlar",
-        "description": "En hızlı büyüyen sahil bölgesi — modern konutlar, uygun fiyatlı lüks ve uluslararası alıcılardan güçlü kira talebi.",
+        "description": "Najbrže rastuće obalno područje — moderni stanovi, pristupačan luksuz i snažna potražnja za iznajmljivanje od međunarodnih kupaca.",
         "avgPrice": "₺ 2.2M",
         "avgRoi": "%8.5"
       },
       "kestel": {
         "name": "Kestel",
-        "description": "Panoramik deniz manzarası, aile dostu atmosfer ve mükemmel fiyat-performans oranı sunan huzurlu sahil mahallesi.",
+        "description": "Mirna obalna četvrt s panoramskim pogledom na more, porodičnom atmosferom i odličnim omjerom cijene i kvalitete.",
         "avgPrice": "₺ 2.8M",
         "avgRoi": "%7.2"
       },
       "oba": {
         "name": "Oba",
-        "description": "Alanya'nın prestijli yerleşim merkezi — premium siteler, yemyeşil doğa ve şehir merkezine yakınlık.",
+        "description": "Prestižni stambeni centar Alanje — premium rezidencije, bogata priroda i blizina centra grada.",
         "avgPrice": "₺ 3.5M",
         "avgRoi": "%7.0"
       },
       "tosmur": {
         "name": "Tosmur",
-        "description": "Alanya ile Dim Çayı arasında huzurlu bir nehir kıyısı bölgesi — doğa yürüyüşleri ve sakin yaşam.",
+        "description": "Mirno riječno područje između Alanje i Dim Čaja — prirodne šetnje i miran život.",
         "avgPrice": "₺ 2.0M",
         "avgRoi": "%7.8"
       },
       "cikcilli": {
         "name": "Cikcilli",
-        "description": "Muhteşem Toros Dağları manzarası, modern daireler ve büyüyen yabancı topluluğu ile yamaç mahallesi.",
+        "description": "Brdska četvrt s veličanstvenim pogledom na Taurus planine, modernim stanovima i rastućom zajednicom stranaca.",
         "avgPrice": "₺ 1.8M",
         "avgRoi": "%8.0"
       },
       "kargicak": {
         "name": "Kargıcak",
-        "description": "Nefes kesen Akdeniz panoraması ve mutlak mahremiyet sunan özel tepe villalar ve rezidanslar.",
+        "description": "Ekskluzivne vile na brdu i rezidencije s zapanjujućom mediteranskom panoramom i apsolutnom privatnošću.",
         "avgPrice": "₺ 5.0M",
         "avgRoi": "%6.5"
       },
       "avsallar": {
         "name": "Avsallar",
-        "description": "Her şey dahil tatil havası, uygun fiyatlı daireler ve güçlü tatil kiralama getirisi sunan popüler sahil bölgesi.",
+        "description": "Popularna obalna zona s atmosferom all-inclusive odmora, pristupačnim stanovima i jakim prihodima od turističkog iznajmljivanja.",
         "avgPrice": "₺ 1.5M",
         "avgRoi": "%9.0"
       }
@@ -181,786 +197,799 @@
   },
   "about": {
     "meta": {
-      "title": "Hakkımızda | EmlakBanq",
-      "description": "EmlakBanq ile tanışın - 100'den fazla uzman, iki ofis, Alanya'nin güvenilir lüks gayrimenkul danışmanları."
+      "title": "O nama | EmlakBanq",
+      "description": "Upoznajte EmlakBanq - više od 100 stručnjaka, dva ureda, pouzdani savjetnici za luksuzne nekretnine u Alanji."
     },
-    "heading": "EmlakBanq Hakkında",
-    "subtitle": "Lüks gayrimenkul yatırımında Alanya'nin güvenilir ortağı",
+    "heading": "O EmlakBanqu",
+    "subtitle": "Vaš pouzdani partner za investicije u luksuzne nekretnine u Alanji",
     "story": {
-      "label": "Hikayemiz",
-      "title": "Hikayemiz",
-      "p1": "EmlakBanq, tek bir vizyonla kuruldu: Alanya'daki lüks gayrimenkul deneyimini yeniden tanımlamak. Butik bir danışmanlık firması olarak başlayan yapımız, iki kıtada faaliyet gösteren 100'den fazla uzman danışmana sahip küresel bir platforma dönüştü.",
-      "p2": "Alanya'da mülk satın almanın, şehrin kendisi kadar heyecan verici — şeffaf, kusursuz ve ödüllendirici — olması gerektiğine inanıyoruz. Ekibimiz, derin piyasa bilgisini yatırımcıların mükemmel eşleşmelerini bulmalarına yardımcı olma tutkusuyla birleştiriyor.",
-      "p3": "Tamamlanmadan satış fırsatlarından taşınmaya hazır villalara, Altın Vize yardımından satış sonrası mülk yönetimine kadar Alanya gayrimenkulünde uçtan uca ortağınızız."
+      "label": "Naša priča",
+      "title": "Naša priča",
+      "p1": "EmlakBanq je osnovan s jednom vizijom: redefinisati iskustvo luksuznih nekretnina u Alanji. Ono što je počelo kao butik konsultantska firma preraslo je u globalnu platformu s više od 100 stručnih savjetnika koji djeluju na dva kontinenta.",
+      "p2": "Vjerujemo da kupovina nekretnine u Alanji treba biti jednako uzbudljiva kao i sam grad — transparentna, besprijekorna i nagrađujuća. Naš tim kombinuje duboko poznavanje tržišta sa strašću za pomaganje investitorima da pronađu savršeni spoj.",
+      "p3": "Od prodaje u izgradnji do vila spremnih za useljenje, od pomoći s državljanstvom do upravljanja nekretninama nakon prodaje — vaš smo partner od A do Z u nekretninama Alanje."
     },
     "values": {
-      "label": "Değerlerimiz",
-      "title": "Değerlerimiz",
+      "label": "Naše vrijednosti",
+      "title": "Naše vrijednosti",
       "transparency": {
-        "title": "Şeffaflık",
-        "description": "Gizli ücret yok, abartılı vaatler yok. Her adımda dürüst, veriye dayalı rehberlik."
+        "title": "Transparentnost",
+        "description": "Nema skrivenih naknada, nema pretjeranih obećanja. Iskreno vođenje zasnovano na podacima u svakom koraku."
       },
       "expertise": {
-        "title": "Uzmanlık",
-        "description": "Yıllarca Alanya piyasası deneyimine sahip sertifikalı profesyoneller."
+        "title": "Stručnost",
+        "description": "Certificirani profesionalci s višegodišnjim iskustvom na tržištu Alanje."
       },
       "global": {
-        "title": "Küresel Erişim",
-        "description": "Alanya ve İstanbul'da ofisler, 40'tan fazla ülkeden müşteriye hizmet."
+        "title": "Globalni doseg",
+        "description": "Uredi u Alanji i Istanbulu, pružamo usluge klijentima iz više od 40 zemalja."
       },
       "client": {
-        "title": "Önce Müşteri",
-        "description": "Her karar, müşterilerimizin yatırım hedefleri için en iyi olan doğrultusunda yönlendirilir."
+        "title": "Klijent na prvom mjestu",
+        "description": "Svaka odluka je usmjerena ka onome što je najbolje za investicijske ciljeve naših klijenata."
       }
     },
     "hero": {
-      "subtitle": "Kıtalar arası bağlantılar kurarak, eşsiz uzmanlık ve sarsılmaz dürüstlükle yatırımcıları dünyanın en dinamik gayrimenkul piyasasına bağlıyoruz."
+      "subtitle": "Povezujemo kontinente, spajamo investitore s najdinamičnijim tržištem nekretnina na svijetu kroz nenadmašnu stručnost i nepokolebljiv integritet."
     },
     "offices": {
-      "label": "Küresel Varlık",
-      "title": "Ofislerimiz",
-      "description": "Küresel yatırımın kesişim noktasında stratejik olarak konumlanmış ofislerimiz, Alanya'nin lüks gayrimenkul piyasasına açılan kapınızdır.",
-      "officeLabel": "Ofisi",
-      "alanya": { "city": "Alanya, Türkiye", "address": "Oba Mah., Alanya, Antalya" },
-      "istanbul": { "city": "İstanbul, Türkiye", "address": "Skyland Istanbul" }
+      "label": "Globalno prisustvo",
+      "title": "Naši uredi",
+      "description": "Strateški pozicionirani na raskršću globalne investicije, naši uredi su vaša kapija ka luksuznome tržištu nekretnina u Alanji.",
+      "officeLabel": "Ured",
+      "alanya": { "city": "Alanja, Turska", "address": "Oba Mah., Alanja, Antalija" },
+      "istanbul": { "city": "Istanbul, Turska", "address": "Skyland Istanbul" }
     },
     "cta": {
-      "title": "Yolculuğunuza Başlamaya Hazır mısınız?",
-      "description": "Uzman ekibimizle bağlantı kurun ve yaşam tarzınıza ve yatırım hedeflerinize uygun mükemmel mülkü keşfedin.",
-      "button": "Bize Ulaşın"
+      "title": "Spremni započeti svoje putovanje?",
+      "description": "Povežite se s našim timom stručnjaka i otkrijte savršenu nekretninu za vaš životni stil i investicijske ciljeve.",
+      "button": "Kontaktirajte nas"
     }
   },
   "contact": {
     "meta": {
-      "title": "İletişim | EmlakBanq",
-      "description": "EmlakBanq ile iletişime geçin. Alanya ve İstanbul'da ofisler."
+      "title": "Kontakt | EmlakBanq",
+      "description": "Kontaktirajte EmlakBanq. Uredi u Alanji i Istanbulu."
     },
-    "heading": "İletişime Geçin",
-    "subtitle": "İlk kez alıcı olun ya da deneyimli bir yatırımcı, ekibimiz size yardımcı olmak için burada.",
-    "intro": "Yatırım yapmak, hayalinizdeki evi satın almak veya Altın Vize seçeneklerini keşfetmek istiyor olun, ekibimiz her adımda size rehberlik etmeye hazır.",
+    "heading": "Kontaktirajte nas",
+    "subtitle": "Bilo da ste kupac prvi put ili iskusni investitor, naš tim je tu da vam pomogne.",
+    "intro": "Želite li investirati, kupiti dom iz snova ili istražiti opcije državljanstva, naš tim je spreman da vas vodi na svakom koraku.",
     "form": {
-      "title": "Bize Mesaj Gönderin",
-      "description": "Aşağıdaki formu doldurun, danışmanlarımızdan biri 24 saat içinde size geri dönüş yapacaktır.",
-      "name": "Ad Soyad",
-      "email": "E-posta Adresi",
-      "phone": "Telefon Numarası",
-      "interest": "İlgilendiğim konu...",
+      "title": "Pošaljite nam poruku",
+      "description": "Popunite formular ispod, jedan od naših savjetnika će vam se javiti u roku od 24 sata.",
+      "name": "Ime i prezime",
+      "email": "Email adresa",
+      "phone": "Broj telefona",
+      "interest": "Zanima me...",
       "interests": {
-        "buying": "Mülk satın alma",
-        "investing": "Yatırım danışmanlığı",
-        "visa": "Altın Vize",
-        "selling": "Mülk satma",
-        "other": "Diğer"
+        "buying": "Kupovina nekretnine",
+        "investing": "Investicijsko savjetovanje",
+        "visa": "Državljanstvo",
+        "selling": "Prodaja nekretnine",
+        "other": "Ostalo"
       },
-      "selectInterest": "İlgilendiğiniz konuyu seçin...",
+      "selectInterest": "Odaberite oblast interesovanja...",
       "interestOptions": {
-        "buying": "Mülk Satın Alma",
-        "investing": "Yatırım Fırsatları",
-        "visa": "Altın Vize Yardımı",
-        "selling": "Mülk Satma",
-        "other": "Diğer Soru"
+        "buying": "Kupovina nekretnine",
+        "investing": "Investicijske prilike",
+        "visa": "Pomoć s državljanstvom",
+        "selling": "Prodaja nekretnine",
+        "other": "Ostalo pitanje"
       },
-      "message": "Mesajınız",
-      "submit": "Mesaj Gönder",
-      "consent": "Kişisel verilerimin gizlilik politikası kapsamında işlenmesini kabul ediyorum.",
+      "message": "Vaša poruka",
+      "submit": "Pošaljite poruku",
+      "consent": "Pristajem na obradu mojih ličnih podataka u skladu s politikom privatnosti.",
       "placeholders": {
-        "name": "ör. Ahmet Yılmaz",
-        "email": "ornek@email.com",
-        "phone": "+971 50 XXX XXXX",
-        "message": "İhtiyaçlarınız, bütçeniz veya sorularınız hakkında bize bilgi verin..."
+        "name": "npr. Amer Hodžić",
+        "email": "primjer@email.com",
+        "phone": "+90 532 XXX XXXX",
+        "message": "Recite nam o vašim potrebama, budžetu ili pitanjima..."
       },
-      "privacyLink": "Gizlilik Politikası",
-      "sending": "Gönderiliyor...",
-      "success": "Teşekkürler! Mesajınız gönderildi. 24 saat içinde size geri dönüş yapacağız.",
-      "error": "Bir hata oluştu. Lütfen tekrar deneyin."
+      "privacyLink": "Politika privatnosti",
+      "sending": "Slanje...",
+      "success": "Hvala! Vaša poruka je poslana. Javit ćemo vam se u roku od 24 sata.",
+      "error": "Došlo je do greške. Pokušajte ponovo."
     },
     "info": {
-      "title": "Bize Ulaşın",
+      "title": "Kontaktirajte nas",
       "email": "info@emlakbanq.com",
-      "phone": "+971 4 XXX XXXX",
-      "whatsapp": "+971 50 XXX XXXX",
-      "hours": "Paz - Per: 9:00 - 18:00",
+      "phone": "+90 242 XXX XXXX",
+      "whatsapp": "+90 532 XXX XXXX",
+      "hours": "Pon - Pet: 9:00 - 18:00",
       "labels": {
-        "email": "E-posta",
+        "email": "Email",
         "phone": "Telefon",
         "whatsapp": "WhatsApp",
-        "workingHours": "Çalışma Saatleri"
+        "workingHours": "Radno vrijeme"
       },
-      "workingHoursValue": "Paz - Per: 9:00 - 19:00 (GST)"
+      "workingHoursValue": "Pon - Pet: 9:00 - 18:00 (TR)"
     },
     "offices": {
-      "title": "Ofislerimiz",
+      "title": "Naši uredi",
       "alanya": {
-        "city": "Alanya, Türkiye",
-        "address": "Oba Mah., Alanya, Antalya, Alanya, Türkiye"
+        "city": "Alanja, Turska",
+        "address": "Oba Mah., Alanja, Antalija, Turska"
       },
       "istanbul": {
-        "city": "İstanbul, Türkiye",
-        "address": "Skyland Istanbul, Türkiye"
+        "city": "Istanbul, Turska",
+        "address": "Skyland Istanbul, Turska"
       }
     },
     "cta": {
-      "title": "Direkt Arama mı Tercih Ediyorsunuz?",
-      "description": "Çok dilli ekibimiz İngilizce, Arapça, Türkçe ve Rusça konuşmaktadır. Size uygun bir zamanda arama planlayın.",
-      "callNow": "Hemen Ara"
+      "title": "Preferirate direktan poziv?",
+      "description": "Naš višejezični tim govori engleski, arapski, turski i ruski. Zakažite poziv u vrijeme koje vam odgovara.",
+      "callNow": "Pozovite odmah"
     }
   },
   "goldenVisa": {
     "meta": {
-      "title": "Türk Vatandaşlığı | EmlakBanq",
-      "description": "Gayrimenkul yatırımı ile Türk vatandaşlığı edinme hakkında bilgi edinin."
+      "title": "Tursko državljanstvo | EmlakBanq",
+      "description": "Saznajte o sticanju turskog državljanstva putem investicije u nekretnine."
     },
-    "heading": "Gayrimenkul Yatırımı ile Türk Vatandaşlığına Açılan Kapınız",
-    "subtitle": "Yatırım Yoluyla Türk Vatandaşlığı",
+    "heading": "Vaša kapija ka turskom državljanstvu putem investicije u nekretnine",
+    "subtitle": "Tursko državljanstvo putem investicije",
     "hero": {
-      "subtitle": "Türkiye'nin yatırım yoluyla vatandaşlık programı, gayrimenkul yatırımcılarına Türk vatandaşlığı edinme imkânı sunarak Avrupa ile Asya arasında köprü olan eşsiz bir ülkede yaşam fırsatı sağlar.",
-      "intro": "EmlakBanq, uygun mülklerin belirlenmesinden vatandaşlık başvurunuzun tamamlanmasına kadar uçtan uca destek sunmaktadır. Özel ekibimiz yüzlerce ailenin güvenle Türk vatandaşlığı edinmesine yardımcı olmuştur."
+      "subtitle": "Program turskog državljanstva putem investicije nudi investitorima u nekretnine mogućnost sticanja turskog državljanstva, pružajući životnu priliku u jedinstvenoj zemlji koja povezuje Evropu i Aziju.",
+      "intro": "EmlakBanq pruža sveobuhvatnu podršku od identifikacije podobnih nekretnina do završetka vaše prijave za državljanstvo. Naš specijalizovani tim je pomogao stotinama porodica da sigurno steknu tursko državljanstvo."
     },
     "benefits": {
-      "label": "Neden Türk Vatandaşlığı?",
-      "title": "Yatırım Yoluyla Türk Vatandaşlığının Avantajları",
+      "label": "Zašto tursko državljanstvo?",
+      "title": "Prednosti turskog državljanstva putem investicije",
       "renewable_residency": {
-        "title": "Tam Vatandaşlık Hakkı",
-        "description": "Kendiniz ve aileniz için kalıcı Türk vatandaşlığı edinin. Oturma izni değil, tam vatandaşlık hakkı kazanın."
+        "title": "Puno pravo državljanstva",
+        "description": "Stekni trajno tursko državljanstvo za sebe i svoju porodicu. Ne samo boravišna dozvola, već puno pravo državljanstva."
       },
       "family_sponsorship": {
-        "title": "Aile Dahil Vatandaşlık",
-        "description": "Eşiniz ve 18 yaşından küçük çocuklarınız da başvuruya dahil edilerek birlikte vatandaşlık alabilir."
+        "title": "Državljanstvo za porodicu",
+        "description": "Vaš supružnik i djeca mlađa od 18 godina također mogu biti uključeni u prijavu i zajedno steći državljanstvo."
       },
       "business_ownership": {
-        "title": "İş Kurma Özgürlüğü",
-        "description": "Türk vatandaşı olarak herhangi bir kısıtlama olmadan Türkiye'de işletme kurun ve yönetin."
+        "title": "Sloboda poslovanja",
+        "description": "Kao turski državljanin, osnujte i vodite preduzeće u Turskoj bez ikakvih ograničenja."
       },
       "ease_of_travel": {
-        "title": "Vizesiz Seyahat",
-        "description": "Türk pasaportu ile 110'dan fazla ülkeye vizesiz veya kapıda vize ile seyahat edin."
+        "title": "Putovanje bez vize",
+        "description": "S turskim pasošem putujte u više od 110 zemalja bez vize ili s vizom na granici."
       },
       "tax_free": {
-        "title": "Avantajlı Vergi Sistemi",
-        "description": "Rekabetçi vergi oranları, yabancı yatırımcılara özel teşvikler ve çifte vergilendirmeyi önleyen anlaşmalardan yararlanın."
+        "title": "Povoljan poreski sistem",
+        "description": "Konkurentne poreske stope, posebni poticaji za strane investitore i sporazumi o izbjegavanju dvostrukog oporezivanja."
       },
       "premium_services": {
-        "title": "Kaliteli Yaşam Standartları",
-        "description": "Türk vatandaşı olarak dünya standartlarında sağlık, eğitim ve bankacılık hizmetlerine tam erişim elde edin."
+        "title": "Kvalitetan životni standard",
+        "description": "Kao turski državljanin uživajte pun pristup zdravstvenim uslugama, obrazovnim institucijama i bankarskim uslugama svjetskog standarda."
       }
     },
     "eligibility": {
-      "label": "Gereksinimler",
-      "title": "Uygunluk Kriterleri",
-      "description": "Aşağıdaki kriterler Türkiye'nin yatırım yoluyla vatandaşlık programının gayrimenkul rotası için geçerlidir.",
-      "item1": "Türkiye'de minimum 400.000 USD değerinde bir gayrimenkul satın alın.",
-      "item2": "Mülk, satın alma tarihinden itibaren en az 3 yıl boyunca satılmamalıdır.",
-      "item3": "Mülk konut veya ticari olabilir; tamamlanmış veya yapım aşamasında projeler uygundur.",
-      "item4": "Tapu Müdürlüğü'nden resmi değerleme raporu alınması gereklidir.",
-      "item5": "Başvuru, mülkün Tapu ve Kadastro Müdürlüğü'ne tescilinden sonra yapılmalıdır.",
-      "item6": "Gayrimenkul yatırımcı rotası için minimum maaş gereksinimi veya istihdam durumu kısıtlaması bulunmamaktadır."
+      "label": "Uslovi",
+      "title": "Kriteriji podobnosti",
+      "description": "Sljedeći kriteriji se primjenjuju na rutu ulaganja u nekretnine programa turskog državljanstva putem investicije.",
+      "item1": "Kupite nekretninu u Turskoj u minimalnoj vrijednosti od 400.000 USD.",
+      "item2": "Nekretnina se ne smije prodati najmanje 3 godine od datuma kupovine.",
+      "item3": "Nekretnina može biti stambena ili komercijalna; podobni su i završeni projekti i projekti u izgradnji.",
+      "item4": "Potrebno je pribaviti zvaničnu procjenu od Uprave za tapije.",
+      "item5": "Prijava se podnosi nakon registracije nekretnine u Upravi za tapije i katastar.",
+      "item6": "Za rutu investicije u nekretnine nema zahtjeva za minimalnom platom niti ograničenja u pogledu zaposlenja."
     },
     "process": {
-      "label": "Nasıl Çalışır",
-      "title": "Türk Vatandaşlığına Giden Yolunuz",
+      "label": "Kako funkcioniše",
+      "title": "Vaš put do turskog državljanstva",
       "step1": {
-        "title": "Mülk Seçimi",
-        "description": "Uzman danışmanlarımızın rehberliğinde 400.000 USD ve üzeri değerinde uygun bir mülk seçin."
+        "title": "Odabir nekretnine",
+        "description": "Uz vodstvo naših stručnih savjetnika odaberite podobnu nekretninu u vrijednosti od 400.000 USD ili više."
       },
       "step2": {
-        "title": "Satın Alma ve Tescil",
-        "description": "Satın alma işlemini tamamlayın ve mülkü Tapu ve Kadastro Müdürlüğü'ne tescil ettirin."
+        "title": "Kupovina i registracija",
+        "description": "Završite kupovinu i registrujte nekretninu u Upravi za tapije i katastar."
       },
       "step3": {
-        "title": "Belge Hazırlığı",
-        "description": "Pasaport, doğum belgesi, tapu ve değerleme raporu dahil gerekli belgeleri toplayın."
+        "title": "Priprema dokumenata",
+        "description": "Prikupite potrebne dokumente uključujući pasoš, rodni list, tapiju i izvještaj o procjeni."
       },
       "step4": {
-        "title": "Vatandaşlık Onayı",
-        "description": "Başvurunuzu yapın ve 3-6 ay içinde Türk vatandaşlığınızı edinin."
+        "title": "Odobrenje državljanstva",
+        "description": "Podnesite prijavu i stekni tursko državljanstvo u roku od 3-6 mjeseci."
       }
     },
     "cta": {
-      "title": "Vatandaşlık Yolculuğunuza Başlayın",
-      "description": "Uzman danışmanlarımız mülk seçiminden vatandaşlık onayına kadar size rehberlik edecektir. Bugün ücretsiz bir danışmanlık randevusu alın.",
-      "button": "Ücretsiz Danışmanlık Randevusu Alın"
+      "title": "Započnite svoje putovanje ka državljanstvu",
+      "description": "Naši stručni savjetnici će vas voditi od odabira nekretnine do odobrenja državljanstva. Zakažite besplatnu konsultaciju danas.",
+      "button": "Zakažite besplatnu konsultaciju"
     }
   },
   "buyerGuides": {
     "meta": {
-      "title": "Alıcı Rehberi | EmlakBanq",
-      "description": "Alanya'da lüks mülk satın almak için kapsamlı rehberler."
+      "title": "Vodič za kupce | EmlakBanq",
+      "description": "Sveobuhvatni vodiči za kupovinu luksuznih nekretnina u Alanji."
     },
-    "heading": "Alıcı Rehberleri",
-    "subtitle": "Alanya'da mülk satın alma hakkında bilmeniz gereken her şey",
-    "intro": "Mülk kararlarınızı güçlendirmek için uzman tarafından hazırlanmış rehberler. İlk kez alıcılardan deneyimli yatırımcılara kadar güvenle yatırım yapmak için gereken bilgiyi edinin.",
-    "readGuide": "Rehberi Oku",
-    "speakToExpert": "Uzmanla Görüşün",
+    "heading": "Vodiči za kupce",
+    "subtitle": "Sve što trebate znati o kupovini nekretnina u Alanji",
+    "intro": "Stručno pripremljeni vodiči za jačanje vaših odluka o nekretninama. Od kupaca koji kupuju prvi put do iskusnih investitora — stekni znanje potrebno za sigurnu investiciju.",
+    "readGuide": "Pročitajte vodič",
+    "speakToExpert": "Razgovarajte sa stručnjakom",
     "cta": {
-      "title": "Kişiselleştirilmiş Tavsiye Mi İhtiyacınız Var?",
-      "description": "Danışmanlarımız, finansal hedeflerinize, zaman çizelgenize ve risk iştahınıza göre özel bir yatırım stratejisi oluşturabilir.",
-      "button": "Uzmanla Görüşün"
+      "title": "Trebate personalizovani savjet?",
+      "description": "Naši savjetnici mogu kreirati prilagođenu investicijsku strategiju prema vašim finansijskim ciljevima, vremenskom okviru i sklonosti riziku.",
+      "button": "Razgovarajte sa stručnjakom"
     }
   },
   "insights": {
     "meta": {
-      "title": "Yatırım Analizleri | EmlakBanq",
-      "description": "Alanya gayrimenkul piyasası analizleri ve yatırım içgörüleri."
+      "title": "Investicijske analize | EmlakBanq",
+      "description": "Analize tržišta nekretnina u Alanji i investicijski uvidi."
     },
-    "label": "Piyasa Analizi",
-    "heading": "Alanya Piyasa Analizleri",
-    "intro": "Alanya gayrimenkul piyasasına dair veriye dayalı analizler ve uzman görüşleri. En son trendler, getiri verileri ve yatırım fırsatlarıyla bilgi sahibi olun.",
+    "label": "Analiza tržišta",
+    "heading": "Analize tržišta Alanje",
+    "intro": "Analize zasnovane na podacima i stručna mišljenja o tržištu nekretnina Alanje. Budite informisani s najnovijim trendovima, podacima o prinosu i investicijskim prilikama.",
     "overview": {
-      "title": "Piyasaya Genel Bakış",
-      "period": "2025 4. Çeyrek - 2026 1. Çeyrek Öne Çıkanlar"
+      "title": "Pregled tržišta",
+      "period": "Q4 2025 - Q1 2026 Istaknuto"
     },
     "roi": {
-      "label": "Yatırım Verileri",
-      "title": "Kira Getirisine Göre En İyi Bölgeler",
-      "description": "2025 4. Çeyrek verilerine göre Alanya'nin en popüler yatırım bölgelerinde ortalama brüt kira getirisi.",
-      "area": "Bölge",
-      "grossRoi": "Brüt Getiri",
-      "priceRange": "Fiyat Aralığı",
+      "label": "Investicijski podaci",
+      "title": "Najbolja područja po prinosu od iznajmljivanja",
+      "description": "Prosječni bruto prinos od iznajmljivanja u najpopularnijim investicijskim zonama Alanje na osnovu podataka iz Q4 2025.",
+      "area": "Područje",
+      "grossRoi": "Bruto prinos",
+      "priceRange": "Raspon cijena",
       "trend": "Trend",
-      "rising": "Yükseliş",
-      "stable": "Sabit",
-      "disclaimer": "Veriler Alanya Arazi Departmanı ve iç analizlerden alınmıştır. Getiriler gösterge niteliğindedir ve değişkenlik gösterebilir."
+      "rising": "Rast",
+      "stable": "Stabilan",
+      "disclaimer": "Podaci su preuzeti od Odjela za zemljište Alanje i internih analiza. Prinosi su indikativni i mogu varirati."
     },
     "articles": {
-      "label": "Son Analizler",
-      "title": "Son Makaleler",
-      "viewAll": "Tüm Makaleleri Gör",
-      "readArticle": "Makaleyi Oku"
+      "label": "Najnovije analize",
+      "title": "Najnoviji članci",
+      "viewAll": "Pogledajte sve članke",
+      "readArticle": "Pročitajte članak"
     }
   },
   "propertyDetail": {
-    "price": "Fiyat",
-    "bedrooms": "Yatak Odası",
-    "size": "Boyut",
+    "price": "Cijena",
+    "bedrooms": "Spavaće sobe",
+    "size": "Veličina",
     "sqftValue": "{{value}} sq ft",
-    "developer": "Geliştirici",
-    "completion": "Teslim Tarihi",
-    "aboutProperty": "Bu Mülk Hakkında",
-    "gallery": "Galeri",
-    "amenities": "Olanaklar ve Özellikler",
-    "interestedTitle": "Bu Mülkle İlgileniyor musunuz?",
-    "interestedDescription": "Ekibimiz özel bir gezi ayarlayabilir, detaylı fiyat bilgisi sağlayabilir ve tüm satın alma sürecinde size rehberlik edebilir.",
-    "contactUs": "Bize Ulaşın"
+    "developer": "Developer",
+    "completion": "Datum završetka",
+    "aboutProperty": "O ovoj nekretnini",
+    "gallery": "Galerija",
+    "amenities": "Pogodnosti i karakteristike",
+    "interestedTitle": "Zainteresovani za ovu nekretninu?",
+    "interestedDescription": "Naš tim može organizovati privatnu posjetu, pružiti detaljne informacije o cijenama i voditi vas kroz cijeli proces kupovine.",
+    "contactUs": "Kontaktirajte nas"
   },
   "blog": {
     "meta": {
       "title": "Blog | EmlakBanq",
-      "description": "Alanya lüks gayrimenkul piyasasından en son haberler ve güncellemeler."
+      "description": "Najnovije vijesti i ažuriranja s tržišta luksuznih nekretnina u Alanji."
     },
-    "heading": "Blog ve Haberler",
-    "subtitle": "En son piyasa trendleri, proje lansmanları ve uzman görüşleriyle güncel kalın"
+    "heading": "Blog i vijesti",
+    "subtitle": "Stručni komentari",
+    "intro": "Detaljni članci, tržišne analize i stručne perspektive o tržištu nekretnina u Alanji. Pripremljeno od strane našeg istraživačkog tima za zahtjevne investitore.",
+    "moreLabel": "Istražite",
+    "moreTitle": "Svi članci",
+    "backToList": "Svi članci",
+    "share": "Podijeli",
+    "related": "Slični članci",
+    "relatedLabel": "Nastavite čitanje",
+    "cta": {
+      "title": "Spremni za investiranje u Alanju?",
+      "description": "Naši stručni savjetnici spremni su pomoći vam pronaći savršenu nekretninu. Kontaktirajte nas za personalizirane preporuke.",
+      "viewProperties": "Pogledajte nekretnine",
+      "contact": "Kontaktirajte nas"
+    }
   },
   "privacy": {
     "meta": {
-      "title": "Gizlilik Politikası | EmlakBanq",
-      "description": "EmlakBanq gizlilik politikası."
+      "title": "Politika privatnosti | EmlakBanq",
+      "description": "EmlakBanq politika privatnosti."
     },
-    "heading": "Gizlilik Politikası"
+    "heading": "Politika privatnosti"
   },
   "terms": {
     "meta": {
-      "title": "Kullanım Koşulları | EmlakBanq",
-      "description": "EmlakBanq kullanım koşulları."
+      "title": "Uslovi korištenja | EmlakBanq",
+      "description": "EmlakBanq uslovi korištenja."
     },
-    "heading": "Kullanım Koşulları"
+    "heading": "Uslovi korištenja"
   },
   "footer": {
-    "description": "Mülk yatırımı için uzman rehberlik, Altın Vize yardımı ve kapsamlı satış sonrası destek sunan Alanya'nin önde gelen lüks gayrimenkul platformu.",
-    "quickLinks": "Hızlı Bağlantılar",
-    "services": "Hizmetler",
-    "legal": "Yasal",
-    "privacy": "Gizlilik Politikası",
-    "terms": "Kullanım Koşulları",
+    "description": "Vodeća platforma za luksuzne nekretnine u Alanji, koja nudi stručno vođenje investicija, pomoć s državljanstvom i sveobuhvatnu podršku nakon prodaje.",
+    "quickLinks": "Brzi linkovi",
+    "services": "Usluge",
+    "legal": "Pravno",
+    "privacy": "Politika privatnosti",
+    "terms": "Uslovi korištenja",
     "newsletter": {
-      "title": "Güncel Kalın",
-      "subtitle": "Haftalık piyasa analizleri ve özel mülk bildirimleri alın.",
-      "placeholder": "E-posta adresinizi girin",
-      "subscribe": "Abone Ol"
+      "title": "Budite u toku",
+      "subtitle": "Primajte sedmične analize tržišta i ekskluzivna obavještenja o nekretninama.",
+      "placeholder": "Unesite email adresu",
+      "subscribe": "Pretplatite se"
     },
-    "copyright": "2026 EmlakBanq. Tüm hakları saklıdır."
+    "copyright": "2026 EmlakBanq. Sva prava zadržana."
   },
   "notFound": {
     "meta": {
-      "title": "Sayfa Bulunamadı | EmlakBanq"
+      "title": "Stranica nije pronađena | EmlakBanq"
     },
-    "title": "Sayfa Bulunamadı",
-    "message": "Aradığınız sayfa mevcut değil veya taşınmış olabilir."
+    "title": "Stranica nije pronađena",
+    "message": "Stranica koju tražite ne postoji ili je premještena."
   },
   "gdpr": {
-    "cookieConsent": "Deneyiminizi iyileştirmek için çerezler kullanıyoruz. Devam ederek gizlilik politikamızı kabul etmiş olursunuz.",
-    "accept": "Kabul Et",
-    "decline": "Reddet"
+    "cookieConsent": "Koristimo kolačiće za poboljšanje vašeg iskustva. Nastavkom prihvatate našu politiku privatnosti.",
+    "accept": "Prihvati",
+    "decline": "Odbij"
   },
   "admin": {
     "common": {
-      "search": "Ara",
-      "filter": "Filtrele",
-      "save": "Kaydet",
-      "saveAll": "Tümünü Kaydet",
-      "cancel": "İptal",
-      "delete": "Sil",
-      "edit": "Düzenle",
-      "create": "Oluştur",
-      "update": "Güncelle",
-      "add": "Ekle",
-      "actions": "İşlemler",
-      "status": "Durum",
-      "confirmDelete": "Silmeyi Onayla",
-      "deleteMessage": "Emin misiniz? Bu işlem geri alınamaz.",
-      "deleteConfirmMessage": "\"{{name}}\" öğesini silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
-      "saving": "Kaydediliyor...",
-      "deleting": "Siliniyor...",
-      "loading": "Yükleniyor...",
-      "noResults": "Sonuç bulunamadı",
-      "noItemsYet": "Henüz öğe yok. İlk öğeyi ekleyin.",
-      "addFirstItem": "İlk öğeyi ekleyin",
-      "total": "toplam",
-      "upload": "Yükle",
-      "uploading": "Yükleniyor...",
-      "orEnterUrl": "veya URL girin",
-      "dragDrop": "Sürükle bırak veya tıklayarak yükle",
-      "fileTooLarge": "Dosya çok büyük",
-      "invalidFormat": "Geçersiz dosya formatı",
-      "order": "Sıra",
-      "icon": "İkon",
-      "title": "Başlık",
-      "description": "Açıklama",
-      "sortOrder": "Sıralama",
-      "editItem": "Öğeyi Düzenle",
-      "addItem": "Öğe Ekle",
-      "deleteItem": "Öğeyi Sil",
-      "benefits": "Avantajlar",
-      "eligibility": "Uygunluk",
-      "processSteps": "Süreç Adımları",
-      "manageContent": "İçeriği yönetin",
-      "heroImages": "Hero Resimleri",
-      "heroImagesDesc": "Her sayfa hero bölümü için arka plan resimleri",
-      "offices": "Ofisler",
-      "officesDesc": "Şirket ofis konumları",
-      "companyStats": "Şirket İstatistikleri",
-      "companyStatsDesc": "Web sitesinde gösterilen istatistikler",
-      "brandInfo": "Marka bilgileri ve sosyal medya bağlantıları",
-      "marketHighlights": "Piyasa Öne Çıkanları",
-      "shortTextItems": "Analiz bölümünde gösterilen kısa metinler",
-      "topAreasROI": "En İyi Bölge ROI'leri",
-      "investmentReturns": "Bölgeye göre yatırım getirileri",
-      "imageUrl": "Resim URL",
-      "altText": "Alternatif metin",
-      "savedSuccessfully": "Başarıyla kaydedildi",
-      "deletedSuccessfully": "Başarıyla silindi",
-      "createdSuccessfully": "Başarıyla oluşturuldu",
-      "updatedSuccessfully": "Başarıyla güncellendi",
-      "operationFailed": "İşlem başarısız",
-      "unsavedChanges": "Kaydedilmemiş değişiklikler",
-      "unsavedChangesTitle": "Kaydedilmemiş Değişiklikler",
-      "unsavedChangesMessage": "Kaydedilmemiş değişiklikleriniz var. Ayrılmak istediğinizden emin misiniz?",
-      "discardChanges": "Değişiklikleri At",
-      "keepEditing": "Düzenlemeye Devam Et",
-      "show": "Göster",
-      "all": "Tümü"
+      "search": "Pretraži",
+      "filter": "Filtriraj",
+      "save": "Sačuvaj",
+      "saveAll": "Sačuvaj sve",
+      "cancel": "Otkaži",
+      "delete": "Obriši",
+      "edit": "Uredi",
+      "create": "Kreiraj",
+      "update": "Ažuriraj",
+      "add": "Dodaj",
+      "actions": "Akcije",
+      "status": "Status",
+      "confirmDelete": "Potvrdi brisanje",
+      "deleteMessage": "Jeste li sigurni? Ova akcija se ne može poništiti.",
+      "deleteConfirmMessage": "Jeste li sigurni da želite obrisati \"{{name}}\"? Ova akcija se ne može poništiti.",
+      "saving": "Čuvanje...",
+      "deleting": "Brisanje...",
+      "loading": "Učitavanje...",
+      "noResults": "Nema rezultata",
+      "noItemsYet": "Još nema stavki. Dodajte prvu stavku.",
+      "addFirstItem": "Dodajte prvu stavku",
+      "total": "ukupno",
+      "upload": "Učitaj",
+      "uploading": "Učitavanje...",
+      "orEnterUrl": "ili unesite URL",
+      "dragDrop": "Prevucite i ispustite ili kliknite za učitavanje",
+      "fileTooLarge": "Fajl je prevelik",
+      "invalidFormat": "Nevažeći format fajla",
+      "order": "Redoslijed",
+      "icon": "Ikona",
+      "title": "Naslov",
+      "description": "Opis",
+      "sortOrder": "Redoslijed",
+      "editItem": "Uredi stavku",
+      "addItem": "Dodaj stavku",
+      "deleteItem": "Obriši stavku",
+      "benefits": "Prednosti",
+      "eligibility": "Podobnost",
+      "processSteps": "Koraci procesa",
+      "manageContent": "Upravljajte sadržajem",
+      "heroImages": "Hero slike",
+      "heroImagesDesc": "Pozadinske slike za hero sekciju svake stranice",
+      "offices": "Uredi",
+      "officesDesc": "Lokacije kancelarija kompanije",
+      "companyStats": "Statistika kompanije",
+      "companyStatsDesc": "Statistike prikazane na web stranici",
+      "brandInfo": "Informacije o brendu i linkovi društvenih mreža",
+      "marketHighlights": "Tržišni naglasci",
+      "shortTextItems": "Kratki tekstovi prikazani u sekciji analiza",
+      "topAreasROI": "Najbolji ROI po području",
+      "investmentReturns": "Povrati investicija po području",
+      "imageUrl": "URL slike",
+      "altText": "Alternativni tekst",
+      "savedSuccessfully": "Uspješno sačuvano",
+      "deletedSuccessfully": "Uspješno obrisano",
+      "createdSuccessfully": "Uspješno kreirano",
+      "updatedSuccessfully": "Uspješno ažurirano",
+      "operationFailed": "Operacija neuspješna",
+      "unsavedChanges": "Nesačuvane promjene",
+      "unsavedChangesTitle": "Nesačuvane promjene",
+      "unsavedChangesMessage": "Imate nesačuvane promjene. Jeste li sigurni da želite otići?",
+      "discardChanges": "Odbaci promjene",
+      "keepEditing": "Nastavi uređivanje",
+      "show": "Prikaži",
+      "all": "Sve"
     },
     "nav": {
-      "dashboard": "Gösterge Paneli",
-      "properties": "İlanlar",
-      "areas": "Bölgeler",
+      "dashboard": "Kontrolna tabla",
+      "properties": "Nekretnine",
+      "areas": "Područja",
       "blog": "Blog",
-      "buyerGuides": "Alıcı Rehberleri",
-      "goldenVisa": "Altın Vize",
-      "insights": "Analizler",
-      "messages": "Mesajlar",
-      "settings": "Ayarlar"
+      "buyerGuides": "Vodiči za kupce",
+      "goldenVisa": "Državljanstvo",
+      "insights": "Analize",
+      "messages": "Poruke",
+      "settings": "Postavke"
     },
     "topBar": {
-      "logout": "Çıkış Yap",
+      "logout": "Odjava",
       "admin": "Admin",
-      "backToSite": "Siteye Dön"
+      "backToSite": "Povratak na stranicu"
     },
     "login": {
-      "title": "Admin Girişi",
-      "heading": "Hesabınıza giriş yapın",
-      "email": "E-posta",
-      "password": "Şifre",
-      "emailPlaceholder": "E-posta adresinizi girin",
-      "passwordPlaceholder": "Şifrenizi girin",
-      "signIn": "Giriş Yap",
-      "signingIn": "Giriş yapılıyor...",
-      "backToSite": "EmlakBanq'a Dön",
-      "invalidCredentials": "Geçersiz e-posta veya şifre."
+      "title": "Admin prijava",
+      "heading": "Prijavite se na vaš račun",
+      "email": "Email",
+      "password": "Lozinka",
+      "emailPlaceholder": "Unesite email adresu",
+      "passwordPlaceholder": "Unesite lozinku",
+      "signIn": "Prijava",
+      "signingIn": "Prijavljivanje...",
+      "backToSite": "Povratak na EmlakBanq",
+      "invalidCredentials": "Nevažeći email ili lozinka."
     },
     "dashboard": {
-      "welcomeBack": "Tekrar hoş geldiniz, {{name}}",
-      "overview": "EmlakBanq yönetim panelinize genel bir bakış.",
-      "totalProperties": "Toplam İlan",
-      "totalAreas": "Toplam Bölge",
-      "blogPosts": "Blog Yazıları",
-      "unreadMessages": "Okunmamış Mesajlar",
-      "quickActions": "Hızlı İşlemler",
-      "newProperty": "Yeni İlan",
-      "addListing": "İlan ekle",
-      "newBlogPost": "Yeni Blog Yazısı",
-      "writeArticle": "Makale yaz",
-      "newArea": "Yeni Bölge",
-      "addLocation": "Konum ekle",
-      "viewMessages": "Mesajlar",
-      "viewSubmissions": "Gönderileri görüntüle",
-      "recentMessages": "Son Mesajlar",
-      "viewAll": "Tümünü görüntüle",
-      "noMessages": "Henüz mesaj yok.",
-      "noMessageContent": "Mesaj içeriği yok",
-      "buyerGuides": "Alıcı Rehberleri",
-      "goldenVisaItems": "Türk Vatandaşlığı Öğeleri",
-      "recentActivity": "Son Aktiviteler",
-      "noActivity": "Henüz aktivite yok"
+      "welcomeBack": "Dobrodošli nazad, {{name}}",
+      "overview": "Pregled vašeg EmlakBanq admin panela.",
+      "totalProperties": "Ukupno nekretnina",
+      "totalAreas": "Ukupno područja",
+      "blogPosts": "Blog objave",
+      "unreadMessages": "Nepročitane poruke",
+      "quickActions": "Brze akcije",
+      "newProperty": "Nova nekretnina",
+      "addListing": "Dodaj oglas",
+      "newBlogPost": "Nova blog objava",
+      "writeArticle": "Napiši članak",
+      "newArea": "Novo područje",
+      "addLocation": "Dodaj lokaciju",
+      "viewMessages": "Poruke",
+      "viewSubmissions": "Pregledaj prijave",
+      "recentMessages": "Nedavne poruke",
+      "viewAll": "Pogledaj sve",
+      "noMessages": "Još nema poruka.",
+      "noMessageContent": "Nema sadržaja poruke",
+      "buyerGuides": "Vodiči za kupce",
+      "goldenVisaItems": "Stavke turskog državljanstva",
+      "recentActivity": "Nedavna aktivnost",
+      "noActivity": "Još nema aktivnosti"
     },
     "properties": {
-      "title": "İlanlar",
-      "subtitle": "İlan listenizi yönetin",
-      "addNew": "Yeni İlan Ekle",
-      "editProperty": "İlanı Düzenle",
-      "addProperty": "İlan Ekle",
-      "backToProperties": "İlanlara Dön",
-      "image": "Resim",
-      "name": "Başlık",
+      "title": "Nekretnine",
+      "subtitle": "Upravljajte listom nekretnina",
+      "addNew": "Dodaj novu nekretninu",
+      "editProperty": "Uredi nekretninu",
+      "addProperty": "Dodaj nekretninu",
+      "backToProperties": "Povratak na nekretnine",
+      "image": "Slika",
+      "name": "Naziv",
       "type": "Tip",
-      "location": "Konum",
-      "price": "Fiyat",
-      "featured": "Öne Çıkan",
-      "noProperties": "İlan bulunamadı. Başlamak için ilk ilanınızı ekleyin.",
-      "deleteError": "İlan silinirken hata oluştu.",
-      "notFound": "İlan bulunamadı.",
-      "failedToSave": "İlan kaydedilemedi.",
-      "loadingProperty": "İlan yükleniyor...",
-      "deleteSuccess": "Mülk başarıyla silindi",
-      "totalProperties": "Toplam Mülk",
-      "featuredCount": "Öne Çıkan",
-      "typeBreakdown": "Tür Dağılımı",
-      "types": "tür",
-      "details": "Detaylar",
-      "allTypes": "Tüm Türler",
-      "allFeatured": "Tümü",
-      "featuredOnly": "Öne Çıkan",
-      "notFeatured": "Öne Çıkmayan"
+      "location": "Lokacija",
+      "price": "Cijena",
+      "featured": "Istaknuto",
+      "noProperties": "Nema nekretnina. Dodajte prvu nekretninu za početak.",
+      "deleteError": "Greška pri brisanju nekretnine.",
+      "notFound": "Nekretnina nije pronađena.",
+      "failedToSave": "Nekretnina nije sačuvana.",
+      "loadingProperty": "Učitavanje nekretnine...",
+      "deleteSuccess": "Nekretnina uspješno obrisana",
+      "totalProperties": "Ukupno nekretnina",
+      "featuredCount": "Istaknuto",
+      "typeBreakdown": "Raspodjela po tipu",
+      "types": "tipova",
+      "details": "Detalji",
+      "allTypes": "Svi tipovi",
+      "allFeatured": "Sve",
+      "featuredOnly": "Istaknuto",
+      "notFeatured": "Nije istaknuto"
     },
     "propertyForm": {
-      "basicInfo": "Temel Bilgiler",
-      "propertyName": "İlan Adı",
-      "propertyNamePlaceholder": "ör. Palm Residences Tower A",
-      "propertyNameHelp": "Desteklenen tüm dillerde ilan adı. Slug İngilizce'den otomatik oluşturulur.",
+      "basicInfo": "Osnovne informacije",
+      "propertyName": "Naziv nekretnine",
+      "propertyNamePlaceholder": "npr. Alanya Sahil Residence",
+      "propertyNameHelp": "Naziv nekretnine na svim podržanim jezicima. Slug se automatski generiše iz engleskog naziva.",
       "slug": "Slug",
-      "slugPlaceholder": "otomatik-oluşturulacak",
-      "slugHelp": "URL dostu tanımlayıcı. İngilizce başlıktan otomatik oluşturulur.",
+      "slugPlaceholder": "automatski-generisano",
+      "slugHelp": "URL-prijateljski identifikator. Automatski se generiše iz engleskog naslova.",
       "type": "Tip",
-      "typeLabel": "Tip Etiketi",
+      "typeLabel": "Oznaka tipa",
       "typeOptions": {
-        "apartment": "Daire",
-        "villa": "Villa",
+        "apartment": "Stan",
+        "villa": "Vila",
         "penthouse": "Penthouse",
-        "townhouse": "Müstakil Ev"
+        "townhouse": "Kuća u nizu"
       },
-      "typeLabelPlaceholder": "ör. Lüks Daire",
-      "typeLabelHelp": "İlan kartında gösterilen etiket, tüm dillerde.",
-      "location": "Konum",
-      "locationPlaceholder": "ör. Mahmutlar",
-      "locationHelp": "Desteklenen tüm dillerde ilan konumu.",
-      "price": "Fiyat",
-      "pricePlaceholder": "ör. ₺ 2,500,000",
-      "beds": "Yatak Odası",
-      "bedsPlaceholder": "ör. 3",
-      "sqft": "Metrekare",
-      "sqftPlaceholder": "ör. 2,450",
-      "developer": "Geliştirici",
-      "developerPlaceholder": "ör. Emaar Properties",
-      "year": "İnşa Yılı",
-      "yearPlaceholder": "ör. 2024",
-      "media": "Medya",
-      "image": "Ana Resim URL",
+      "typeLabelPlaceholder": "npr. Luksuzni stan",
+      "typeLabelHelp": "Oznaka prikazana na kartici nekretnine, na svim jezicima.",
+      "location": "Lokacija",
+      "locationPlaceholder": "npr. Mahmutlar",
+      "locationHelp": "Lokacija nekretnine na svim podržanim jezicima.",
+      "price": "Cijena",
+      "pricePlaceholder": "npr. ₺ 2,500,000",
+      "beds": "Spavaće sobe",
+      "bedsPlaceholder": "npr. 3",
+      "sqft": "Kvadratni metri",
+      "sqftPlaceholder": "npr. 2,450",
+      "developer": "Developer",
+      "developerPlaceholder": "npr. Emaar Properties",
+      "year": "Godina izgradnje",
+      "yearPlaceholder": "npr. 2024",
+      "media": "Mediji",
+      "image": "URL glavne slike",
       "imagePlaceholder": "https://example.com/image.jpg",
-      "gallery": "Galeri",
-      "galleryPlaceholder": "Her satırda bir resim URL'si",
-      "galleryHelp": "Her satıra bir resim URL'si girin. Bunlar ilan galerisinde gösterilecektir.",
-      "details": "Detaylar",
-      "description": "Açıklama",
-      "descriptionPlaceholder": "İlanın detaylı açıklaması...",
-      "amenities": "Olanaklar",
-      "amenitiesPlaceholder": "Her satırda bir olanak",
-      "amenitiesHelp": "Her satıra bir olanak girin (ör. Yüzme Havuzu, Spor Salonu, Otopark).",
-      "settings": "Ayarlar",
-      "sortOrder": "Sıralama",
+      "gallery": "Galerija",
+      "galleryPlaceholder": "Jedan URL slike po redu",
+      "galleryHelp": "Unesite jedan URL slike po redu. Ove slike će biti prikazane u galeriji nekretnine.",
+      "details": "Detalji",
+      "description": "Opis",
+      "descriptionPlaceholder": "Detaljan opis nekretnine...",
+      "amenities": "Pogodnosti",
+      "amenitiesPlaceholder": "Jedna pogodnost po redu",
+      "amenitiesHelp": "Unesite jednu pogodnost po redu (npr. Bazen, Teretana, Parking).",
+      "settings": "Postavke",
+      "sortOrder": "Redoslijed",
       "sortOrderPlaceholder": "0",
-      "sortOrderHelp": "Düşük sayılar önce görünür.",
-      "featured": "Öne Çıkan",
-      "updateProperty": "İlanı Güncelle",
-      "createProperty": "İlan Oluştur",
-      "cancel": "İptal"
+      "sortOrderHelp": "Niži brojevi se prikazuju prvi.",
+      "featured": "Istaknuto",
+      "updateProperty": "Ažuriraj nekretninu",
+      "createProperty": "Kreiraj nekretninu",
+      "cancel": "Otkaži"
     },
     "areas": {
-      "title": "Bölgeler",
-      "subtitle": "Alanya bölge listesini yönetin",
-      "addNew": "Yeni Bölge Ekle",
-      "editArea": "Bölgeyi Düzenle",
-      "addArea": "Bölge Ekle",
-      "backToAreas": "Bölgelere Dön",
-      "noAreas": "Bölge bulunamadı. Başlamak için ilk bölgenizi ekleyin.",
-      "image": "Resim",
-      "name": "Ad",
+      "title": "Područja",
+      "subtitle": "Upravljajte listom područja Alanje",
+      "addNew": "Dodaj novo područje",
+      "editArea": "Uredi područje",
+      "addArea": "Dodaj područje",
+      "backToAreas": "Povratak na područja",
+      "noAreas": "Nema područja. Dodajte prvo područje za početak.",
+      "image": "Slika",
+      "name": "Naziv",
       "tagline": "Slogan",
-      "avgPrice": "Ort. Fiyat",
+      "avgPrice": "Prosj. cijena",
       "roi": "ROI",
-      "featured": "Öne Çıkan",
-      "notFound": "Bölge bulunamadı.",
-      "failedToSave": "Bölge kaydedilemedi.",
-      "failedToDelete": "Bölge silinemedi.",
-      "loadingArea": "Bölge yükleniyor...",
-      "notFeatured": "Öne Çıkmayan"
+      "featured": "Istaknuto",
+      "notFound": "Područje nije pronađeno.",
+      "failedToSave": "Područje nije sačuvano.",
+      "failedToDelete": "Područje nije obrisano.",
+      "loadingArea": "Učitavanje područja...",
+      "notFeatured": "Nije istaknuto"
     },
     "areaForm": {
-      "basicInfo": "Temel Bilgiler",
-      "areaName": "Bölge Adı",
-      "areaNamePlaceholder": "ör. Mahmutlar",
-      "areaNameHelp": "Desteklenen tüm dillerde bölge adı. Slug ve key İngilizce'den otomatik oluşturulur.",
-      "key": "Anahtar",
-      "keyPlaceholder": "ör. mahmutlar",
-      "keyHelp": "Benzersiz tanımlayıcı anahtar. İngilizce isimden otomatik oluşturulur.",
+      "basicInfo": "Osnovne informacije",
+      "areaName": "Naziv područja",
+      "areaNamePlaceholder": "npr. Mahmutlar",
+      "areaNameHelp": "Naziv područja na svim podržanim jezicima. Slug i ključ se automatski generišu iz engleskog naziva.",
+      "key": "Ključ",
+      "keyPlaceholder": "npr. mahmutlar",
+      "keyHelp": "Jedinstveni identifikacioni ključ. Automatski se generiše iz engleskog imena.",
       "slug": "Slug",
-      "slugPlaceholder": "ör. mahmutlar",
-      "slugHelp": "URL dostu tanımlayıcı. İngilizce isimden otomatik oluşturulur.",
-      "imageUrl": "Resim URL",
+      "slugPlaceholder": "npr. mahmutlar",
+      "slugHelp": "URL-prijateljski identifikator. Automatski se generiše iz engleskog imena.",
+      "imageUrl": "URL slike",
       "imagePlaceholder": "https://example.com/area.jpg",
-      "avgPrice": "Ortalama Fiyat",
-      "avgPricePlaceholder": "ör. ₺ 2.5M",
+      "avgPrice": "Prosječna cijena",
+      "avgPricePlaceholder": "npr. ₺ 2.5M",
       "roi": "ROI",
-      "roiPlaceholder": "ör. %7.2",
-      "descriptions": "Açıklamalar",
-      "shortDescription": "Kısa Açıklama",
-      "shortDescPlaceholder": "Bölgenin kısa özeti...",
-      "shortDescHelp": "Bölge kartlarında gösterilen kısa açıklama, tüm dillerde.",
-      "longDescription": "Uzun Açıklama",
-      "longDescPlaceholder": "Bölgenin detaylı açıklaması...",
-      "longDescHelp": "Bölge detay sayfasında gösterilen detaylı açıklama, tüm dillerde.",
-      "highlights": "Öne Çıkanlar",
-      "highlightsPlaceholder": "Her satırda bir özellik",
-      "highlightsHelp": "Her satıra bir özellik girin (ör. Sahil Yaşamı, Dünya Standartlarında Yemek).",
-      "settings": "Ayarlar",
-      "sortOrder": "Sıralama",
+      "roiPlaceholder": "npr. %7.2",
+      "descriptions": "Opisi",
+      "shortDescription": "Kratki opis",
+      "shortDescPlaceholder": "Kratak pregled područja...",
+      "shortDescHelp": "Kratki opis prikazan na karticama područja, na svim jezicima.",
+      "longDescription": "Dugačak opis",
+      "longDescPlaceholder": "Detaljan opis područja...",
+      "longDescHelp": "Detaljan opis prikazan na stranici detalja područja, na svim jezicima.",
+      "highlights": "Naglasci",
+      "highlightsPlaceholder": "Jedna karakteristika po redu",
+      "highlightsHelp": "Unesite jednu karakteristiku po redu (npr. Obalni život, Restorani svjetske klase).",
+      "settings": "Postavke",
+      "sortOrder": "Redoslijed",
       "sortOrderPlaceholder": "0",
-      "sortOrderHelp": "Düşük sayılar önce görünür.",
-      "featured": "Öne Çıkan",
-      "updateArea": "Bölgeyi Güncelle",
-      "createArea": "Bölge Oluştur",
-      "cancel": "İptal"
+      "sortOrderHelp": "Niži brojevi se prikazuju prvi.",
+      "featured": "Istaknuto",
+      "updateArea": "Ažuriraj područje",
+      "createArea": "Kreiraj područje",
+      "cancel": "Otkaži"
     },
     "blog": {
-      "title": "Blog Yazıları",
-      "subtitle": "Blog içeriğini yönetin",
-      "addNew": "Yeni Yazı Ekle",
-      "editPost": "Blog Yazısını Düzenle",
-      "addPost": "Blog Yazısı Ekle",
-      "backToBlog": "Blog Yazılarına Dön",
-      "image": "Resim",
-      "title": "Başlık",
-      "category": "Kategori",
-      "published": "Yayınlandı",
-      "date": "Tarih",
-      "noPosts": "Blog yazısı bulunamadı. Başlamak için ilk yazınızı ekleyin.",
-      "deleteTitle": "Blog Yazısını Sil",
-      "deleteConfirm": "Bu yazıyı silmek istediğinizden emin misiniz?",
-      "columnTitle": "Başlık",
-      "author": "Yazar",
-      "publishedStatus": "Yayında",
-      "draftStatus": "Taslak",
-      "notFound": "Blog yazısı bulunamadı.",
-      "failedToSave": "Blog yazısı kaydedilemedi.",
-      "failedToDelete": "Blog yazısı silinemedi.",
-      "loadingPost": "Blog yazısı yükleniyor...",
-      "totalPosts": "Toplam Yazı",
-      "publishedCount": "Yayında",
-      "draftCount": "Taslak"
+      "title": "Blog objave",
+      "subtitle": "Upravljajte blog sadržajem",
+      "addNew": "Dodaj novu objavu",
+      "editPost": "Uredi blog objavu",
+      "addPost": "Dodaj blog objavu",
+      "backToBlog": "Povratak na blog objave",
+      "image": "Slika",
+      "title": "Naslov",
+      "category": "Kategorija",
+      "published": "Objavljeno",
+      "date": "Datum",
+      "noPosts": "Nema blog objava. Dodajte prvu objavu za početak.",
+      "deleteTitle": "Obriši blog objavu",
+      "deleteConfirm": "Jeste li sigurni da želite obrisati ovu objavu?",
+      "columnTitle": "Naslov",
+      "author": "Autor",
+      "publishedStatus": "Objavljeno",
+      "draftStatus": "Nacrt",
+      "notFound": "Blog objava nije pronađena.",
+      "failedToSave": "Blog objava nije sačuvana.",
+      "failedToDelete": "Blog objava nije obrisana.",
+      "loadingPost": "Učitavanje blog objave...",
+      "totalPosts": "Ukupno objava",
+      "publishedCount": "Objavljeno",
+      "draftCount": "Nacrt"
     },
     "blogForm": {
-      "basicInfo": "Temel Bilgiler",
-      "title": "Başlık",
-      "titlePlaceholder": "ör. Alanya Emlak Piyasası Güncellemesi 2025",
-      "titleHelp": "Desteklenen tüm dillerde blog yazısı başlığı. Slug İngilizce'den otomatik oluşturulur.",
+      "basicInfo": "Osnovne informacije",
+      "title": "Naslov",
+      "titlePlaceholder": "npr. Ažuriranje tržišta nekretnina u Alanji 2025",
+      "titleHelp": "Naslov blog objave na svim podržanim jezicima. Slug se automatski generiše iz engleskog naslova.",
       "slug": "Slug",
-      "slugPlaceholder": "otomatik-oluşturulacak",
-      "slugHelp": "URL dostu tanımlayıcı. İngilizce başlıktan otomatik oluşturulur.",
-      "category": "Kategori",
-      "categoryPlaceholder": "ör. Piyasa Analizi",
-      "categoryHelp": "Desteklenen tüm dillerde kategori adı.",
-      "categoryColor": "Kategori Rengi",
-      "categoryColorPlaceholder": "ör. bg-blue-100 text-blue-700",
-      "categoryColorHelp": "Kategori rozeti için Tailwind CSS sınıfları.",
-      "date": "Tarih",
-      "datePlaceholder": "ör. 15 Mart 2025",
-      "dateHelp": "Blog yazısında gösterilen tarih.",
-      "imageUrl": "Resim URL",
+      "slugPlaceholder": "automatski-generisano",
+      "slugHelp": "URL-prijateljski identifikator. Automatski se generiše iz engleskog naslova.",
+      "category": "Kategorija",
+      "categoryPlaceholder": "npr. Analiza tržišta",
+      "categoryHelp": "Naziv kategorije na svim podržanim jezicima.",
+      "categoryColor": "Boja kategorije",
+      "categoryColorPlaceholder": "npr. bg-blue-100 text-blue-700",
+      "categoryColorHelp": "Tailwind CSS klase za badge kategorije.",
+      "date": "Datum",
+      "datePlaceholder": "npr. 15. mart 2025",
+      "dateHelp": "Datum prikazan na blog objavi.",
+      "imageUrl": "URL slike",
       "imagePlaceholder": "https://example.com/blog-image.jpg",
-      "publishedAt": "Yayın Tarihi",
-      "publishedAtPlaceholder": "ör. 2025-03-15T10:00:00Z",
-      "publishedAtHelp": "Yazının yayınlandığı ISO zaman damgası.",
-      "content": "İçerik",
-      "excerpt": "Özet",
-      "excerptPlaceholder": "Blog listesinde gösterilen kısa özet...",
-      "excerptHelp": "Blog liste sayfasında gösterilen kısa özet, tüm dillerde.",
-      "fullContent": "İçerik",
-      "contentPlaceholder": "Blog yazısının tam içeriği...",
-      "contentHelp": "Desteklenen tüm dillerde blog yazısının tam içeriği.",
-      "imagePreview": "Resim Önizleme",
-      "settings": "Ayarlar",
-      "sortOrder": "Sıralama",
+      "publishedAt": "Datum objave",
+      "publishedAtPlaceholder": "npr. 2025-03-15T10:00:00Z",
+      "publishedAtHelp": "ISO vremenska oznaka kada je objava objavljena.",
+      "content": "Sadržaj",
+      "excerpt": "Izvod",
+      "excerptPlaceholder": "Kratki izvod prikazan na listi bloga...",
+      "excerptHelp": "Kratki izvod prikazan na stranici liste bloga, na svim jezicima.",
+      "fullContent": "Sadržaj",
+      "contentPlaceholder": "Puni sadržaj blog objave...",
+      "contentHelp": "Puni sadržaj blog objave na svim podržanim jezicima.",
+      "imagePreview": "Pregled slike",
+      "settings": "Postavke",
+      "sortOrder": "Redoslijed",
       "sortOrderPlaceholder": "0",
-      "sortOrderHelp": "Düşük sayılar önce görünür.",
-      "published": "Yayınlandı",
-      "updatePost": "Yazıyı Güncelle",
-      "createPost": "Yazı Oluştur",
-      "cancel": "İptal"
+      "sortOrderHelp": "Niži brojevi se prikazuju prvi.",
+      "published": "Objavljeno",
+      "updatePost": "Ažuriraj objavu",
+      "createPost": "Kreiraj objavu",
+      "cancel": "Otkaži"
     },
     "buyerGuides": {
-      "title": "Alıcı Rehberleri",
-      "subtitle": "Alıcı rehberi içeriğini yönetin",
-      "addNew": "Yeni Rehber Ekle",
-      "editGuide": "Alıcı Rehberini Düzenle",
-      "addGuide": "Alıcı Rehberi Ekle",
-      "backToGuides": "Alıcı Rehberlerine Dön",
-      "noGuides": "Alıcı rehberi bulunamadı. Başlamak için ilk rehberinizi ekleyin.",
-      "image": "Resim",
-      "columnTitle": "Başlık",
-      "tag": "Etiket",
-      "readTime": "Okuma Süresi",
-      "notFound": "Alıcı rehberi bulunamadı.",
-      "failedToSave": "Alıcı rehberi kaydedilemedi.",
-      "failedToDelete": "Alıcı rehberi silinemedi.",
-      "loadingGuide": "Alıcı rehberi yükleniyor...",
-      "totalGuides": "Toplam Rehber",
-      "withImages": "Görsel Olan"
+      "title": "Vodiči za kupce",
+      "subtitle": "Upravljajte sadržajem vodiča za kupce",
+      "addNew": "Dodaj novi vodič",
+      "editGuide": "Uredi vodič za kupce",
+      "addGuide": "Dodaj vodič za kupce",
+      "backToGuides": "Povratak na vodiče za kupce",
+      "noGuides": "Nema vodiča za kupce. Dodajte prvi vodič za početak.",
+      "image": "Slika",
+      "columnTitle": "Naslov",
+      "tag": "Oznaka",
+      "readTime": "Vrijeme čitanja",
+      "notFound": "Vodič za kupce nije pronađen.",
+      "failedToSave": "Vodič za kupce nije sačuvan.",
+      "failedToDelete": "Vodič za kupce nije obrisan.",
+      "loadingGuide": "Učitavanje vodiča za kupce...",
+      "totalGuides": "Ukupno vodiča",
+      "withImages": "Sa slikama"
     },
     "buyerGuideForm": {
-      "basicInfo": "Temel Bilgiler",
-      "title": "Başlık",
-      "titlePlaceholder": "ör. Alanya İlk Kez Alıcı Rehberi",
+      "basicInfo": "Osnovne informacije",
+      "title": "Naslov",
+      "titlePlaceholder": "npr. Vodič za kupce u Alanji za početnike",
       "slug": "Slug",
-      "slugPlaceholder": "basliktan-otomatik-olusturulur",
-      "slugHelp": "URL dostu tanımlayıcı. Başlıktan otomatik oluşturulur.",
-      "imageUrl": "Resim URL",
-      "imagePlaceholder": "https://example.com/rehber-resim.jpg",
-      "readTime": "Okuma Süresi",
-      "readTimePlaceholder": "ör. 8 dk okuma",
-      "content": "İçerik",
-      "description": "Açıklama",
-      "descriptionPlaceholder": "Rehber açıklaması veya özeti...",
+      "slugPlaceholder": "automatski-generisano-iz-naslova",
+      "slugHelp": "URL-prijateljski identifikator. Automatski se generiše iz naslova.",
+      "imageUrl": "URL slike",
+      "imagePlaceholder": "https://example.com/vodic-slika.jpg",
+      "readTime": "Vrijeme čitanja",
+      "readTimePlaceholder": "npr. 8 min čitanja",
+      "content": "Sadržaj",
+      "description": "Opis",
+      "descriptionPlaceholder": "Opis ili sažetak vodiča...",
       "styling": "Stil",
-      "tag": "Etiket",
-      "tagPlaceholder": "ör. Temel",
-      "tagHelp": "Rehber kartında görüntülenen etiket metni.",
-      "tagColor": "Etiket Rengi",
-      "tagColorPlaceholder": "ör. bg-blue-100 text-blue-700",
-      "tagColorHelp": "Etiket rozeti için Tailwind CSS sınıfları.",
-      "borderColor": "Kenarlık Rengi",
-      "borderColorPlaceholder": "ör. border-blue-200",
-      "borderColorHelp": "Kart kenarlığı için Tailwind CSS sınıfı.",
-      "imagePreview": "Resim Önizleme",
-      "settings": "Ayarlar",
-      "sortOrder": "Sıralama",
-      "sortOrderHelp": "Düşük numaralar önce görünür."
+      "tag": "Oznaka",
+      "tagPlaceholder": "npr. Osnovno",
+      "tagHelp": "Tekst oznake prikazan na kartici vodiča.",
+      "tagColor": "Boja oznake",
+      "tagColorPlaceholder": "npr. bg-blue-100 text-blue-700",
+      "tagColorHelp": "Tailwind CSS klase za badge oznake.",
+      "borderColor": "Boja obruba",
+      "borderColorPlaceholder": "npr. border-blue-200",
+      "borderColorHelp": "Tailwind CSS klasa za obrub kartice.",
+      "imagePreview": "Pregled slike",
+      "settings": "Postavke",
+      "sortOrder": "Redoslijed",
+      "sortOrderHelp": "Niži brojevi se prikazuju prvi."
     },
     "contactSubmissions": {
-      "title": "İletişim Mesajları",
-      "subtitle": "Gelen talepleri ve mesajları yönetin",
-      "all": "Tümü",
-      "unread": "Okunmamış",
-      "read": "Okunmuş",
-      "name": "İsim",
-      "email": "E-posta",
+      "title": "Kontakt poruke",
+      "subtitle": "Upravljajte pristiglim zahtjevima i porukama",
+      "all": "Sve",
+      "unread": "Nepročitane",
+      "read": "Pročitane",
+      "name": "Ime",
+      "email": "Email",
       "phone": "Telefon",
-      "interest": "İlgi Alanı",
-      "date": "Tarih",
-      "status": "Durum",
-      "actions": "İşlemler",
-      "noUnreadMessages": "Okunmamış mesaj yok",
-      "noReadMessages": "Okunmuş mesaj yok",
-      "noMessagesYet": "Henüz mesaj yok",
-      "viewMessage": "Mesajı görüntüle",
-      "markAsRead": "Okundu olarak işaretle",
-      "markAsUnread": "Okunmadı olarak işaretle",
-      "readStatus": "Okundu",
-      "unreadStatus": "Okunmadı",
-      "message": "Mesaj",
-      "noMessageProvided": "Mesaj sağlanmadı",
-      "deleteTitle": "Mesajı Sil",
-      "deleteConfirm": "\"{{name}}\" adlı kişiden gelen mesajı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
-      "markedRead": "Okundu olarak işaretlendi",
-      "markedUnread": "Okunmadı olarak işaretlendi",
-      "replyViaEmail": "E-posta ile Yanıtla"
+      "interest": "Oblast interesovanja",
+      "date": "Datum",
+      "status": "Status",
+      "actions": "Akcije",
+      "noUnreadMessages": "Nema nepročitanih poruka",
+      "noReadMessages": "Nema pročitanih poruka",
+      "noMessagesYet": "Još nema poruka",
+      "viewMessage": "Pogledaj poruku",
+      "markAsRead": "Označi kao pročitano",
+      "markAsUnread": "Označi kao nepročitano",
+      "readStatus": "Pročitano",
+      "unreadStatus": "Nepročitano",
+      "message": "Poruka",
+      "noMessageProvided": "Poruka nije pružena",
+      "deleteTitle": "Obriši poruku",
+      "deleteConfirm": "Jeste li sigurni da želite obrisati poruku od \"{{name}}\"? Ova akcija se ne može poništiti.",
+      "markedRead": "Označeno kao pročitano",
+      "markedUnread": "Označeno kao nepročitano",
+      "replyViaEmail": "Odgovori putem emaila"
     },
     "goldenVisa": {
-      "subtitle": "Avantajları, uygunluk kriterlerini ve süreç adımlarını yönetin",
-      "iconPlaceholder": "ör. emoji veya ikon sınıfı",
-      "titlePlaceholder": "Öğe başlığı",
-      "descriptionPlaceholder": "Bu öğeyi açıklayın..."
+      "subtitle": "Upravljajte prednostima, kriterijima podobnosti i koracima procesa",
+      "iconPlaceholder": "npr. emoji ili klasa ikone",
+      "titlePlaceholder": "Naslov stavke",
+      "descriptionPlaceholder": "Opišite ovu stavku..."
     },
     "insights": {
-      "subtitle": "Piyasa öne çıkanlarını ve bölge ROI verilerini yönetin",
-      "highlightsPlaceholder": "Öne çıkan metnini girin...",
-      "noHighlights": "Henüz öne çıkan yok. İlk öğeyi ekleyin.",
-      "noAreas": "Henüz bölge yok. İlk bölgeyi ekleyin.",
-      "area": "Bölge",
-      "areaPlaceholder": "ör. Mahmutlar",
+      "subtitle": "Upravljajte tržišnim naglascima i ROI podacima po području",
+      "highlightsPlaceholder": "Unesite tekst naglaska...",
+      "noHighlights": "Još nema naglasaka. Dodajte prvu stavku.",
+      "noAreas": "Još nema područja. Dodajte prvo područje.",
+      "area": "Područje",
+      "areaPlaceholder": "npr. Mahmutlar",
       "roi": "ROI",
-      "roiPlaceholder": "ör. %8.5",
-      "priceRange": "Fiyat Aralığı",
-      "priceRangePlaceholder": "ör. ₺ 1.2M - 5M",
+      "roiPlaceholder": "npr. %8.5",
+      "priceRange": "Raspon cijena",
+      "priceRangePlaceholder": "npr. ₺ 1.2M - 5M",
       "trend": "Trend",
-      "trendUp": "Yükseliş",
-      "trendStable": "Sabit",
-      "editArea": "Bölgeyi Düzenle",
-      "addArea": "Bölge Ekle"
+      "trendUp": "Rast",
+      "trendStable": "Stabilan",
+      "editArea": "Uredi područje",
+      "addArea": "Dodaj područje"
     },
     "settings": {
-      "title": "Site Ayarları",
-      "subtitle": "Hero resimleri, ofisler, şirket istatistikleri ve genel ayarları yönetin",
-      "noOffices": "Henüz ofis yok. İlk ofisi ekleyin.",
-      "noStats": "Henüz istatistik yok. İlk istatistiği ekleyin.",
-      "noSiteSettings": "Site ayarı bulunamadı.",
-      "editOffice": "Ofisi Düzenle",
-      "addOffice": "Ofis Ekle",
-      "editStat": "İstatistiği Düzenle",
-      "addStat": "İstatistik Ekle",
-      "city": "Şehir",
-      "cityPlaceholder": "ör. Alanya",
-      "address": "Adres",
-      "addressPlaceholder": "Tam ofis adresi",
+      "title": "Postavke stranice",
+      "subtitle": "Upravljajte hero slikama, uredima, statistikama kompanije i opštim postavkama",
+      "noOffices": "Još nema ureda. Dodajte prvi ured.",
+      "noStats": "Još nema statistika. Dodajte prvu statistiku.",
+      "noSiteSettings": "Postavke stranice nisu pronađene.",
+      "editOffice": "Uredi ured",
+      "addOffice": "Dodaj ured",
+      "editStat": "Uredi statistiku",
+      "addStat": "Dodaj statistiku",
+      "city": "Grad",
+      "cityPlaceholder": "npr. Alanja",
+      "address": "Adresa",
+      "addressPlaceholder": "Puna adresa ureda",
       "phone": "Telefon",
-      "email": "E-posta",
-      "value": "Değer",
-      "valuePlaceholder": "ör. 350+",
-      "label": "Etiket",
-      "labelPlaceholder": "ör. Listelenen İlanlar",
-      "brandName": "Marka Adı",
-      "domain": "Domain",
+      "email": "Email",
+      "value": "Vrijednost",
+      "valuePlaceholder": "npr. 350+",
+      "label": "Oznaka",
+      "labelPlaceholder": "npr. Objavljeni oglasi",
+      "brandName": "Naziv brenda",
+      "domain": "Domena",
       "tagline": "Slogan",
-      "socialMediaLinks": "Sosyal Medya Bağlantıları"
+      "socialMediaLinks": "Linkovi društvenih mreža"
     }
   },
   "components": {
     "confirmDialog": {
-      "title": "Silmeyi Onayla",
-      "message": "Emin misiniz? Bu işlem geri alınamaz.",
-      "confirm": "Sil",
-      "cancel": "İptal"
+      "title": "Potvrdite brisanje",
+      "message": "Jeste li sigurni? Ova akcija se ne može poništiti.",
+      "confirm": "Obriši",
+      "cancel": "Otkaži"
     },
     "multilingualInput": {
-      "translated": "Çevrildi",
-      "missing": "Eksik",
-      "characters": "karakter"
+      "translated": "Prevedeno",
+      "missing": "Nedostaje",
+      "characters": "karaktera"
     },
     "adminFormField": {
-      "selectPlaceholder": "Seçin..."
+      "selectPlaceholder": "Odaberite..."
     },
     "imageWithLoader": {
-      "errorMessage": "Resim yüklenemedi"
+      "errorMessage": "Slika nije učitana"
     },
     "loadingSkeleton": {
-      "loading": "Yükleniyor..."
+      "loading": "Učitavanje..."
     }
   }
 }

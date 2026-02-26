@@ -76,29 +76,13 @@ export default function Footer() {
           </div>
 
           <div className="lg:col-span-4">
-            <h3 className="mb-2 text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
-              {t('footer.newsletter.title')}
+            <h3 className="mb-5 text-xs font-semibold uppercase tracking-[0.2em] text-blue-400">
+              {t('footer.contact', 'İletişim')}
             </h3>
-            <p className="mb-5 text-sm text-estate-500">
-              {t('footer.newsletter.subtitle')}
-            </p>
-            <form className="flex gap-2" onSubmit={(e) => e.preventDefault()}>
-              <input
-                type="email"
-                placeholder={t('footer.newsletter.placeholder')}
-                className="flex-1 rounded-md border border-estate-700 bg-estate-800/30 px-4 py-3 text-sm text-white placeholder:text-estate-500 transition-colors focus:border-blue-500 focus:outline-none focus:ring-2 focus:ring-blue-500/10"
-              />
-              <button
-                type="submit"
-                className="btn-glow shrink-0 rounded-md bg-blue-500 px-5 py-3 text-sm font-semibold text-white transition-all duration-200 hover:bg-blue-400"
-              >
-                {t('footer.newsletter.subscribe')}
-              </button>
-            </form>
-
-            <div className="mt-8 space-y-2 text-sm text-estate-500">
+            <div className="space-y-3 text-sm text-estate-400">
               <p>info@emlakbanq.com</p>
-              <p>+971 4 XXX XXXX</p>
+              <p>+90 242 XXX XXXX</p>
+              <p>Oba Mah., Alanya, Antalya, Türkiye</p>
             </div>
           </div>
         </div>

@@ -28,8 +28,8 @@
     "areas": "Gebiete",
     "about": "Über uns",
     "contact": "Kontakt",
-    "goldenVisa": "Türkische Staatsbürgerschaft",
-    "buyerGuides": "Käuferratgeber",
+    "goldenVisa": "Staatsbürgerschaft",
+    "buyerGuides": "Ratgeber",
     "insights": "Analysen",
     "blog": "Blog"
   },
@@ -121,6 +121,22 @@
     "intro": "Von ikonischem Waterfront-Wohnen bis hin zu ruhigen Vorstadt-Rückzugsorten — entdecken Sie den einzigartigen Charakter und das Investitionspotenzial jedes Viertels.",
     "explore": "Entdecken",
     "speakToExpert": "Mit einem Experten sprechen",
+    "detail": {
+      "explore": "Gebiet erkunden",
+      "avgPrice": "Durchschnittspreis",
+      "roi": "Erwartete Rendite",
+      "properties": "Verfügbare Immobilien",
+      "population": "Bevölkerung",
+      "aboutTitle": "Über",
+      "highlights": "Gebiets-Highlights",
+      "gallery": "Galerie",
+      "cta": {
+        "title": "Investieren in",
+        "description": "Entdecken Sie exklusive Immobilien und Investitionsmöglichkeiten in einem der begehrtesten Viertel von Alanya.",
+        "viewProperties": "Immobilien ansehen",
+        "contact": "Kontaktieren Sie uns"
+      }
+    },
     "cta": {
       "title": "Nicht sicher, welches Gebiet zu Ihnen passt?",
       "description": "Unsere Experten können Ihnen helfen, das ideale Viertel basierend auf Ihrem Lebensstil, Budget und Ihren Investitionszielen zu finden."
@@ -223,6 +239,8 @@
     "heading": "Lassen Sie uns sprechen",
     "subtitle": "Ob Erstkäufer oder erfahrener Investor — unser Team ist für Sie da.",
     "form": {
+      "title": "Senden Sie uns eine Nachricht",
+      "description": "Füllen Sie das Formular aus und einer unserer Berater wird sich innerhalb von 24 Stunden bei Ihnen melden.",
       "name": "Vollständiger Name",
       "email": "E-Mail-Adresse",
       "phone": "Telefonnummer",
@@ -234,16 +252,46 @@
         "selling": "Immobilienverkauf",
         "other": "Sonstiges"
       },
+      "selectInterest": "Wählen Sie Ihr Interesse...",
+      "interestOptions": {
+        "buying": "Immobilie kaufen",
+        "investing": "Investitionsmöglichkeiten",
+        "visa": "Hilfe bei der Staatsbürgerschaft",
+        "selling": "Immobilie verkaufen",
+        "other": "Andere Anfrage"
+      },
       "message": "Ihre Nachricht",
       "submit": "Nachricht senden",
-      "consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der Datenschutzrichtlinie zu."
+      "consent": "Ich stimme der Verarbeitung meiner personenbezogenen Daten gemäß der Datenschutzrichtlinie zu.",
+      "placeholders": {
+        "name": "z.B. Max Mustermann",
+        "email": "beispiel@email.com",
+        "phone": "+90 532 XXX XXXX",
+        "message": "Erzählen Sie uns von Ihren Anforderungen, Ihrem Budget oder Ihren Fragen..."
+      },
+      "privacyLink": "Datenschutzrichtlinie",
+      "sending": "Wird gesendet...",
+      "success": "Vielen Dank! Ihre Nachricht wurde gesendet. Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.",
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
     },
     "info": {
       "title": "Kontakt aufnehmen",
       "email": "info@emlakbanq.com",
-      "phone": "+971 4 XXX XXXX",
-      "whatsapp": "+971 50 XXX XXXX",
-      "hours": "So - Do: 9:00 - 18:00"
+      "phone": "+90 242 XXX XXXX",
+      "whatsapp": "+90 532 XXX XXXX",
+      "hours": "So - Do: 9:00 - 18:00",
+      "labels": {
+        "email": "E-Mail",
+        "phone": "Telefon",
+        "whatsapp": "WhatsApp",
+        "workingHours": "Arbeitszeiten"
+      },
+      "workingHoursValue": "Mo - Fr: 9:00 - 18:00 (TR)"
+    },
+    "cta": {
+      "title": "Bevorzugen Sie einen direkten Anruf?",
+      "description": "Unser mehrsprachiges Team spricht Englisch, Arabisch, Türkisch und Russisch. Vereinbaren Sie einen Anruf zu einem für Sie passenden Zeitpunkt.",
+      "callNow": "Jetzt anrufen"
     }
   },
   "goldenVisa": {
@@ -357,7 +405,20 @@
       "description": "Aktuelle Nachrichten und Updates vom Luxusimmobilienmarkt in Alanya."
     },
     "heading": "Blog & Nachrichten",
-    "subtitle": "Bleiben Sie informiert über aktuelle Markttrends, Projektstarts und Expertenmeinungen"
+    "subtitle": "Expertenkommentare",
+    "intro": "Ausführliche Artikel, Marktanalysen und Expertenperspektiven zur Immobilienlandschaft in Alanya. Verfasst von unserem Rechercheteam für anspruchsvolle Investoren.",
+    "moreLabel": "Entdecken",
+    "moreTitle": "Alle Artikel",
+    "backToList": "Alle Artikel",
+    "share": "Teilen",
+    "related": "Ähnliche Artikel",
+    "relatedLabel": "Weiterlesen",
+    "cta": {
+      "title": "Bereit, in Alanya zu investieren?",
+      "description": "Unsere Experten helfen Ihnen, die perfekte Immobilie zu finden. Kontaktieren Sie uns für personalisierte Empfehlungen.",
+      "viewProperties": "Immobilien ansehen",
+      "contact": "Kontaktieren Sie uns"
+    }
   },
   "privacy": {
     "meta": { "title": "Datenschutzrichtlinie | EmlakBanq", "description": "Datenschutzrichtlinie von EmlakBanq." },
@@ -545,7 +606,7 @@
     "propertyForm": {
       "basicInfo": "Grundinformationen",
       "propertyName": "Immobilienname",
-      "propertyNamePlaceholder": "z.B. Palm Residences Tower A",
+      "propertyNamePlaceholder": "z.B. Alanya Sahil Residence",
       "propertyNameHelp": "Immobilienname in allen unterstützten Sprachen. Slug wird automatisch aus dem Englischen generiert.",
       "slug": "Slug",
       "slugPlaceholder": "automatisch-aus-titel-generiert",

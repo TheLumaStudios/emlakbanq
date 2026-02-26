@@ -228,8 +228,8 @@ Aynı şekilde güncelleyin:
 INSERT INTO properties (name, location, price)
 VALUES (
   '{"en": "Luxury Villa", "tr": "Lüks Villa", "ar": "فيلا فاخرة"}'::jsonb,
-  '{"en": "Marina District", "tr": "Marina Bölgesi"}'::jsonb,
-  'AED 5M'
+  '{"en": "Oba, Alanya", "tr": "Oba, Alanya"}'::jsonb,
+  '€485.000'
 );
 ```
 

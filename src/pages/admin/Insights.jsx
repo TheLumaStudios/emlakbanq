@@ -6,15 +6,25 @@ import AdminModal from '../../components/admin/AdminModal'
 import MultilingualInput from '../../components/admin/MultilingualInput'
 import { useToast } from '../../hooks/useToast'
 
-// Display text from JSONB or plain string
-function getDisplayText(field) {
+// Display text from JSONB, JSON string, or plain string
+function getDisplayText(field, lang) {
   if (!field) return ''
-  if (typeof field === 'string') return field
-  return field.en || Object.values(field).find((v) => v) || ''
+  if (typeof field === 'string') {
+    try {
+      const parsed = JSON.parse(field)
+      if (typeof parsed === 'object' && parsed !== null) {
+        return parsed[lang] || parsed['en'] || ''
+      }
+    } catch { /* not JSON */ }
+    return field
+  }
+  if (typeof field === 'object') return field[lang] || field['en'] || Object.values(field).find((v) => v) || ''
+  return field
 }
 
 export default function Insights() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = i18n.language
   const toast = useToast()
   // Market Highlights state
   const [highlights, setHighlights] = useState([])
@@ -255,7 +265,7 @@ export default function Insights() {
                 <span className="w-10 text-center text-xs font-medium text-estate-400">
                   {item.sort_order}
                 </span>
-                <span className="flex-1 text-sm text-estate-700">{getDisplayText(item.text)}</span>
+                <span className="flex-1 text-sm text-estate-700">{getDisplayText(item.text, lang)}</span>
                 <button
                   onClick={() => openHighlightModal(item)}
                   className="rounded-md p-1.5 text-estate-400 hover:bg-estate-100 hover:text-estate-700"
@@ -325,7 +335,7 @@ export default function Insights() {
                 {areas.map((item) => (
                   <tr key={item.id} className="transition-colors hover:bg-yellow-50">
                     <td className="px-4 py-3 text-estate-400">{item.sort_order}</td>
-                    <td className="px-4 py-3 font-medium text-estate-900">{getDisplayText(item.area)}</td>
+                    <td className="px-4 py-3 font-medium text-estate-900">{getDisplayText(item.area, lang)}</td>
                     <td className="px-4 py-3 font-semibold text-blue-600">{item.roi}</td>
                     <td className="px-4 py-3 text-estate-500">{item.price_range}</td>
                     <td className="px-4 py-3">
@@ -530,7 +540,7 @@ export default function Insights() {
       <ConfirmDialog
         open={!!deleteTarget}
         title={t('admin.common.deleteItem')}
-        message={t('admin.common.deleteConfirmMessage', { name: getDisplayText(deleteTarget?.text) || getDisplayText(deleteTarget?.area) })}
+        message={t('admin.common.deleteConfirmMessage', { name: getDisplayText(deleteTarget?.text, lang) || getDisplayText(deleteTarget?.area, lang) })}
         onConfirm={handleDelete}
         onCancel={() => {
           setDeleteTarget(null)

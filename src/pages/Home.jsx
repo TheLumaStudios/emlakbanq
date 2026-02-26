@@ -15,7 +15,7 @@ import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 export default function Home() {
   const { t } = useTranslation()
   const { data: featured, loading: loadingFeatured } = useFeaturedProperties()
-  const { data: zones, loading: loadingZones } = useAreas({ featured: true, limit: 4 })
+  const { data: zones, loading: loadingZones } = useAreas({ featured: true, limit: 5 })
   const { data: services, loading: loadingServices } = useServices()
   const heroImages = useDataStore((s) => s.heroImages)
   const fetchHeroImages = useDataStore((s) => s.fetchHeroImages)
@@ -143,7 +143,7 @@ export default function Home() {
             {!loadingFeatured && featured?.map((property, index) => (
               <Link
                 key={property.id}
-                to={ROUTES.PROPERTIES}
+                to={ROUTES.PROPERTY_DETAIL.replace(':slug', property.slug)}
                 className={`reveal reveal-delay-${(index % 3) + 1} card-premium group overflow-hidden rounded-2xl ${
                   index === 0
                     ? 'lg:col-span-7 lg:row-span-2'
@@ -163,6 +163,12 @@ export default function Home() {
                   <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-xs font-semibold uppercase tracking-wider text-estate-800 backdrop-blur-sm">
                     {property.type_label}
                   </span>
+                  {/* Year badge */}
+                  {property.year && (
+                    <span className="absolute right-4 top-4 rounded-full bg-blue-500/90 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm">
+                      {property.year}
+                    </span>
+                  )}
                   {/* Price overlay */}
                   <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent px-5 pb-5 pt-12">
                     <p className="font-heading text-xl font-bold text-white">
@@ -175,19 +181,47 @@ export default function Home() {
                   <h3 className="font-heading text-lg font-bold text-estate-900 transition-colors duration-300 group-hover:text-blue-600">
                     {property.name}
                   </h3>
-                  <p className="mt-1 text-sm text-estate-400">
-                    {property.location}
-                  </p>
-                  <div className="mt-4 flex items-center gap-6 border-t border-estate-100 pt-4 text-sm text-estate-500">
+                  <div className="mt-1 flex items-center gap-2">
+                    <svg className="h-3.5 w-3.5 shrink-0 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd" /></svg>
+                    <p className="text-sm text-estate-400">
+                      {property.location}
+                    </p>
+                  </div>
+                  {property.description && (
+                    <p className="mt-3 line-clamp-2 text-sm leading-relaxed text-estate-500">
+                      {property.description}
+                    </p>
+                  )}
+                  {property.developer && (
+                    <p className="mt-2 text-xs text-estate-400">
+                      <span className="font-medium text-estate-500">{t('common.developer', 'Yapımcı')}:</span> {property.developer}
+                    </p>
+                  )}
+                  <div className="mt-4 flex flex-wrap items-center gap-4 border-t border-estate-100 pt-4 text-sm text-estate-500">
                     <span className="flex items-center gap-1.5">
-                      <span className="inline-block h-1 w-1 rounded-full bg-blue-500" />
+                      <svg className="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
                       {property.beds} {t('common.bedrooms')}
                     </span>
                     <span className="flex items-center gap-1.5">
-                      <span className="inline-block h-1 w-1 rounded-full bg-blue-500" />
-                      {property.sqft} {t('common.sqft')}
+                      <svg className="h-4 w-4 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3.75v4.5m0-4.5h4.5m-4.5 0L9 9M3.75 20.25v-4.5m0 4.5h4.5m-4.5 0L9 15M20.25 3.75h-4.5m4.5 0v4.5m0-4.5L15 9m5.25 11.25h-4.5m4.5 0v-4.5m0 4.5L15 15" /></svg>
+                      {property.sqft}
                     </span>
                   </div>
+                  {/* Amenities preview */}
+                  {property.amenities?.length > 0 && (
+                    <div className="mt-3 flex flex-wrap gap-1.5">
+                      {property.amenities.slice(0, 3).map((amenity, i) => (
+                        <span key={i} className="rounded-full bg-blue-50 px-2.5 py-0.5 text-[11px] font-medium text-blue-700">
+                          {amenity}
+                        </span>
+                      ))}
+                      {property.amenities.length > 3 && (
+                        <span className="rounded-full bg-estate-100 px-2.5 py-0.5 text-[11px] font-medium text-estate-500">
+                          +{property.amenities.length - 3}
+                        </span>
+                      )}
+                    </div>
+                  )}
                 </div>
               </Link>
             ))}
@@ -250,7 +284,7 @@ export default function Home() {
 
                   {/* ROI badge */}
                   <span className="relative z-10 mb-auto ml-auto inline-block rounded-full bg-white/15 px-3 py-1 text-xs font-semibold text-white backdrop-blur-sm ring-1 ring-white/20">
-                    {t('common.roi')}: {zone.avg_roi}
+                    {t('common.roi')}: {zone.roi}
                   </span>
 
                   <div className="relative z-10">

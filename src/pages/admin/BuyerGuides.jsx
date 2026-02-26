@@ -8,8 +8,24 @@ import ConfirmDialog from '../../components/admin/ConfirmDialog'
 import ListStatCard from '../../components/admin/ListStatCard'
 import ListToolbar from '../../components/admin/ListToolbar'
 
+function getTranslation(field, lang) {
+  if (!field) return ''
+  if (typeof field === 'string') {
+    try {
+      const parsed = JSON.parse(field)
+      if (typeof parsed === 'object' && parsed !== null) {
+        return parsed[lang] || parsed['en'] || ''
+      }
+    } catch { /* not JSON */ }
+    return field
+  }
+  if (typeof field === 'object') return field[lang] || field['en'] || ''
+  return field
+}
+
 export default function BuyerGuides() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
+  const lang = i18n.language
   const navigate = useNavigate()
   const toast = useToast()
   const [guides, setGuides] = useState([])
@@ -57,7 +73,8 @@ export default function BuyerGuides() {
 
   const filteredGuides = guides.filter((g) => {
     if (!search) return true
-    return (g.title || '').toLowerCase().includes(search.toLowerCase())
+    const title = getTranslation(g.title, lang)
+    return (title || '').toLowerCase().includes(search.toLowerCase())
   })
 
   const stats = useMemo(() => {
@@ -90,7 +107,7 @@ export default function BuyerGuides() {
       sortable: true,
       render: (value, row) => (
         <div>
-          <p className="font-medium text-estate-900">{value}</p>
+          <p className="font-medium text-estate-900">{getTranslation(value, lang)}</p>
           <p className="text-xs text-estate-400">{row.slug}</p>
         </div>
       ),
@@ -100,14 +117,14 @@ export default function BuyerGuides() {
       label: t('admin.buyerGuides.tag'),
       render: (value, row) => (
         <span className={`inline-block rounded-full px-2.5 py-0.5 text-xs font-medium ${row.tag_color || 'bg-estate-100 text-estate-600'}`}>
-          {value}
+          {getTranslation(value, lang)}
         </span>
       ),
     },
     {
       key: 'read_time',
       label: t('admin.buyerGuides.readTime'),
-      render: (value) => <span className="text-sm text-estate-500">{value || '--'}</span>,
+      render: (value) => <span className="text-sm text-estate-500">{getTranslation(value, lang) || '--'}</span>,
     },
   ]
 
@@ -178,7 +195,7 @@ export default function BuyerGuides() {
       {/* Confirm Delete Dialog */}
       <ConfirmDialog
         open={!!deleteTarget}
-        message={deleteTarget ? `${t('admin.common.confirmDelete')} "${deleteTarget.title}"? ${t('admin.common.deleteMessage')}` : ''}
+        message={deleteTarget ? `${t('admin.common.confirmDelete')} "${getTranslation(deleteTarget.title, lang)}"? ${t('admin.common.deleteMessage')}` : ''}
         onConfirm={handleDelete}
         onCancel={() => setDeleteTarget(null)}
         loading={deleting}

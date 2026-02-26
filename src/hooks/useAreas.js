@@ -3,7 +3,17 @@ import { useTranslation } from 'react-i18next'
 
 // Helper function to get translation from JSONB field
 function getTranslation(jsonbField, lang, fallbackLang = 'en') {
-  if (!jsonbField || typeof jsonbField !== 'object') return jsonbField
+  if (!jsonbField) return ''
+  if (typeof jsonbField === 'string') {
+    try {
+      const parsed = JSON.parse(jsonbField)
+      if (typeof parsed === 'object' && parsed !== null) {
+        return parsed[lang] || parsed[fallbackLang] || parsed['en'] || ''
+      }
+    } catch { /* not JSON, return as-is */ }
+    return jsonbField
+  }
+  if (typeof jsonbField !== 'object') return jsonbField
   return jsonbField[lang] || jsonbField[fallbackLang] || jsonbField['en'] || ''
 }
 
@@ -16,6 +26,9 @@ function mapAreaFields(area, lang) {
     name: getTranslation(area.name, lang),
     description: getTranslation(area.description, lang),
     description_long: getTranslation(area.description_long, lang),
+    highlights: Array.isArray(area.highlights)
+      ? area.highlights.map((h) => getTranslation(h, lang))
+      : area.highlights,
   }
 }
 

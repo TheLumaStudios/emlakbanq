@@ -39,7 +39,7 @@ export default function Header() {
           <Logo size="2xl" />
         </Link>
 
-        <ul className="hidden items-center gap-2 lg:flex">
+        <ul className="hidden items-center gap-1 lg:flex xl:gap-2">
           {NAV_ITEMS.map((item) => {
             const isActive = pathname === item.path || pathname.startsWith(item.path + '/')
             return (
@@ -47,7 +47,7 @@ export default function Header() {
                 <Link
                   to={item.path}
                   className={cn(
-                    'rounded-md px-3.5 py-2 text-sm font-medium tracking-[0.08em] transition-all duration-300',
+                    'whitespace-nowrap rounded-md px-2.5 py-2 text-[13px] font-medium tracking-[0.04em] transition-all duration-300 xl:px-3.5 xl:text-sm xl:tracking-[0.08em]',
                     isActive
                       ? isTransparent ? 'text-blue-400' : 'text-blue-600'
                       : isTransparent

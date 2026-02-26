@@ -114,24 +114,24 @@ WHERE slug = 'first-time-buyer-tips';
 -- Guide 3: Mortgage & Finance
 UPDATE buyer_guides SET
   title = '{
-    "en": "Mortgage & Finance Options in the UAE",
-    "tr": "BAE''de İpotek ve Finansman Seçenekleri",
-    "ar": "خيارات الرهن العقاري والتمويل في الإمارات",
-    "ru": "Ипотека и финансирование в ОАЭ",
-    "de": "Hypotheken- und Finanzierungsoptionen in den VAE",
-    "fr": "Options de prêt hypothécaire et de financement aux EAU",
-    "fa": "گزینه‌های وام مسکن و تأمین مالی در امارات",
-    "hi": "UAE में बंधक और वित्त विकल्प"
+    "en": "Mortgage & Finance Options in Turkey",
+    "tr": "Türkiye''de Kredi ve Finansman Seçenekleri",
+    "ar": "خيارات التمويل والرهن العقاري في تركيا",
+    "ru": "Ипотека и финансирование в Турции",
+    "de": "Hypothekenoptionen in der Türkei",
+    "fr": "Options de prêt et de financement en Turquie",
+    "fa": "گزینه‌های وام مسکن و تأمین مالی در ترکیه",
+    "hi": "तुर्की में बंधक और वित्त विकल्प"
   }'::jsonb,
   description = '{
-    "en": "Navigate UAE mortgage regulations, compare rates from leading banks, and understand the financing options available to residents and non-residents alike.",
-    "tr": "BAE ipotek düzenlemelerini anlayın, önde gelen bankalardan oranları karşılaştırın ve yerleşiklere ve yabancılara sunulan finansman seçeneklerini keşfedin.",
-    "ar": "تعرف على لوائح الرهن العقاري في الإمارات، وقارن الأسعار من البنوك الرائدة، وافهم خيارات التمويل المتاحة للمقيمين وغير المقيمين.",
-    "ru": "Изучите ипотечное законодательство ОАЭ, сравните ставки ведущих банков и узнайте о доступных вариантах финансирования для резидентов и нерезидентов.",
-    "de": "Navigieren Sie durch die Hypothekenvorschriften der VAE, vergleichen Sie Zinssätze führender Banken und verstehen Sie die verfügbaren Finanzierungsoptionen.",
-    "fr": "Naviguez dans les réglementations hypothécaires des EAU, comparez les taux des banques leaders et comprenez les options de financement disponibles.",
-    "fa": "قوانین وام مسکن امارات را بررسی کنید، نرخ‌های بانک‌های پیشرو را مقایسه کنید و گزینه‌های تأمین مالی موجود را درک کنید.",
-    "hi": "UAE बंधक नियमों को समझें, प्रमुख बैंकों की दरों की तुलना करें और निवासियों और गैर-निवासियों के लिए उपलब्ध वित्तपोषण विकल्प जानें।"
+    "en": "Navigate Turkish mortgage regulations, compare rates from leading banks, and understand the financing options available to residents and non-residents.",
+    "tr": "Türkiye kredi düzenlemelerini anlayın, önde gelen bankalardan oranları karşılaştırın ve yerleşiklere ve yabancılara sunulan finansman seçeneklerini keşfedin.",
+    "ar": "تعرف على لوائح الرهن العقاري في تركيا، وقارن الأسعار من البنوك الرائدة، وافهم خيارات التمويل المتاحة.",
+    "ru": "Изучите турецкое ипотечное законодательство, сравните ставки ведущих банков и узнайте о доступных вариантах финансирования.",
+    "de": "Navigieren Sie durch die türkischen Hypothekenvorschriften, vergleichen Sie Zinssätze führender Banken und verstehen Sie die verfügbaren Finanzierungsoptionen.",
+    "fr": "Naviguez dans les réglementations hypothécaires turques, comparez les taux des banques leaders et comprenez les options de financement disponibles.",
+    "fa": "قوانین وام مسکن ترکیه را بررسی کنید، نرخ‌های بانک‌های پیشرو را مقایسه کنید و گزینه‌های تأمین مالی موجود را درک کنید.",
+    "hi": "तुर्की बंधक नियमों को समझें, प्रमुख बैंकों की दरों की तुलना करें और उपलब्ध वित्तपोषण विकल्प जानें।"
   }'::jsonb,
   tag = '{
     "en": "Finance",

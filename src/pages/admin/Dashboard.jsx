@@ -7,8 +7,17 @@ import { useToast } from '../../hooks/useToast'
 
 const getLocalizedValue = (field, lang = 'en') => {
   if (!field) return ''
-  if (typeof field === 'string') return field
-  return field[lang] || field.en || Object.values(field)[0] || ''
+  if (typeof field === 'string') {
+    try {
+      const parsed = JSON.parse(field)
+      if (typeof parsed === 'object' && parsed !== null) {
+        return parsed[lang] || parsed['en'] || Object.values(parsed).find((v) => v) || ''
+      }
+    } catch { /* not JSON */ }
+    return field
+  }
+  if (typeof field === 'object') return field[lang] || field['en'] || Object.values(field).find((v) => v) || ''
+  return String(field)
 }
 
 function getRelativeTime(dateStr) {

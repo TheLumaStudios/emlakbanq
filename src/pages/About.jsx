@@ -139,10 +139,7 @@ export default function About() {
       <section className="bg-white py-20 lg:py-24" ref={valuesRef}>
         <Container>
           <div className="text-center">
-            <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
-              {t('about.values.label', 'Our Values')}
-            </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
+            <h2 className="font-heading text-3xl font-bold text-estate-900 md:text-4xl">
               {t('about.values.title', 'The Principles That Guide Us')}
             </h2>
           </div>
@@ -178,7 +175,7 @@ export default function About() {
             <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
               {t('about.offices.label', 'Global Presence')}
             </p>
-            <h2 className="mt-3 font-heading text-3xl font-bold text-estate-900 md:text-4xl">
+            <h2 className="mt-3 font-heading text-3xl font-bold leading-tight tracking-widest text-estate-900 md:text-4xl md:leading-tight">
               {t('about.offices.title', 'Our Offices')}
             </h2>
             <p className="mx-auto mt-4 max-w-xl text-estate-500">

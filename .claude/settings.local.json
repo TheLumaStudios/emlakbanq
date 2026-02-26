@@ -6,7 +6,8 @@
       "Bash(npx vite build:*)",
       "Bash(ls:*)",
       "Bash(npx supabase:*)",
-      "Bash(done)"
+      "Bash(done)",
+      "Bash(node scripts/test-insert.js)"
     ]
   }
 }

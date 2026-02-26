@@ -3,8 +3,28 @@ import { useTranslation } from 'react-i18next'
 
 // Helper function to get translation from JSONB field
 function getTranslation(jsonbField, lang, fallbackLang = 'en') {
-  if (!jsonbField || typeof jsonbField !== 'object') return jsonbField
+  if (!jsonbField) return ''
+  if (typeof jsonbField === 'string') {
+    try {
+      const parsed = JSON.parse(jsonbField)
+      if (typeof parsed === 'object' && parsed !== null) {
+        return parsed[lang] || parsed[fallbackLang] || parsed['en'] || ''
+      }
+    } catch { /* not JSON, return as-is */ }
+    return jsonbField
+  }
+  if (typeof jsonbField !== 'object') return jsonbField
   return jsonbField[lang] || jsonbField[fallbackLang] || jsonbField['en'] || ''
+}
+
+// Format date string to localized format
+const LOCALE_MAP = { tr: 'tr-TR', en: 'en-US', de: 'de-DE', ru: 'ru-RU', bs: 'bs-BA' }
+function formatDate(dateStr, lang) {
+  if (!dateStr) return ''
+  try {
+    const d = new Date(dateStr)
+    return d.toLocaleDateString(LOCALE_MAP[lang] || lang, { year: 'numeric', month: 'long', day: 'numeric' })
+  } catch { return dateStr }
 }
 
 // Helper function to map database fields to current language
@@ -17,6 +37,8 @@ function mapBlogPostFields(post, lang) {
     excerpt: getTranslation(post.excerpt, lang),
     content: getTranslation(post.content, lang),
     category: getTranslation(post.category, lang),
+    read_time: getTranslation(post.read_time, lang),
+    date: formatDate(post.date, lang),
   }
 }
 

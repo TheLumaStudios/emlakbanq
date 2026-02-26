@@ -91,7 +91,7 @@ export default function AreaDetail() {
           <Container>
             <div className="mx-auto max-w-3xl">
               <h2 className="font-heading text-2xl font-bold text-estate-900">
-                {t('areas.detail.aboutTitle', 'About')} {area.name}
+                {area.name} {t('areas.detail.aboutTitle', 'About')}
               </h2>
               <p className="mt-6 text-base leading-relaxed text-estate-600">{area.description_long}</p>
             </div>
