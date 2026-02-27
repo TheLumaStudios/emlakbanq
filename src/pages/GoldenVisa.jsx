@@ -4,10 +4,16 @@ import SEOHead from '../components/seo/SEOHead'
 import Container from '../components/common/Container'
 import { ROUTES } from '../config/routes'
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
+import { useGoldenVisa } from '../hooks/useGoldenVisa'
+import LoadingSkeleton from '../components/common/LoadingSkeleton'
 
 export default function GoldenVisa() {
   const { t } = useTranslation()
   const benefitsRef = useRevealOnScroll()
+
+  const { data: benefits, loading: loadingBenefits } = useGoldenVisa('benefit')
+  const { data: eligibility, loading: loadingEligibility } = useGoldenVisa('eligibility')
+  const { data: processSteps, loading: loadingProcess } = useGoldenVisa('process_step')
 
   return (
     <>
@@ -57,9 +63,11 @@ export default function GoldenVisa() {
           </div>
 
           <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {['renewable_residency', 'family_sponsorship', 'business_ownership', 'ease_of_travel', 'tax_free', 'premium_services'].map((benefitKey) => (
+            {loadingBenefits ? (
+              <LoadingSkeleton variant="card" count={6} columns={3} />
+            ) : benefits?.map((item) => (
               <div
-                key={benefitKey}
+                key={item.id}
                 className="card-premium reveal group rounded-2xl bg-white p-7 transition-all duration-300 hover:-translate-y-1"
               >
                 {/* Green checkmark indicator */}
@@ -80,10 +88,10 @@ export default function GoldenVisa() {
                 </div>
 
                 <h3 className="mt-4 font-heading text-lg font-semibold text-estate-900">
-                  {t(`goldenVisa.benefits.${benefitKey}.title`)}
+                  {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-estate-500">
-                  {t(`goldenVisa.benefits.${benefitKey}.description`)}
+                  {item.description}
                 </p>
               </div>
             ))}
@@ -94,7 +102,7 @@ export default function GoldenVisa() {
       {/* ── Eligibility ─────────────────────────────────────────────── */}
       <section className="bg-yellow-50 py-20 lg:py-24">
         <Container>
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto" style={{ maxWidth: '48rem' }}>
             <div className="text-center">
               <p className="font-heading text-sm uppercase tracking-[0.25em] text-blue-600">
                 {t('goldenVisa.eligibility.label', 'Requirements')}
@@ -111,16 +119,22 @@ export default function GoldenVisa() {
             </div>
 
             <div className="mt-12 space-y-4">
-              {[1,2,3,4,5,6].map((index) => (
+              {loadingEligibility ? (
+                <div className="space-y-4">
+                  {[1,2,3,4,5,6].map((i) => (
+                    <div key={i} className="h-14 animate-pulse rounded-xl bg-estate-100" />
+                  ))}
+                </div>
+              ) : eligibility?.map((item, index) => (
                 <div
-                  key={index}
+                  key={item.id}
                   className="flex items-start gap-4 rounded-xl border border-estate-100 bg-white px-6 py-4 transition-all duration-300 hover:border-blue-200 hover:shadow-sm"
                 >
                   <div className="mt-0.5 flex h-6 w-6 flex-shrink-0 items-center justify-center rounded-full bg-blue-100 text-xs font-bold text-blue-800">
-                    {index}
+                    {index + 1}
                   </div>
                   <p className="text-sm leading-relaxed text-estate-700">
-                    {t(`goldenVisa.eligibility.item${index}`)}
+                    {item.description}
                   </p>
                 </div>
               ))}
@@ -142,25 +156,27 @@ export default function GoldenVisa() {
           </div>
 
           <div className="mx-auto mt-14 grid max-w-5xl gap-8 md:grid-cols-2 lg:grid-cols-4">
-            {[1,2,3,4].map((stepNumber) => (
-              <div key={stepNumber} className="relative text-center">
+            {loadingProcess ? (
+              <LoadingSkeleton variant="card" count={4} columns={4} />
+            ) : processSteps?.map((item, index) => (
+              <div key={item.id} className="relative text-center">
                 {/* Step Number */}
                 <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-blue-700 shadow-lg shadow-blue-500/20">
                   <span className="font-heading text-2xl font-bold text-white">
-                    {stepNumber}
+                    {index + 1}
                   </span>
                 </div>
 
                 {/* Connector line (hidden on last item and mobile) */}
-                {stepNumber < 4 && (
+                {index < (processSteps?.length || 0) - 1 && (
                   <div className="absolute left-[calc(50%+2.5rem)] top-8 hidden h-px w-[calc(100%-3rem)] bg-gradient-to-r from-blue-300 to-blue-100 lg:block" />
                 )}
 
                 <h3 className="mt-6 font-heading text-lg font-semibold text-estate-900">
-                  {t(`goldenVisa.process.step${stepNumber}.title`)}
+                  {item.title}
                 </h3>
                 <p className="mt-2 text-sm leading-relaxed text-estate-500">
-                  {t(`goldenVisa.process.step${stepNumber}.description`)}
+                  {item.description}
                 </p>
               </div>
             ))}

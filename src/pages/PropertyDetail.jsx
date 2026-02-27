@@ -154,7 +154,7 @@ export default function PropertyDetail() {
                   <h2 className="font-heading text-2xl font-bold text-estate-900">
                     {t('propertyDetail.aboutProperty', 'About This Property')}
                   </h2>
-                  <p className="mt-6 whitespace-pre-line text-base leading-relaxed text-estate-600">
+                  <p className="mt-6 whitespace-pre-line break-words text-base leading-relaxed text-estate-600">
                     {property.description}
                   </p>
                 </div>

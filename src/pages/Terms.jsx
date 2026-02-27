@@ -30,7 +30,7 @@ export default function Terms() {
       {/* ── İçerik ──────────────────────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-24">
         <Container>
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto" style={{ maxWidth: '48rem' }}>
             <p className="mb-12 text-sm text-estate-400">
               Son güncelleme: 27 Şubat 2026
             </p>

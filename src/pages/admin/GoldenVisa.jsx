@@ -5,7 +5,7 @@ import ConfirmDialog from '../../components/admin/ConfirmDialog'
 import { useToast } from '../../hooks/useToast'
 import AdminModal from '../../components/admin/AdminModal'
 
-const EMPTY_ITEM = { icon: '', title: '', description: '', sort_order: 0 }
+const EMPTY_ITEM = { title: '', description: '', sort_order: 0 }
 
 export default function GoldenVisa() {
   const { t } = useTranslation()
@@ -61,7 +61,6 @@ export default function GoldenVisa() {
   function openEditModal(item) {
     setEditingItem(item)
     setFormData({
-      icon: item.icon || '',
       title: item.title || '',
       description: item.description || '',
       sort_order: item.sort_order ?? 0,
@@ -216,8 +215,9 @@ export default function GoldenVisa() {
             <thead>
               <tr className="border-b border-estate-200 bg-estate-50">
                 <th className="px-4 py-3 font-semibold text-estate-600">{t('admin.common.order')}</th>
-                <th className="px-4 py-3 font-semibold text-estate-600">{t('admin.common.icon')}</th>
-                <th className="px-4 py-3 font-semibold text-estate-600">{t('admin.common.title')}</th>
+                {activeTab !== 'eligibility' && (
+                  <th className="px-4 py-3 font-semibold text-estate-600">{t('admin.common.title')}</th>
+                )}
                 <th className="hidden px-4 py-3 font-semibold text-estate-600 md:table-cell">{t('admin.common.description')}</th>
                 <th className="px-4 py-3 text-right font-semibold text-estate-600">{t('admin.common.actions')}</th>
               </tr>
@@ -226,12 +226,9 @@ export default function GoldenVisa() {
               {items.map((item) => (
                 <tr key={item.id} className="transition-colors hover:bg-yellow-50">
                   <td className="px-4 py-3 text-estate-400">{item.sort_order}</td>
-                  <td className="px-4 py-3">
-                    <span className="inline-flex h-8 w-8 items-center justify-center rounded-lg bg-blue-50 text-base">
-                      {item.icon}
-                    </span>
-                  </td>
-                  <td className="px-4 py-3 font-medium text-estate-900">{item.title}</td>
+                  {activeTab !== 'eligibility' && (
+                    <td className="px-4 py-3 font-medium text-estate-900">{item.title}</td>
+                  )}
                   <td className="hidden max-w-xs truncate px-4 py-3 text-estate-500 md:table-cell">
                     {item.description}
                   </td>
@@ -271,43 +268,32 @@ export default function GoldenVisa() {
         title={editingItem ? t('admin.common.editItem') : t('admin.common.addItem')}
       >
         <form onSubmit={handleSave} className="space-y-4">
-          <div className="grid grid-cols-2 gap-4">
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.icon')}</label>
-              <input
-                type="text"
-                name="icon"
-                value={formData.icon}
-                onChange={handleFormChange}
-                placeholder={t('admin.goldenVisa.iconPlaceholder')}
-                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              />
-            </div>
-            <div>
-              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
-              <input
-                type="number"
-                name="sort_order"
-                value={formData.sort_order}
-                onChange={handleFormChange}
-                min={0}
-                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-              />
-            </div>
-          </div>
-
           <div>
-            <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.title')}</label>
+            <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.sortOrder')}</label>
             <input
-              type="text"
-              name="title"
-              value={formData.title}
+              type="number"
+              name="sort_order"
+              value={formData.sort_order}
               onChange={handleFormChange}
-              required
-              placeholder={t('admin.goldenVisa.titlePlaceholder')}
-              className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              min={0}
+              className="w-24 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
             />
           </div>
+
+          {activeTab !== 'eligibility' && (
+            <div>
+              <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.title')}</label>
+              <input
+                type="text"
+                name="title"
+                value={formData.title}
+                onChange={handleFormChange}
+                required
+                placeholder={t('admin.goldenVisa.titlePlaceholder')}
+                className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+              />
+            </div>
+          )}
 
           <div>
             <label className="mb-1.5 block text-sm font-medium text-estate-700">{t('admin.common.description')}</label>

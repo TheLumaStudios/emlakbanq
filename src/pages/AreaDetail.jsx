@@ -89,11 +89,11 @@ export default function AreaDetail() {
       {area.description_long && (
         <section className="bg-white py-16 lg:py-20">
           <Container>
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto" style={{ maxWidth: '48rem' }}>
               <h2 className="font-heading text-2xl font-bold text-estate-900">
                 {area.name} {t('areas.detail.aboutTitle', 'About')}
               </h2>
-              <p className="mt-6 text-base leading-relaxed text-estate-600">{area.description_long}</p>
+              <p className="mt-6 whitespace-normal text-base leading-relaxed text-estate-600">{area.description_long}</p>
             </div>
           </Container>
         </section>
@@ -103,7 +103,7 @@ export default function AreaDetail() {
       {area.highlights?.length > 0 && (
         <section className="bg-yellow-50 py-16 lg:py-20">
           <Container>
-            <div className="mx-auto max-w-3xl">
+            <div className="mx-auto" style={{ maxWidth: '48rem' }}>
               <h2 className="font-heading text-2xl font-bold text-estate-900">
                 {t('areas.detail.highlights', 'Area Highlights')}
               </h2>

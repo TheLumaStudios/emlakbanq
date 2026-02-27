@@ -314,10 +314,9 @@ export default function BlogForm() {
             <MultilingualInput
               label={t('admin.blogForm.fullContent')}
               name="content"
-              type="textarea"
+              type="richtext"
               value={formData.content}
               onChange={handleChange}
-              rows={12}
               placeholder={t('admin.blogForm.contentPlaceholder')}
               help={t('admin.blogForm.contentHelp')}
             />

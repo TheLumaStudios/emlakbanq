@@ -60,6 +60,7 @@ export default function BuyerGuideForm() {
     }
   }, [id])
 
+
   const fetchGuide = async () => {
     setLoading(true)
     const { data, error } = await supabase
@@ -290,10 +291,9 @@ export default function BuyerGuideForm() {
             <MultilingualInput
               label={t('admin.buyerGuideForm.contentBody')}
               name="content"
-              type="textarea"
+              type="richtext"
               value={formData.content}
               onChange={handleChange}
-              rows={12}
               placeholder={t('admin.buyerGuideForm.contentBodyPlaceholder')}
               help={t('admin.buyerGuideForm.contentBodyHelp')}
             />

@@ -83,7 +83,7 @@ export default function About() {
       {/* ── Our Story ───────────────────────────────────────────────── */}
       <section className="bg-white py-20 lg:py-24">
         <Container>
-          <div className="mx-auto max-w-3xl">
+          <div className="mx-auto" style={{ maxWidth: '48rem' }}>
             <h2 className="font-heading text-3xl font-bold text-estate-900 md:text-4xl">
               {t('about.story.title', 'Built on Passion, Driven by Excellence')}
             </h2>

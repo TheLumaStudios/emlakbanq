@@ -7,7 +7,19 @@
       "Bash(ls:*)",
       "Bash(npx supabase:*)",
       "Bash(done)",
-      "Bash(node scripts/test-insert.js)"
+      "Bash(node scripts/test-insert.js)",
+      "Bash(npm ls react-quill-new)",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); content=data[0][''content'']; parsed=json.loads\\(content\\) if isinstance\\(content,str\\) else content; tr=parsed.get\\(''tr'',''''\\); print\\(tr[:2000]\\)\")",
+      "Bash(tr '{' '\\\\n')",
+      "Bash(curl -s \"https://ycrlkkkoxrsmugidznri.supabase.co/rest/v1/blog_posts?select=slug,content&published=eq.true&limit=1\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inljcmxra2tveHJzbXVnaWR6bnJpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTE3MzEyOSwiZXhwIjoyMDg2NzQ5MTI5fQ.ZfgE4FEPU2p13nJC3np9OUOuBJeKqUDUYF0nka57ihc\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inljcmxra2tveHJzbXVnaWR6bnJpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTE3MzEyOSwiZXhwIjoyMDg2NzQ5MTI5fQ.ZfgE4FEPU2p13nJC3np9OUOuBJeKqUDUYF0nka57ihc\")",
+      "Bash(python -c \"import sys,json; data=json.load\\(sys.stdin\\); content=data[0][''content''] if data else {}; tr=content.get\\(''tr'',''''\\) if isinstance\\(content,dict\\) else content; print\\(tr[:3000]\\)\")",
+      "Bash(git checkout -- src/pages/BlogPost.jsx src/pages/BuyerGuideDetail.jsx src/styles/app.css)",
+      "Bash(curl -s \"https://ycrlkkkoxrsmugidznri.supabase.co/rest/v1/blog_posts?select=id,slug,title,content&published=eq.true&order=sort_order\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inljcmxra2tveHJzbXVnaWR6bnJpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTE3MzEyOSwiZXhwIjoyMDg2NzQ5MTI5fQ.ZfgE4FEPU2p13nJC3np9OUOuBJeKqUDUYF0nka57ihc\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inljcmxra2tveHJzbXVnaWR6bnJpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTE3MzEyOSwiZXhwIjoyMDg2NzQ5MTI5fQ.ZfgE4FEPU2p13nJC3np9OUOuBJeKqUDUYF0nka57ihc\")",
+      "Bash(python -c \":*)",
+      "Bash(curl -s \"https://ycrlkkkoxrsmugidznri.supabase.co/rest/v1/blog_posts?select=id,slug,content&id=eq.cc8ac5d0-1a8a-4cfe-a2ec-07c78381c24e\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inljcmxra2tveHJzbXVnaWR6bnJpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTE3MzEyOSwiZXhwIjoyMDg2NzQ5MTI5fQ.ZfgE4FEPU2p13nJC3np9OUOuBJeKqUDUYF0nka57ihc\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inljcmxra2tveHJzbXVnaWR6bnJpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTE3MzEyOSwiZXhwIjoyMDg2NzQ5MTI5fQ.ZfgE4FEPU2p13nJC3np9OUOuBJeKqUDUYF0nka57ihc\")",
+      "Bash(curl -s \"https://ycrlkkkoxrsmugidznri.supabase.co/rest/v1/blog_posts?select=id,slug,content&published=eq.true&order=sort_order\" -H \"apikey: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inljcmxra2tveHJzbXVnaWR6bnJpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTE3MzEyOSwiZXhwIjoyMDg2NzQ5MTI5fQ.ZfgE4FEPU2p13nJC3np9OUOuBJeKqUDUYF0nka57ihc\" -H \"Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Inljcmxra2tveHJzbXVnaWR6bnJpIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc3MTE3MzEyOSwiZXhwIjoyMDg2NzQ5MTI5fQ.ZfgE4FEPU2p13nJC3np9OUOuBJeKqUDUYF0nka57ihc\")",
+      "Bash(where python)",
+      "Bash(python update_blog_posts.py)"
     ]
   }
 }

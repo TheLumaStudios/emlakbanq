@@ -1,11 +1,26 @@
-import { useState } from 'react'
+import { useState, lazy, Suspense } from 'react'
 import { useTranslation } from 'react-i18next'
 import { SUPPORTED_LANGUAGES } from '../../config/i18n'
+import 'react-quill-new/dist/quill.snow.css'
+
+const ReactQuill = lazy(() => import('react-quill-new'))
 
 const ALL_EDIT_LANGUAGES = [
   { code: 'tr', name: 'Türkçe', dir: 'ltr' },
   ...SUPPORTED_LANGUAGES.filter((l) => l.code !== 'tr'),
 ]
+
+const QUILL_MODULES = {
+  toolbar: [
+    [{ header: [2, 3, 4, false] }],
+    ['bold', 'italic', 'underline'],
+    [{ list: 'ordered' }, { list: 'bullet' }],
+    ['link'],
+    ['clean'],
+  ],
+}
+
+const QUILL_FORMATS = ['header', 'bold', 'italic', 'underline', 'list', 'link']
 
 /**
  * Multilingual Input Component
@@ -16,7 +31,7 @@ export default function MultilingualInput({
   name,
   value = {}, // JSONB object: { en: '...', tr: '...', de: '...', ... }
   onChange,
-  type = 'text', // 'text' or 'textarea'
+  type = 'text', // 'text', 'textarea', or 'richtext'
   required = false,
   placeholder = '',
   rows = 4,
@@ -72,7 +87,18 @@ export default function MultilingualInput({
             key={lang.code}
             className={activeTab === lang.code ? 'block' : 'hidden'}
           >
-            {type === 'textarea' ? (
+            {type === 'richtext' ? (
+              <Suspense fallback={<div className="h-64 animate-pulse rounded-md bg-estate-100" />}>
+                <ReactQuill
+                  theme="snow"
+                  value={translations[lang.code] || ''}
+                  onChange={(val) => handleChange(lang.code, val)}
+                  modules={QUILL_MODULES}
+                  formats={QUILL_FORMATS}
+                  placeholder={`${placeholder} (${lang.name})`}
+                />
+              </Suspense>
+            ) : type === 'textarea' ? (
               <textarea
                 value={translations[lang.code] || ''}
                 onChange={(e) => handleChange(lang.code, e.target.value)}

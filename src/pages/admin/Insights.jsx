@@ -13,12 +13,25 @@ function getDisplayText(field, lang) {
     try {
       const parsed = JSON.parse(field)
       if (typeof parsed === 'object' && parsed !== null) {
-        return parsed[lang] || parsed['en'] || ''
+        return parsed[lang] || parsed['tr'] || ''
       }
     } catch { /* not JSON */ }
     return field
   }
-  if (typeof field === 'object') return field[lang] || field['en'] || Object.values(field).find((v) => v) || ''
+  if (typeof field === 'object') return field[lang] || field['tr'] || Object.values(field).find((v) => v) || ''
+  return field
+}
+
+// Convert JSONB field to object for form editing
+function toJsonb(field) {
+  if (!field) return {}
+  if (typeof field === 'string') {
+    try {
+      const parsed = JSON.parse(field)
+      if (typeof parsed === 'object' && parsed !== null) return parsed
+    } catch (e) { /* not JSON */ }
+    return { tr: field }
+  }
   return field
 }
 
@@ -67,7 +80,7 @@ export default function Insights() {
   function openHighlightModal(item = null) {
     if (item) {
       setEditingHighlight(item)
-      const text = typeof item.text === 'string' ? { en: item.text } : (item.text || {})
+      const text = toJsonb(item.text)
       setHighlightForm({ text, sort_order: item.sort_order ?? 0 })
     } else {
       setEditingHighlight(null)
@@ -127,7 +140,7 @@ export default function Insights() {
   function openAreaModal(item = null) {
     if (item) {
       setEditingArea(item)
-      const area = typeof item.area === 'string' ? { en: item.area } : (item.area || {})
+      const area = toJsonb(item.area)
       setAreaForm({
         area,
         roi: item.roi || '',
