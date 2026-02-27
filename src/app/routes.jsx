@@ -35,6 +35,14 @@ import AdminInsights from '../pages/admin/Insights'
 import AdminContactSubmissions from '../pages/admin/ContactSubmissions'
 import AdminSettings from '../pages/admin/Settings'
 
+// Rental Management pages
+import RentalDashboard from '../pages/admin/RentalDashboard'
+import Tenants from '../pages/admin/Tenants'
+import TenantForm from '../pages/admin/TenantForm'
+import RentalContracts from '../pages/admin/RentalContracts'
+import RentalContractForm from '../pages/admin/RentalContractForm'
+import RentalPayments from '../pages/admin/RentalPayments'
+
 export const router = createBrowserRouter([
   {
     element: <RootLayout />,
@@ -82,6 +90,15 @@ export const router = createBrowserRouter([
       { path: 'insights', element: <AdminInsights /> },
       { path: 'contact', element: <AdminContactSubmissions /> },
       { path: 'settings', element: <AdminSettings /> },
+      // Rental Management
+      { path: 'rentals', element: <RentalDashboard /> },
+      { path: 'tenants', element: <Tenants /> },
+      { path: 'tenants/new', element: <TenantForm /> },
+      { path: 'tenants/:id', element: <TenantForm /> },
+      { path: 'contracts', element: <RentalContracts /> },
+      { path: 'contracts/new', element: <RentalContractForm /> },
+      { path: 'contracts/:id', element: <RentalContractForm /> },
+      { path: 'payments', element: <RentalPayments /> },
     ],
   },
 ])
