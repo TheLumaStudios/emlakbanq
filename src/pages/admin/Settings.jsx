@@ -23,7 +23,7 @@ const EMPTY_OFFICE = { city: '', address: '', phone: '', email: '', sort_order: 
 const EMPTY_STAT = { value: '', label: '', sort_order: 0 }
 
 export default function Settings() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const toast = useToast()
 
   // Hero Images state
@@ -361,7 +361,7 @@ export default function Settings() {
     if (!deleteTarget) return ''
     const label = deleteTarget.label
     const displayLabel = label && typeof label === 'object'
-      ? (label.en || label.tr || Object.values(label)[0] || '')
+      ? (label[i18n.language] || label.tr || label.en || Object.values(label)[0] || '')
       : label
     return deleteTarget.city || displayLabel || deleteTarget.key || 'this item'
   }
@@ -586,7 +586,7 @@ export default function Settings() {
                 </div>
                 <p className="text-sm font-medium text-estate-700">
                   {stat.label && typeof stat.label === 'object'
-                    ? (stat.label.en || stat.label.tr || Object.values(stat.label)[0] || '')
+                    ? (stat.label[i18n.language] || stat.label.tr || stat.label.en || Object.values(stat.label)[0] || '')
                     : stat.label}
                 </p>
               </div>
