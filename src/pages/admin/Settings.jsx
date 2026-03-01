@@ -357,12 +357,23 @@ export default function Settings() {
     setSaving(false)
   }
 
+  function parseLabel(label) {
+    if (typeof label === 'string') {
+      try {
+        label = JSON.parse(label)
+      } catch {
+        return label
+      }
+    }
+    if (label && typeof label === 'object') {
+      return label[i18n.language] || label.tr || label.en || Object.values(label)[0] || ''
+    }
+    return label || ''
+  }
+
   function getDeleteLabel() {
     if (!deleteTarget) return ''
-    const label = deleteTarget.label
-    const displayLabel = label && typeof label === 'object'
-      ? (label[i18n.language] || label.tr || label.en || Object.values(label)[0] || '')
-      : label
+    const displayLabel = parseLabel(deleteTarget.label)
     return deleteTarget.city || displayLabel || deleteTarget.key || 'this item'
   }
 
@@ -585,9 +596,7 @@ export default function Settings() {
                   </span>
                 </div>
                 <p className="text-sm font-medium text-estate-700">
-                  {stat.label && typeof stat.label === 'object'
-                    ? (stat.label[i18n.language] || stat.label.tr || stat.label.en || Object.values(stat.label)[0] || '')
-                    : stat.label}
+                  {parseLabel(stat.label)}
                 </p>
               </div>
             ))}
