@@ -430,26 +430,12 @@ export default function Settings() {
                     {t('admin.common.save')}
                   </button>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <ImageUpload
-                    name="url"
-                    value={hero.url || ''}
-                    onChange={(_, value) => handleHeroChange(hero.page, 'url', value)}
-                    folder="hero-images"
-                  />
-                  <div>
-                    <label className="mb-1.5 block text-sm font-medium text-estate-700">
-                      {t('admin.common.altText')}
-                    </label>
-                    <input
-                      type="text"
-                      value={hero.alt || ''}
-                      onChange={(e) => handleHeroChange(hero.page, 'alt', e.target.value)}
-                      placeholder={t('admin.common.altText')}
-                      className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                    />
-                  </div>
-                </div>
+                <ImageUpload
+                  name="url"
+                  value={hero.url || ''}
+                  onChange={(_, value) => handleHeroChange(hero.page, 'url', value)}
+                  folder="hero-images"
+                />
               </div>
             ))}
           </div>
@@ -556,9 +542,9 @@ export default function Settings() {
         </div>
 
         {loadingStats ? (
-          <div className="space-y-2 p-5">
-            {[1, 2].map((i) => (
-              <div key={i} className="h-12 animate-pulse rounded bg-estate-100" />
+          <div className="grid gap-4 p-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="h-32 animate-pulse rounded-lg bg-estate-100" />
             ))}
           </div>
         ) : stats.length === 0 ? (
@@ -566,56 +552,45 @@ export default function Settings() {
             <p className="text-sm text-estate-400">{t('admin.settings.noStats')}</p>
           </div>
         ) : (
-          <div className="overflow-x-auto">
-            <table className="w-full text-left text-sm">
-              <thead>
-                <tr className="border-b border-estate-200 bg-estate-50">
-                  <th className="px-4 py-3 font-semibold text-estate-600">{t('admin.common.order')}</th>
-                  <th className="px-4 py-3 font-semibold text-estate-600">{t('admin.settings.value')}</th>
-                  <th className="px-4 py-3 font-semibold text-estate-600">{t('admin.settings.label')}</th>
-                  <th className="px-4 py-3 text-right font-semibold text-estate-600">{t('admin.common.actions')}</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-estate-100">
-                {stats.map((stat) => (
-                  <tr key={stat.id} className="transition-colors hover:bg-yellow-50">
-                    <td className="px-4 py-3 text-estate-400">{stat.sort_order}</td>
-                    <td className="px-4 py-3">
-                      <span className="inline-flex rounded-md bg-blue-50 px-2.5 py-1 text-sm font-bold text-blue-700">
-                        {stat.value}
-                      </span>
-                    </td>
-                    <td className="px-4 py-3 text-estate-700">
-                      {stat.label && typeof stat.label === 'object'
-                        ? (stat.label.en || stat.label.tr || Object.values(stat.label)[0] || '')
-                        : stat.label}
-                    </td>
-                    <td className="px-4 py-3">
-                      <div className="flex items-center justify-end gap-2">
-                        <button
-                          onClick={() => openStatModal(stat)}
-                          className="rounded-md p-1.5 text-estate-400 transition-colors hover:bg-estate-100 hover:text-estate-700"
-                          title={t('admin.common.edit')}
-                        >
-                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
-                          </svg>
-                        </button>
-                        <button
-                          onClick={() => confirmDelete(stat, 'company_stats')}
-                          className="rounded-md p-1.5 text-estate-400 transition-colors hover:bg-red-50 hover:text-red-600"
-                          title={t('admin.common.delete')}
-                        >
-                          <svg className="h-4 w-4" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
-                          </svg>
-                        </button>
-                      </div>
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="grid gap-4 p-5 sm:grid-cols-2 lg:grid-cols-4">
+            {stats.map((stat) => (
+              <div
+                key={stat.id}
+                className="group relative overflow-hidden rounded-lg border border-estate-200 bg-gradient-to-br from-white to-estate-50 p-5 shadow-sm transition-all hover:shadow-md"
+              >
+                <div className="absolute right-3 top-3 flex gap-1 opacity-0 transition-opacity group-hover:opacity-100">
+                  <button
+                    onClick={() => openStatModal(stat)}
+                    className="rounded-md bg-white p-1.5 text-estate-400 shadow-sm transition-colors hover:text-blue-600"
+                    title={t('admin.common.edit')}
+                  >
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0 1 15.75 21H5.25A2.25 2.25 0 0 1 3 18.75V8.25A2.25 2.25 0 0 1 5.25 6H10" />
+                    </svg>
+                  </button>
+                  <button
+                    onClick={() => confirmDelete(stat, 'company_stats')}
+                    className="rounded-md bg-white p-1.5 text-estate-400 shadow-sm transition-colors hover:text-red-600"
+                    title={t('admin.common.delete')}
+                  >
+                    <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" d="m14.74 9-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 0 1-2.244 2.077H8.084a2.25 2.25 0 0 1-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 0 0-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 0 1 3.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 0 0-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 0 0-7.5 0" />
+                    </svg>
+                  </button>
+                </div>
+                <div className="mb-1 flex items-baseline justify-between">
+                  <span className="text-3xl font-bold text-blue-600">{stat.value}</span>
+                  <span className="rounded-full bg-estate-200 px-2 py-0.5 text-xs font-medium text-estate-600">
+                    #{stat.sort_order}
+                  </span>
+                </div>
+                <p className="text-sm font-medium text-estate-700">
+                  {stat.label && typeof stat.label === 'object'
+                    ? (stat.label.en || stat.label.tr || Object.values(stat.label)[0] || '')
+                    : stat.label}
+                </p>
+              </div>
+            ))}
           </div>
         )}
       </section>
@@ -657,7 +632,7 @@ export default function Settings() {
                       <input
                         type="text"
                         value={displayValue}
-                        onChange={(e) => handleSettingValueChange(setting.id, JSON.stringify(e.target.value))}
+                        onChange={(e) => handleSettingValueChange(setting.id, e.target.value)}
                         className="flex-1 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                       />
                       <button
