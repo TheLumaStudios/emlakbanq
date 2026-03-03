@@ -357,12 +357,23 @@ export default function Settings() {
     setSaving(false)
   }
 
+  function parseLabel(label) {
+    if (typeof label === 'string') {
+      try {
+        label = JSON.parse(label)
+      } catch {
+        return label
+      }
+    }
+    if (label && typeof label === 'object') {
+      return label[i18n.language] || label.tr || label.en || Object.values(label)[0] || ''
+    }
+    return label || ''
+  }
+
   function getDeleteLabel() {
     if (!deleteTarget) return ''
-    const label = deleteTarget.label
-    const displayLabel = label && typeof label === 'object'
-      ? (label.en || label.tr || Object.values(label)[0] || '')
-      : label
+    const displayLabel = parseLabel(deleteTarget.label)
     return deleteTarget.city || displayLabel || deleteTarget.key || 'this item'
   }
 
@@ -542,9 +553,9 @@ export default function Settings() {
         </div>
 
         {loadingStats ? (
-          <div className="space-y-2 p-5">
-            {[1, 2].map((i) => (
-              <div key={i} className="h-12 animate-pulse rounded bg-estate-100" />
+          <div className="grid gap-4 p-5 sm:grid-cols-2 lg:grid-cols-4">
+            {[1, 2, 3, 4].map((i) => (
+              <div key={i} className="h-32 animate-pulse rounded-lg bg-estate-100" />
             ))}
           </div>
         ) : stats.length === 0 ? (
@@ -572,16 +583,9 @@ export default function Settings() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-estate-700">
-                      {(() => {
-                        let label = stat.label
-                        if (typeof label === 'string') {
-                          try { label = JSON.parse(label) } catch {}
-                        }
-                        if (label && typeof label === 'object') {
-                          return label[i18n.language] || label.tr || label.en || Object.values(label)[0] || ''
-                        }
-                        return label || ''
-                      })()}
+                      {stat.label && typeof stat.label === 'object'
+                        ? (stat.label.en || stat.label.tr || Object.values(stat.label)[0] || '')
+                        : stat.label}
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex items-center justify-end gap-2">
@@ -650,7 +654,7 @@ export default function Settings() {
                       <input
                         type="text"
                         value={displayValue}
-                        onChange={(e) => handleSettingValueChange(setting.id, JSON.stringify(e.target.value))}
+                        onChange={(e) => handleSettingValueChange(setting.id, e.target.value)}
                         className="flex-1 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                       />
                       <button
