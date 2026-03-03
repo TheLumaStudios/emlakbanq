@@ -648,11 +648,11 @@ export default function Settings() {
           <div className="divide-y divide-estate-100">
             {/* Simple text settings (brand, domain, tagline) */}
             {siteSettings
-              .filter((s) => s.key !== 'social')
+              .filter((s) => s.key === 'brand' || s.key === 'domain')
               .map((setting) => {
                 const displayValue =
                   typeof setting.value === 'string' ? setting.value : JSON.stringify(setting.value).replace(/^"|"$/g, '')
-                const labels = { brand: t('admin.settings.brandName'), domain: t('admin.settings.domain'), tagline: t('admin.settings.tagline') }
+                const labels = { brand: t('admin.settings.brandName'), domain: t('admin.settings.domain') }
                 return (
                   <div key={setting.id} className="flex flex-col gap-3 px-5 py-4 sm:flex-row sm:items-center">
                     <div className="w-28 shrink-0">
@@ -664,26 +664,12 @@ export default function Settings() {
                       <input
                         type="text"
                         value={displayValue}
-                        onChange={(e) => handleSettingValueChange(setting.id, e.target.value)}
-                        className="flex-1 rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                        readOnly
+                        className="flex-1 rounded-lg border border-estate-200 bg-estate-50 px-3 py-2 text-sm text-estate-500 cursor-not-allowed"
                       />
-                      <button
-                        onClick={() => saveSiteSetting(setting)}
-                        disabled={savingSetting === setting.id}
-                        className="inline-flex shrink-0 items-center gap-1.5 rounded-lg bg-blue-500 px-3 py-2 text-xs font-semibold text-white transition-colors hover:bg-blue-600 disabled:opacity-50"
-                      >
-                        {savingSetting === setting.id ? (
-                          <svg className="h-3.5 w-3.5 animate-spin" viewBox="0 0 24 24" fill="none">
-                            <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                            <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                          </svg>
-                        ) : (
-                          <svg className="h-3.5 w-3.5" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="m4.5 12.75 6 6 9-13.5" />
-                          </svg>
-                        )}
-                        {t('admin.common.save')}
-                      </button>
+                      <svg className="h-4 w-4 shrink-0 text-estate-400" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M16.5 10.5V6.75a4.5 4.5 0 1 0-9 0v3.75m-.75 11.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-6.75a2.25 2.25 0 0 0-2.25-2.25H6.75a2.25 2.25 0 0 0-2.25 2.25v6.75a2.25 2.25 0 0 0 2.25 2.25Z" />
+                      </svg>
                     </div>
                   </div>
                 )
