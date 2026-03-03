@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { ROUTES } from '../config/routes'
 import { APP_CONFIG } from '../config/constants'
+import { useDataStore } from '../stores/useDataStore'
 import Logo from '../components/common/Logo'
 
 const SOCIAL_ICONS = {
@@ -21,6 +22,16 @@ const SOCIAL_ICONS = {
 
 export default function Footer() {
   const { t } = useTranslation()
+  const siteSettings = useDataStore((s) => s.siteSettings)
+
+  const socialLinks = (() => {
+    if (!siteSettings?.social) return APP_CONFIG.social
+    const raw = siteSettings.social
+    if (typeof raw === 'string') {
+      try { return JSON.parse(raw) } catch { return APP_CONFIG.social }
+    }
+    return raw
+  })()
 
   return (
     <footer className="relative bg-estate-900 text-estate-300">
@@ -34,7 +45,7 @@ export default function Footer() {
               {t('footer.description')}
             </p>
             <div className="mt-6 flex gap-4">
-              {Object.entries(APP_CONFIG.social).map(([platform, url]) => (
+              {Object.entries(socialLinks).map(([platform, url]) => (
                 <a
                   key={platform}
                   href={url}

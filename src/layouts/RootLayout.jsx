@@ -5,12 +5,18 @@ import Footer from './Footer'
 import WhatsAppButton from '../components/common/WhatsAppButton'
 import { useDirection } from '../hooks/useDirection'
 import { useUIStore } from '../stores/useUIStore'
+import { useDataStore } from '../stores/useDataStore'
 
 export default function RootLayout() {
   useDirection()
 
   const { pathname } = useLocation()
   const closeMobileMenu = useUIStore((s) => s.closeMobileMenu)
+  const fetchSiteSettings = useDataStore((s) => s.fetchSiteSettings)
+
+  useEffect(() => {
+    fetchSiteSettings()
+  }, [fetchSiteSettings])
 
   useEffect(() => {
     closeMobileMenu()

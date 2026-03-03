@@ -6,6 +6,7 @@ import ConfirmDialog from '../../components/admin/ConfirmDialog'
 import ImageUpload from '../../components/admin/ImageUpload'
 import MultilingualInput from '../../components/admin/MultilingualInput'
 import { useToast } from '../../hooks/useToast'
+import { useDataStore } from '../../stores/useDataStore'
 
 const HERO_PAGES = [
   'home',
@@ -25,6 +26,7 @@ const EMPTY_STAT = { value: '', label: '', sort_order: 0 }
 export default function Settings() {
   const { t, i18n } = useTranslation()
   const toast = useToast()
+  const refetchSiteSettings = useDataStore((s) => s.refetchSiteSettings)
 
   // Hero Images state
   const [heroImages, setHeroImages] = useState([])
@@ -324,6 +326,7 @@ export default function Settings() {
     } else {
       toast.success(t('admin.common.savedSuccessfully'))
       await fetchSiteSettings()
+      refetchSiteSettings()
     }
     setSavingSetting(null)
   }

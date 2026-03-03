@@ -1,7 +1,11 @@
 import { APP_CONFIG } from '../../config/constants'
+import { useDataStore } from '../../stores/useDataStore'
 
 export default function SEOHead({ title, description }) {
-  const fullTitle = title || `${APP_CONFIG.brand} | ${APP_CONFIG.tagline}`
+  const siteSettings = useDataStore((s) => s.siteSettings)
+  const brand = siteSettings?.brand || APP_CONFIG.brand
+  const tagline = siteSettings?.tagline || APP_CONFIG.tagline
+  const fullTitle = title || `${brand} | ${tagline}`
 
   return (
     <>
