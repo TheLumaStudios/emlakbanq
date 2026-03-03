@@ -23,7 +23,7 @@ const EMPTY_OFFICE = { city: '', address: '', phone: '', email: '', sort_order: 
 const EMPTY_STAT = { value: '', label: '', sort_order: 0 }
 
 export default function Settings() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const toast = useToast()
 
   // Hero Images state
@@ -430,26 +430,12 @@ export default function Settings() {
                     {t('admin.common.save')}
                   </button>
                 </div>
-                <div className="grid gap-3 sm:grid-cols-2">
-                  <ImageUpload
-                    name="url"
-                    value={hero.url || ''}
-                    onChange={(_, value) => handleHeroChange(hero.page, 'url', value)}
-                    folder="hero-images"
-                  />
-                  <div>
-                    <label className="mb-1.5 block text-sm font-medium text-estate-700">
-                      {t('admin.common.altText')}
-                    </label>
-                    <input
-                      type="text"
-                      value={hero.alt || ''}
-                      onChange={(e) => handleHeroChange(hero.page, 'alt', e.target.value)}
-                      placeholder={t('admin.common.altText')}
-                      className="w-full rounded-lg border border-estate-200 px-3 py-2 text-sm text-estate-900 placeholder:text-estate-300 focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
-                    />
-                  </div>
-                </div>
+                <ImageUpload
+                  name="url"
+                  value={hero.url || ''}
+                  onChange={(_, value) => handleHeroChange(hero.page, 'url', value)}
+                  folder="hero-images"
+                />
               </div>
             ))}
           </div>
@@ -586,9 +572,16 @@ export default function Settings() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-estate-700">
-                      {stat.label && typeof stat.label === 'object'
-                        ? (stat.label.en || stat.label.tr || Object.values(stat.label)[0] || '')
-                        : stat.label}
+                      {(() => {
+                        let label = stat.label
+                        if (typeof label === 'string') {
+                          try { label = JSON.parse(label) } catch {}
+                        }
+                        if (label && typeof label === 'object') {
+                          return label[i18n.language] || label.tr || label.en || Object.values(label)[0] || ''
+                        }
+                        return label || ''
+                      })()}
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex items-center justify-end gap-2">
