@@ -583,9 +583,16 @@ export default function Settings() {
                       </span>
                     </td>
                     <td className="px-4 py-3 text-estate-700">
-                      {stat.label && typeof stat.label === 'object'
-                        ? (stat.label.en || stat.label.tr || Object.values(stat.label)[0] || '')
-                        : stat.label}
+                      {(() => {
+                        let label = stat.label
+                        if (typeof label === 'string') {
+                          try { label = JSON.parse(label) } catch { return label }
+                        }
+                        if (label && typeof label === 'object') {
+                          return label[i18n.language] || label.tr || label.en || Object.values(label)[0] || ''
+                        }
+                        return label || ''
+                      })()}
                     </td>
                     <td className="px-4 py-3">
                       <div className="flex items-center justify-end gap-2">
