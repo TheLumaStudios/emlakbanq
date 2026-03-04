@@ -6,7 +6,7 @@ import ListStatCard from '../../components/admin/ListStatCard'
 import { useToast } from '../../hooks/useToast'
 
 export default function ContactSubmissions() {
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const toast = useToast()
 
   const FILTERS = [
@@ -21,12 +21,13 @@ export default function ContactSubmissions() {
   const [filter, setFilter] = useState('all')
   const [search, setSearch] = useState('')
   const [unreadCount, setUnreadCount] = useState(0)
+  const [propertiesMap, setPropertiesMap] = useState({})
 
   const totalCount = submissions.length
   const filteredSubmissions = submissions.filter((s) => {
     if (!search) return true
     const q = search.toLowerCase()
-    return (s.name || '').toLowerCase().includes(q) || (s.email || '').toLowerCase().includes(q) || (s.property_interest || '').toLowerCase().includes(q)
+    return (s.name || '').toLowerCase().includes(q) || (s.email || '').toLowerCase().includes(q) || (s.interest || '').toLowerCase().includes(q)
   })
 
   // Expanded row for viewing message
@@ -42,7 +43,32 @@ export default function ContactSubmissions() {
 
   useEffect(() => {
     fetchUnreadCount()
+    fetchProperties()
   }, [])
+
+  function getLang(jsonb) {
+    if (!jsonb) return ''
+    if (typeof jsonb === 'string') {
+      try {
+        const p = JSON.parse(jsonb)
+        if (typeof p === 'object' && p !== null) return p[i18n.language] || p.en || ''
+      } catch { return jsonb }
+      return jsonb
+    }
+    if (typeof jsonb !== 'object') return jsonb
+    return jsonb[i18n.language] || jsonb.en || ''
+  }
+
+  async function fetchProperties() {
+    const { data } = await supabase
+      .from('properties')
+      .select('slug, name, location, price, image, beds, sqft, type_label')
+    if (data) {
+      const map = {}
+      data.forEach((p) => { map[p.slug] = p })
+      setPropertiesMap(map)
+    }
+  }
 
   async function fetchSubmissions() {
     setLoading(true)
@@ -115,10 +141,26 @@ export default function ContactSubmissions() {
     setExpandedId((prev) => (prev === id ? null : id))
   }
 
+  function translateInterest(raw) {
+    if (!raw) return '-'
+    const key = raw.split(' | ')[0]
+    const map = {
+      buying: t('contact.form.interestOptions.buying', 'Mülk Satın Alma'),
+      investing: t('contact.form.interestOptions.investing', 'Yatırım Fırsatları'),
+      visa: t('contact.form.interestOptions.visa', 'Altın Vize Yardımı'),
+      selling: t('contact.form.interestOptions.selling', 'Mülk Satma'),
+      other: t('contact.form.interestOptions.other', 'Diğer Soru'),
+    }
+    return map[key] || key
+  }
+
+  const LOCALE_MAP = { tr: 'tr-TR', de: 'de-DE', ru: 'ru-RU', bs: 'bs-BA', en: 'en-GB' }
+  const currentLocale = LOCALE_MAP[i18n.language] || 'tr-TR'
+
   function formatDate(dateStr) {
     if (!dateStr) return '-'
     const date = new Date(dateStr)
-    return date.toLocaleDateString('en-GB', {
+    return date.toLocaleDateString(currentLocale, {
       day: 'numeric',
       month: 'short',
       year: 'numeric',
@@ -296,7 +338,7 @@ export default function ContactSubmissions() {
                       </td>
                       <td className="hidden px-4 py-3 text-estate-500 lg:table-cell">{item.phone || '-'}</td>
                       <td className="hidden max-w-[160px] truncate px-4 py-3 text-estate-500 sm:table-cell">
-                        {item.property_interest || '-'}
+                        {translateInterest(item.interest)}
                       </td>
                       <td className="whitespace-nowrap px-4 py-3 text-xs text-estate-400">
                         {formatDate(item.created_at)}
@@ -373,12 +415,56 @@ export default function ContactSubmissions() {
                               </div>
                             </div>
 
-                            {item.property_interest && (
-                              <div className="text-sm">
-                                <span className="font-medium text-estate-600">{t('admin.contactSubmissions.interest')}: </span>
-                                <span className="text-estate-500">{item.property_interest}</span>
-                              </div>
-                            )}
+                            {item.interest && (() => {
+                              const parts = item.interest.split(' | ')
+                              const interestType = parts[0]
+                              const propertySlug = parts[1]
+                              const prop = propertySlug ? propertiesMap[propertySlug] : null
+                              return (
+                                <div className="space-y-3">
+                                  <div className="text-sm">
+                                    <span className="font-medium text-estate-600">{t('admin.contactSubmissions.interest')}: </span>
+                                    <span className="text-estate-500">{translateInterest(interestType)}</span>
+                                  </div>
+                                  {prop && (
+                                    <div className="overflow-hidden rounded-lg border border-blue-200 bg-blue-50">
+                                      <p className="px-4 pt-3 text-xs font-semibold uppercase tracking-wider text-blue-600">
+                                        {t('admin.contactSubmissions.selectedProperty', 'İlgilenilen Mülk')}
+                                      </p>
+                                      <div className="flex items-start gap-4 p-4">
+                                        {prop.image && (
+                                          <img src={prop.image} alt={getLang(prop.name)} className="h-20 w-28 flex-shrink-0 rounded-md object-cover" />
+                                        )}
+                                        <div className="min-w-0 space-y-1">
+                                          <p className="font-semibold text-estate-900">{getLang(prop.name)}</p>
+                                          {prop.location && (
+                                            <p className="text-sm text-estate-500">{getLang(prop.location)}</p>
+                                          )}
+                                          <div className="flex flex-wrap gap-3 text-sm text-estate-600">
+                                            {prop.price && <span className="font-medium text-blue-700">{prop.price}</span>}
+                                            {prop.beds && (
+                                              <span>{prop.beds} {t('admin.contactSubmissions.beds', 'Yatak')}</span>
+                                            )}
+                                            {prop.sqft && <span>{prop.sqft}</span>}
+                                            {prop.type_label && (
+                                              <span className="rounded bg-estate-100 px-2 py-0.5 text-xs">{getLang(prop.type_label)}</span>
+                                            )}
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  )}
+                                  {propertySlug && !prop && (
+                                    <div className="flex items-center gap-2 rounded-lg border border-blue-200 bg-blue-50 px-4 py-2.5 text-sm">
+                                      <svg className="h-4 w-4 flex-shrink-0 text-blue-600" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor">
+                                        <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 21v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21m0 0h4.5V3.545M12.75 21h7.5V10.75M2.25 21h1.5m18 0h-18M2.25 9l4.5-1.636M18.75 3l-1.5.545m0 6.205l3 1m1.5.5l-1.5-.5M6.75 7.364V3h-3v18m3-13.636l10.5-3.819" />
+                                      </svg>
+                                      <span className="text-blue-700">{propertySlug}</span>
+                                    </div>
+                                  )}
+                                </div>
+                              )
+                            })()}
 
                             <div>
                               <p className="mb-1 text-xs font-semibold uppercase tracking-wider text-estate-400">{t('admin.contactSubmissions.message')}</p>
@@ -389,7 +475,7 @@ export default function ContactSubmissions() {
 
                             {item.email && (
                               <a
-                                href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(item.email)}&su=${encodeURIComponent('Re: ' + (item.property_interest || 'Your inquiry'))}`}
+                                href={`https://mail.google.com/mail/?view=cm&to=${encodeURIComponent(item.email)}&su=${encodeURIComponent('Re: ' + (item.interest || t('admin.contactSubmissions.defaultSubject', 'Sorgunuz')))}`}
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex items-center gap-2 rounded-lg bg-blue-500 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-blue-600"

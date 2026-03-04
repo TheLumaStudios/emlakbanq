@@ -15,7 +15,7 @@ export default function AreaDetail() {
   if (loading) return <LoadingSkeleton variant="detail" />
   if (error || !area) return (
     <Container className="py-20">
-      <ErrorMessage onRetry={() => window.location.reload()} />
+      <ErrorMessage />
     </Container>
   )
 

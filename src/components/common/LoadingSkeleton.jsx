@@ -12,7 +12,7 @@ export default function LoadingSkeleton({ variant = 'card', count = 3, columns =
         <div className="flex flex-col items-center gap-4">
           <img
             src="/logo.png"
-            alt="Loading..."
+            alt="Yükleniyor..."
             className="h-16 w-auto animate-pulse"
           />
           <div className="flex gap-1">

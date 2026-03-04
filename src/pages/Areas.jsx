@@ -47,7 +47,7 @@ export default function Areas() {
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {loading && <LoadingSkeleton variant="card" count={8} columns={4} />}
-            {error && <ErrorMessage onRetry={() => window.location.reload()} />}
+            {error && <ErrorMessage />}
             {!loading && !error && areas?.map((area, index) => (
               <Link
                 key={area.key}

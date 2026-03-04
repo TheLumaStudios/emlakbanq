@@ -1,6 +1,7 @@
 import { useTranslation } from 'react-i18next'
+import { Link } from 'react-router-dom'
 
-export default function ErrorMessage({ onRetry }) {
+export default function ErrorMessage() {
   const { t } = useTranslation()
 
   return (
@@ -11,19 +12,17 @@ export default function ErrorMessage({ onRetry }) {
         </svg>
       </div>
       <p className="mt-4 text-lg font-medium text-estate-900">
-        {t('common.error', 'Something went wrong')}
+        {t('common.error', 'Bir hata oluştu')}
       </p>
       <p className="mt-2 text-sm text-estate-500">
-        {t('common.errorDescription', 'Please try again later.')}
+        {t('common.errorDescription', 'Lütfen daha sonra tekrar deneyin.')}
       </p>
-      {onRetry && (
-        <button
-          onClick={onRetry}
-          className="mt-6 rounded-full bg-estate-900 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-estate-800"
-        >
-          {t('common.retry', 'Try Again')}
-        </button>
-      )}
+      <Link
+        to="/"
+        className="mt-6 inline-block rounded-full bg-estate-900 px-6 py-2.5 text-sm font-medium text-white transition-colors hover:bg-estate-800"
+      >
+        {t('common.backToHome', 'Ana Sayfaya Dön')}
+      </Link>
     </div>
   )
 }

@@ -5,6 +5,7 @@ import SEOHead from '../components/seo/SEOHead'
 import Container from '../components/common/Container'
 import { ROUTES } from '../config/routes'
 import { useContactSubmit } from '../hooks/useContactSubmit'
+import { useProperties } from '../hooks/useProperties'
 import { useRevealOnScroll } from '../hooks/useRevealOnScroll'
 
 const INITIAL_FORM = {
@@ -12,12 +13,15 @@ const INITIAL_FORM = {
   email: '',
   phone: '',
   interest: '',
+  property: '',
   message: '',
   consent: false,
 }
 
 export default function Contact() {
   const { t } = useTranslation()
+
+  const { data: properties } = useProperties()
 
   const INTEREST_OPTIONS = [
     { value: '', label: t('contact.form.selectInterest', 'Select your interest...') },
@@ -79,6 +83,7 @@ export default function Contact() {
     setForm((prev) => ({
       ...prev,
       [name]: type === 'checkbox' ? checked : value,
+      ...(name === 'interest' && value !== 'buying' ? { property: '' } : {}),
     }))
   }
 
@@ -219,6 +224,34 @@ export default function Contact() {
                       ))}
                     </select>
                   </div>
+
+                  {/* Property Selector (visible when interest is buying) */}
+                  {form.interest === 'buying' && properties?.length > 0 && (
+                    <div>
+                      <label
+                        htmlFor="property"
+                        className="mb-1.5 block text-sm font-medium text-estate-700"
+                      >
+                        {t('contact.form.property', 'İlgilendiğiniz Mülk')}
+                      </label>
+                      <select
+                        id="property"
+                        name="property"
+                        value={form.property}
+                        onChange={handleChange}
+                        className={inputClass}
+                      >
+                        <option value="">
+                          {t('contact.form.selectProperty', 'Mülk seçin...')}
+                        </option>
+                        {properties.map((p) => (
+                          <option key={p.id} value={p.slug}>
+                            {p.name} {p.location ? `— ${p.location}` : ''}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                  )}
 
                   {/* Message */}
                   <div>

@@ -75,7 +75,7 @@ export default function Properties() {
         <Container>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {loading && <LoadingSkeleton variant="card" count={6} columns={3} />}
-            {error && <ErrorMessage onRetry={() => window.location.reload()} />}
+            {error && <ErrorMessage />}
             {!loading && !error && properties?.length === 0 && (
               <div className="col-span-full py-20 text-center">
                 <p className="text-lg text-estate-500">

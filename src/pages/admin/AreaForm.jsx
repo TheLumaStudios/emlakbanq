@@ -10,8 +10,50 @@ import ConfirmDialog from '../../components/admin/ConfirmDialog'
 import { useToast } from '../../hooks/useToast'
 import { useUnsavedChanges } from '../../hooks/useUnsavedChanges'
 
+const SUPPORTED_LANGS = ['tr', 'en', 'de', 'ru', 'bs']
+
 const generateSlug = (title) =>
   title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/(^-|-$)/g, '')
+
+function highlightsArrayToMultilingual(arr) {
+  if (!arr || arr.length === 0) return {}
+  let isMultilingual = false
+  try {
+    const parsed = typeof arr[0] === 'string' ? JSON.parse(arr[0]) : arr[0]
+    if (typeof parsed === 'object' && parsed !== null) isMultilingual = true
+  } catch { /* plain string */ }
+
+  if (isMultilingual) {
+    const result = {}
+    SUPPORTED_LANGS.forEach(lang => {
+      result[lang] = arr.map(a => {
+        try {
+          const parsed = typeof a === 'string' ? JSON.parse(a) : a
+          return (typeof parsed === 'object' && parsed !== null) ? (parsed[lang] || '') : a
+        } catch { return a }
+      }).join('\n')
+    })
+    return result
+  }
+  return { tr: arr.join('\n') }
+}
+
+function multilingualToHighlightsArray(obj) {
+  if (!obj || typeof obj !== 'object') return []
+  const langs = SUPPORTED_LANGS.filter(l => obj[l]?.trim())
+  if (langs.length === 0) return []
+  const maxLines = Math.max(...langs.map(l => (obj[l] || '').split('\n').filter(Boolean).length))
+  const result = []
+  for (let i = 0; i < maxLines; i++) {
+    const item = {}
+    langs.forEach(l => {
+      const lines = (obj[l] || '').split('\n').filter(Boolean)
+      if (lines[i]) item[l] = lines[i].trim()
+    })
+    if (Object.keys(item).length > 0) result.push(JSON.stringify(item))
+  }
+  return result
+}
 
 const INITIAL_STATE = {
   name: {},
@@ -22,7 +64,7 @@ const INITIAL_STATE = {
   image: '',
   avg_price: '',
   roi: '',
-  highlights: '',
+  highlights: {},
   featured: false,
   sort_order: 0,
 }
@@ -68,7 +110,7 @@ export default function AreaForm() {
         image: data.image || '',
         avg_price: data.avg_price || '',
         roi: data.roi || '',
-        highlights: (data.highlights || []).join('\n'),
+        highlights: highlightsArrayToMultilingual(data.highlights || []),
         featured: data.featured || false,
         sort_order: data.sort_order || 0,
       }
@@ -178,7 +220,7 @@ export default function AreaForm() {
       image: formData.image,
       avg_price: formData.avg_price,
       roi: formData.roi,
-      highlights: formData.highlights.split('\n').filter(Boolean),
+      highlights: multilingualToHighlightsArray(formData.highlights),
       featured: formData.featured,
       sort_order: parseInt(formData.sort_order, 10) || 0,
     }
@@ -353,7 +395,7 @@ export default function AreaForm() {
             />
 
             {/* Highlights */}
-            <AdminFormField
+            <MultilingualInput
               label={t('admin.areaForm.highlights')}
               name="highlights"
               type="textarea"

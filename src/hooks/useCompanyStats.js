@@ -29,6 +29,7 @@ export function useCompanyStats() {
     ...result,
     data: result.data?.map((item) => ({
       ...item,
+      value: getTranslation(item.value, lang),
       label: getTranslation(item.label, lang),
     })),
   }

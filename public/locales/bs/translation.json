@@ -22,7 +22,8 @@
     "beds": "Spavaće sobe",
     "bedrooms": "Spavaće sobe",
     "sqft": "sq ft",
-    "roi": "Povrat investicije"
+    "roi": "Povrat investicije",
+    "errorDescription": "Molimo pokušajte ponovo kasnije."
   },
   "nav": {
     "home": "Početna",
@@ -61,7 +62,7 @@
       "propertiesLabel": "Premium oglasa",
       "countries": "40+",
       "countriesLabel": "Zemalja kojima služimo",
-      "volume": "$2B+",
+      "volume": "2Mlr ₺+",
       "volumeLabel": "Obim transakcija"
     },
     "services": {
@@ -237,8 +238,14 @@
       "title": "Naši uredi",
       "description": "Strateški pozicionirani na raskršću globalne investicije, naši uredi su vaša kapija ka luksuznome tržištu nekretnina u Alanji.",
       "officeLabel": "Ured",
-      "alanya": { "city": "Alanja, Turska", "address": "Oba Mah., Alanja, Antalija" },
-      "istanbul": { "city": "Istanbul, Turska", "address": "Skyland Istanbul" }
+      "alanya": {
+        "city": "Alanja, Turska",
+        "address": "Oba Mah., Alanja, Antalija"
+      },
+      "istanbul": {
+        "city": "Istanbul, Turska",
+        "address": "Skyland Istanbul"
+      }
     },
     "cta": {
       "title": "Spremni započeti svoje putovanje?",
@@ -288,7 +295,9 @@
       "privacyLink": "Politika privatnosti",
       "sending": "Slanje...",
       "success": "Hvala! Vaša poruka je poslana. Javit ćemo vam se u roku od 24 sata.",
-      "error": "Došlo je do greške. Pokušajte ponovo."
+      "error": "Došlo je do greške. Pokušajte ponovo.",
+      "property": "Nekretnina od interesa",
+      "selectProperty": "Odaberite nekretninu..."
     },
     "info": {
       "title": "Kontaktirajte nas",
@@ -790,14 +799,13 @@
       "cancel": "Otkaži"
     },
     "blog": {
-      "title": "Blog objave",
+      "title": "Naslov",
       "subtitle": "Upravljajte blog sadržajem",
       "addNew": "Dodaj novu objavu",
       "editPost": "Uredi blog objavu",
       "addPost": "Dodaj blog objavu",
       "backToBlog": "Povratak na blog objave",
       "image": "Slika",
-      "title": "Naslov",
       "category": "Kategorija",
       "published": "Objavljeno",
       "date": "Datum",
@@ -933,7 +941,10 @@
       "deleteConfirm": "Jeste li sigurni da želite obrisati poruku od \"{{name}}\"? Ova akcija se ne može poništiti.",
       "markedRead": "Označeno kao pročitano",
       "markedUnread": "Označeno kao nepročitano",
-      "replyViaEmail": "Odgovori putem emaila"
+      "replyViaEmail": "Odgovori putem emaila",
+      "defaultSubject": "Vaš upit",
+      "selectedProperty": "Odabrana nekretnina",
+      "beds": "Spavaće sobe"
     },
     "goldenVisa": {
       "subtitle": "Upravljajte prednostima, kriterijima podobnosti i koracima procesa",
@@ -1016,8 +1027,12 @@
       "days": "dana",
       "viewAll": "Prikaži sve",
       "noUpcomingPayments": "Nema predstojećih plaćanja",
+      "viewTenants": "Prikaži Stanare",
+      "viewTenantsDesc": "Upravljaj svim stanarima",
       "addTenant": "Dodaj Stanara",
       "addTenantDesc": "Kreiraj novi zapis stanara",
+      "viewContracts": "Prikaži Ugovore",
+      "viewContractsDesc": "Svi ugovori o najmu",
       "addContract": "Kreiraj Ugovor",
       "addContractDesc": "Novi ugovor o najmu",
       "viewPayments": "Prikaži Plaćanja",
@@ -1156,7 +1171,13 @@
       "tenant": "Stanar",
       "property": "Nekretnina",
       "amount": "Iznos",
-      "status": "Status",
+      "status": {
+        "pending": "Na čekanju",
+        "paid": "Plaćeno",
+        "overdue": "Zakasnelo",
+        "partial": "Djelimično",
+        "waived": "Otpisano"
+      },
       "noPayments": "Još nema zabilježenih plaćanja",
       "markPaid": "Označi kao Plaćeno",
       "markPending": "Poništi",
@@ -1169,14 +1190,7 @@
       "paidAmount": "Plaćeni Iznos",
       "transactionReference": "Referenca Transakcije",
       "transactionReferencePlaceholder": "Broj bankovnog transfera, broj čeka itd.",
-      "confirmPaid": "Označi kao Plaćeno",
-      "status": {
-        "pending": "Na čekanju",
-        "paid": "Plaćeno",
-        "overdue": "Zakasnelo",
-        "partial": "Djelimično",
-        "waived": "Otpisano"
-      }
+      "confirmPaid": "Označi kao Plaćeno"
     }
   }
 }

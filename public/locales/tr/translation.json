@@ -22,7 +22,8 @@
     "beds": "Yatak Odası",
     "bedrooms": "Yatak Odası",
     "sqft": "sq ft",
-    "roi": "Yatırım Getirisi"
+    "roi": "Yatırım Getirisi",
+    "errorDescription": "Lütfen daha sonra tekrar deneyin."
   },
   "nav": {
     "home": "Ana Sayfa",
@@ -61,7 +62,7 @@
       "propertiesLabel": "Premium İlan",
       "countries": "40+",
       "countriesLabel": "Hizmet Verilen Ülke",
-      "volume": "$2B+",
+      "volume": "2Mr ₺+",
       "volumeLabel": "İşlem Hacmi"
     },
     "services": {
@@ -237,8 +238,14 @@
       "title": "Ofislerimiz",
       "description": "Küresel yatırımın kesişim noktasında stratejik olarak konumlanmış ofislerimiz, Alanya'nin lüks gayrimenkul piyasasına açılan kapınızdır.",
       "officeLabel": "Ofisi",
-      "alanya": { "city": "Alanya, Türkiye", "address": "Oba Mah., Alanya, Antalya" },
-      "istanbul": { "city": "İstanbul, Türkiye", "address": "Skyland Istanbul" }
+      "alanya": {
+        "city": "Alanya, Türkiye",
+        "address": "Oba Mah., Alanya, Antalya"
+      },
+      "istanbul": {
+        "city": "İstanbul, Türkiye",
+        "address": "Skyland Istanbul"
+      }
     },
     "cta": {
       "title": "Yolculuğunuza Başlamaya Hazır mısınız?",
@@ -288,7 +295,9 @@
       "privacyLink": "Gizlilik Politikası",
       "sending": "Gönderiliyor...",
       "success": "Teşekkürler! Mesajınız gönderildi. 24 saat içinde size geri dönüş yapacağız.",
-      "error": "Bir hata oluştu. Lütfen tekrar deneyin."
+      "error": "Bir hata oluştu. Lütfen tekrar deneyin.",
+      "property": "İlgilendiğiniz Mülk",
+      "selectProperty": "Mülk seçin..."
     },
     "info": {
       "title": "Bize Ulaşın",
@@ -790,14 +799,13 @@
       "cancel": "İptal"
     },
     "blog": {
-      "title": "Blog Yazıları",
+      "title": "Başlık",
       "subtitle": "Blog içeriğini yönetin",
       "addNew": "Yeni Yazı Ekle",
       "editPost": "Blog Yazısını Düzenle",
       "addPost": "Blog Yazısı Ekle",
       "backToBlog": "Blog Yazılarına Dön",
       "image": "Resim",
-      "title": "Başlık",
       "category": "Kategori",
       "published": "Yayınlandı",
       "date": "Tarih",
@@ -933,7 +941,10 @@
       "deleteConfirm": "\"{{name}}\" adlı kişiden gelen mesajı silmek istediğinizden emin misiniz? Bu işlem geri alınamaz.",
       "markedRead": "Okundu olarak işaretlendi",
       "markedUnread": "Okunmadı olarak işaretlendi",
-      "replyViaEmail": "E-posta ile Yanıtla"
+      "replyViaEmail": "E-posta ile Yanıtla",
+      "defaultSubject": "Sorgunuz",
+      "selectedProperty": "İlgilenilen Mülk",
+      "beds": "Yatak"
     },
     "goldenVisa": {
       "subtitle": "Avantajları, uygunluk kriterlerini ve süreç adımlarını yönetin",
@@ -1016,8 +1027,12 @@
       "days": "gün",
       "viewAll": "Tümünü Gör",
       "noUpcomingPayments": "Yaklaşan ödeme yok",
+      "viewTenants": "Kiracıları Görüntüle",
+      "viewTenantsDesc": "Tüm kiracıları yönet",
       "addTenant": "Kiracı Ekle",
       "addTenantDesc": "Yeni kiracı kaydı oluştur",
+      "viewContracts": "Sözleşmeleri Görüntüle",
+      "viewContractsDesc": "Tüm kira sözleşmeleri",
       "addContract": "Sözleşme Oluştur",
       "addContractDesc": "Yeni kira sözleşmesi",
       "viewPayments": "Ödemeleri Görüntüle",
@@ -1156,7 +1171,13 @@
       "tenant": "Kiracı",
       "property": "Mülk",
       "amount": "Tutar",
-      "status": "Durum",
+      "status": {
+        "pending": "Beklemede",
+        "paid": "Ödendi",
+        "overdue": "Gecikmiş",
+        "partial": "Kısmi",
+        "waived": "Vazgeçildi"
+      },
       "noPayments": "Henüz ödeme kaydı yok",
       "markPaid": "Ödendi İşaretle",
       "markPending": "Geri Al",
@@ -1169,14 +1190,7 @@
       "paidAmount": "Ödenen Tutar",
       "transactionReference": "İşlem Referansı",
       "transactionReferencePlaceholder": "Banka dekont no, çek no vb.",
-      "confirmPaid": "Ödendi Olarak İşaretle",
-      "status": {
-        "pending": "Beklemede",
-        "paid": "Ödendi",
-        "overdue": "Gecikmiş",
-        "partial": "Kısmi",
-        "waived": "Vazgeçildi"
-      }
+      "confirmPaid": "Ödendi Olarak İşaretle"
     }
   }
 }

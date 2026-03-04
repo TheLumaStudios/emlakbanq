@@ -11,13 +11,17 @@ export function useContactSubmit() {
     setError(null)
     setSuccess(false)
 
+    const interest = formData.property
+      ? `${formData.interest} | ${formData.property}`
+      : formData.interest
+
     const { error } = await supabase
       .from('contact_submissions')
       .insert({
         name: formData.name,
         email: formData.email,
         phone: formData.phone || null,
-        interest: formData.interest,
+        interest,
         message: formData.message || null,
       })
 

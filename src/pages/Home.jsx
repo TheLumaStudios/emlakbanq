@@ -40,7 +40,7 @@ export default function Home() {
         <div className="absolute inset-0">
           <ImageWithLoader
             src={heroImages?.home || ''}
-            alt="Alanya skyline"
+            alt="Alanya manzarası"
             priority={true}
           />
           <div className="absolute inset-0 bg-gradient-to-b from-estate-950/80 via-estate-900/60 to-estate-950/90" />
@@ -146,14 +146,14 @@ export default function Home() {
                 to={ROUTES.PROPERTY_DETAIL.replace(':slug', property.slug)}
                 className={`reveal reveal-delay-${(index % 3) + 1} card-premium group overflow-hidden rounded-2xl ${
                   index === 0
-                    ? 'lg:col-span-7 lg:row-span-2'
+                    ? 'lg:col-span-7 lg:row-span-2 lg:flex lg:flex-col'
                     : index < 3
                       ? 'lg:col-span-5'
                       : 'lg:col-span-4'
                 }`}
               >
                 {/* Property Image */}
-                <div className={`relative overflow-hidden ${index === 0 ? 'h-72 lg:h-full lg:min-h-[420px]' : 'h-56'}`}>
+                <div className={`relative overflow-hidden ${index === 0 ? 'h-72 lg:flex-[2] lg:min-h-0' : 'h-56'}`}>
                   <ImageWithLoader
                     src={property.image}
                     alt={property.name}
@@ -177,7 +177,7 @@ export default function Home() {
                   </div>
                 </div>
 
-                <div className="p-5">
+                <div className={`p-5 ${index === 0 ? 'lg:flex-[0.5]' : ''}`}>
                   <h3 className="font-heading text-lg font-bold text-estate-900 transition-colors duration-300 group-hover:text-blue-600">
                     {property.name}
                   </h3>

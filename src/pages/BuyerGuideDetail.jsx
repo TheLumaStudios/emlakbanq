@@ -16,7 +16,7 @@ export default function BuyerGuideDetail() {
   if (loading) return <LoadingSkeleton variant="detail" />
   if (error || !guide) return (
     <Container className="py-20">
-      <ErrorMessage onRetry={() => window.location.reload()} />
+      <ErrorMessage />
     </Container>
   )
 

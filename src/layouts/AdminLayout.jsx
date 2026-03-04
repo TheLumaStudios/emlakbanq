@@ -27,7 +27,7 @@ export default function AdminLayout() {
         <div className="flex flex-col items-center gap-4">
           <img
             src="/logo.png"
-            alt="Loading..."
+            alt="Yükleniyor..."
             className="h-16 w-auto animate-pulse"
           />
           <div className="flex gap-1">
@@ -35,7 +35,7 @@ export default function AdminLayout() {
             <div className="h-2 w-2 animate-bounce rounded-full bg-blue-500" style={{ animationDelay: '150ms' }} />
             <div className="h-2 w-2 animate-bounce rounded-full bg-blue-500" style={{ animationDelay: '300ms' }} />
           </div>
-          <p className="text-sm text-estate-400">Loading admin panel...</p>
+          <p className="text-sm text-estate-400">Admin paneli yükleniyor...</p>
         </div>
       </div>
     )

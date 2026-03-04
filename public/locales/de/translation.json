@@ -20,7 +20,8 @@
     "from": "Ab",
     "bedrooms": "Schlafzimmer",
     "sqft": "sq ft",
-    "roi": "Rendite"
+    "roi": "Rendite",
+    "errorDescription": "Bitte versuchen Sie es später erneut."
   },
   "nav": {
     "home": "Startseite",
@@ -59,7 +60,7 @@
       "propertiesLabel": "Premium-Angebote",
       "countries": "40+",
       "countriesLabel": "Betreute Länder",
-      "volume": "$2B+",
+      "volume": "2Mrd ₺+",
       "volumeLabel": "Transaktionsvolumen"
     },
     "services": {
@@ -212,18 +213,36 @@
     "values": {
       "label": "Unsere Werte",
       "title": "Unsere Werte",
-      "transparency": { "title": "Transparenz", "description": "Keine versteckten Gebühren, keine übertriebenen Versprechen. Ehrliche, datengestützte Beratung bei jedem Schritt." },
-      "expertise": { "title": "Fachkompetenz", "description": "Zertifizierte Fachleute mit jahrelanger Erfahrung auf dem Alanyaaner Immobilienmarkt." },
-      "global": { "title": "Globale Reichweite", "description": "Büros in Alanya und Istanbul, Betreuung von Kunden aus über 40 Ländern." },
-      "client": { "title": "Der Kunde zuerst", "description": "Jede Entscheidung orientiert sich an den Investitionszielen unserer Kunden." }
+      "transparency": {
+        "title": "Transparenz",
+        "description": "Keine versteckten Gebühren, keine übertriebenen Versprechen. Ehrliche, datengestützte Beratung bei jedem Schritt."
+      },
+      "expertise": {
+        "title": "Fachkompetenz",
+        "description": "Zertifizierte Fachleute mit jahrelanger Erfahrung auf dem Alanyaaner Immobilienmarkt."
+      },
+      "global": {
+        "title": "Globale Reichweite",
+        "description": "Büros in Alanya und Istanbul, Betreuung von Kunden aus über 40 Ländern."
+      },
+      "client": {
+        "title": "Der Kunde zuerst",
+        "description": "Jede Entscheidung orientiert sich an den Investitionszielen unserer Kunden."
+      }
     },
     "offices": {
       "label": "Globale Präsenz",
       "title": "Unsere Büros",
       "description": "Strategisch an der Schnittstelle globaler Investitionen positioniert, sind unsere Büros Ihr Tor zum Luxusimmobilienmarkt in Alanya.",
       "officeLabel": "Büro",
-      "alanya": { "city": "Alanya, Türkei", "address": "Oba Mah., Alanya, Antalya" },
-      "istanbul": { "city": "Istanbul, Türkei", "address": "Skyland Istanbul" }
+      "alanya": {
+        "city": "Alanya, Türkei",
+        "address": "Oba Mah., Alanya, Antalya"
+      },
+      "istanbul": {
+        "city": "Istanbul, Türkei",
+        "address": "Skyland Istanbul"
+      }
     },
     "cta": {
       "title": "Bereit, Ihre Reise zu beginnen?",
@@ -272,7 +291,9 @@
       "privacyLink": "Datenschutzrichtlinie",
       "sending": "Wird gesendet...",
       "success": "Vielen Dank! Ihre Nachricht wurde gesendet. Wir werden uns innerhalb von 24 Stunden bei Ihnen melden.",
-      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+      "error": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+      "property": "Immobilie von Interesse",
+      "selectProperty": "Immobilie auswählen..."
     },
     "info": {
       "title": "Kontakt aufnehmen",
@@ -295,7 +316,10 @@
     }
   },
   "goldenVisa": {
-    "meta": { "title": "Türkische Staatsbürgerschaft | EmlakBanq", "description": "Erfahren Sie mehr über den Erwerb der türkischen Staatsbürgerschaft durch Immobilieninvestition." },
+    "meta": {
+      "title": "Türkische Staatsbürgerschaft | EmlakBanq",
+      "description": "Erfahren Sie mehr über den Erwerb der türkischen Staatsbürgerschaft durch Immobilieninvestition."
+    },
     "heading": "Ihr Tor zur türkischen Staatsbürgerschaft durch Immobilieninvestition",
     "subtitle": "Staatsbürgerschaft durch Investition",
     "hero": {
@@ -305,12 +329,30 @@
     "benefits": {
       "label": "Warum türkische Staatsbürgerschaft?",
       "title": "Vorteile der türkischen Staatsbürgerschaft durch Investition",
-      "renewable_residency": { "title": "Volle Bürgerrechte", "description": "Erwerben Sie die dauerhafte türkische Staatsbürgerschaft für sich und Ihre Familie. Nicht nur eine Aufenthaltserlaubnis, sondern volle Bürgerrechte." },
-      "family_sponsorship": { "title": "Staatsbürgerschaft für die Familie", "description": "Ihr Ehepartner und Kinder unter 18 Jahren können in denselben Antrag aufgenommen werden und gemeinsam die Staatsbürgerschaft erhalten." },
-      "business_ownership": { "title": "Geschäftsfreiheit", "description": "Als türkischer Staatsbürger können Sie Ihr Unternehmen in der Türkei ohne Einschränkungen gründen und führen." },
-      "ease_of_travel": { "title": "Visafreies Reisen", "description": "Reisen Sie mit dem türkischen Pass visafrei oder mit Visum bei Ankunft in über 110 Länder." },
-      "tax_free": { "title": "Wettbewerbsfähiges Steuersystem", "description": "Profitieren Sie von wettbewerbsfähigen Steuersätzen, besonderen Anreizen für ausländische Investoren und Doppelbesteuerungsabkommen." },
-      "premium_services": { "title": "Hoher Lebensstandard", "description": "Als türkischer Staatsbürger erhalten Sie vollen Zugang zu Gesundheitsversorgung, Bildung und internationalen Bankdienstleistungen." }
+      "renewable_residency": {
+        "title": "Volle Bürgerrechte",
+        "description": "Erwerben Sie die dauerhafte türkische Staatsbürgerschaft für sich und Ihre Familie. Nicht nur eine Aufenthaltserlaubnis, sondern volle Bürgerrechte."
+      },
+      "family_sponsorship": {
+        "title": "Staatsbürgerschaft für die Familie",
+        "description": "Ihr Ehepartner und Kinder unter 18 Jahren können in denselben Antrag aufgenommen werden und gemeinsam die Staatsbürgerschaft erhalten."
+      },
+      "business_ownership": {
+        "title": "Geschäftsfreiheit",
+        "description": "Als türkischer Staatsbürger können Sie Ihr Unternehmen in der Türkei ohne Einschränkungen gründen und führen."
+      },
+      "ease_of_travel": {
+        "title": "Visafreies Reisen",
+        "description": "Reisen Sie mit dem türkischen Pass visafrei oder mit Visum bei Ankunft in über 110 Länder."
+      },
+      "tax_free": {
+        "title": "Wettbewerbsfähiges Steuersystem",
+        "description": "Profitieren Sie von wettbewerbsfähigen Steuersätzen, besonderen Anreizen für ausländische Investoren und Doppelbesteuerungsabkommen."
+      },
+      "premium_services": {
+        "title": "Hoher Lebensstandard",
+        "description": "Als türkischer Staatsbürger erhalten Sie vollen Zugang zu Gesundheitsversorgung, Bildung und internationalen Bankdienstleistungen."
+      }
     },
     "eligibility": {
       "label": "Voraussetzungen",
@@ -326,10 +368,22 @@
     "process": {
       "label": "So funktioniert es",
       "title": "Ihr Weg zur türkischen Staatsbürgerschaft",
-      "step1": { "title": "Immobilienauswahl", "description": "Wählen Sie mit Unterstützung unserer erfahrenen Berater eine qualifizierende Immobilie im Wert von 400.000 USD oder mehr." },
-      "step2": { "title": "Kauf und Registrierung", "description": "Schließen Sie den Kauf ab und registrieren Sie die Immobilie beim Grundbuch- und Katasteramt." },
-      "step3": { "title": "Dokumentenvorbereitung", "description": "Sammeln Sie die erforderlichen Dokumente einschließlich Reisepass, Geburtsurkunde, Eigentumsurkunde und Wertgutachten." },
-      "step4": { "title": "Genehmigung der Staatsbürgerschaft", "description": "Reichen Sie Ihren Antrag ein und erhalten Sie die türkische Staatsbürgerschaft innerhalb von 3-6 Monaten." }
+      "step1": {
+        "title": "Immobilienauswahl",
+        "description": "Wählen Sie mit Unterstützung unserer erfahrenen Berater eine qualifizierende Immobilie im Wert von 400.000 USD oder mehr."
+      },
+      "step2": {
+        "title": "Kauf und Registrierung",
+        "description": "Schließen Sie den Kauf ab und registrieren Sie die Immobilie beim Grundbuch- und Katasteramt."
+      },
+      "step3": {
+        "title": "Dokumentenvorbereitung",
+        "description": "Sammeln Sie die erforderlichen Dokumente einschließlich Reisepass, Geburtsurkunde, Eigentumsurkunde und Wertgutachten."
+      },
+      "step4": {
+        "title": "Genehmigung der Staatsbürgerschaft",
+        "description": "Reichen Sie Ihren Antrag ein und erhalten Sie die türkische Staatsbürgerschaft innerhalb von 3-6 Monaten."
+      }
     },
     "cta": {
       "title": "Starten Sie Ihre Reise zur Staatsbürgerschaft",
@@ -431,11 +485,17 @@
     }
   },
   "privacy": {
-    "meta": { "title": "Datenschutzrichtlinie | EmlakBanq", "description": "Datenschutzrichtlinie von EmlakBanq." },
+    "meta": {
+      "title": "Datenschutzrichtlinie | EmlakBanq",
+      "description": "Datenschutzrichtlinie von EmlakBanq."
+    },
     "heading": "Datenschutzrichtlinie"
   },
   "terms": {
-    "meta": { "title": "Nutzungsbedingungen | EmlakBanq", "description": "Nutzungsbedingungen von EmlakBanq." },
+    "meta": {
+      "title": "Nutzungsbedingungen | EmlakBanq",
+      "description": "Nutzungsbedingungen von EmlakBanq."
+    },
     "heading": "Nutzungsbedingungen"
   },
   "footer": {
@@ -454,7 +514,9 @@
     "copyright": "2026 EmlakBanq. Alle Rechte vorbehalten."
   },
   "notFound": {
-    "meta": { "title": "Seite nicht gefunden | EmlakBanq" },
+    "meta": {
+      "title": "Seite nicht gefunden | EmlakBanq"
+    },
     "title": "Seite nicht gefunden",
     "message": "Die gesuchte Seite existiert nicht oder wurde verschoben."
   },
@@ -723,14 +785,13 @@
       "cancel": "Abbrechen"
     },
     "blog": {
-      "title": "Blogbeiträge",
+      "title": "Titel",
       "subtitle": "Blog-Inhalte verwalten",
       "addNew": "Neuen Beitrag hinzufügen",
       "editPost": "Blogbeitrag bearbeiten",
       "addPost": "Blogbeitrag hinzufügen",
       "backToBlog": "Zurück zu Blogbeiträgen",
       "image": "Bild",
-      "title": "Titel",
       "category": "Kategorie",
       "published": "Veröffentlicht",
       "date": "Datum",
@@ -866,7 +927,10 @@
       "deleteConfirm": "Möchten Sie die Nachricht von \"{{name}}\" wirklich löschen? Diese Aktion kann nicht rückgängig gemacht werden.",
       "markedRead": "Als gelesen markiert",
       "markedUnread": "Als ungelesen markiert",
-      "replyViaEmail": "Per E-Mail antworten"
+      "replyViaEmail": "Per E-Mail antworten",
+      "defaultSubject": "Ihre Anfrage",
+      "selectedProperty": "Ausgewählte Immobilie",
+      "beds": "Schlafzimmer"
     },
     "goldenVisa": {
       "subtitle": "Vorteile, Berechtigungskriterien und Prozessschritte verwalten",
@@ -949,8 +1013,12 @@
       "days": "Tage",
       "viewAll": "Alle anzeigen",
       "noUpcomingPayments": "Keine bevorstehenden Zahlungen",
+      "viewTenants": "Mieter anzeigen",
+      "viewTenantsDesc": "Alle Mieter verwalten",
       "addTenant": "Mieter hinzufügen",
       "addTenantDesc": "Neuen Mieterdatensatz erstellen",
+      "viewContracts": "Verträge anzeigen",
+      "viewContractsDesc": "Alle Mietverträge",
       "addContract": "Vertrag erstellen",
       "addContractDesc": "Neuer Mietvertrag",
       "viewPayments": "Zahlungen anzeigen",
@@ -1089,7 +1157,13 @@
       "tenant": "Mieter",
       "property": "Immobilie",
       "amount": "Betrag",
-      "status": "Status",
+      "status": {
+        "pending": "Ausstehend",
+        "paid": "Bezahlt",
+        "overdue": "Überfällig",
+        "partial": "Teilweise",
+        "waived": "Erlassen"
+      },
       "noPayments": "Noch keine Zahlungen erfasst",
       "markPaid": "Als bezahlt markieren",
       "markPending": "Rückgängig machen",
@@ -1102,14 +1176,7 @@
       "paidAmount": "Gezahlter Betrag",
       "transactionReference": "Transaktionsreferenz",
       "transactionReferencePlaceholder": "Banküberweisungsnr., Schecknr. usw.",
-      "confirmPaid": "Als bezahlt markieren",
-      "status": {
-        "pending": "Ausstehend",
-        "paid": "Bezahlt",
-        "overdue": "Überfällig",
-        "partial": "Teilweise",
-        "waived": "Erlassen"
-      }
+      "confirmPaid": "Als bezahlt markieren"
     }
   }
 }

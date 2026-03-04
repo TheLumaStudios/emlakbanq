@@ -16,7 +16,7 @@ export default function PropertyDetail() {
   if (loading) return <LoadingSkeleton variant="detail" />
   if (error || !property) return (
     <Container className="py-20">
-      <ErrorMessage onRetry={() => window.location.reload()} />
+      <ErrorMessage />
     </Container>
   )
 

@@ -1,6 +1,7 @@
 import { useAuthStore } from '../../stores/useAuthStore'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import LanguageSwitcher from '../common/LanguageSwitcher'
 
 export default function AdminTopBar({ onMenuToggle }) {
   const { t } = useTranslation()
@@ -28,8 +29,9 @@ export default function AdminTopBar({ onMenuToggle }) {
         </button>
       </div>
 
-      {/* Right: user info + logout */}
+      {/* Right: lang + user info + logout */}
       <div className="flex items-center gap-4">
+        <LanguageSwitcher />
         {session?.user?.email && (
           <span className="hidden text-sm text-estate-500 sm:block">
             {session.user.email}

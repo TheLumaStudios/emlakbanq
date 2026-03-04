@@ -582,7 +582,16 @@ export default function Settings() {
                     <td className="px-4 py-3 text-estate-400">{stat.sort_order}</td>
                     <td className="px-4 py-3">
                       <span className="inline-flex rounded-md bg-blue-50 px-2.5 py-1 text-sm font-bold text-blue-700">
-                        {stat.value}
+                        {(() => {
+                          let val = stat.value
+                          if (typeof val === 'string') {
+                            try { val = JSON.parse(val) } catch { return val }
+                          }
+                          if (val && typeof val === 'object') {
+                            return val[i18n.language] || val.tr || val.en || Object.values(val)[0] || ''
+                          }
+                          return val || ''
+                        })()}
                       </span>
                     </td>
                     <td className="px-4 py-3 text-estate-700">
