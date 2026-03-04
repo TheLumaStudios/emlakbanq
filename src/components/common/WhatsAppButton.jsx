@@ -1,15 +1,24 @@
 import { useState, useEffect } from 'react'
+import { useDataStore } from '../../stores/useDataStore'
 
-const WHATSAPP_NUMBER = '905551234567'
-const WHATSAPP_URL = `https://wa.me/${WHATSAPP_NUMBER}`
+const DEFAULT_NUMBER = '905551234567'
 
 export default function WhatsAppButton() {
   const [visible, setVisible] = useState(false)
+  const siteSettings = useDataStore((s) => s.siteSettings)
+  const fetchSiteSettings = useDataStore((s) => s.fetchSiteSettings)
+
+  useEffect(() => {
+    fetchSiteSettings()
+  }, [])
 
   useEffect(() => {
     const timer = setTimeout(() => setVisible(true), 1500)
     return () => clearTimeout(timer)
   }, [])
+
+  const whatsappNumber = siteSettings?.whatsapp || DEFAULT_NUMBER
+  const WHATSAPP_URL = `https://wa.me/${whatsappNumber}`
 
   return (
     <a

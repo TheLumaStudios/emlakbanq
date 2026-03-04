@@ -6,12 +6,15 @@ import LoadingSkeleton from '../components/common/LoadingSkeleton'
 import ErrorMessage from '../components/common/ErrorMessage'
 import ImageWithLoader from '../components/common/ImageWithLoader'
 import { useProperty } from '../hooks/useProperties'
+import { useDataStore } from '../stores/useDataStore'
 import { ROUTES } from '../config/routes'
 
 export default function PropertyDetail() {
   const { slug } = useParams()
   const { t } = useTranslation()
   const { data: property, loading, error } = useProperty(slug)
+  const siteSettings = useDataStore((s) => s.siteSettings)
+  const whatsappNumber = siteSettings?.whatsapp || '905551234567'
 
   if (loading) return <LoadingSkeleton variant="detail" />
   if (error || !property) return (
@@ -226,7 +229,7 @@ export default function PropertyDetail() {
                   </Link>
 
                   <a
-                    href="https://wa.me/905551234567"
+                    href={`https://wa.me/${whatsappNumber}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-green-600 bg-white px-6 py-3.5 font-semibold text-green-600 transition-all hover:bg-green-50"
@@ -238,7 +241,7 @@ export default function PropertyDetail() {
                   </a>
 
                   <a
-                    href="tel:+905551234567"
+                    href={`tel:+${whatsappNumber}`}
                     className="flex w-full items-center justify-center gap-2 rounded-lg border-2 border-estate-300 bg-white px-6 py-3.5 font-semibold text-estate-700 transition-all hover:border-estate-400 hover:bg-estate-50"
                   >
                     <svg className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
